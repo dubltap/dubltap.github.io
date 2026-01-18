@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dubltap.io | AI That Actually Does Stuff</title>
+  <meta name="description" content="A portfolio of viral AI applications designed to help you generate income, build your brand, and work smarter. From The Convergence Architect.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="dubltap.io | AI That Actually Does Stuff">
+  <meta property="og:description" content="Viral AI applications for income generation, personal branding, and business growth.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dubltap.io">
+  <meta property="og:image" content="https://dubltap.io/og-image.png">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="dubltap.io | AI That Actually Does Stuff">
+  <meta name="twitter:description" content="Viral AI applications for income generation, personal branding, and business growth.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    /*
+     * ═══════════════════════════════════════════════════════════════
+     * DUBLTAP.IO — GOLDEN RATIO DESIGN SYSTEM
+     * φ (Phi) = 1.618033988749895
+     * 
+     * "AI That Actually Does Stuff"
+     * ═══════════════════════════════════════════════════════════════
+     */
+    
+    :root {
+      /* ═══ GOLDEN CONSTANTS ═══ */
+      --phi: 1.618033988749895;
+      --phi-inv: 0.618033988749895;
+      
+      /* ═══ GOLDEN TYPOGRAPHY ═══ */
+      --text-xs: 10px;
+      --text-sm: 13px;
+      --text-base: 16px;
+      --text-lg: 21px;
+      --text-xl: 26px;
+      --text-2xl: 34px;
+      --text-3xl: 42px;
+      --text-4xl: 55px;
+      --text-5xl: 68px;
+      --text-6xl: 89px;
+      
+      /* ═══ FIBONACCI SPACING ═══ */
+      --space-3xs: 3px;
+      --space-2xs: 5px;
+      --space-xs: 8px;
+      --space-sm: 13px;
+      --space-md: 21px;
+      --space-lg: 34px;
+      --space-xl: 55px;
+      --space-2xl: 89px;
+      --space-3xl: 144px;
+      
+      /* ═══ GOLDEN TIMING ═══ */
+      --duration-fast: 162ms;
+      --duration-base: 262ms;
+      --duration-slow: 424ms;
+      
+      /* ═══ GOLDEN EASING ═══ */
+      --ease-golden: cubic-bezier(0.382, 0, 0.618, 1);
+      --ease-golden-out: cubic-bezier(0, 0.618, 0.382, 1);
+      
+      /* ═══ SOCAL COLOR PALETTE ═══ */
+      /* Sunset */
+      --sunset-gold: #F4A261;
+      --sunset-coral: #E76F51;
+      --sunset-peach: #FFBE98;
+      
+      /* Ocean */
+      --ocean-deep: #264653;
+      --ocean-teal: #2A9D8F;
+      --ocean-foam: #A8DADC;
+      
+      /* Sand */
+      --sand-light: #FDF8F3;
+      --sand-warm: #E9E0D6;
+      --sand-medium: #C4B7A6;
+      --sand-dark: #4A4238;
+      
+      /* ═══ GRADIENTS ═══ */
+      --gradient-sunset: linear-gradient(137.5deg, var(--sunset-gold), var(--sunset-coral));
+      --gradient-ocean: linear-gradient(137.5deg, var(--ocean-deep), var(--ocean-teal));
+      --gradient-warm: linear-gradient(137.5deg, var(--sand-light), var(--sand-warm));
+      
+      /* ═══ SHADOWS ═══ */
+      --shadow-sm: 0 2px 5px rgba(38, 70, 83, 0.1);
+      --shadow-md: 0 5px 13px rgba(38, 70, 83, 0.15);
+      --shadow-lg: 0 13px 34px rgba(38, 70, 83, 0.2);
+      --shadow-glow: 0 0 34px rgba(244, 162, 97, 0.3);
+      
+      /* ═══ RADIUS ═══ */
+      --radius-sm: 5px;
+      --radius-md: 8px;
+      --radius-lg: 13px;
+      --radius-xl: 21px;
+      --radius-2xl: 34px;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: var(--text-base);
+      line-height: 1.618;
+      color: var(--sand-dark);
+      background: var(--sand-light);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space-lg);
+    }
+    
+    /* ═══ HEADER ═══ */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(253, 248, 243, 0.9);
+      backdrop-filter: blur(13px);
+      border-bottom: 1px solid var(--sand-warm);
+      transition: all var(--duration-base) var(--ease-golden);
+    }
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--space-sm) 0;
+    }
+    
+    .logo {
+      font-family: 'Outfit', sans-serif;
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--ocean-deep);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+    
+    .logo-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--sunset-gold);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.2); }
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: var(--space-lg);
+      align-items: center;
+    }
+    
+    .nav-links a {
+      color: var(--sand-dark);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: var(--text-sm);
+      transition: color var(--duration-fast) var(--ease-golden);
+    }
+    
+    .nav-links a:hover {
+      color: var(--sunset-coral);
+    }
+    
+    .nav-cta {
+      background: var(--gradient-sunset);
+      color: var(--ocean-deep) !important;
+      padding: var(--space-xs) var(--space-md);
+      border-radius: var(--radius-lg);
+      font-weight: 600;
+      transition: all var(--duration-fast) var(--ease-golden);
+    }
+    
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow);
+    }
+    
+    /* ═══ HERO ═══ */
+    .hero {
+      padding: var(--space-3xl) 0 var(--space-2xl);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: 
+        radial-gradient(circle at 30% 20%, rgba(244, 162, 97, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(42, 157, 143, 0.08) 0%, transparent 50%);
+      animation: heroFloat 20s ease-in-out infinite;
+      pointer-events: none;
+    }
+    
+    @keyframes heroFloat {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      50% { transform: translate(-2%, 2%) rotate(1deg); }
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      background: var(--sand-warm);
+      padding: var(--space-xs) var(--space-md);
+      border-radius: var(--radius-2xl);
+      font-size: var(--text-sm);
+      font-weight: 500;
+      color: var(--ocean-deep);
+      margin-bottom: var(--space-lg);
+    }
+    
+    .hero-badge-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--ocean-teal);
+      border-radius: 50%;
+    }
+    
+    .hero h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: var(--text-5xl);
+      font-weight: 800;
+      color: var(--ocean-deep);
+      line-height: 1.1;
+      margin-bottom: var(--space-md);
+    }
+    
+    .hero h1 span {
+      background: var(--gradient-sunset);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero-tagline {
+      font-size: var(--text-xl);
+      color: var(--sand-dark);
+      max-width: 600px;
+      margin: 0 auto var(--space-xl);
+      opacity: 0.9;
+    }
+    
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      background: var(--gradient-sunset);
+      color: var(--ocean-deep);
+      padding: var(--space-md) var(--space-xl);
+      border-radius: var(--radius-xl);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      text-decoration: none;
+      transition: all var(--duration-base) var(--ease-golden);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .hero-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-glow), var(--shadow-lg);
+    }
+    
+    .hero-cta svg {
+      width: 20px;
+      height: 20px;
+      transition: transform var(--duration-fast) var(--ease-golden);
+    }
+    
+    .hero-cta:hover svg {
+      transform: translateX(4px);
+    }
+    
+    /* ═══ APPS SECTION ═══ */
+    .apps-section {
+      padding: var(--space-2xl) 0;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: var(--space-xl);
+    }
+    
+    .category-label {
+      display: inline-block;
+      font-size: var(--text-sm);
+      font-weight: 600;
+      padding: var(--space-xs) var(--space-md);
+      border-radius: var(--radius-2xl);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .category-traffic {
+      background: linear-gradient(137.5deg, rgba(231, 111, 81, 0.15), rgba(244, 162, 97, 0.15));
+      color: var(--sunset-coral);
+    }
+    
+    .category-revenue {
+      background: linear-gradient(137.5deg, rgba(42, 157, 143, 0.15), rgba(38, 70, 83, 0.15));
+      color: var(--ocean-teal);
+    }
+    
+    .category-bridge {
+      background: linear-gradient(137.5deg, rgba(196, 183, 166, 0.3), rgba(233, 224, 214, 0.3));
+      color: var(--sand-dark);
+    }
+    
+    .section-header h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: var(--text-3xl);
+      font-weight: 700;
+      color: var(--ocean-deep);
+      margin-bottom: var(--space-xs);
+    }
+    
+    .section-header p {
+      font-size: var(--text-lg);
+      color: var(--sand-dark);
+      opacity: 0.8;
+    }
+    
+    /* ═══ APP CARDS GRID ═══ */
+    .apps-grid {
+      display: grid;
+      gap: var(--space-lg);
+    }
+    
+    .apps-grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+    
+    .app-card {
+      background: white;
+      border-radius: var(--radius-xl);
+      padding: var(--space-lg);
+      position: relative;
+      overflow: hidden;
+      transition: all var(--duration-base) var(--ease-golden);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--sand-warm);
+    }
+    
+    .app-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .app-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-sunset);
+      opacity: 0;
+      transition: opacity var(--duration-base) var(--ease-golden);
+    }
+    
+    .app-card:hover::before {
+      opacity: 1;
+    }
+    
+    .app-badge {
+      position: absolute;
+      top: var(--space-md);
+      right: var(--space-md);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      padding: var(--space-3xs) var(--space-xs);
+      border-radius: var(--radius-md);
+    }
+    
+    .app-badge.traffic {
+      background: rgba(231, 111, 81, 0.1);
+      color: var(--sunset-coral);
+    }
+    
+    .app-badge.revenue {
+      background: rgba(42, 157, 143, 0.1);
+      color: var(--ocean-teal);
+    }
+    
+    .app-badge.bridge {
+      background: rgba(196, 183, 166, 0.2);
+      color: var(--sand-dark);
+    }
+    
+    .app-badge.free {
+      background: rgba(244, 162, 97, 0.2);
+      color: var(--sunset-coral);
+    }
+    
+    .app-icon {
+      font-size: var(--text-3xl);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .app-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--ocean-deep);
+      margin-bottom: var(--space-xs);
+    }
+    
+    .app-tagline {
+      font-size: var(--text-sm);
+      color: var(--sand-dark);
+      margin-bottom: var(--space-sm);
+      line-height: 1.5;
+    }
+    
+    .app-price {
+      font-size: var(--text-sm);
+      color: var(--sand-medium);
+      margin-bottom: var(--space-md);
+    }
+    
+    .app-price strong {
+      color: var(--ocean-teal);
+    }
+    
+    .app-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+      margin-bottom: var(--space-md);
+    }
+    
+    .app-feature {
+      font-size: var(--text-xs);
+      padding: var(--space-3xs) var(--space-xs);
+      background: var(--sand-warm);
+      border-radius: var(--radius-md);
+      color: var(--sand-dark);
+    }
+    
+    .app-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      color: var(--sunset-coral);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: var(--text-sm);
+      transition: all var(--duration-fast) var(--ease-golden);
+    }
+    
+    .app-cta:hover {
+      color: var(--sunset-gold);
+      gap: var(--space-sm);
+    }
+    
+    /* ═══ CREATOR SECTION ═══ */
+    .creator-section {
+      padding: var(--space-2xl) 0;
+      background: var(--gradient-warm);
+    }
+    
+    .creator-content {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: var(--space-xl);
+      align-items: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .creator-avatar {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: var(--gradient-sunset);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--text-5xl);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .creator-info h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--ocean-deep);
+      margin-bottom: var(--space-xs);
+    }
+    
+    .creator-title {
+      font-size: var(--text-lg);
+      color: var(--sunset-coral);
+      font-weight: 500;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .creator-bio {
+      font-size: var(--text-base);
+      color: var(--sand-dark);
+      line-height: 1.7;
+      margin-bottom: var(--space-md);
+    }
+    
+    .creator-mission {
+      font-family: 'Outfit', sans-serif;
+      font-size: var(--text-lg);
+      font-weight: 600;
+      color: var(--ocean-deep);
+      font-style: italic;
+    }
+    
+    /* ═══ EMAIL CAPTURE ═══ */
+    .email-section {
+      padding: var(--space-2xl) 0;
+      text-align: center;
+    }
+    
+    .email-box {
+      background: white;
+      padding: var(--space-xl);
+      border-radius: var(--radius-2xl);
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .email-box h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--ocean-deep);
+      margin-bottom: var(--space-xs);
+    }
+    
+    .email-box p {
+      color: var(--sand-dark);
+      margin-bottom: var(--space-lg);
+    }
+    
+    .email-form {
+      display: flex;
+      gap: var(--space-sm);
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    
+    .email-form input {
+      flex: 1;
+      padding: var(--space-sm) var(--space-md);
+      border: 2px solid var(--sand-warm);
+      border-radius: var(--radius-lg);
+      font-size: var(--text-base);
+      outline: none;
+      transition: border-color var(--duration-fast) var(--ease-golden);
+    }
+    
+    .email-form input:focus {
+      border-color: var(--ocean-teal);
+    }
+    
+    .email-form button {
+      background: var(--gradient-sunset);
+      color: var(--ocean-deep);
+      padding: var(--space-sm) var(--space-lg);
+      border: none;
+      border-radius: var(--radius-lg);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--duration-fast) var(--ease-golden);
+    }
+    
+    .email-form button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow);
+    }
+    
+    .email-note {
+      font-size: var(--text-xs);
+      color: var(--sand-medium);
+      margin-top: var(--space-sm);
+    }
+    
+    /* ═══ BUNDLE SECTION ═══ */
+    .bundle-section {
+      padding: var(--space-2xl) 0;
+      background: var(--ocean-deep);
+      color: white;
+    }
+    
+    .bundle-content {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .bundle-content h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: var(--text-3xl);
+      font-weight: 700;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .bundle-content h2 span {
+      color: var(--sunset-gold);
+    }
+    
+    .bundle-content p {
+      font-size: var(--text-lg);
+      opacity: 0.9;
+      margin-bottom: var(--space-lg);
+    }
+    
+    .bundle-price {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-lg);
+    }
+    
+    .bundle-original {
+      font-size: var(--text-xl);
+      text-decoration: line-through;
+      opacity: 0.5;
+    }
+    
+    .bundle-current {
+      font-size: var(--text-4xl);
+      font-weight: 800;
+      color: var(--sunset-gold);
+    }
+    
+    .bundle-period {
+      font-size: var(--text-lg);
+      opacity: 0.8;
+    }
+    
+    .bundle-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      background: var(--sunset-gold);
+      color: var(--ocean-deep);
+      padding: var(--space-md) var(--space-xl);
+      border-radius: var(--radius-xl);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      text-decoration: none;
+      transition: all var(--duration-base) var(--ease-golden);
+    }
+    
+    .bundle-cta:hover {
+      background: var(--sunset-coral);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-glow);
+    }
+    
+    .bundle-savings {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.1);
+      padding: var(--space-xs) var(--space-md);
+      border-radius: var(--radius-2xl);
+      font-size: var(--text-sm);
+      margin-top: var(--space-md);
+    }
+    
+    /* ═══ FOOTER ═══ */
+    footer {
+      padding: var(--space-xl) 0;
+      background: var(--sand-warm);
+    }
+    
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+    }
+    
+    .footer-logo {
+      font-family: 'Outfit', sans-serif;
+      font-size: var(--text-lg);
+      font-weight: 700;
+      color: var(--ocean-deep);
+    }
+    
+    .footer-links {
+      display: flex;
+      gap: var(--space-lg);
+    }
+    
+    .footer-links a {
+      color: var(--sand-dark);
+      text-decoration: none;
+      font-size: var(--text-sm);
+      transition: color var(--duration-fast) var(--ease-golden);
+    }
+    
+    .footer-links a:hover {
+      color: var(--sunset-coral);
+    }
+    
+    .footer-copy {
+      font-size: var(--text-sm);
+      color: var(--sand-medium);
+    }
+    
+    /* ═══ RESPONSIVE ═══ */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: var(--text-3xl);
+      }
+      
+      .hero-tagline {
+        font-size: var(--text-base);
+      }
+      
+      .nav-links {
+        display: none;
+      }
+      
+      .creator-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      
+      .creator-avatar {
+        margin: 0 auto;
+        width: 150px;
+        height: 150px;
+      }
+      
+      .email-form {
+        flex-direction: column;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="/" class="logo">
+          dubltap<span class="logo-dot"></span>io
+        </a>
+        <nav class="nav-links">
+          <a href="#apps">Apps</a>
+          <a href="#creator">Creator</a>
+          <a href="#bundle">Bundle</a>
+          <a href="#get-started" class="nav-cta">Get Started</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          8 AI-Powered Apps • One Ecosystem
+        </div>
+        <h1>AI That Actually <span>Does Stuff</span></h1>
+        <p class="hero-tagline">A portfolio of viral AI applications designed to help you generate income, build your brand, and work smarter.</p>
+        <a href="#apps" class="hero-cta">
+          Explore Apps
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Traffic Magnets -->
+  <section class="apps-section" id="apps">
+    <div class="container">
+      <div class="section-header">
+        <span class="category-label category-traffic">🔥 Traffic Magnets — Free/Viral Entry Points</span>
+        <h2>Start Free, Go Viral</h2>
+        <p>High-engagement apps designed to share. Build your audience.</p>
+      </div>
+      
+      <div class="apps-grid apps-grid-3">
+        <!-- Bad Mutha Forker -->
+        <div class="app-card">
+          <span class="app-badge traffic">🔥 Viral</span>
+          <div class="app-icon">🍴</div>
+          <div class="app-name">Bad Mutha Forker</div>
+          <div class="app-tagline">Transform any recipe based on dietary needs, ingredients, or preferences. Generate shareable recipe cards.</div>
+          <div class="app-price"><strong>$9/mo</strong> or $79/year • 5 forks free/month</div>
+          <div class="app-features">
+            <span class="app-feature">Recipe Transform</span>
+            <span class="app-feature">Nutrition Analysis</span>
+            <span class="app-feature">Share Cards</span>
+          </div>
+          <a href="https://fork.dubltap.io" class="app-cta">Fork a Recipe →</a>
+        </div>
+        
+        <!-- Side Hustle Copilot -->
+        <div class="app-card">
+          <span class="app-badge traffic">🔥 Viral</span>
+          <div class="app-icon">🚀</div>
+          <div class="app-name">Side Hustle Copilot</div>
+          <div class="app-tagline">Match your skills to income opportunities with personalized launch guidance and income projections.</div>
+          <div class="app-price"><strong>$12/mo</strong> or $99/year • 3 matches free/month</div>
+          <div class="app-features">
+            <span class="app-feature">Skill Matching</span>
+            <span class="app-feature">7-Day Launch Plan</span>
+            <span class="app-feature">Income Projections</span>
+          </div>
+          <a href="https://hustle.dubltap.io" class="app-cta">Find Your Hustle →</a>
+        </div>
+        
+        <!-- Mind Expander -->
+        <div class="app-card">
+          <span class="app-badge free">🆓 FREE</span>
+          <div class="app-icon">🧠</div>
+          <div class="app-name">Mind Expander</div>
+          <div class="app-tagline">Daily cognitive enhancement using Hermetic principles and sacred geometry. Build an unshakeable mind.</div>
+          <div class="app-price"><strong>FREE FOREVER</strong> • Unlimited expansions</div>
+          <div class="app-features">
+            <span class="app-feature">7 Hermetic Principles</span>
+            <span class="app-feature">Daily Exercises</span>
+            <span class="app-feature">Sacred Geometry</span>
+          </div>
+          <a href="https://mind.dubltap.io" class="app-cta">Expand Your Mind →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Monetization Hubs -->
+  <section class="apps-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="category-label category-revenue">💰 Monetization Hubs — Premium Revenue Drivers</span>
+        <h2>Grow & Profit</h2>
+        <p>Professional-grade tools for serious entrepreneurs. Clear ROI.</p>
+      </div>
+      
+      <div class="apps-grid apps-grid-3">
+        <!-- Market Maven -->
+        <div class="app-card">
+          <span class="app-badge revenue">💰 Revenue</span>
+          <div class="app-icon">📊</div>
+          <div class="app-name">Market Maven</div>
+          <div class="app-tagline">Real-time competitive intelligence in minutes, not weeks. Instant competitor analysis and market opportunity scoring.</div>
+          <div class="app-price"><strong>$19/mo</strong> or $149/year • 2 reports free/month</div>
+          <div class="app-features">
+            <span class="app-feature">Competitor Analysis</span>
+            <span class="app-feature">Trend Detection</span>
+            <span class="app-feature">Export Reports</span>
+          </div>
+          <a href="https://maven.dubltap.io" class="app-cta">Analyze Market →</a>
+        </div>
+        
+        <!-- CLIFF NOTEZ -->
+        <div class="app-card">
+          <span class="app-badge revenue">💰 Revenue</span>
+          <div class="app-icon">📚</div>
+          <div class="app-name">CLIFF NOTEZ</div>
+          <div class="app-tagline">Doctorate-level document analysis and research synthesis. Academic rigor meets AI speed.</div>
+          <div class="app-price"><strong>$19/mo</strong> or $149/year • 3 analyses free/month</div>
+          <div class="app-features">
+            <span class="app-feature">Deep Analysis</span>
+            <span class="app-feature">Citation Network</span>
+            <span class="app-feature">Research Synthesis</span>
+          </div>
+          <a href="https://cliff.dubltap.io" class="app-cta">Analyze Documents →</a>
+        </div>
+        
+        <!-- Pro Business Development -->
+        <div class="app-card">
+          <span class="app-badge revenue">💰 Revenue</span>
+          <div class="app-icon">💼</div>
+          <div class="app-name">Pro Business Development</div>
+          <div class="app-tagline">AI-powered sales strategy generator. Close more deals with personalized pitch decks and competitive positioning.</div>
+          <div class="app-price"><strong>$24/mo</strong> or $199/year • 3 strategies free/month</div>
+          <div class="app-features">
+            <span class="app-feature">Sales Strategy</span>
+            <span class="app-feature">Pitch Generation</span>
+            <span class="app-feature">Deal Coaching</span>
+          </div>
+          <a href="https://bizdev.dubltap.io" class="app-cta">Build Strategy →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Bridge Products -->
+  <section class="apps-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="category-label category-bridge">🌉 Bridge Products — Cross-Sell Multipliers</span>
+        <h2>Enhance Everything</h2>
+        <p>Apps that make all your other outputs better.</p>
+      </div>
+      
+      <div class="apps-grid apps-grid-3" style="max-width: 700px; margin: 0 auto;">
+        <!-- Aesthetic AI -->
+        <div class="app-card">
+          <span class="app-badge bridge">🌉 Bridge</span>
+          <div class="app-icon">🎨</div>
+          <div class="app-name">Aesthetic AI</div>
+          <div class="app-tagline">Discover your visual identity. Get personalized color palettes, fonts, and social media templates.</div>
+          <div class="app-price"><strong>$12/mo</strong> or $99/year • 5 aesthetics free/month</div>
+          <div class="app-features">
+            <span class="app-feature">Color Palettes</span>
+            <span class="app-feature">Font Pairing</span>
+            <span class="app-feature">Social Templates</span>
+          </div>
+          <a href="https://aesthetic.dubltap.io" class="app-cta">Design Aesthetic →</a>
+        </div>
+        
+        <!-- VibeCurate -->
+        <div class="app-card">
+          <span class="app-badge bridge">🌉 Bridge</span>
+          <div class="app-icon">🎵</div>
+          <div class="app-name">VibeCurate</div>
+          <div class="app-tagline">AI-powered playlist curation across platforms. Find your perfect soundtrack and share the vibe.</div>
+          <div class="app-price"><strong>$9/mo</strong> or $79/year • 5 playlists free/month</div>
+          <div class="app-features">
+            <span class="app-feature">Multi-Platform</span>
+            <span class="app-feature">Flow Mode</span>
+            <span class="app-feature">Share Playlists</span>
+          </div>
+          <a href="https://vibe.dubltap.io" class="app-cta">Curate Playlist →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Creator Section -->
+  <section class="creator-section" id="creator">
+    <div class="container">
+      <div class="creator-content">
+        <div class="creator-avatar">🎸</div>
+        <div class="creator-info">
+          <h3>Christopher Grove</h3>
+          <div class="creator-title">The Convergence Architect</div>
+          <p class="creator-bio">40+ years bridging analog systems, industrial automation, and AI. Author of "Mind Beyond Mind: IAMAUM." Professional musician with Xtreme Intent. Building AI tools that help real people generate income and solve problems.</p>
+          <div class="creator-mission">"Riffs Louder Than Hunger"</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Email Capture -->
+  <section class="email-section" id="get-started">
+    <div class="container">
+      <div class="email-box">
+        <h3>Get Early Access</h3>
+        <p>Be first to know when new apps launch. Plus get exclusive tips on using AI to generate income.</p>
+        <form class="email-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <button type="submit">Join Free</button>
+        </form>
+        <p class="email-note">No spam. Unsubscribe anytime. We're cool like that.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Bundle Section -->
+  <section class="bundle-section" id="bundle">
+    <div class="container">
+      <div class="bundle-content">
+        <h2>Get <span>Everything</span></h2>
+        <p>All 8 apps. One subscription. Unlimited possibilities.</p>
+        <div class="bundle-price">
+          <span class="bundle-original">$104/mo</span>
+          <span class="bundle-current">$59</span>
+          <span class="bundle-period">/month</span>
+        </div>
+        <a href="#get-started" class="bundle-cta">Unlock the Bundle</a>
+        <div class="bundle-savings">Save 45% with annual ($499/year)</div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">dubltap.io</div>
+        <div class="footer-links">
+          <a href="mailto:support@dubltap.io">Support</a>
+          <a href="https://github.com/dubltap">GitHub</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+        </div>
+        <div class="footer-copy">© 2026 dubltap.io. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+    
+    // Header scroll effect
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.style.boxShadow = 'var(--shadow-md)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
