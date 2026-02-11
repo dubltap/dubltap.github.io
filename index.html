@@ -1141,4 +1141,51 @@
     const header = document.querySelector('header');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
+              header.classList.add('scrolled');
+            } else {
+          header.classList.remove('scrolled');
+      }
+    });
+
+        // Email form AJAX submission
+        const emailForm = document.querySelector('.email-form');
+        if (emailForm) {
+                emailForm.addEventListener('submit', function(e) {
+                          e.preventDefault();
+                          const formData = new FormData(emailForm);
+                          const submitBtn = emailForm.querySelector('button[type="submit"]');
+                          const originalText = submitBtn.textContent;
+                          submitBtn.textContent = 'Sending...';
+                          submitBtn.disabled = true;
+                          fetch(emailForm.action, {
+                                      method: 'POST',
+              body: formData,
+                                      headers: { 'Accept': 'application/json' }
+                          }).then(function(response) {
+                                      if (response.ok) {
+                                                    submitBtn.textContent = 'You\'re In!';
+                                                    emailForm.querySelector('input[type="email"]').value = '';
+                                                    setTimeout(function() {
+                                                                    submitBtn.textContent = originalText;
+                                                                    submitBtn.disabled = false;
+                                                    }, 3000);
+                                      } else {
+                                                    submitBtn.textContent = 'Error - Try Again';
+                                                    submitBtn.disabled = false;
+                                                    setTimeout(function() {
+                                                                    submitBtn.textContent = originalText;
+                                                    }, 3000);
+      }
+                          }).catch(function() {
+                                      submitBtn.textContent = 'Error - Try Again';
+                                      submitBtn.disabled = false;
+                                      setTimeout(function() {
+                                                    submitBtn.textContent = originalText;
+                                      }, 3000);
+                          });
+                });
+        }
+          </script>
+</body>
+</html>
     
