@@ -1528,7 +1528,7 @@
 
 
     // ═══ MASCOT SCROLL TRACKING ═══
-    (function() {
+    window.addEventListener('load', function() {
       const mascot = document.querySelector('.hero-mascot');
       const heroSection = document.querySelector('.hero');
       if (!mascot || !heroSection) return;
@@ -1548,7 +1548,7 @@
       
       window.addEventListener('scroll', handleMascotScroll, { passive: true });
       handleMascotScroll();
-    })();
+    });
   </script>
 
   <!-- Scrolling CTA Bar -->
