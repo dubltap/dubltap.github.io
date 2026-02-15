@@ -7,7 +7,7 @@
   <meta name="description" content="A portfolio of viral AI applications designed to help you generate income, build your brand, and work smarter. From The Convergence Architect.">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="dubltap.io | AI Thhat Actually Does Stuff">
+  <meta property="og:title" content="dubltap.io | AI That Actually Does Stuff">
   <meta property="og:description" content="Viral AI applications for income generation, personal branding, and business growth.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dubltap.io">
@@ -845,6 +845,215 @@
         text-align: center;
       }
     }
+
+    /* ═══ SCROLLING CTA BAR ═══ */
+    .scroll-cta-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 90;
+      background: var(--ocean-deep);
+      color: white;
+      overflow: hidden;
+      transition: transform 0.4s ease;
+      border-top: 2px solid var(--sunset-gold);
+    }
+    .scroll-cta-bar.hidden { transform: translateY(100%); }
+    .scroll-cta-inner {
+      display: flex;
+      align-items: center;
+      padding: var(--space-xs) var(--space-md);
+      position: relative;
+    }
+    .scroll-cta-text {
+      white-space: nowrap;
+      animation: scrollCTA 30s linear infinite;
+      display: flex;
+      gap: var(--space-xl);
+      font-size: var(--text-sm);
+      font-weight: 500;
+    }
+    .scroll-cta-text a {
+      color: var(--sunset-gold);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+    .scroll-cta-text a:hover { color: var(--sunset-peach); }
+    .scroll-cta-text .divider { color: var(--ocean-foam); opacity: 0.4; }
+    .scroll-cta-dismiss {
+      position: absolute;
+      right: var(--space-sm);
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.15);
+      border: none;
+      color: white;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      transition: background 0.2s;
+    }
+    .scroll-cta-dismiss:hover { background: rgba(255,255,255,0.3); }
+    @keyframes scrollCTA {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ═══ BUNDLE PRICING MODAL ═══ */
+    .bundle-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(38, 70, 83, 0.6);
+      backdrop-filter: blur(8px);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-md);
+    }
+    .bundle-modal-overlay.active { display: flex; }
+    .bundle-modal {
+      background: var(--sand-light);
+      border-radius: var(--radius-2xl);
+      max-width: 640px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+      position: relative;
+    }
+    .bundle-modal-header {
+      background: var(--gradient-sunset);
+      padding: var(--space-lg);
+      text-align: center;
+      border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+    }
+    .bundle-modal-header h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--ocean-deep);
+      margin-bottom: var(--space-3xs);
+    }
+    .bundle-modal-header p { color: var(--ocean-deep); opacity: 0.8; font-size: var(--text-sm); }
+    .bundle-modal-close {
+      position: absolute;
+      top: var(--space-sm);
+      right: var(--space-sm);
+      background: rgba(255,255,255,0.3);
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ocean-deep);
+      transition: background 0.2s;
+    }
+    .bundle-modal-close:hover { background: rgba(255,255,255,0.5); }
+    .bundle-modal-apps { padding: var(--space-md) var(--space-lg); }
+    .bundle-modal-app {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-xs) 0;
+      border-bottom: 1px solid var(--sand-warm);
+    }
+    .bundle-modal-app:last-child { border-bottom: none; }
+    .bundle-modal-app .app-emoji { font-size: var(--text-xl); width: 36px; text-align: center; }
+    .bundle-modal-app .app-details { flex: 1; }
+    .bundle-modal-app .app-details strong { font-family: 'Outfit', sans-serif; color: var(--ocean-deep); font-size: var(--text-sm); }
+    .bundle-modal-app .app-details span { font-size: var(--text-xs); color: var(--sand-medium); display: block; }
+    .bundle-modal-app .app-value { font-size: var(--text-xs); color: var(--sand-medium); text-decoration: line-through; }
+    .bundle-modal-pricing {
+      padding: var(--space-lg);
+      background: var(--ocean-deep);
+      text-align: center;
+      border-radius: 0 0 var(--radius-2xl) var(--radius-2xl);
+    }
+    .bundle-modal-pricing .price-options {
+      display: flex;
+      gap: var(--space-sm);
+      justify-content: center;
+      margin-bottom: var(--space-md);
+      flex-wrap: wrap;
+    }
+    .bundle-modal-pricing .price-card {
+      background: rgba(255,255,255,0.1);
+      border: 2px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      flex: 1;
+      max-width: 220px;
+      min-width: 180px;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: white;
+    }
+    .bundle-modal-pricing .price-card:hover,
+    .bundle-modal-pricing .price-card.recommended {
+      border-color: var(--sunset-gold);
+      background: rgba(244, 162, 97, 0.15);
+    }
+    .bundle-modal-pricing .price-card .label { font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 1px; opacity: 0.7; margin-bottom: var(--space-xs); }
+    .bundle-modal-pricing .price-card .amount { font-family: 'Outfit', sans-serif; font-size: var(--text-2xl); font-weight: 700; color: var(--sunset-gold); }
+    .bundle-modal-pricing .price-card .period { font-size: var(--text-sm); opacity: 0.7; }
+    .bundle-modal-pricing .price-card .savings-tag {
+      display: inline-block;
+      background: var(--sunset-coral);
+      color: white;
+      font-size: var(--text-xs);
+      padding: 2px 8px;
+      border-radius: var(--radius-sm);
+      margin-top: var(--space-xs);
+      font-weight: 600;
+    }
+    .bundle-modal-pricing .bundle-checkout-btn {
+      display: inline-block;
+      background: var(--sunset-gold);
+      color: var(--ocean-deep);
+      padding: var(--space-sm) var(--space-xl);
+      border-radius: var(--radius-lg);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .bundle-modal-pricing .bundle-checkout-btn:hover {
+      background: var(--sunset-coral);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    /* ═══ TOAST NOTIFICATION ═══ */
+    .toast-notification {
+      position: fixed;
+      top: 80px;
+      right: var(--space-md);
+      background: var(--ocean-teal);
+      color: white;
+      padding: var(--space-sm) var(--space-lg);
+      border-radius: var(--radius-lg);
+      font-weight: 500;
+      box-shadow: var(--shadow-lg);
+      z-index: 300;
+      transform: translateX(120%);
+      transition: transform 0.4s cubic-bezier(0, 0.618, 0.382, 1);
+    }
+    .toast-notification.show { transform: translateX(0); }
   </style>
 </head>
 <body>
@@ -910,7 +1119,7 @@
             <span class="app-feature">Nutrition Analysis</span>
             <span class="app-feature">Share Cards</span>
           </div>
-          <a href="https://fork.dubltap.io" class="app-cta">Fork a Recipe →</a>
+          <a href="https://fork.dubltap.io" class="app-cta" target="_blank" rel="noopener">Fork a Recipe →</a>
         </div>
         
         <!-- Side Hustle Copilot -->
@@ -925,7 +1134,7 @@
             <span class="app-feature">7-Day Launch Plan</span>
             <span class="app-feature">Income Projections</span>
           </div>
-          <a href="https://hustle.dubltap.io" class="app-cta">Find Your Hustle →</a>
+          <a href="https://hustle.dubltap.io" class="app-cta" target="_blank" rel="noopener">Find Your Hustle →</a>
         </div>
         
         <!-- Mind Expander -->
@@ -940,7 +1149,7 @@
             <span class="app-feature">Daily Exercises</span>
             <span class="app-feature">Sacred Geometry</span>
           </div>
-          <a href="https://mind.dubltap.io" class="app-cta">Expand Your Mind →</a>
+          <a href="https://mind.dubltap.io" class="app-cta" target="_blank" rel="noopener">Expand Your Mind →</a>
         </div>
         
         <!-- WuzUP -->
@@ -955,7 +1164,7 @@
             <span class="app-feature">Date Planning</span>
             <span class="app-feature">Nightlife Guide</span>
           </div>
-          <a href="https://wuzup.dubltap.io" class="app-cta">Find Something Fun →</a>
+          <a href="https://wuzup.dubltap.io" class="app-cta" target="_blank" rel="noopener">Find Something Fun →</a>
         </div>
       </div>
     </div>
@@ -983,7 +1192,7 @@
             <span class="app-feature">Trend Detection</span>
             <span class="app-feature">Export Reports</span>
           </div>
-          <a href="https://maven.dubltap.io" class="app-cta">Analyze Market →</a>
+          <a href="https://maven.dubltap.io" class="app-cta" target="_blank" rel="noopener">Analyze Market →</a>
         </div>
         
         <!-- CLIFF NOTEZ -->
@@ -998,7 +1207,7 @@
             <span class="app-feature">Citation Network</span>
             <span class="app-feature">Research Synthesis</span>
           </div>
-          <a href="https://cliff.dubltap.io" class="app-cta">Analyze Documents →</a>
+          <a href="https://cliff.dubltap.io" class="app-cta" target="_blank" rel="noopener">Analyze Documents →</a>
         </div>
         
         <!-- Pro Business Development -->
@@ -1013,7 +1222,7 @@
             <span class="app-feature">Pitch Generation</span>
             <span class="app-feature">Deal Coaching</span>
           </div>
-          <a href="https://bizdev.dubltap.io" class="app-cta">Build Strategy →</a>
+          <a href="https://bizdev.dubltap.io" class="app-cta" target="_blank" rel="noopener">Build Strategy →</a>
         </div>
       </div>
     </div>
@@ -1041,7 +1250,7 @@
             <span class="app-feature">Font Pairing</span>
             <span class="app-feature">Social Templates</span>
           </div>
-          <a href="https://aesthetic.dubltap.io" class="app-cta">Design Aesthetic →</a>
+          <a href="https://aesthetic.dubltap.io" class="app-cta" target="_blank" rel="noopener">Design Aesthetic →</a>
         </div>
         
         <!-- VibeCurate -->
@@ -1056,7 +1265,7 @@
             <span class="app-feature">Flow Mode</span>
             <span class="app-feature">Share Playlists</span>
           </div>
-          <a href="https://vibe.dubltap.io" class="app-cta">Curate Playlist →</a>
+          <a href="https://vibe.dubltap.io" class="app-cta" target="_blank" rel="noopener">Curate Playlist →</a>
         </div>
       </div>
     </div>
@@ -1083,9 +1292,9 @@
       <div class="email-box">
         <h3>Get Early Access</h3>
         <p>Be first to know when new apps launch. Plus get exclusive tips on using AI to generate income.</p>
-        <form class="email-form" action="https://formspree.io/f/xqedegoa" method="POST">
+        <form class="email-form" id="emailCaptureForm">
           <input type="email" name="email" placeholder="your@email.com" required>
-                    <input type="hidden" name="_next" value="https://dubltap.io/#get-started">
+          <input type="hidden" name="source" value="homepage">
           <button type="submit">Join Free</button>
         </form>
         <p class="email-note">No spam. Unsubscribe anytime. We're cool like that.</p>
@@ -1104,8 +1313,8 @@
           <span class="bundle-current">$59</span>
           <span class="bundle-period">/month</span>
         </div>
-        <a href="#get-started" class="bundle-cta">Unlock the Bundle</a>
-        <div class="bundle-savings">Save 45% with annual ($499/year)</div>
+        <button onclick="openBundleFlow()" class="bundle-cta" style="border:none;cursor:pointer;">Unlock the Bundle</button>
+        <button onclick="openBundleFlow('annual')" class="bundle-savings" style="border:none;cursor:pointer;">Save 45% with annual ($499/year)</button>
       </div>
     </div>
   </section>
@@ -1126,66 +1335,249 @@
   </footer>
   
   <script>
-    // Smooth scroll for anchor links
+    // ═══ SMOOTH SCROLL ═══
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        const target = document.querySelector(href);
         if (target) {
+          e.preventDefault();
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
     });
-    
-    // Header scroll effect
+
+    // ═══ HEADER SCROLL EFFECT ═══
     const header = document.querySelector('header');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-              header.classList.add('scrolled');
-            } else {
-          header.classList.remove('scrolled');
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // ═══ MAKE FULL APP CARDS CLICKABLE (opens in new tab) ═══
+    document.querySelectorAll('.app-card').forEach(card => {
+      card.addEventListener('click', function(e) {
+        if (e.target.closest('a')) return; // Let actual links handle themselves
+        const link = this.querySelector('.app-cta');
+        if (link) window.open(link.href, '_blank');
+      });
+    });
+
+    // ═══ EMAIL CAPTURE (API + Confirmation Email) ═══
+    const emailForm = document.getElementById('emailCaptureForm');
+    if (emailForm) {
+      emailForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const emailInput = this.querySelector('input[type="email"]');
+        const email = emailInput.value.trim();
+        const source = this.querySelector('input[name="source"]')?.value || 'homepage';
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+
+        if (!email) return;
+
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+
+        try {
+          const response = await fetch('https://api.dubltap.io/api/email-capture', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, source, tags: ['homepage-signup'] })
+          });
+
+          const data = await response.json();
+
+          if (response.ok && data.success) {
+            submitBtn.textContent = "You're In! ✓";
+            emailInput.value = '';
+            showToast(data.isNew 
+              ? '🎉 Welcome! Check your email for a confirmation.' 
+              : '👋 Welcome back! You\'re already registered.');
+            setTimeout(() => {
+              submitBtn.textContent = originalText;
+              submitBtn.disabled = false;
+            }, 4000);
+          } else {
+            throw new Error(data.error || 'Failed');
+          }
+        } catch (err) {
+          submitBtn.textContent = 'Error - Try Again';
+          submitBtn.disabled = false;
+          setTimeout(() => { submitBtn.textContent = originalText; }, 3000);
+        }
+      });
+    }
+
+    // ═══ TOAST NOTIFICATIONS ═══
+    function showToast(message, duration = 4000) {
+      const toast = document.getElementById('toastNotification');
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), duration);
+    }
+
+    // ═══ SCROLL CTA BAR ═══
+    let scrollCtaDismissed = sessionStorage.getItem('scrollCtaDismissed');
+    const scrollCtaBar = document.getElementById('scrollCtaBar');
+
+    if (scrollCtaDismissed) {
+      scrollCtaBar.classList.add('hidden');
+    }
+
+    // Show after scrolling past hero
+    window.addEventListener('scroll', () => {
+      if (!scrollCtaDismissed && window.scrollY > 400) {
+        scrollCtaBar.classList.remove('hidden');
       }
     });
 
-        // Email form AJAX submission
-        const emailForm = document.querySelector('.email-form');
-        if (emailForm) {
-                emailForm.addEventListener('submit', function(e) {
-                          e.preventDefault();
-                          const formData = new FormData(emailForm);
-                          const submitBtn = emailForm.querySelector('button[type="submit"]');
-                          const originalText = submitBtn.textContent;
-                          submitBtn.textContent = 'Sending...';
-                          submitBtn.disabled = true;
-                          fetch(emailForm.action, {
-                                      method: 'POST',
-              body: formData,
-                                      headers: { 'Accept': 'application/json' }
-                          }).then(function(response) {
-                                      if (response.ok) {
-                                                    submitBtn.textContent = 'You\'re In!';
-                                                    emailForm.querySelector('input[type="email"]').value = '';
-                                                    setTimeout(function() {
-                                                                    submitBtn.textContent = originalText;
-                                                                    submitBtn.disabled = false;
-                                                    }, 3000);
-                                      } else {
-                                                    submitBtn.textContent = 'Error - Try Again';
-                                                    submitBtn.disabled = false;
-                                                    setTimeout(function() {
-                                                                    submitBtn.textContent = originalText;
-                                                    }, 3000);
-      }
-                          }).catch(function() {
-                                      submitBtn.textContent = 'Error - Try Again';
-                                      submitBtn.disabled = false;
-                                      setTimeout(function() {
-                                                    submitBtn.textContent = originalText;
-                                      }, 3000);
-                          });
-                });
-        }
-          </script>
+    // Start hidden
+    scrollCtaBar.classList.add('hidden');
+
+    function dismissScrollCta() {
+      scrollCtaBar.classList.add('hidden');
+      scrollCtaDismissed = true;
+      sessionStorage.setItem('scrollCtaDismissed', 'true');
+    }
+
+    // ═══ BUNDLE FLOW ═══
+    let selectedBundlePlan = 'annual'; // Default to annual (better LTV)
+
+    function openBundleFlow(plan) {
+      if (plan) selectedBundlePlan = plan;
+      updateBundleSelection();
+      document.getElementById('bundleModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeBundleModal() {
+      document.getElementById('bundleModal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function selectBundlePlan(plan) {
+      selectedBundlePlan = plan;
+      updateBundleSelection();
+    }
+
+    function updateBundleSelection() {
+      const monthly = document.getElementById('monthlyCard');
+      const annual = document.getElementById('annualCard');
+      monthly.classList.toggle('recommended', selectedBundlePlan === 'monthly');
+      annual.classList.toggle('recommended', selectedBundlePlan === 'annual');
+    }
+
+    function bundleCheckout() {
+      // Redirect to Stripe checkout via backend
+      const priceId = selectedBundlePlan === 'annual' 
+        ? 'price_bundle_annual'  // Replace with actual Stripe price ID
+        : 'price_bundle_monthly'; // Replace with actual Stripe price ID
+      
+      window.location.href = 'https://api.dubltap.io/create-checkout?price=' + priceId;
+    }
+
+    // Close modal on overlay click
+    document.getElementById('bundleModal').addEventListener('click', function(e) {
+      if (e.target === this) closeBundleModal();
+    });
+
+    // Close modal on Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeBundleModal();
+    });
+
+    // Nav "Bundle" link opens modal
+    document.querySelectorAll('a[href="#bundle"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        if (this.closest('.scroll-cta-text')) return; // Let scroll CTA handle its own
+        e.preventDefault();
+        openBundleFlow();
+      });
+    });
+  </script>
+
+  <!-- Scrolling CTA Bar -->
+  <div class="scroll-cta-bar" id="scrollCtaBar">
+    <div class="scroll-cta-inner">
+      <div class="scroll-cta-text">
+        <a href="https://fork.dubltap.io" target="_blank">🍴 Bad Mutha Forker</a>
+        <span class="divider">•</span>
+        <a href="https://hustle.dubltap.io" target="_blank">🚀 Side Hustle Copilot</a>
+        <span class="divider">•</span>
+        <a href="https://mind.dubltap.io" target="_blank">🧠 Mind Expander — FREE</a>
+        <span class="divider">•</span>
+        <a href="https://maven.dubltap.io" target="_blank">📊 Market Maven</a>
+        <span class="divider">•</span>
+        <a href="https://cliff.dubltap.io" target="_blank">📚 CLIFF NOTEZ</a>
+        <span class="divider">•</span>
+        <a href="https://aesthetic.dubltap.io" target="_blank">🎨 Aesthetic AI</a>
+        <span class="divider">•</span>
+        <a href="https://vibe.dubltap.io" target="_blank">🎵 VibeCurate</a>
+        <span class="divider">•</span>
+        <a href="#bundle" onclick="openBundleFlow()" style="color:#E76F51;font-weight:700;">🔥 FULL BUNDLE — $59/mo or $499/yr</a>
+        <span class="divider">•</span>
+        <!-- Duplicate for seamless loop -->
+        <a href="https://fork.dubltap.io" target="_blank">🍴 Bad Mutha Forker</a>
+        <span class="divider">•</span>
+        <a href="https://hustle.dubltap.io" target="_blank">🚀 Side Hustle Copilot</a>
+        <span class="divider">•</span>
+        <a href="https://mind.dubltap.io" target="_blank">🧠 Mind Expander — FREE</a>
+        <span class="divider">•</span>
+        <a href="https://maven.dubltap.io" target="_blank">📊 Market Maven</a>
+        <span class="divider">•</span>
+        <a href="https://cliff.dubltap.io" target="_blank">📚 CLIFF NOTEZ</a>
+        <span class="divider">•</span>
+        <a href="https://aesthetic.dubltap.io" target="_blank">🎨 Aesthetic AI</a>
+        <span class="divider">•</span>
+        <a href="https://vibe.dubltap.io" target="_blank">🎵 VibeCurate</a>
+        <span class="divider">•</span>
+        <a href="#bundle" onclick="openBundleFlow()" style="color:#E76F51;font-weight:700;">🔥 FULL BUNDLE — $59/mo or $499/yr</a>
+      </div>
+      <button class="scroll-cta-dismiss" onclick="dismissScrollCta()" title="Dismiss">✕</button>
+    </div>
+  </div>
+
+  <!-- Bundle Pricing Modal -->
+  <div class="bundle-modal-overlay" id="bundleModal">
+    <div class="bundle-modal">
+      <button class="bundle-modal-close" onclick="closeBundleModal()">✕</button>
+      <div class="bundle-modal-header">
+        <h3>🚀 The Complete Bundle</h3>
+        <p>All 9 AI apps. One subscription. Unlimited everything.</p>
+      </div>
+      <div class="bundle-modal-apps">
+        <div class="bundle-modal-app"><div class="app-emoji">🍴</div><div class="app-details"><strong>Bad Mutha Forker</strong><span>Recipe transformation & share cards</span></div><div class="app-value">$9/mo</div></div>
+        <div class="bundle-modal-app"><div class="app-emoji">🚀</div><div class="app-details"><strong>Side Hustle Copilot</strong><span>Income opportunity matching</span></div><div class="app-value">$12/mo</div></div>
+        <div class="bundle-modal-app"><div class="app-emoji">🧠</div><div class="app-details"><strong>Mind Expander</strong><span>Hermetic cognitive enhancement</span></div><div class="app-value">FREE</div></div>
+        <div class="bundle-modal-app"><div class="app-emoji">🎉</div><div class="app-details"><strong>WuzUP</strong><span>Entertainment & nightlife planning</span></div><div class="app-value">$9/mo</div></div>
+        <div class="bundle-modal-app"><div class="app-emoji">📊</div><div class="app-details"><strong>Market Maven</strong><span>Competitive intelligence</span></div><div class="app-value">$19/mo</div></div>
+        <div class="bundle-modal-app"><div class="app-emoji">📚</div><div class="app-details"><strong>CLIFF NOTEZ</strong><span>Doctorate-level document analysis</span></div><div class="app-value">$19/mo</div></div>
+        <div class="bundle-modal-app"><div class="app-emoji">💼</div><div class="app-details"><strong>Pro Business Development</strong><span>AI-powered sales strategy</span></div><div class="app-value">$24/mo</div></div>
+        <div class="bundle-modal-app"><div class="app-emoji">🎨</div><div class="app-details"><strong>Aesthetic AI</strong><span>Visual design & brand identity</span></div><div class="app-value">$12/mo</div></div>
+        <div class="bundle-modal-app"><div class="app-emoji">🎵</div><div class="app-details"><strong>VibeCurate</strong><span>AI playlist curation</span></div><div class="app-value">$9/mo</div></div>
+      </div>
+      <div class="bundle-modal-pricing">
+        <div class="price-options">
+          <div class="price-card" id="monthlyCard" onclick="selectBundlePlan('monthly')">
+            <div class="label">Monthly</div>
+            <div class="amount">$59</div>
+            <div class="period">/month</div>
+          </div>
+          <div class="price-card recommended" id="annualCard" onclick="selectBundlePlan('annual')">
+            <div class="label">Annual</div>
+            <div class="amount">$499</div>
+            <div class="period">/year ($41.58/mo)</div>
+            <div class="savings-tag">SAVE 45%</div>
+          </div>
+        </div>
+        <button class="bundle-checkout-btn" id="bundleCheckoutBtn" onclick="bundleCheckout()">Subscribe Now →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification"></div>
 </body>
 </html>
     
