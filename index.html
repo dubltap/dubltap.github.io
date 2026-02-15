@@ -248,16 +248,40 @@
     }
     
     .hero-mascot {
+      position: fixed;
+      width: 120px;
+      height: auto;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%) rotate(-5deg);
+      z-index: 9999;
+      opacity: 0.92;
+      filter: drop-shadow(0 8px 24px rgba(244, 162, 97, 0.35));
+      animation: mascotFloat 5s ease-in-out infinite;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      cursor: pointer;
+      pointer-events: auto;
+    }
+    
+    .hero-mascot:hover {
+      transform: translateY(-50%) rotate(0deg) scale(1.08);
+      filter: drop-shadow(0 12px 32px rgba(244, 162, 97, 0.5));
+    }
+    
+    .hero-mascot.in-hero {
       position: absolute;
       width: 380px;
-      height: auto;
       right: -180px;
       top: -220px;
       z-index: -1;
       opacity: 0.9;
-      filter: drop-shadow(0 12px 40px rgba(244, 162, 97, 0.3));
-      animation: mascotFloat 5s ease-in-out infinite;
       transform: rotate(-5deg);
+      filter: drop-shadow(0 12px 40px rgba(244, 162, 97, 0.3));
+    }
+    
+    .hero-mascot.in-hero:hover {
+      transform: rotate(-3deg) scale(1.02);
+      filter: drop-shadow(0 12px 40px rgba(244, 162, 97, 0.3));
     }
     
     @keyframes mascotFloat {
@@ -807,6 +831,12 @@
       }
       
       .hero-mascot {
+        width: 80px;
+        right: 10px;
+        opacity: 0.85;
+      }
+      
+      .hero-mascot.in-hero {
         width: 140px;
         right: -40px;
         top: -80px;
@@ -1471,8 +1501,8 @@
     function bundleCheckout() {
       // Redirect to Stripe checkout via backend
       const priceId = selectedBundlePlan === 'annual' 
-        ? 'price_bundle_annual'  // Replace with actual Stripe price ID
-        : 'price_bundle_monthly'; // Replace with actual Stripe price ID
+        ? 'price_1T1AmqBkYqg7J4R7SjrQlFtJ'  // Annual Bundle Stripe price ID
+        : 'price_1T1AiRBkYqg7J4R7994ehOsB'; // Monthly Bundle Stripe price ID
       
       window.location.href = 'https://api.dubltap.io/create-checkout?price=' + priceId;
     }
@@ -1495,6 +1525,30 @@
         openBundleFlow();
       });
     });
+
+
+    // ═══ MASCOT SCROLL TRACKING ═══
+    (function() {
+      const mascot = document.querySelector('.hero-mascot');
+      const heroSection = document.querySelector('.hero');
+      if (!mascot || !heroSection) return;
+      
+      mascot.classList.add('in-hero');
+      
+      function handleMascotScroll() {
+        const heroRect = heroSection.getBoundingClientRect();
+        const heroBottom = heroRect.bottom;
+        
+        if (heroBottom < 0) {
+          mascot.classList.remove('in-hero');
+        } else {
+          mascot.classList.add('in-hero');
+        }
+      }
+      
+      window.addEventListener('scroll', handleMascotScroll, { passive: true });
+      handleMascotScroll();
+    })();
   </script>
 
   <!-- Scrolling CTA Bar -->
