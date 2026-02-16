@@ -7,7 +7,7 @@
   <meta name="description" content="A portfolio of viral AI applications designed to help you generate income, build your brand, and work smarter. From The Convergence Architect.">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="dubltap.io | AI That Actually Does Stuff">
+  <meta property="og:title" conthhent="dubltap.io | AI That Actually Does Stuff">
   <meta property="og:description" content="Viral AI applications for income generation, personal branding, and business growth.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dubltap.io">
@@ -1452,21 +1452,21 @@
     const scrollCtaBar = document.getElementById('scrollCtaBar');
 
     if (scrollCtaDismissed) {
-      scrollCtaBar.classList.add('hidden');
+      scrollCtaBar && scrollCtaBar.classList.add('hidden');
     }
 
     // Show after scrolling past hero
     window.addEventListener('scroll', () => {
       if (!scrollCtaDismissed && window.scrollY > 400) {
-        scrollCtaBar.classList.remove('hidden');
+        scrollCtaBar && scrollCtaBar.classList.remove('hidden');
       }
     });
 
     // Start hidden
-    scrollCtaBar.classList.add('hidden');
+    scrollCtaBar && scrollCtaBar.classList.add('hidden');
 
     function dismissScrollCta() {
-      scrollCtaBar.classList.add('hidden');
+      scrollCtaBar && scrollCtaBar.classList.add('hidden');
       scrollCtaDismissed = true;
       sessionStorage.setItem('scrollCtaDismissed', 'true');
     }
@@ -1528,7 +1528,7 @@
 
 
     // ═══ MASCOT SCROLL TRACKING ═══
-    window.addEventListener('load', function() {
+    (function initMascotScroll() {
       const mascot = document.querySelector('.hero-mascot');
       const heroSection = document.querySelector('.hero');
       if (!mascot || !heroSection) return;
