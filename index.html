@@ -1508,7 +1508,7 @@
     }
 
     // Close modal on overlay click
-    document.getElementById('bundleModal').addEventListener('click', function(e) {
+    document.getElementById('bundleModal')?.addEventListener('click', function(e) {
       if (e.target === this) closeBundleModal();
     });
 
