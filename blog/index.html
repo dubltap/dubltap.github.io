@@ -200,6 +200,11 @@
         pointer-events: none;
         animation: heroMascotFloat 6s ease-in-out infinite;
     }
+
+        .hero-text-layer {
+            position: relative;
+            z-index: 1;
+        }
     @keyframes heroMascotFloat {
         0%, 100% { transform: translateY(0px) rotate(-2deg); }
         50% { transform: translateY(-18px) rotate(0deg); }
