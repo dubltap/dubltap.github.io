@@ -576,59 +576,145 @@
         }
 
         /* Book Card */
+        /* ===== BOOK CARD - ENHANCED ===== */
         .book-card {
-            background: linear-gradient(145deg, #1a0f08 0%, #2c1810 50%, #1a0f0a 100%);
+            background: linear-gradient(160deg, #0f0a05 0%, #1e0e06 40%, #2a1200 70%, #1a0a04 100%);
             text-align: center;
             overflow: hidden;
+            padding: 0 !important;
+            border: none !important;
         }
         .book-card::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse at 50% 0%, rgba(244,162,97,0.08) 0%, transparent 60%);
+            background: radial-gradient(ellipse at 50% 30%, rgba(244,162,97,0.12) 0%, transparent 65%),
+                        radial-gradient(ellipse at 80% 80%, rgba(212,120,40,0.06) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .book-card-inner {
+            position: relative;
+            z-index: 1;
+            padding: 1.8rem 1.5rem 1.5rem;
         }
         .book-card .sidebar-title {
             color: var(--sunset-peach);
             font-style: italic;
+            font-size: 0.75rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
         }
-        .book-card .sidebar-title-accent { background: var(--sunset-coral); margin: 0.6rem auto 0; }
-        .book-icon { font-size: 2.5rem; margin-bottom: 0.8rem; display: block; }
+        .book-card .sidebar-title-accent { background: var(--sunset-coral); margin: 0.5rem auto 1.2rem; }
+        .book-cover-wrap {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.2rem;
+        }
+        .book-cover-img {
+            width: 140px;
+            border-radius: 4px;
+            box-shadow: -6px 6px 20px rgba(0,0,0,0.7), 4px 0 12px rgba(244,162,97,0.2);
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .book-cover-wrap:hover .book-cover-img {
+            transform: perspective(600px) rotateY(-8deg) translateY(-4px);
+            box-shadow: -12px 12px 30px rgba(0,0,0,0.8), 8px 0 20px rgba(244,162,97,0.3);
+        }
         .book-title-text {
             font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 1.4rem;
+            font-size: 1.25rem;
             font-weight: 700;
             font-style: italic;
             color: var(--sunset-gold);
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.15rem;
+            line-height: 1.3;
         }
-        .book-author {
-            font-size: 0.8rem;
-            color: var(--sand-medium);
+        .book-subtitle-text {
+            font-size: 0.78rem;
+            color: rgba(244,162,97,0.6);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
             margin-bottom: 1rem;
         }
         .book-desc {
-            font-size: 0.85rem;
-            color: var(--sand-warm);
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.72);
+            line-height: 1.65;
             margin-bottom: 1.2rem;
-            line-height: 1.6;
-            position: relative;
+            font-style: italic;
         }
-        .book-btn {
-            display: inline-block;
-            padding: 0.7rem 2rem;
-            background: transparent;
-            color: var(--sunset-gold);
-            text-decoration: none;
-            border-radius: 100px;
-            font-weight: 600;
+        .book-author-row {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255,255,255,0.04);
+            border-radius: 12px;
+            padding: 0.65rem 0.9rem;
+            margin-bottom: 1.3rem;
+            text-align: left;
+            border: 1px solid rgba(244,162,97,0.12);
+        }
+        .book-author-photo {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(244,162,97,0.4);
+            flex-shrink: 0;
+        }
+        .book-author-info { flex: 1; min-width: 0; }
+        .book-author-name {
             font-size: 0.82rem;
-            border: 1px solid var(--sunset-gold);
-            transition: all 0.3s;
-            letter-spacing: 0.03em;
+            font-weight: 700;
+            color: var(--sunset-gold);
+            display: block;
+        }
+        .book-author-title {
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.45);
+            display: block;
+            margin-top: 0.05rem;
+        }
+        .book-author-link {
+            font-size: 0.68rem;
+            color: var(--sunset-peach);
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+            display: block;
+            margin-top: 0.1rem;
+        }
+        .book-author-link:hover { opacity: 1; text-decoration: underline; }
+        .book-btn {
+            display: block;
+            width: 100%;
+            padding: 0.85rem 1.5rem;
+            background: linear-gradient(135deg, var(--sunset-gold) 0%, #d4850a 100%);
+            border: none;
+            color: #1a0f08;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: 0.04em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(244,162,97,0.3);
+            cursor: pointer;
         }
         .book-btn:hover {
-            background: var(--sunset-gold);
-            color: var(--ocean-deep);
+            background: linear-gradient(135deg, #f5b05a 0%, #e09520 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(244,162,97,0.45);
+            color: #0f0a05;
+        }
+        .book-kdp-note {
+            font-size: 0.68rem;
+            color: rgba(255,255,255,0.3);
+            margin-top: 0.6rem;
+            letter-spacing: 0.02em;
         }
 
         /* About Card */
@@ -1125,12 +1211,34 @@
             </div>
 
             <div class="sidebar-card book-card reveal">
-                <h3 class="sidebar-title">Go Deeper<span class="sidebar-title-accent"></span></h3>
-                <span class="book-icon">&#128214;</span>
-                <div class="book-title-text">Mind Beyond Mind: IAMAUM</div>
-                <div class="book-author">by Christopher Grove</div>
-                <p class="book-desc">The Hermetic principles and metacognitive frameworks that became the philosophical foundation for dubltap.io.</p>
-                <a href="https://www.amazon.com/s?k=Mind+Beyond+Mind+IAMAUM+Christopher+Grove" target="_blank" rel="noopener" class="book-btn">Explore the Book &#8594;</a>
+                <div class="book-card-inner">
+                    <h3 class="sidebar-title">Go Deeper<span class="sidebar-title-accent"></span></h3>
+
+                    <a href="https://a.co/d/0hz74nqC" target="_blank" rel="noopener" class="book-cover-wrap" aria-label="Get Mind Beyond Mind: IAMAUM on Amazon">
+                        <img src="/book-cover-mind-beyond-mind.png" alt="Mind Beyond Mind: IAMAUM book cover" class="book-cover-img" loading="lazy">
+                    </a>
+
+                    <div class="book-title-text">Mind Beyond Mind: IAMAUM</div>
+                    <div class="book-subtitle-text">by Christopher Grove</div>
+
+                    <p class="book-desc">The Hermetic principles and metacognitive frameworks that became the philosophical foundation for dubltap.io. A map for the mind that wants to go further.</p>
+
+                    <div class="book-author-row">
+                        <a href="https://www.amazon.com/stores/author/B0F2ZSL4Z7/about" target="_blank" rel="noopener" style="flex-shrink:0;">
+                            <img src="/author-christopher-grove.png" alt="Christopher Grove" class="book-author-photo">
+                        </a>
+                        <div class="book-author-info">
+                            <span class="book-author-name">Christopher Grove</span>
+                            <span class="book-author-title">The Convergence Architect</span>
+                            <a href="https://www.amazon.com/stores/author/B0F2ZSL4Z7/about" target="_blank" rel="noopener" class="book-author-link">View author page &#8594;</a>
+                        </div>
+                    </div>
+
+                    <a href="https://a.co/d/0hz74nqC" target="_blank" rel="noopener" class="book-btn">
+                        Get the Book on Amazon &#8594;
+                    </a>
+                    <p class="book-kdp-note">Available in Kindle &amp; Paperback</p>
+                </div>
             </div>
 
             <div class="sidebar-card cat-card reveal">
