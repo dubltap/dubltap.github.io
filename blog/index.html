@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Convergence Threshold | dubltap.io Blog — Come On In and Get Happy</title>
-    <meta name="description" content="You're not broken. You're just not armed yet. Blog updates from The Convergence Architect — AI tools, cognitive enhancement, Hermetic wisdom, and the golden ratio. Home of Mind Beyond Mind: IAMAUM.">
+    <title>The Convergence Threshold | dubltap.io Blog â Come On In and Get Happy</title>
+    <meta name="description" content="You're not broken. You're just not armed yet. Blog updates from The Convergence Architect â AI tools, cognitive enhancement, Hermetic wisdom, and the golden ratio. Home of Mind Beyond Mind: IAMAUM.">
     <meta name="keywords" content="convergence architect, AI tools, cognitive enhancement, Hermetic principles, golden ratio, side hustle AI, competitive intelligence, Mind Beyond Mind IAMAUM, dubltap.io, personal development AI">
     <meta property="og:title" content="The Convergence Threshold | dubltap.io">
     <meta property="og:description" content="You're not broken. You're just not armed yet. Nine AI tools. One frequency. Your frequency. Come on in and get happy.">
@@ -26,7 +26,7 @@
             "@type": "Person",
             "name": "Christopher Grove",
             "jobTitle": "The Convergence Architect",
-            "description": "40+ years building systems — from recording studios to factory floors to production AI. Author of Mind Beyond Mind: IAMAUM."
+            "description": "40+ years building systems â from recording studios to factory floors to production AI. Author of Mind Beyond Mind: IAMAUM."
         },
         "publisher": {
             "@type": "Organization",
@@ -673,74 +673,125 @@
             border-radius: 100px;
         }
 
-        /* ===== APP RIBBON ===== */
-        .app-ribbon {
+        /* ===== FIXED SCROLL CTA BAR (APP RIBBON) ===== */
+        .scroll-cta-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 900;
             background: var(--ocean-deep);
-            padding: 3rem 0;
+            color: white;
             overflow: hidden;
+            transition: transform 0.4s ease;
+            border-top: 2px solid var(--sunset-gold);
+        }
+        .scroll-cta-bar.hidden { transform: translateY(100%); }
+        .scroll-cta-inner {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
             position: relative;
         }
-        .app-ribbon::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(ellipse at 50% 0%, rgba(42, 157, 143, 0.08) 0%, transparent 50%);
-        }
-        .ribbon-title {
-            text-align: center;
-            font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 0.9rem;
-            font-style: italic;
-            letter-spacing: 0.1em;
-            color: var(--ocean-foam);
-            margin-bottom: 1.5rem;
-            opacity: 0.5;
-        }
-        .ribbon-track {
+        .scroll-cta-text {
+            white-space: nowrap;
+            animation: scrollCTA 35s linear infinite;
             display: flex;
-            gap: 1rem;
-            animation: scroll-ribbon 45s linear infinite;
-            width: max-content;
+            gap: 2rem;
+            font-size: 0.82rem;
+            font-weight: 500;
+            padding-right: 2.5rem;
         }
-        .ribbon-track:hover { animation-play-state: paused; }
-        @keyframes scroll-ribbon {
+        .scroll-cta-text:hover { animation-play-state: paused; }
+        .scroll-cta-text a {
+            color: var(--sunset-gold);
+            text-decoration: none;
+            white-space: nowrap;
+            transition: color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .scroll-cta-text a:hover { color: var(--sunset-peach); }
+        .scroll-cta-text .divider { color: var(--ocean-foam); opacity: 0.4; }
+        .scroll-cta-dismiss {
+            position: absolute;
+            right: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.15);
+            border: none;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            transition: background 0.2s;
+            flex-shrink: 0;
+        }
+        .scroll-cta-dismiss:hover { background: rgba(255,255,255,0.3); }
+        @keyframes scrollCTA {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
         }
-        .app-chip {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            padding: 0.7rem 1.4rem;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(168, 218, 220, 0.1);
-            border-radius: 100px;
-            text-decoration: none;
-            white-space: nowrap;
-            transition: all 0.4s;
-            flex-shrink: 0;
+        /* ===== HERO MASCOT (large, in hero section) ===== */
+        .hero-mascot-large {
+            position: absolute;
+            width: 420px;
+            height: auto;
+            right: -60px;
+            top: 50%;
+            transform: translateY(-55%) rotate(-5deg);
+            z-index: 0;
+            opacity: 0.88;
+            filter: drop-shadow(0 12px 40px rgba(244, 162, 97, 0.3));
+            animation: mascotHeroFloat 6s ease-in-out infinite;
+            pointer-events: none;
         }
-        .app-chip:hover {
-            background: rgba(244, 162, 97, 0.1);
-            border-color: rgba(244, 162, 97, 0.3);
-            transform: translateY(-2px);
+        @keyframes mascotHeroFloat {
+            0%, 100% { transform: translateY(-55%) rotate(-5deg); }
+            50% { transform: translateY(-58%) rotate(-3deg); }
         }
-        .app-emoji { font-size: 1.1rem; }
-        .app-chip-name {
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 600;
-            font-size: 0.82rem;
-            color: white;
+        /* ===== SCROLL MASCOT (fixed, tracks user scroll) ===== */
+        .scroll-mascot {
+            position: fixed;
+            right: 20px;
+            bottom: 60px;
+            width: 120px;
+            height: auto;
+            z-index: 899;
+            opacity: 0;
+            filter: drop-shadow(0 8px 24px rgba(244, 162, 97, 0.35));
+            animation: mascotScrollFloat 5s ease-in-out infinite;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            cursor: pointer;
+            pointer-events: auto;
+            transform: rotate(-5deg) translateY(20px);
         }
-        .app-chip-desc {
-            font-size: 0.7rem;
-            color: var(--ocean-foam);
-            opacity: 0.5;
+        .scroll-mascot.visible {
+            opacity: 0.92;
+            transform: rotate(-5deg) translateY(0);
         }
-        .app-chip-price {
-            font-size: 0.7rem;
-            color: var(--sunset-gold);
-            font-weight: 600;
+        .scroll-mascot:hover {
+            transform: rotate(0deg) scale(1.1) translateY(-5px) !important;
+            filter: drop-shadow(0 12px 32px rgba(244, 162, 97, 0.5));
+            opacity: 1 !important;
+        }
+        @keyframes mascotScrollFloat {
+            0%, 100% { transform: rotate(-5deg) translateY(0); }
+            50% { transform: rotate(-3deg) translateY(-10px); }
+        }
+        @media (max-width: 960px) {
+            .hero-mascot-large { width: 260px; right: -30px; opacity: 0.7; }
+        }
+        @media (max-width: 768px) {
+            .hero-mascot-large { width: 160px; right: -15px; opacity: 0.55; top: auto; bottom: 0; transform: rotate(-5deg); }
+            .scroll-mascot { width: 80px; right: 10px; bottom: 55px; }
         }
 
         /* ===== FOOTER ===== */
@@ -910,6 +961,7 @@
         <div class="hero-orb hero-orb-2"></div>
         <div class="hero-orb hero-orb-3"></div>
 
+        <img src="/blog-mascot.png" alt="dubltap mascot - the convergence architect" class="hero-mascot-large" id="heroMascot">
         <div class="hero-eyebrow reveal">The Convergence Threshold</div>
         <h1 class="hero-title reveal reveal-delay-1">You're Not Broken.<br><em>You're Just Not Armed Yet.</em></h1>
         <p class="hero-subtitle reveal reveal-delay-2">Nine AI tools. One frequency. Your frequency. Built for the hungry, the optimists, the futurists.</p>
@@ -1048,7 +1100,7 @@
 
             <div class="sidebar-card book-card reveal">
                 <h3 class="sidebar-title">Go Deeper<span class="sidebar-title-accent"></span></h3>
-                <span class="book-icon">📖</span>
+                <span class="book-icon">ð</span>
                 <div class="book-title-text">Mind Beyond Mind: IAMAUM</div>
                 <div class="book-author">by Christopher Grove</div>
                 <p class="book-desc">The Hermetic principles and metacognitive frameworks that became the philosophical foundation for dubltap.io.</p>
@@ -1075,11 +1127,52 @@
         </aside>
     </main>
 
-    <!-- APP RIBBON -->
-    <section class="app-ribbon">
-        <div class="ribbon-title">The Arsenal &mdash; Nine AI Tools Built for the Hungry</div>
-        <div class="ribbon-track" id="ribbonTrack"></div>
-    </section>
+    <!-- SCROLL CTA BAR (Fixed, tracks scroll) -->
+    <div class="scroll-cta-bar" id="scrollCtaBar">
+        <div class="scroll-cta-inner">
+            <div class="scroll-cta-text" id="scrollCtaText">
+                <a href="https://vibe.dubltap.io" target="_blank" rel="noopener">&#127925; VibeCurate</a>
+                <span class="divider">&#8226;</span>
+                <a href="https://fork.dubltap.io" target="_blank" rel="noopener">&#127860; Bad Mutha Forker</a>
+                <span class="divider">&#8226;</span>
+                <a href="https://mind.dubltap.io" target="_blank" rel="noopener">&#129504; Mind Expander &#8212; FREE</a>
+                <span class="divider">&#8226;</span>
+                <a href="https://cliff.dubltap.io" target="_blank" rel="noopener">&#128203; CLIFF NOTEZ</a>
+                <span class="divider">&#8226;</span>
+                <a href="https://maven.dubltap.io" target="_blank" rel="noopener">&#128202; Market Maven</a>
+                <span class="divider">&#8226;</span>
+                <a href="https://hustle.dubltap.io" target="_blank" rel="noopener">&#128176; Side Hustle Copilot</a>
+                <span class="divider">&#8226;</span>
+                <a href="https://bizdev.dubltap.io" target="_blank" rel="noopener">&#127919; Pro BizDev</a>
+                <span class="divider">&#8226;</span>
+                <a href="https://aesthetic.dubltap.io" target="_blank" rel="noopener">&#127912; Aesthetic AI</a>
+                <span class="divider">&#8226;</span>
+                <a href="https://dubltap.io/#tools" target="_blank" rel="noopener">&#9889; COMPLETE BUNDLE</a>
+                <span class="divider">&#8226;</span>
+                <a href="https://vibe.dubltap.io" target="_blank" rel="noopener">&#127925; VibeCurate</a>
+                <span class="divider">&#8226;</span>
+                <a href="https://fork.dubltap.io" target="_blank" rel="noopener">&#127860; Bad Mutha Forker</a>
+                <span class="divider">&#8226;</span>
+                <a href="https://mind.dubltap.io" target="_blank" rel="noopener">&#129504; Mind Expander &#8212; FREE</a>
+                <span class="divider">&#8226;</span>
+                <a href="https://cliff.dubltap.io" target="_blank" rel="noopener">&#128203; CLIFF NOTEZ</a>
+                <span class="divider">&#8226;</span>
+                <a href="https://maven.dubltap.io" target="_blank" rel="noopener">&#128202; Market Maven</a>
+                <span class="divider">&#8226;</span>
+                <a href="https://hustle.dubltap.io" target="_blank" rel="noopener">&#128176; Side Hustle Copilot</a>
+                <span class="divider">&#8226;</span>
+                <a href="https://bizdev.dubltap.io" target="_blank" rel="noopener">&#127919; Pro BizDev</a>
+                <span class="divider">&#8226;</span>
+                <a href="https://aesthetic.dubltap.io" target="_blank" rel="noopener">&#127912; Aesthetic AI</a>
+                <span class="divider">&#8226;</span>
+                <a href="https://dubltap.io/#tools" target="_blank" rel="noopener">&#9889; COMPLETE BUNDLE</a>
+            </div>
+            <button class="scroll-cta-dismiss" onclick="dismissScrollCta()" title="Dismiss">&#10005;</button>
+        </div>
+    </div>
+
+    <!-- SCROLL MASCOT (fixed, tracks user scroll) -->
+    <img src="/dubltap-mascot.png" alt="dubltap mascot" class="scroll-mascot" id="scrollMascot" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">
 
     <!-- FOOTER -->
     <footer class="site-footer">
@@ -1133,30 +1226,26 @@
         }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
         reveals.forEach(el => observer.observe(el));
 
-        // ===== APP RIBBON =====
-        const apps = [
-            { name: 'VibeCurate', desc: 'Energy & Vibration', price: '$9/mo', emoji: '🎵', url: 'https://vibe.dubltap.io' },
-            { name: 'Bad Mutha Forker', desc: 'Recipe Transformation', price: '$9/mo', emoji: '🍴', url: 'https://fork.dubltap.io' },
-            { name: 'Mind Expander', desc: 'Cognitive Enhancement', price: 'FREE', emoji: '🧠', url: 'https://mind.dubltap.io' },
-            { name: 'CLIFF NOTEZ', desc: 'Document Analysis', price: '$19/mo', emoji: '📋', url: 'https://cliff.dubltap.io' },
-            { name: 'Market Maven', desc: 'Competitive Intelligence', price: '$19/mo', emoji: '📊', url: 'https://maven.dubltap.io' },
-            { name: 'Side Hustle Copilot', desc: 'Income Matching', price: '$12/mo', emoji: '💰', url: 'https://hustle.dubltap.io' },
-            { name: 'Pro BizDev', desc: 'Sales Strategy', price: '$24/mo', emoji: '🎯', url: 'https://bizdev.dubltap.io' },
-            { name: 'Aesthetic AI', desc: 'Golden Ratio Design', price: '$12/mo', emoji: '🎨', url: 'https://aesthetic.dubltap.io' },
-            { name: 'COMPLETE Bundle', desc: 'All 9 Tools', price: '$59/mo', emoji: '⚡', url: 'https://dubltap.io' },
-        ];
-        const track = document.getElementById('ribbonTrack');
-        const allApps = [...apps, ...apps, ...apps];
-        track.innerHTML = allApps.map(a => `
-            <a href="${a.url}" class="app-chip" target="_blank" rel="noopener">
-                <span class="app-emoji">${a.emoji}</span>
-                <div>
-                    <div class="app-chip-name">${a.name}</div>
-                    <div class="app-chip-desc">${a.desc}</div>
-                </div>
-                <span class="app-chip-price">${a.price}</span>
-            </a>
-        `).join('');
+        // ===== SCROLL CTA BAR =====
+        let scrollCtaDismissed = false;
+        function dismissScrollCta() {
+            document.getElementById('scrollCtaBar').classList.add('hidden');
+            scrollCtaDismissed = true;
+        }
+
+        // ===== SCROLL MASCOT =====
+        const scrollMascotEl = document.getElementById('scrollMascot');
+        let mascotVisible = false;
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 400 && !mascotVisible) {
+                mascotVisible = true;
+                scrollMascotEl.classList.add('visible');
+            } else if (window.scrollY <= 400 && mascotVisible) {
+                mascotVisible = false;
+                scrollMascotEl.classList.remove('visible');
+            }
+        });
 
         // ===== EMAIL =====
         let emailCaptured = localStorage.getItem('dubltap_email_captured');
@@ -1171,7 +1260,7 @@
             emailCaptured = true;
             if (source === 'modal') closeModal();
             const btn = source === 'modal' ? document.querySelector('.modal-submit') : document.querySelector('.email-btn');
-            btn.textContent = '✓ You\'re In';
+            btn.textContent = 'â You\'re In';
             btn.style.background = '#2A9D8F';
             setTimeout(() => { btn.textContent = source === 'modal' ? 'Come On In and Get Happy' : 'Come On In'; btn.style.background = ''; }, 3000);
         }
