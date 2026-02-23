@@ -1470,8 +1470,16 @@
             }
         }
         function openPost(slug) {
-            if (!emailCaptured) { document.getElementById('emailModal').classList.add('active'); return; }
-            alert('Full blog posts coming soon! You\'ll be first to read them.');
+            const urls = {
+                'convergence-threshold': '/blog/convergence-threshold.html',
+                'interview-001': '/blog/interview-001.html',
+                '9-ai-apps': '/blog/9-ai-apps.html',
+                'side-hustles': '/blog/side-hustles.html',
+                'manifesto': '/blog/manifesto.html'
+            };
+            if (urls[slug]) {
+                window.location.href = urls[slug];
+            }
         }
 
         function closeModal() { document.getElementById('emailModal').classList.remove('active'); }
