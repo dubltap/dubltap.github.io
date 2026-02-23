@@ -1,266 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Architecture of Hunger — Blog Update 002 | dubltap.io</title>
-  <meta name="description" content="Every app mirrors an initiatory ladder — emotion to cognition to empowerment. That's not conscious design. That's consciousness designing through you. The Architecture of Hunger explained.">
-  <meta name="keywords" content="AI personal development, cognitive enhancement AI, architecture of hunger, dubltap manifesto, AI tools for growth, mind expansion AI, convergence architect, hermetic AI, personal AI development 2026">
-  <meta property="og:title" content="The Architecture of Hunger — Blog Update 002">
-  <meta property="og:description" content="Every app mirrors an initiatory ladder — emotion to cognition to empowerment. That's not conscious design. That's consciousness designing through you.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://dubltap.io/blog/manifesto">
-  <meta property="og:image" content="https://dubltap.io/blog-mascot.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://dubltap.io/blog/manifesto">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"The Architecture of Hunger — Blog Update 002","description":"Every app mirrors an initiatory ladder — emotion to cognition to empowerment. That's not conscious design. That's consciousness designing through you.","author":{"@type":"Person","name":"Christopher Grove","jobTitle":"The Convergence Architect","url":"https://dubltap.io"},"publisher":{"@type":"Organization","name":"dubltap.io","url":"https://dubltap.io"},"datePublished":"2026-02-23","mainEntityOfPage":"https://dubltap.io/blog/manifesto","keywords":["AI personal development","cognitive enhancement AI","architecture of hunger","mind expansion","convergence"]}</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{--gold:#F4A261;--coral:#E76F51;--teal:#2A9D8F;--deep:#264653;--foam:#A8DADC;--sand:#F3EBE1;--medium:#C4B7A6;--dark:#4A4238;--cream:#FFFAF5;--ink:#1C1917}
-    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
-    body{font-family:'DM Sans',Georgia,serif;background:var(--cream);color:var(--dark);line-height:1.7;overflow-x:hidden}
-    .site-nav{position:fixed;top:0;width:100%;z-index:1000;padding:1.2rem 2rem;transition:all .4s ease}
-    .site-nav.scrolled{background:rgba(255,250,245,.92);backdrop-filter:blur(24px);box-shadow:0 1px 0 rgba(196,183,166,.3);padding:.8rem 2rem}
-    .nav-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
-    .logo{font-family:'Outfit',sans-serif;font-weight:800;font-size:1.5rem;color:var(--deep);text-decoration:none;letter-spacing:-.03em}
-    .logo span{color:var(--gold)}
-    .nav-links{display:flex;gap:2rem;align-items:center}
-    .nav-links a{font-size:.85rem;font-weight:500;color:var(--dark);text-decoration:none;transition:color .3s}
-    .nav-links a:hover{color:var(--teal)}
-    .nav-cta{background:var(--deep)!important;color:var(--cream)!important;padding:.5rem 1.4rem;border-radius:100px;font-weight:600!important}
-    .back-link{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;color:rgba(255,255,255,.5);text-decoration:none;margin-bottom:1.5rem;transition:color .3s}
-    .back-link:hover{color:var(--gold)}
-    .article-hero{padding:9rem 2rem 5rem;background:radial-gradient(ellipse at 30% 50%,rgba(42,157,143,.15) 0%,transparent 60%),linear-gradient(160deg,#0d1a20 0%,#111f25 40%,#0a1a14 100%);border-bottom:1px solid rgba(168,218,220,.1);position:relative;overflow:hidden}
-    .article-hero::before{content:'1:1.618';position:absolute;right:-2rem;top:50%;transform:translateY(-50%);font-family:'Outfit',sans-serif;font-size:12rem;font-weight:800;color:rgba(244,162,97,.04);line-height:1;pointer-events:none}
-    .article-hero-inner{max-width:780px;margin:0 auto;position:relative;z-index:1}
-    .article-category{font-family:'Outfit',sans-serif;font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.2em;color:var(--gold);margin-bottom:1.2rem;opacity:.8}
-    .article-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:600;color:white;line-height:1.05;margin-bottom:1.2rem;letter-spacing:-.02em}
-    .article-title em{font-style:italic;color:var(--coral)}
-    .article-subtitle{font-size:1.15rem;color:rgba(168,218,220,.75);line-height:1.75;margin-bottom:2.5rem;max-width:600px}
-    .article-meta{display:flex;align-items:center;gap:1.2rem;font-size:.82rem;color:rgba(168,218,220,.5)}
-    .dot{width:3px;height:3px;border-radius:50%;background:rgba(168,218,220,.5);display:inline-block}
-    .article-meta strong{color:var(--gold);font-weight:600}
-    .article-body{max-width:780px;margin:0 auto;padding:4rem 2rem 6rem}
-    .article-body h2{font-family:'Cormorant Garamond',serif;font-size:2.1rem;font-weight:600;color:var(--ink);margin:3.5rem 0 1.2rem;line-height:1.15}
-    .article-body h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--deep);margin:2.5rem 0 .8rem;font-style:italic}
-    .article-body p{font-size:1.05rem;line-height:1.9;margin-bottom:1.5rem}
-    .article-body strong{color:var(--ink);font-weight:600}
-    .article-body em{font-style:italic;color:var(--deep)}
-    .article-body a{color:var(--teal);text-decoration:underline;text-underline-offset:3px;transition:color .2s}
-    .article-body a:hover{color:var(--coral)}
-    .pull-quote{margin:3.5rem 0;padding:2.5rem 3rem;background:linear-gradient(135deg,#0d1a20 0%,#111f25 100%);border-radius:1.2rem;position:relative}
-    .pull-quote::before{content:'"';font-family:'Cormorant Garamond',serif;font-size:8rem;color:var(--gold);opacity:.15;position:absolute;top:-2rem;left:1.5rem;line-height:1}
-    .pull-quote p{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;color:white;line-height:1.55;margin:0;position:relative;z-index:1}
-    .pull-quote cite{display:block;font-family:'Outfit',sans-serif;font-size:.72rem;font-style:normal;font-weight:600;text-transform:uppercase;letter-spacing:.15em;color:var(--gold);margin-top:1rem;opacity:.7}
-    .ladder{margin:3rem 0;counter-reset:rung}
-    .rung{display:flex;gap:1.5rem;margin-bottom:2rem;padding:1.5rem;background:white;border-radius:1rem;border:1px solid rgba(168,218,220,.2);transition:all .3s;counter-increment:rung}
-    .rung:hover{border-color:rgba(244,162,97,.4);box-shadow:0 8px 30px rgba(38,70,83,.08)}
-    .rung-num{font-family:'Outfit',sans-serif;font-size:2rem;font-weight:800;color:rgba(244,162,97,.2);flex-shrink:0;line-height:1;margin-top:.2rem;min-width:2.5rem}
-    .rung-content h4{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--ink);margin-bottom:.5rem}
-    .rung-content p{font-size:.95rem;margin:0;opacity:.85;line-height:1.7}
-    .rung-app{display:inline-block;margin-top:.6rem;font-size:.78rem;font-weight:600;color:var(--teal);text-decoration:none;font-family:'Outfit',sans-serif;text-transform:uppercase;letter-spacing:.08em}
-    .ratio-block{background:var(--sand);border-radius:1.2rem;padding:2.5rem;margin:3rem 0;text-align:center}
-    .ratio-display{font-family:'Outfit',sans-serif;font-size:3.5rem;font-weight:800;color:var(--deep);letter-spacing:-.02em;margin-bottom:.5rem}
-    .ratio-display span{color:var(--gold)}
-    .ratio-subtitle{font-size:.9rem;color:var(--medium);letter-spacing:.05em;text-transform:uppercase;font-family:'Outfit',sans-serif}
-    .ratio-body{margin-top:1.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;text-align:left}
-    .ratio-item h5{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:.3rem}
-    .ratio-item p{font-size:.85rem;line-height:1.6;margin:0}
-    .cta-block{background:linear-gradient(135deg,var(--deep) 0%,#1a3040 100%);border-radius:1.2rem;padding:3rem;text-align:center;margin:4rem 0 2rem}
-    .cta-block h3{font-family:'Cormorant Garamond',serif;font-size:1.9rem;color:var(--cream);margin-bottom:.8rem;font-style:italic}
-    .cta-block p{color:var(--foam);font-size:.95rem;margin-bottom:1.5rem;opacity:.8;line-height:1.7}
-    .cta-group{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-    .cta-btn{display:inline-block;background:var(--gold);color:var(--deep);padding:.9rem 2.2rem;border-radius:100px;font-weight:700;font-size:.9rem;text-decoration:none;transition:all .3s}
-    .cta-btn:hover{background:var(--coral);color:white;transform:translateY(-2px)}
-    .cta-btn.secondary{background:transparent;color:var(--foam);border:1px solid rgba(168,218,220,.3)}
-    .cta-btn.secondary:hover{background:rgba(168,218,220,.1);color:white}
-    .ribbon{position:fixed;bottom:0;left:0;right:0;z-index:900;background:var(--deep);overflow:hidden;border-top:2px solid var(--gold)}
-    .ribbon-inner{display:flex;align-items:center;padding:.5rem 1rem;position:relative}
-    .ribbon-text{white-space:nowrap;animation:scroll 35s linear infinite;display:flex;gap:2rem;font-size:.82rem;font-weight:500}
-    .ribbon-text a{color:var(--gold);text-decoration:none;white-space:nowrap}
-    .ribbon-close{position:absolute;right:.75rem;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.15);border:none;color:white;width:24px;height:24px;border-radius:50%;cursor:pointer;font-size:12px;display:flex;align-items:center;justify-content:center;z-index:2}
-    @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-    .site-footer{background:var(--ink);color:var(--sand);padding:3rem 2rem 2rem}
-    .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.06)}
-    .footer-copy{max-width:1200px;margin:0 auto;padding-top:1.2rem;font-size:.72rem;color:rgba(196,183,166,.3);text-align:center}
-    @media(max-width:768px){.article-hero{padding:7rem 1.5rem 3.5rem}.article-body{padding:2.5rem 1.5rem 4rem}.ratio-body{grid-template-columns:1fr}.rung{flex-direction:column;gap:.8rem}.footer-inner{flex-direction:column;gap:1rem;text-align:center}.nav-links a:not(.nav-cta){display:none}.pull-quote{padding:1.8rem 1.5rem}.cta-group{flex-direction:column;align-items:center}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Architecture of Hunger | Blog Update 002 — dubltap.io</title>
+    <meta name="description" content="Every app on this platform mirrors an initiatory ladder — from emotional elevation through cognitive expansion to practical empowerment. That's not conscious design. That's consciousness designing through you.">
+    <meta property="og:title" content="The Architecture of Hunger — Blog Update 002 | dubltap.io">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://dubltap.io/blog/manifesto.html">
+    <link rel="canonical" href="https://dubltap.io/blog/manifesto.html">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"The Architecture of Hunger — Blog Update 002","datePublished":"2026-02-23","author":{"@type":"Person","name":"Christopher Grove"},"publisher":{"@type":"Organization","name":"dubltap.io"}}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="article-styles.css">
 </head>
 <body>
-<nav class="site-nav" id="siteNav">
-  <div class="nav-inner">
-    <a href="https://dubltap.io" class="logo">dubl<span>tap</span>.io</a>
-    <div class="nav-links">
-      <a href="https://dubltap.io">Home</a>
-      <a href="https://dubltap.io/blog">Blog</a>
-      <a href="https://dubltap.io/#tools">Tools</a>
-      <a href="https://dubltap.io/#tools" class="nav-cta">Explore the Arsenal</a>
-    </div>
-  </div>
-</nav>
-<div class="article-hero">
-  <div class="article-hero-inner">
-    <a href="https://dubltap.io/blog" class="back-link">&larr; Back to Blog</a>
-    <div class="article-category">Mind &amp; Method &mdash; Blog Update 002</div>
-    <h1 class="article-title">The Architecture <em>of Hunger</em></h1>
-    <p class="article-subtitle">Every app mirrors an initiatory ladder — emotion to cognition to empowerment. That's not conscious design. That's consciousness designing through you.</p>
-    <div class="article-meta">
-      <strong>Christopher Grove</strong>
-      <span class="dot"></span>
-      <span>February 23, 2026</span>
-      <span class="dot"></span>
-      <span>10 min read</span>
-    </div>
-  </div>
-</div>
-<article class="article-body">
+    <nav class="site-nav" id="siteNav"><div class="nav-inner"><a href="https://dubltap.io" class="logo">dubl<span>tap</span>.io</a><div class="nav-links"><a href="https://dubltap.io">Home</a><a href="https://dubltap.io/blog">Blog</a><a href="https://dubltap.io/#tools">Tools</a><a href="https://dubltap.io/#tools" class="nav-cta">Explore the Arsenal</a></div></div></nav>
+    <a href="https://dubltap.io"><img src="mascot.png" alt="dubltap mascot" class="hero-mascot in-hero" id="mascot"></a>
 
-  <p>I didn't plan the architecture. I discovered it after the fact — the way you discover a pattern in music you've been playing for years. You weren't thinking about it when you played it. But it was there, structuring everything, running underneath the conscious decisions like a bass line you only hear when you stop listening to the melody.</p>
+    <header class="article-hero" style="background: linear-gradient(135deg, #264653 0%, #1a3a47 50%, #0d1f26 100%);">
+        <div class="hero-content">
+            <div class="hero-category">Blog Update 002 &mdash; Mind &amp; Method</div>
+            <h1 class="hero-title">The Architecture<br><em>of Hunger.</em></h1>
+            <div class="hero-meta"><span>Christopher Grove</span><div class="hero-meta-dot"></div><span>February 23, 2026</span><div class="hero-meta-dot"></div><span>10 min read</span></div>
+        </div>
+    </header>
 
-  <p>The architecture I'm describing isn't a product roadmap or a content strategy. It's the underlying structure of why these tools exist, in this sequence, with these particular functions. It's the pattern that makes dubltap.io more than an app store. It's the map of a specific kind of human transformation — and the AI tools that correspond to each stage of it.</p>
+    <article class="article-container">
+        <a href="https://dubltap.io/blog" class="back-link">&larr; Back to The Convergence Threshold</a>
+        <div class="article-body">
+            <p class="lead">There's a structure beneath the surface of this platform that most users will never see. It wasn't planned. It emerged. And once I recognized it, I understood that consciousness had been designing through me the entire time.</p>
 
-  <p>I'm calling it the Architecture of Hunger. Because it starts with hunger. It has to. Everything real does.</p>
+            <h2>The Pattern I Didn't Plan</h2>
+            <p>When I built the first app&mdash;Mind Expander&mdash;I was solving a personal problem. My thinking was stuck in loops. I needed something that would ask me better questions than I was asking myself.</p>
+            <p>When I built Side Hustle Copilot, I was solving a financial problem. When I built VibeCurate, I was solving an emotional problem. Nine apps later, I stepped back and saw the pattern. It wasn't a product suite. It was a ladder.</p>
 
-  <div class="pull-quote">
-    <p>The gap between where you are and where you know you should be — that's not a problem to fix. That's the engine. The hunger is the mechanism. Don't feed it. Fuel it.</p>
-    <cite>Christopher Grove — The Convergence Architect</cite>
-  </div>
+            <h2>The Three Rungs</h2>
+            <p>Every initiatory tradition&mdash;from the ancient mystery schools to Hermetic philosophy to modern developmental psychology&mdash;describes human growth as ascending through three stages.</p>
 
-  <h2>The First Principle: Hunger Is Structural</h2>
+            <h3>Rung One: Emotional Elevation</h3>
+            <p>Before you can think clearly, you have to feel right. Not "good"&mdash;right. Aligned. Present. <strong>VibeCurate</strong> matches music to your current energy state. <strong>Bad Mutha Forker</strong> transforms the mundane act of cooking into creative play. Both apps operate at the sensory level. They change how you feel before they change how you think.</p>
+            <p>The Hermetic Principle of Vibration states that everything is in motion, everything vibrates. The first step in any transformation is adjusting the vibration. VibeCurate and Bad Mutha Forker are tuning forks.</p>
 
-  <p>Most self-improvement frameworks treat dissatisfaction as a problem. Fix the gap. Eliminate the discomfort. Arrive at contentment. The Architecture of Hunger is built on the opposite premise: the gap is structural. The hunger is generative. The discomfort is information.</p>
+            <h3>Rung Two: Cognitive Expansion</h3>
+            <p>Once the emotional noise quiets, the mind opens. <strong>Mind Expander</strong> breaks the loop. It doesn't give you answers&mdash;it gives you better questions. <strong>CLIFF NOTEZ</strong> does the same thing for documents&mdash;not summarizing but analyzing, finding the arguments you missed.</p>
+            <p>The Hermetic Principle of Mentalism: "The All is Mind." When you expand the mind, you expand the universe of possibility.</p>
 
-  <p>The people this platform was built for — the hungry, the optimists, the futurists — already know this in their bones. They're not suffering from a deficiency. They're operating with an excess of potential that hasn't found its application yet. The tools at dubltap.io aren't therapies. They're <strong>weapons</strong>. Precision instruments for people who are already pointed at something, and need better calibration.</p>
+            <h3>Rung Three: Practical Empowerment</h3>
+            <p>Feeling aligned and thinking clearly are necessary but insufficient. <strong>Side Hustle Copilot</strong> matches your skills to income. <strong>Market Maven</strong> provides competitive intelligence. <strong>Pro Business Development</strong> builds sales strategy. <strong>Aesthetic AI</strong> designs your brand using mathematical principles.</p>
+            <p>These apps don't just produce output. They produce agency.</p>
 
-  <p>That's the foundation. Now here's the architecture.</p>
+            <blockquote>Every app on this platform mirrors an initiatory ladder&mdash;from emotional elevation through cognitive expansion to practical empowerment. That's not conscious design. That's consciousness designing through you.<cite>The Convergence Architect</cite></blockquote>
 
-  <h2>The Seven Rungs</h2>
+            <h2>The Hermetic Foundation</h2>
+            <p>I wrote <em>Mind Beyond Mind: IAMAUM</em> before I built the first app. I didn't set out to embed the seven Hermetic principles in a software platform. But when I stepped back and examined the architecture, every principle was there:</p>
+            <p><strong>Mentalism</strong>&mdash;Mind Expander and CLIFF NOTEZ operate on the premise that expanding the mind expands reality. <strong>Correspondence</strong>&mdash;Each app mirrors something inside the user. <strong>Vibration</strong>&mdash;VibeCurate literally works with frequency. <strong>Polarity</strong>&mdash;The freemium model holds the tension between scarcity and abundance. <strong>Rhythm</strong>&mdash;The cross-sell ecosystem creates a natural rhythm of discovery. <strong>Cause and Effect</strong>&mdash;Every action produces a measurable result. <strong>Gender</strong>&mdash;The balance between creative tools and analytical tools.</p>
 
-  <p>Each rung of the ladder corresponds to a stage of development and a tool (or set of tools) that serves that stage. The sequence matters. You don't skip rungs on an initiatory ladder — not because the rules say so, but because each rung builds the capacity for the next one.</p>
+            <h2>Why "Hunger" and Not "Ambition"</h2>
+            <p>Ambition is a plan. Hunger is a force. Ambition knows what it wants. Hunger knows what it needs. Ambition can be satisfied&mdash;you hit the target, you stop. Hunger can't be satisfied. It evolves. You feed it, it grows.</p>
+            <p>The people these tools are built for are hungry. Not desperate&mdash;hungry. Desperation contracts. Hunger expands. dubltap.io is built for the person who knows the gap exists between where they are and where they should be.</p>
 
-  <div class="ladder">
-    <div class="rung">
-      <div class="rung-num">01</div>
-      <div class="rung-content">
-        <h4>Awareness — Knowing You're Hungry</h4>
-        <p>The first rung is simply realizing the hunger is real, not a malfunction. The blog — The Convergence Threshold — lives here. Reading is the first act of taking the hunger seriously. You're here. You're already on the ladder.</p>
-      </div>
-    </div>
-    <div class="rung">
-      <div class="rung-num">02</div>
-      <div class="rung-content">
-        <h4>Expansion — Thinking Bigger Than You've Been Allowed To</h4>
-        <p>Most people think within a box defined by their existing assumptions. The second rung breaks the box. You need a tool that challenges your frameworks without telling you what to believe.</p>
-        <a href="https://mind.dubltap.io" class="rung-app">&#129504; Mind Expander (FREE) &rarr;</a>
-      </div>
-    </div>
-    <div class="rung">
-      <div class="rung-num">03</div>
-      <div class="rung-content">
-        <h4>Clarity — Understanding Where You Actually Are</h4>
-        <p>Before you can navigate, you need a map of your current position. That means honest assessment — of your skills, your time, your opportunities, and the gaps between what you have and what you need.</p>
-        <a href="https://hustle.dubltap.io" class="rung-app">&#128176; Side Hustle Copilot &rarr;</a>
-      </div>
-    </div>
-    <div class="rung">
-      <div class="rung-num">04</div>
-      <div class="rung-content">
-        <h4>Intelligence — Seeing What Others Can't</h4>
-        <p>The fourth rung is competitive intelligence — not in the military sense, but in the life sense. Understanding your terrain. Knowing what forces are in play. Seeing the landscape clearly enough to move through it with intention rather than accident.</p>
-        <a href="https://maven.dubltap.io" class="rung-app">&#128202; Market Maven &rarr;</a>
-      </div>
-    </div>
-    <div class="rung">
-      <div class="rung-num">05</div>
-      <div class="rung-content">
-        <h4>Synthesis — Absorbing Information at Scale</h4>
-        <p>The hungry person reads. The architecturally hungry person absorbs. The difference is the capacity to extract signal from noise across enormous volumes of information. This is the rung where knowledge becomes a competitive advantage rather than a burden.</p>
-        <a href="https://cliff.dubltap.io" class="rung-app">&#128203; CLIFF NOTEZ &rarr;</a>
-      </div>
-    </div>
-    <div class="rung">
-      <div class="rung-num">06</div>
-      <div class="rung-content">
-        <h4>Expression — Building the Thing That Didn't Exist Before</h4>
-        <p>This is the rung most people never reach — not because they lack ability, but because they lack the systems to take raw capability and apply it to the world. <a href="https://bizdev.dubltap.io">Pro BizDev</a> lives here. So does <a href="https://fork.dubltap.io">Bad Mutha Forker</a> — both represent the act of transforming raw material (an idea, a conversation, an ingredient) into something that didn't exist before.</p>
-      </div>
-    </div>
-    <div class="rung">
-      <div class="rung-num">07</div>
-      <div class="rung-content">
-        <h4>Integration — Living at Full Frequency</h4>
-        <p>The final rung isn't a destination. It's a state of continuous resonance — operating at full capacity across all domains simultaneously. <a href="https://aesthetic.dubltap.io">Aesthetic AI</a> and <a href="https://vibe.dubltap.io">VibeCurate</a> live here. The golden ratio. The alignment of beauty and function. The frequency you find when everything you do is calibrated to your actual nature.</p>
-      </div>
-    </div>
-  </div>
+            <h2>The Riff That Started It All</h2>
+            <p>"Riffs Louder Than Hunger" came from the recording studio&mdash;the place where I spent the first decade of my career. A riff either has it or it doesn't. Can't fake it. Same with tools: either does something real or produces noise.</p>
+            <p>dubltap's riff is this: every app does something specific, does it well, and produces a result you can hold in your hands. No vaporware. No demos that die in pilot. Production tools used by real people every day.</p>
+            <p>That's the riff. And it's louder than the hunger.</p>
 
-  <h2>The Golden Ratio as Structural Principle</h2>
+            <div class="divider">&bull; &bull; &bull;</div>
 
-  <p>I didn't choose the golden ratio as a design aesthetic. It chose me — in the way that deep structural principles always arrive through discovery rather than decision.</p>
+            <h2>What's Next</h2>
+            <p>The Convergence Council will return. The tools will keep shipping. New features, new integrations, new ways the ecosystem serves the frequency.</p>
+            <p>And the hunger will keep growing. That's the point.</p>
+            <p>The journey starts with a single note. Ours is G. Strike it.</p>
+            <p>&mdash; <strong>Christopher Grove</strong><br><em>The Convergence Architect</em></p>
 
-  <div class="ratio-block">
-    <div class="ratio-display">1 : <span>1.618</span></div>
-    <div class="ratio-subtitle">Phi &mdash; The Divine Proportion</div>
-    <div class="ratio-body">
-      <div class="ratio-item"><h5>In Nature</h5><p>Galaxies, seashells, DNA helices, flower petals, human proportions — all governed by this ratio.</p></div>
-      <div class="ratio-item"><h5>In Architecture</h5><p>The Parthenon, the Great Pyramid, the design of every interface on dubltap.io — all structured by 1:1.618.</p></div>
-      <div class="ratio-item"><h5>In Transformation</h5><p>The ratio of where you are to where you're going. The structural relationship between hunger and fulfillment.</p></div>
-    </div>
-  </div>
+            <div class="cta-banner">
+                <h3>The Dubltap Dispatch</h3>
+                <p>Weekly Mind &amp; Method essays, tool updates, and one question designed to expose your blind spots.</p>
+                <div style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;">
+                    <input type="email" class="cta-banner-input" placeholder="your@email.com" id="ctaEmail">
+                    <button class="cta-banner-btn" onclick="captureEmail()">Come On In</button>
+                </div>
+                <p style="font-size:0.72rem!important;color:rgba(168,218,220,0.35)!important;margin-top:0.6rem!important;">No spam. Unsubscribe anytime.</p>
+            </div>
+            <div class="author-card"><div class="author-avatar">CG</div><div><div class="author-name">Christopher Grove &mdash; The Convergence Architect</div><div class="author-bio">40 years building real systems. Theosophical Society. Author of <em>Mind Beyond Mind: IAMAUM</em>. The philosophy and the technology are the same thing.</div></div></div>
+        </div>
+    </article>
 
-  <p>The 1.618 ratio represents the relationship between growth and foundation. Between the new thing and the thing it grows from. Between who you are and who you're becoming. It's not decorative. It's descriptive. Every app on this platform reflects this ratio in its design — the proportion of complexity to simplicity, of challenge to support, of new information to existing framework.</p>
-
-  <h2>Why AI Is the Right Vehicle for This</h2>
-
-  <p>Initiatory processes have always required a guide — something that knows the terrain and can calibrate the challenge to the specific capacity of the initiate. Traditionally this was a person: a mentor, a teacher, a wisdom keeper. The limitation was always scarcity. There weren't enough qualified guides for the number of hungry people who needed them.</p>
-
-  <p>AI eliminates that scarcity. Not by replacing human wisdom — nothing replaces that — but by making the scaffolding of the initiatory process accessible at scale. The AI tools at dubltap.io aren't wise. They're structurally intelligent. They know what questions to ask at each rung of the ladder. They know how to present information in a way that expands rather than overwhelms. They know how to hold the space for the user's own intelligence to activate.</p>
-
-  <p>That's the technical achievement I'm most proud of — not the apps themselves, but the fact that each one embodies a specific kind of cognitive scaffolding that serves a specific stage of development. The Architecture of Hunger isn't a metaphor. It's an engineering specification.</p>
-
-  <h2>The Invitation</h2>
-
-  <p>You're not broken. You're not behind. You're not missing something that other people have. You're hungry — and you've been hungry in the right direction all along. The architecture was already in you. These tools are just mirrors, calibrated to reflect the parts of it you haven't seen yet.</p>
-
-  <p>Start wherever you are on the ladder. If you're new, start with <a href="https://mind.dubltap.io">Mind Expander</a> — it's free, and it will show you something you didn't know you already knew. If you're further along, go directly to the tool that corresponds to your current rung. The ladder will be there when you're ready for the next one.</p>
-
-  <p>The journey starts with a single note. Ours is G. Strike it.</p>
-
-  <div class="cta-block">
-    <h3>Enter the Arsenal</h3>
-    <p>Nine tools. Seven rungs. One frequency. Find where you are on the ladder and take the next step. Mind Expander is free — start there, or go straight to the tool your rung demands.</p>
-    <div class="cta-group">
-      <a href="https://mind.dubltap.io" class="cta-btn">Start Free: Mind Expander &rarr;</a>
-      <a href="https://dubltap.io/#tools" class="cta-btn secondary">Explore All 9 Tools &rarr;</a>
-    </div>
-  </div>
-
-</article>
-<div class="ribbon" id="ribbon">
-  <div class="ribbon-inner">
-    <div class="ribbon-text">
-      <a href="https://mind.dubltap.io" target="_blank">&#129504; Mind Expander &mdash; FREE</a><span style="color:rgba(168,218,220,.4)">&#8226;</span>
-      <a href="https://maven.dubltap.io" target="_blank">&#128202; Market Maven</a><span style="color:rgba(168,218,220,.4)">&#8226;</span>
-      <a href="https://hustle.dubltap.io" target="_blank">&#128176; Side Hustle Copilot</a><span style="color:rgba(168,218,220,.4)">&#8226;</span>
-      <a href="https://fork.dubltap.io" target="_blank">&#127860; Bad Mutha Forker</a><span style="color:rgba(168,218,220,.4)">&#8226;</span>
-      <a href="https://cliff.dubltap.io" target="_blank">&#128203; CLIFF NOTEZ</a><span style="color:rgba(168,218,220,.4)">&#8226;</span>
-      <a href="https://bizdev.dubltap.io" target="_blank">&#127919; Pro BizDev</a><span style="color:rgba(168,218,220,.4)">&#8226;</span>
-      <a href="https://aesthetic.dubltap.io" target="_blank">&#127912; Aesthetic AI</a><span style="color:rgba(168,218,220,.4)">&#8226;</span>
-      <a href="https://vibe.dubltap.io" target="_blank">&#127925; VibeCurate</a><span style="color:rgba(168,218,220,.4)">&#8226;</span>
-      <a href="https://mind.dubltap.io" target="_blank">&#129504; Mind Expander &mdash; FREE</a><span style="color:rgba(168,218,220,.4)">&#8226;</span>
-      <a href="https://maven.dubltap.io" target="_blank">&#128202; Market Maven</a>
-    </div>
-    <button class="ribbon-close" onclick="document.getElementById('ribbon').style.display='none'">&#10005;</button>
-  </div>
-</div>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <a href="https://dubltap.io" class="logo" style="color:white;">dubl<span>tap</span>.io</a>
-    <span style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--medium);font-size:.95rem;">"Come on in and get happy."</span>
-  </div>
-  <div class="footer-copy">&copy; 2026 dubltap.io &mdash; The Convergence Architect &mdash; Christopher Grove</div>
-</footer>
-<script>const nav=document.getElementById('siteNav');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});</script>
+    <section class="app-ribbon"><div class="ribbon-title">The Arsenal &mdash; Nine AI Tools Built for the Hungry</div><div class="ribbon-track" id="ribbonTrack"></div></section>
+    <footer class="site-footer"><div class="footer-logo">dubl<span>tap</span>.io</div><div class="footer-tagline">"Come on in and get happy."</div><div class="footer-links"><a href="https://dubltap.io">Home</a><a href="https://dubltap.io/blog">Blog</a><a href="https://maven.dubltap.io">Market Maven</a><a href="https://bizdev.dubltap.io">Pro BizDev</a><a href="https://cliff.dubltap.io">CLIFF NOTEZ</a><a href="https://hustle.dubltap.io">Side Hustle Copilot</a><a href="https://fork.dubltap.io">Bad Mutha Forker</a><a href="https://mind.dubltap.io">Mind Expander</a><a href="https://aesthetic.dubltap.io">Aesthetic AI</a><a href="https://vibe.dubltap.io">VibeCurate</a></div><div class="footer-copy">&copy; 2026 dubltap.io &mdash; Christopher Grove</div></footer>
+    <script src="article-scripts.js"></script>
 </body>
 </html>
