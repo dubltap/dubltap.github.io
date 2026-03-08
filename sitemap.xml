@@ -4,7 +4,7 @@
     <loc>https://dubltap.io/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
+  </url>h
   <url>
     <loc>https://dubltap.io/blog</loc>
     <changefreq>weekly</changefreq>
@@ -98,5 +98,125 @@
     <lastmod>2026-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dubltap.io/blog/market-maven-vs-semrush.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dubltap.io/blog/market-maven-vs-crayon.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dubltap.io/blog/market-maven-vs-chatgpt.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dubltap.io/blog/market-maven-vs-spyfu.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dubltap.io/blog/cliff-notez-vs-chatgpt.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dubltap.io/blog/cliff-notez-vs-scholarcy.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dubltap.io/blog/cliff-notez-vs-consensus.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dubltap.io/blog/side-hustle-copilot-vs-chatgpt.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dubltap.io/blog/side-hustle-copilot-vs-fiverr.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dubltap.io/blog/side-hustle-copilot-vs-upwork.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dubltap.io/blog/bad-mutha-forker-vs-hellofresh.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dubltap.io/blog/bad-mutha-forker-vs-supercook.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dubltap.io/blog/bad-mutha-forker-vs-yummly.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dubltap.io/blog/vibecurate-vs-spotify-discover.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dubltap.io/blog/vibecurate-vs-apple-music.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dubltap.io/blog/vibecurate-vs-pandora.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dubltap.io/blog/pro-bizdev-vs-apollo.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dubltap.io/blog/pro-bizdev-vs-linkedin-sales-navigator.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dubltap.io/blog/mind-expander-vs-headspace.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dubltap.io/blog/mind-expander-vs-calm.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
