@@ -1,1395 +1,1625 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Convergence Threshold — Tech, Life & The Fast Bunny | dubltap.io</title>
-    <meta name="description" content="The Convergence Threshold — your favorite rag for tech that matters, humans that inspire, entrepreneurs who ship, animals that heal, and The Fast Bunny comic strip. Updated twice weekly. Sunday comics edition.">
-    <meta name="keywords" content="tech news simplified, AI news, entrepreneur stories, The Fast Bunny comic, dubltap, convergence threshold, digital newspaper, tech entertainment">
-    <meta property="og:title" content="The Convergence Threshold — Tech, Life & The Fast Bunny">
-    <meta property="og:description" content="Not another tech blog. A real rag — with teeth, heart, humor, and a cartoon rabbit in a racing suit.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://dubltap.io/blog">
-    <meta property="og:image" content="https://dubltap.io/og-image.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="canonical" href="https://dubltap.io/blog">
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"WebPage","name":"The Convergence Threshold","description":"Digital newspaper covering tech, humanity, entrepreneurship, entertainment, animals, and home of The Fast Bunny comic strip.","url":"https://dubltap.io/blog","author":{"@type":"Person","name":"Christopher Grove","jobTitle":"The Convergence Architect"},"publisher":{"@type":"Organization","name":"dubltap.io","url":"https://dubltap.io"}}
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Bangers&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Convergence Threshold — Tech, Life & The Fast Bunny | dubltap.io</title>
+<meta name="description" content="The Convergence Threshold — your favorite rag for tech that matters, humans that inspire, entrepreneurs who ship, animals that heal, and The Fast Bunny comic strip. Updated twice weekly. Sunday comics edition.">
+<meta name="keywords" content="tech news simplified, AI news, entrepreneur stories, The Fast Bunny comic, dubltap, convergence threshold, digital newspaper, tech entertainment">
+<meta property="og:title" content="The Convergence Threshold — Tech, Life & The Fast Bunny">
+<meta property="og:description" content="Not another tech blog. A real rag — with teeth, heart, humor, and a cartoon rabbit in a racing suit.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dubltap.io/blog">
+<meta property="og:image" content="https://dubltap.io/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://dubltap.io/blog">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"The Convergence Threshold","description":"Digital newspaper covering tech, humanity, entrepreneurship, entertainment, animals, and home of The Fast Bunny comic strip.","url":"https://dubltap.io/blog","author":{"@type":"Person","name":"Christopher Grove","jobTitle":"The Convergence Architect"},"publisher":{"@type":"Organization","name":"dubltap.io","url":"https://dubltap.io"}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Bangers&display=swap" rel="stylesheet">
 <style>
-        /* ===== FOUNDATION ===== */
-        :root {
-            --sunset-gold: #F4A261;
-            --sunset-coral: #E76F51;
-            --sunset-peach: #FFBE98;
-            --ocean-deep: #264653;
-            --ocean-teal: #2A9D8F;
-            --ocean-foam: #A8DADC;
-            --sand-light: #FDF8F3;
-            --sand-warm: #F3EBE1;
-            --sand-medium: #C4B7A6;
-            --sand-dark: #4A4238;
-            --cream: #FFFAF5;
-            --ink: #1C1917;
-            --rule: #D4C5B3;
-            --newsprint: #F9F4EE;
-            --comic-yellow: #FFF8DC;
-            --comic-blue: #E8F4FD;
-            --comic-pink: #FDE8E8;
-            --comic-green: #E8FDE8;
-        }
+/* ===== FOUNDATION ===== */
+:root {
+    --sunset-gold: #F4A261;
+    --sunset-coral: #E76F51;
+    --sunset-peach: #FFBE98;
+    --ocean-deep: #264653;
+    --ocean-teal: #2A9D8F;
+    --ocean-foam: #A8DADC;
+    --sand-light: #FDF8F3;
+    --sand-warm: #F3EBE1;
+    --sand-medium: #C4B7A6;
+    --sand-dark: #4A4238;
+    --cream: #FFFAF5;
+    --ink: #1C1917;
+    --rule: #D4C5B3;
+    --newsprint: #F9F4EE;
+    --comic-yellow: #FFF8DC;
+    --comic-blue: #E8F4FD;
+    --comic-pink: #FDE8E8;
+    --comic-green: #E8FDE8;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'DM Sans', Georgia, serif;
+    background: var(--newsprint);
+    color: var(--ink);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+a { color: var(--ocean-teal); text-decoration: none; }
+a:hover { color: var(--sunset-coral); }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+/* ===== TOP BAR (always visible, including mobile) ===== */
+.top-bar {
+    background: var(--ocean-deep);
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+.top-bar a {
+    color: var(--sunset-gold);
+    transition: color 0.2s;
+}
+.top-bar a:hover { color: var(--sunset-peach); }
+.top-bar-left { display: flex; align-items: center; gap: 0.4rem; color: rgba(255,255,255,0.5); }
+.top-bar-right { display: flex; align-items: center; gap: 1.2rem; }
+.top-bar-apps {
+    display: inline-block;
+    padding: 0.25rem 0.8rem;
+    background: var(--sunset-gold);
+    color: var(--ocean-deep) !important;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 0.68rem;
+    transition: all 0.2s;
+}
+.top-bar-apps:hover { background: var(--sunset-coral); color: white !important; }
 
-        body {
-            font-family: 'DM Sans', Georgia, serif;
-            background: var(--newsprint);
-            color: var(--ink);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
+/* ===== MASTHEAD ===== */
+.masthead {
+    background: var(--cream);
+    border-bottom: 4px double var(--ink);
+    padding: 0.6rem 0 0;
+}
+.masthead-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    font-size: 0.72rem;
+    color: var(--sand-medium);
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0.04em;
+}
+.masthead-top a { color: var(--sand-medium); }
+.masthead-top a:hover { color: var(--sunset-gold); }
+.masthead-title-wrap {
+    text-align: center;
+    padding: 1.2rem 2rem 0.8rem;
+}
+.masthead-rule-top {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 1px;
+    background: var(--ink);
+    margin-bottom: 1rem;
+}
+.masthead-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.3rem;
+}
+.masthead-title span { color: var(--sunset-gold); }
+.masthead-subtitle {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-style: italic;
+    font-size: 0.92rem;
+    color: var(--sand-dark);
+    opacity: 0.7;
+    margin-bottom: 0.6rem;
+}
+.masthead-rule-bottom {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 2px;
+    background: var(--ink);
+}
 
-        /* Grain overlay */
-        body::after {
-            content: '';
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            z-index: 9998;
-            opacity: 0.03;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-        }
+/* ===== SECTION NAV ===== */
+.section-nav {
+    background: var(--cream);
+    border-bottom: 1px solid var(--rule);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.section-nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 0 1rem;
+}
+.section-nav-inner::-webkit-scrollbar { display: none; }
+.section-nav a {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    color: var(--sand-dark);
+    padding: 0.85rem 1.1rem;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+.section-nav a:hover, .section-nav a.active {
+    color: var(--sunset-coral);
+    border-bottom-color: var(--sunset-gold);
+}
+.section-nav .nav-bunny {
+    color: var(--sunset-gold);
+    font-family: 'Bangers', cursive;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: none;
+}
+.nav-subscribe-btn {
+    margin-left: auto;
+    background: var(--sunset-gold);
+    color: var(--ocean-deep) !important;
+    border-radius: 100px;
+    padding: 0.5rem 1.2rem !important;
+    font-weight: 700 !important;
+    border-bottom: none !important;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+.nav-subscribe-btn:hover {
+    background: var(--sunset-coral) !important;
+    color: white !important;
+    border-bottom-color: transparent !important;
+                     }
+/* Mobile hamburger */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.7rem;
+    flex-shrink: 0;
+}
+.mobile-menu-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--ink);
+    margin: 5px 0;
+    transition: all 0.3s;
+}
+.mobile-nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(28,25,23,0.5);
+    z-index: 999;
+}
+.mobile-nav-overlay.open { display: block; }
+.mobile-nav-drawer {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    width: 280px;
+    height: 100%;
+    background: var(--cream);
+    z-index: 1000;
+    transition: right 0.3s ease;
+    padding: 1.5rem;
+    overflow-y: auto;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+}
+.mobile-nav-drawer.open { right: 0; }
+.mobile-nav-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--sand-dark);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.3rem;
+}
+.mobile-nav-drawer a {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--sand-dark);
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--rule);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.mobile-nav-drawer a:hover { color: var(--sunset-coral); }
+.mobile-nav-drawer a.nav-bunny-mobile {
+    color: var(--sunset-gold);
+    font-family: 'Bangers', cursive;
+    font-size: 1.1rem;
+    text-transform: none;
+    letter-spacing: 0.05em;
+}
+.mobile-nav-drawer .mobile-nav-subscribe {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background: var(--sunset-gold);
+    color: var(--ocean-deep);
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: none;
+}
+.mobile-nav-drawer .mobile-nav-home {
+    display: block;
+    text-align: center;
+    margin-top: 0.6rem;
+    padding: 0.6rem 1.5rem;
+    background: var(--ocean-deep);
+    color: var(--sunset-gold);
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    border: none;
+    text-transform: none;
+    letter-spacing: normal;
+}
 
-        a { color: var(--ocean-teal); text-decoration: none; }
-        a:hover { color: var(--sunset-coral); }
+/* ===== LAYOUT ===== */
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    }
 
-        /* ===== MASTHEAD ===== */
-        .masthead {
-            background: var(--cream);
-            border-bottom: 4px double var(--ink);
-            padding: 0.6rem 0 0;
-            position: relative;
-        }
-        .masthead-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            font-size: 0.72rem;
-            color: var(--sand-medium);
-            font-family: 'DM Sans', sans-serif;
-            letter-spacing: 0.04em;
-        }
-        .masthead-top a { color: var(--sand-medium); }
-        .masthead-top a:hover { color: var(--sunset-gold); }
+/* ===== SECTION HEADERS ===== */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0 1rem;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 1.5rem;
+}
+.section-icon { font-size: 1.4rem; line-height: 1; }
+.section-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+}
+.section-tagline {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 0.82rem;
+    color: var(--sand-medium);
+    margin-left: auto;
+}
+.section-rule-accent { position: relative; }
+.section-rule-accent::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--sunset-gold);
+}
 
-        .masthead-title-wrap {
-            text-align: center;
-            padding: 1.2rem 2rem 0.8rem;
-            position: relative;
-        }
-        .masthead-rule-top {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            height: 1px;
-            background: var(--ink);
-            margin-bottom: 1rem;
-        }
-        .masthead-title {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: clamp(2.4rem, 5.5vw, 4.2rem);
-            font-weight: 900;
-            color: var(--ink);
-            line-height: 1;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.3rem;
-        }
-        .masthead-title span { color: var(--sunset-gold); }
-        .masthead-subtitle {
-            font-family: 'Source Serif 4', Georgia, serif;
-            font-style: italic;
-            font-size: 0.92rem;
-            color: var(--sand-dark);
-            opacity: 0.7;
-            margin-bottom: 0.6rem;
-        }
-        .masthead-rule-bottom {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            height: 2px;
-            background: var(--ink);
-        }
+/* ===== LEAD STORY ===== */
+.lead-story {
+    display: grid;
+    grid-template-columns: 1.618fr 1fr;
+    gap: 2.5rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--rule);
+}
+.lead-kicker {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--sunset-coral);
+    margin-bottom: 0.5rem;
+}
+.lead-headline {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 800;
+    color: var(--ink);
+    line-height: 1.12;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.02em;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.lead-headline:hover { color: var(--sunset-coral); }
+.lead-deck {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: var(--sand-dark);
+    margin-bottom: 1rem;
+}
+.lead-byline {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    color: var(--sand-medium);
+}
+.lead-byline strong { color: var(--ink); }
+.lead-read-more {
+    display: inline-block;
+    margin-top: 0.8rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--sunset-coral);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.lead-read-more:hover { color: var(--ocean-teal); }
+.lead-image {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    min-height: 280px;
+}
+.lead-image-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-teal) 60%, var(--sunset-gold) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.lead-image-placeholder .lead-img-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255,255,255,0.12);
+}
+.lead-image-placeholder .photo-credit {
+    position: absolute;
+    bottom: 0.6rem;
+    right: 0.8rem;
+    font-size: 0.62rem;
+    color: rgba(255,255,255,0.35);
+    font-family: 'DM Sans', sans-serif;
+    }
 
-        /* Section Nav */
-        .section-nav {
-            background: var(--cream);
-            border-bottom: 1px solid var(--rule);
-            padding: 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .section-nav-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            gap: 0;
-            overflow-x: auto;
-            scrollbar-width: none;
-        }
-        .section-nav-inner::-webkit-scrollbar { display: none; }
-        .section-nav a {
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.7rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.13em;
-            color: var(--sand-dark);
-            padding: 0.85rem 1.3rem;
-            white-space: nowrap;
-            border-bottom: 2px solid transparent;
-            transition: all 0.2s;
-        }
-        .section-nav a:hover,
-        .section-nav a.active {
-            color: var(--sunset-coral);
-            border-bottom-color: var(--sunset-gold);
-        }
-        .section-nav .nav-bunny {
-            color: var(--sunset-gold);
-            font-family: 'Bangers', cursive;
-            font-size: 0.82rem;
-            letter-spacing: 0.08em;
-            text-transform: none;
-        }
-        .nav-subscribe-btn {
-            margin-left: auto;
-            background: var(--sunset-gold);
-            color: var(--ocean-deep) !important;
-            border-radius: 100px;
-            padding: 0.5rem 1.2rem !important;
-            font-weight: 700 !important;
-            border-bottom: none !important;
-            transition: all 0.2s;
-        }
-        .nav-subscribe-btn:hover {
-            background: var(--sunset-coral) !important;
-            color: white !important;
-            border-bottom-color: transparent !important;
-        }
+/* ===== ARTICLE CARDS ===== */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 0;
+}
+.articles-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.article-card {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.article-card:hover { transform: translateY(-2px); }
+.article-card-image {
+    width: 100%;
+    height: 160px;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    margin-bottom: 0.8rem;
+}
+.article-card-image-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-img-word {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255,255,255,0.15);
+}
+.article-card-kicker {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--ocean-teal);
+    margin-bottom: 0.35rem;
+}
+.article-card-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+}
+.article-card:hover .article-card-title { color: var(--sunset-coral); }
+.article-card-excerpt {
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.86rem;
+    color: var(--sand-dark);
+    line-height: 1.6;
+    opacity: 0.75;
+    margin-bottom: 0.5rem;
+}
+.article-card-meta { font-size: 0.7rem; color: var(--sand-medium); }
+.article-card-read {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--sunset-coral);
+    margin-top: 0.3rem;
+}
 
-        /* ===== LAYOUT ===== */
-        .page-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+/* ===== EXPANDED ARTICLE ===== */
+.article-expanded {
+    display: none;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2rem 0 3rem;
+}
+.article-expanded.open { display: block; }
+.article-expanded-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--ocean-teal);
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.article-expanded-back:hover { color: var(--sunset-coral); }
+.article-expanded-kicker {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--sunset-coral);
+    margin-bottom: 0.6rem;
+}
+.article-expanded h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 800;
+    color: var(--ink);
+    line-height: 1.15;
+    margin-bottom: 0.8rem;
+}
+.article-expanded-meta {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    color: var(--sand-medium);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--rule);
+}
+.article-expanded-meta strong { color: var(--ink); }
+.article-expanded-body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--sand-dark);
+}
+.article-expanded-body p { margin-bottom: 1.2rem; }
+.article-expanded-body p:last-child { margin-bottom: 0; }
+.article-expanded-cta {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--sunset-gold), var(--sunset-coral));
+    border-radius: 0.6rem;
+    text-align: center;
+}
+.article-expanded-cta p {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 0.88rem !important;
+    color: var(--ocean-deep) !important;
+    font-weight: 600;
+    margin-bottom: 0.6rem !important;
+}
+.article-expanded-cta a {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: var(--ocean-deep);
+    color: var(--sunset-gold);
+    border-radius: 100px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+.article-expanded-cta a:hover { background: var(--ink); }
 
-        /* ===== SECTION HEADERS ===== */
-        .section-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 2rem 0 1rem;
-            border-bottom: 2px solid var(--ink);
-            margin-bottom: 1.5rem;
-        }
-        .section-icon {
-            font-size: 1.4rem;
-            line-height: 1;
-        }
-        .section-name {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: 1.1rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--ink);
-        }
-        .section-tagline {
-            font-family: 'Source Serif 4', serif;
-            font-style: italic;
-            font-size: 0.82rem;
-            color: var(--sand-medium);
-            margin-left: auto;
-        }
-        .section-rule-accent {
-            position: relative;
-        }
-        .section-rule-accent::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 60px;
-            height: 2px;
-            background: var(--sunset-gold);
-        }
+/* ===== SIDEBAR LAYOUT ===== */
+.content-with-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2.5rem;
+    padding: 0 0 2rem;
+}
+.sidebar-section { padding-top: 2rem; }
+.sidebar-card {
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    border-radius: 0.6rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.sidebar-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--rule);
+}
+/* Email capture sidebar */
+.email-capture-card {
+    background: var(--ocean-deep);
+    border: none;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.email-capture-card::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -20%;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(244,162,97,0.2) 0%, transparent 70%);
+    border-radius: 50%;
+}
+.email-capture-card .sidebar-card-title {
+    color: var(--sunset-peach);
+    border-bottom-color: rgba(168,218,220,0.2);
+}
+.email-capture-card p {
+    font-size: 0.84rem;
+    color: var(--ocean-foam);
+    opacity: 0.8;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+.email-input-editorial {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid rgba(168,218,220,0.25);
+    border-radius: 0.4rem;
+    background: rgba(255,255,255,0.07);
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    margin-bottom: 0.6rem;
+    outline: none;
+    transition: all 0.3s;
+}
+.email-input-editorial::placeholder { color: rgba(168,218,220,0.4); }
+.email-input-editorial:focus { border-color: var(--sunset-gold); background: rgba(255,255,255,0.12); }
+.email-btn-editorial {
+    width: 100%;
+    padding: 0.7rem;
+    background: var(--sunset-gold);
+    color: var(--ocean-deep);
+    border: none;
+    border-radius: 0.4rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.84rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.email-btn-editorial:hover { background: var(--sunset-coral); color: white; }
+.email-note-editorial {
+    font-size: 0.65rem;
+    color: rgba(168,218,220,0.35);
+    text-align: center;
+    margin-top: 0.5rem;
+}
+/* Trending sidebar */
+.trending-item {
+    display: flex;
+    gap: 0.8rem;
+    align-items: flex-start;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--rule);
+}
+.trending-item:last-child { border-bottom: none; }
+.trending-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--sunset-gold);
+    line-height: 1;
+    min-width: 28px;
+}
+.trending-text {
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.84rem;
+    color: var(--ink);
+    line-height: 1.35;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.trending-text:hover { color: var(--sunset-coral); }
+/* App promo sidebar */
+.app-promo-card {
+    background: linear-gradient(135deg, var(--sunset-gold) 0%, var(--sunset-coral) 100%);
+    border: none;
+    text-align: center;
+}
+.app-promo-card .sidebar-card-title {
+    color: var(--ocean-deep);
+    border-bottom-color: rgba(38,70,83,0.2);
+}
+.app-promo-card p {
+    font-size: 0.84rem;
+    color: var(--ocean-deep);
+    opacity: 0.85;
+    margin-bottom: 1rem;
+    line-height: 1.55;
+}
+.app-promo-btn {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    background: var(--ocean-deep);
+    color: var(--sunset-gold);
+    border-radius: 100px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
+    transition: all 0.2s;
+}
+.app-promo-btn:hover { background: var(--ink); color: var(--sunset-gold); transform: translateY(-1px); }
 
-        /* ===== LEAD STORY ===== */
-        .lead-story {
-            display: grid;
-            grid-template-columns: 1.618fr 1fr;
-            gap: 2.5rem;
-            padding: 2rem 0;
-            border-bottom: 1px solid var(--rule);
-        }
-        .lead-main {}
-        .lead-kicker {
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.68rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--sunset-coral);
-            margin-bottom: 0.5rem;
-        }
-        .lead-headline {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-            font-weight: 800;
-            color: var(--ink);
-            line-height: 1.12;
-            margin-bottom: 0.8rem;
-            letter-spacing: -0.02em;
-        }
-        .lead-deck {
-            font-family: 'Source Serif 4', Georgia, serif;
-            font-size: 1.1rem;
-            line-height: 1.65;
-            color: var(--sand-dark);
-            margin-bottom: 1rem;
-        }
-        .lead-byline {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.78rem;
-            color: var(--sand-medium);
-        }
-        .lead-byline strong { color: var(--ink); }
+/* ===== DIVIDERS ===== */
+.editorial-divider { border: none; border-top: 1px solid var(--rule); margin: 0; }
 
-        .lead-image {
-            border-radius: 0.5rem;
-            overflow: hidden;
-            position: relative;
-            min-height: 280px;
-        }
-        .lead-image-placeholder {
-            width: 100%;
-            height: 100%;
-            min-height: 280px;
-            background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-teal) 60%, var(--sunset-gold) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        .lead-image-placeholder .lead-img-text {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            font-weight: 800;
-            font-style: italic;
-            color: rgba(255,255,255,0.85);
-        }
-        .lead-image-placeholder .photo-credit {
-            position: absolute;
-            bottom: 0.6rem;
-            right: 0.8rem;
-            font-size: 0.62rem;
-            color: rgba(255,255,255,0.35);
-            font-family: 'DM Sans', sans-serif;
-        }
+/* ===== ARTICLE MINI LIST ===== */
+.article-mini-list { display: flex; flex-direction: column; gap: 1rem; }
+.article-mini {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--rule);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.article-mini:last-child { border-bottom: none; padding-bottom: 0; }
+.article-mini:hover .article-mini-title { color: var(--sunset-coral); }
+.article-mini-thumb {
+    width: 90px;
+    height: 70px;
+    border-radius: 0.3rem;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.article-mini-thumb-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255,255,255,0.15);
+}
+.article-mini-body { flex: 1; }
+.article-mini-kicker {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.58rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--ocean-teal);
+    margin-bottom: 0.2rem;
+}
+.article-mini-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.25;
+    transition: color 0.2s;
+}
+.article-mini-meta { font-size: 0.65rem; color: var(--sand-medium); margin-top: 0.2rem; }
+.article-mini-read {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--sunset-coral);
+    margin-top: 0.15rem;
+}
 
-        /* ===== ARTICLE CARDS ===== */
-        .articles-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--rule);
-            margin-bottom: 0;
-        }
-        .articles-grid-2 {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        .article-card {
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-        .article-card:hover { transform: translateY(-2px); }
-        .article-card-image {
-            width: 100%;
-            height: 160px;
-            border-radius: 0.4rem;
-            overflow: hidden;
-            margin-bottom: 0.8rem;
-        }
-        .article-card-image-inner {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .card-img-word {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            font-weight: 800;
-            font-style: italic;
-            color: rgba(255,255,255,0.85);
-        }
-        .article-card-kicker {
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.62rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.14em;
-            color: var(--ocean-teal);
-            margin-bottom: 0.35rem;
-        }
-        .article-card-title {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--ink);
-            line-height: 1.25;
-            margin-bottom: 0.5rem;
-        }
-        .article-card:hover .article-card-title {
-            color: var(--sunset-coral);
-        }
-        .article-card-excerpt {
-            font-family: 'Source Serif 4', serif;
-            font-size: 0.86rem;
-            color: var(--sand-dark);
-            line-height: 1.6;
-            opacity: 0.75;
-            margin-bottom: 0.5rem;
-        }
-        .article-card-meta {
-            font-size: 0.7rem;
-            color: var(--sand-medium);
-        }
+/* ===== THE FAST BUNNY COMIC ===== */
+.fast-bunny-section {
+    background: var(--cream);
+    border-top: 4px solid var(--ink);
+    border-bottom: 4px solid var(--ink);
+    margin: 2rem 0;
+    padding: 0;
+}
+.fast-bunny-header {
+    text-align: center;
+    padding: 2rem 2rem 1rem;
+    border-bottom: 2px solid var(--ink);
+}
+.fb-sunday-badge {
+    display: inline-block;
+    background: var(--sunset-coral);
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    padding: 0.3rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 0.8rem;
+}
+.fb-title {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.03em;
+}
+.fb-title .the { font-size: 0.55em; color: var(--sand-medium); }
+.fb-title .fast { color: var(--sunset-gold); }
+.fb-title .bunny { color: var(--ocean-deep); }
+.fb-byline {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    color: var(--sand-medium);
+}
+.fb-byline strong { color: var(--ink); }
+.comic-page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 2rem;
+}
+.comic-episode-title { text-align: center; margin-bottom: 1.5rem; }
+.comic-episode-num {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--sunset-coral);
+}
+.comic-episode-name {
+    font-family: 'Bangers', cursive;
+    font-size: 1.6rem;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+}
+.comic-footer {
+    text-align: center;
+    padding: 1rem 2rem 1.5rem;
+    border-top: 1px solid var(--rule);
+}
+.comic-footer-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    color: var(--sand-medium);
+    }
 
-        /* ===== SIDEBAR LAYOUT ===== */
-        .content-with-sidebar {
-            display: grid;
-            grid-template-columns: 1fr 320px;
-            gap: 2.5rem;
-            padding: 0 0 2rem;
-        }
-        .sidebar-section {
-            padding-top: 2rem;
-        }
-        .sidebar-card {
-            background: var(--cream);
-            border: 1px solid var(--rule);
-            border-radius: 0.6rem;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-        .sidebar-card-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: var(--ink);
-            margin-bottom: 0.8rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--rule);
-        }
+/* ===== NEWSLETTER CTA ===== */
+.newsletter-cta-section {
+    background: var(--ocean-deep);
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.newsletter-cta-section::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(244,162,97,0.12) 0%, transparent 60%);
+    border-radius: 50%;
+}
+.newsletter-cta-inner {
+    max-width: 560px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+.newsletter-cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--cream);
+    margin-bottom: 0.6rem;
+}
+.newsletter-cta-sub {
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.95rem;
+    color: var(--ocean-foam);
+    opacity: 0.7;
+    margin-bottom: 1.5rem;
+    line-height: 1.55;
+}
+.newsletter-form {
+    display: flex;
+    gap: 0.6rem;
+    max-width: 440px;
+    margin: 0 auto;
+}
+.newsletter-input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: 1px solid rgba(168,218,220,0.3);
+    border-radius: 0.5rem;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    outline: none;
+    transition: all 0.3s;
+}
+.newsletter-input::placeholder { color: rgba(168,218,220,0.4); }
+.newsletter-input:focus { border-color: var(--sunset-gold); background: rgba(255,255,255,0.14); }
+.newsletter-btn {
+    padding: 0.8rem 1.8rem;
+    background: var(--sunset-gold);
+    color: var(--ocean-deep);
+    border: none;
+    border-radius: 0.5rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 0.88rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+.newsletter-btn:hover { background: var(--sunset-coral); color: white; }
+.newsletter-note { font-size: 0.68rem; color: rgba(168,218,220,0.3); margin-top: 0.7rem; }
 
-        /* Email capture sidebar */
-        .email-capture-card {
-            background: var(--ocean-deep);
-            border: none;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-        .email-capture-card::before {
-            content: '';
-            position: absolute;
-            top: -40%;
-            right: -20%;
-            width: 180px;
-            height: 180px;
-            background: radial-gradient(circle, rgba(244,162,97,0.2) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-        .email-capture-card .sidebar-card-title {
-            color: var(--sunset-peach);
-            border-bottom-color: rgba(168,218,220,0.2);
-        }
-        .email-capture-card p {
-            font-size: 0.84rem;
-            color: var(--ocean-foam);
-            opacity: 0.8;
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
-        .email-input-editorial {
-            width: 100%;
-            padding: 0.7rem 0.9rem;
-            border: 1px solid rgba(168,218,220,0.25);
-            border-radius: 0.4rem;
-            background: rgba(255,255,255,0.07);
-            color: white;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.85rem;
-            margin-bottom: 0.6rem;
-            outline: none;
-            transition: all 0.3s;
-        }
-        .email-input-editorial::placeholder { color: rgba(168,218,220,0.4); }
-        .email-input-editorial:focus { border-color: var(--sunset-gold); background: rgba(255,255,255,0.12); }
-        .email-btn-editorial {
-            width: 100%;
-            padding: 0.7rem;
-            background: var(--sunset-gold);
-            color: var(--ocean-deep);
-            border: none;
-            border-radius: 0.4rem;
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 700;
-            font-size: 0.84rem;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .email-btn-editorial:hover { background: var(--sunset-coral); color: white; }
-        .email-note-editorial {
-            font-size: 0.65rem;
-            color: rgba(168,218,220,0.35);
-            text-align: center;
-            margin-top: 0.5rem;
-        }
+/* ===== FOOTER ===== */
+.editorial-footer {
+    background: var(--ink);
+    padding: 2.5rem 2rem;
+    color: rgba(255,255,255,0.5);
+}
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+.footer-col-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--sunset-gold);
+    margin-bottom: 0.8rem;
+}
+.footer-col a {
+    display: block;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.45);
+    padding: 0.2rem 0;
+    transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--sunset-gold); }
+.footer-bottom {
+    max-width: 1200px;
+    margin: 1.5rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.72rem;
+}
+.footer-logo {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--sunset-gold);
+}
+.footer-logo span { color: rgba(255,255,255,0.3); }
 
-        /* Trending sidebar */
-        .trending-item {
-            display: flex;
-            gap: 0.8rem;
-            align-items: flex-start;
-            padding: 0.7rem 0;
-            border-bottom: 1px solid var(--rule);
-        }
-        .trending-item:last-child { border-bottom: none; }
-        .trending-num {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: var(--sunset-gold);
-            line-height: 1;
-            min-width: 28px;
-        }
-        .trending-text {
-            font-family: 'Source Serif 4', serif;
-            font-size: 0.84rem;
-            color: var(--ink);
-            line-height: 1.35;
-        }
-        .trending-text:hover { color: var(--sunset-coral); cursor: pointer; }
+/* ===== COMING SOON SECTIONS ===== */
+.coming-soon-section {
+    padding: 2rem 0;
+    text-align: center;
+}
+.coming-soon-text {
+    color: var(--sand-medium);
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+}
+.coming-soon-subscribe {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: var(--ocean-deep);
+    color: var(--sunset-gold);
+    border-radius: 100px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 0.78rem;
+    transition: all 0.2s;
+}
+.coming-soon-subscribe:hover { background: var(--ink); }
 
-        /* App promo sidebar */
-        .app-promo-card {
-            background: linear-gradient(135deg, var(--sunset-gold) 0%, var(--sunset-coral) 100%);
-            border: none;
-            text-align: center;
-        }
-        .app-promo-card .sidebar-card-title {
-            color: var(--ocean-deep);
-            border-bottom-color: rgba(38,70,83,0.2);
-        }
-        .app-promo-card p {
-            font-size: 0.84rem;
-            color: var(--ocean-deep);
-            opacity: 0.85;
-            margin-bottom: 1rem;
-            line-height: 1.55;
-        }
-        .app-promo-btn {
-            display: inline-block;
-            padding: 0.6rem 1.5rem;
-            background: var(--ocean-deep);
-            color: var(--sunset-gold);
-            border-radius: 100px;
-            font-family: 'Outfit', sans-serif;
-            font-weight: 700;
-            font-size: 0.8rem;
-            letter-spacing: 0.03em;
-            transition: all 0.2s;
-        }
-        .app-promo-btn:hover {
-            background: var(--ink);
-            color: var(--sunset-gold);
-            transform: translateY(-1px);
-        }
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .lead-story { grid-template-columns: 1fr; }
+    .lead-image { min-height: 200px; }
+    .articles-grid { grid-template-columns: 1fr 1fr; }
+    .content-with-sidebar { grid-template-columns: 1fr; }
+    .sidebar-section { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .section-tagline { display: none; }
+}
+@media (max-width: 768px) {
+    /* Hide desktop nav links, show hamburger */
+    .section-nav .section-nav-inner > a:not(.nav-subscribe-btn) { display: none; }
+    .section-nav .nav-subscribe-btn { margin-left: 0; }
+    .mobile-menu-btn { display: block; }
+    .section-nav-inner {
+        justify-content: space-between;
+    }
+    .section-nav-label {
+        display: block;
+        font-family: 'Playfair Display', serif;
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--ink);
+        white-space: nowrap;
+    }
+}
+@media (max-width: 600px) {
+    .page-container { padding: 0 1rem; }
+    .articles-grid { grid-template-columns: 1fr; }
+    .sidebar-section { grid-template-columns: 1fr; }
+    .newsletter-form { flex-direction: column; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+    .masthead-top { display: none; }
+    .top-bar { padding: 0.5rem 1rem; }
+    .top-bar-right { gap: 0.6rem; }
+    .article-mini-thumb { width: 70px; height: 55px; }
+}
+@media (min-width: 769px) {
+    .mobile-menu-btn { display: none; }
+    .section-nav-label { display: none; }
+}
 
-        /* ===== HORIZONTAL DIVIDERS ===== */
-        .editorial-divider {
-            border: none;
-            border-top: 1px solid var(--rule);
-            margin: 0;
-        }
-        .editorial-divider-thick {
-            border-top: 2px solid var(--ink);
-        }
+/* ===== ANIMATIONS ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-        /* ===== THE FAST BUNNY COMIC SECTION ===== */
-        .fast-bunny-section {
-            background: var(--cream);
-            border-top: 4px solid var(--ink);
-            border-bottom: 4px solid var(--ink);
-            margin: 2rem 0;
-            padding: 0;
-        }
-        .fast-bunny-header {
-            text-align: center;
-            padding: 2rem 2rem 1rem;
-            border-bottom: 2px solid var(--ink);
-            position: relative;
-        }
-        .fb-sunday-badge {
-            display: inline-block;
-            background: var(--sunset-coral);
-            color: white;
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.6rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.18em;
-            padding: 0.3rem 1rem;
-            border-radius: 100px;
-            margin-bottom: 0.8rem;
-        }
-        .fb-title {
-            font-family: 'Bangers', cursive;
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            color: var(--ink);
-            line-height: 1;
-            margin-bottom: 0.3rem;
-            letter-spacing: 0.03em;
-        }
-        .fb-title .the { font-size: 0.55em; color: var(--sand-medium); }
-        .fb-title .fast { color: var(--sunset-gold); }
-        .fb-title .bunny { color: var(--ocean-deep); }
-        .fb-byline {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.78rem;
-            color: var(--sand-medium);
-        }
-        .fb-byline strong { color: var(--ink); }
-
-        /* Comic strip container */
-        .comic-page {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 1.5rem 2rem 2rem;
-        }
-        .comic-episode-title {
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-        .comic-episode-num {
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.65rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.18em;
-            color: var(--sunset-coral);
-        }
-        .comic-episode-name {
-            font-family: 'Bangers', cursive;
-            font-size: 1.6rem;
-            color: var(--ink);
-            letter-spacing: 0.02em;
-        }
-
-        /* Comic panels grid */
-        .comic-strip {
-            display: grid;
-            gap: 0.5rem;
-        }
-        .comic-strip-row {
-            display: grid;
-            gap: 0.5rem;
-        }
-        .comic-strip-row.row-3 { grid-template-columns: 1fr 1fr 1fr; }
-        .comic-strip-row.row-2 { grid-template-columns: 1fr 1fr; }
-        .comic-strip-row.row-2-wide { grid-template-columns: 1.5fr 1fr; }
-        .comic-strip-row.row-1 { grid-template-columns: 1fr; }
-
-        .comic-panel {
-            background: white;
-            border: 3px solid var(--ink);
-            border-radius: 4px;
-            position: relative;
-            overflow: hidden;
-            min-height: 200px;
-            display: flex;
-            flex-direction: column;
-        }
-        .comic-panel-art {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            padding: 2.5rem 1rem 1rem;
-        }
-
-        /* Panel color themes */
-        .panel-sky { background: linear-gradient(180deg, #87CEEB 0%, #E0F4FF 100%); }
-        .panel-office { background: linear-gradient(180deg, #F5F0EB 0%, #E8E0D5 100%); }
-        .panel-night { background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); }
-        .panel-sunset { background: linear-gradient(180deg, var(--sunset-peach) 0%, var(--sunset-gold) 100%); }
-        .panel-garage { background: linear-gradient(180deg, #D4CBC0 0%, #B8AFA3 100%); }
-        .panel-track { background: linear-gradient(180deg, #4a7c59 0%, #6b8f5e 60%, #C4B7A6 100%); }
-
-        /* Speech bubbles */
-        .speech-bubble {
-            position: absolute;
-            background: white;
-            border: 2.5px solid var(--ink);
-            border-radius: 1.2rem;
-            padding: 0.55rem 0.85rem;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.72rem;
-            font-weight: 600;
-            color: var(--ink);
-            line-height: 1.35;
-            max-width: 65%;
-            z-index: 5;
-        }
-        .speech-bubble::after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 25%;
-            width: 0;
-            height: 0;
-            border-left: 8px solid transparent;
-            border-right: 8px solid transparent;
-            border-top: 14px solid var(--ink);
-        }
-        .speech-bubble::before {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 26%;
-            width: 0;
-            height: 0;
-            border-left: 6px solid transparent;
-            border-right: 6px solid transparent;
-            border-top: 11px solid white;
-            z-index: 1;
-        }
-        .speech-bubble.right::after { left: auto; right: 25%; }
-        .speech-bubble.right::before { left: auto; right: 26%; }
-        .speech-bubble.thought {
-            border-radius: 1.5rem;
-            border-style: dashed;
-            border-color: var(--sand-medium);
-            font-style: italic;
-            color: var(--sand-dark);
-        }
-        .speech-bubble.thought::after,
-        .speech-bubble.thought::before { display: none; }
-        .speech-bubble.yell {
-            background: var(--comic-yellow);
-            font-family: 'Bangers', cursive;
-            font-size: 0.85rem;
-            letter-spacing: 0.03em;
-            font-weight: 400;
-        }
-
-        /* Bunny SVG character */
-        .bunny-character {
-            width: 80px;
-            height: 120px;
-            position: relative;
-        }
-        .bunny-placeholder {
-            text-align: center;
-            font-size: 0.6rem;
-            color: var(--sand-medium);
-            font-style: italic;
-            padding: 0.5rem;
-            background: rgba(255,255,255,0.5);
-            border-radius: 0.3rem;
-        }
-
-        /* Panel caption/narration box */
-        .panel-caption {
-            background: var(--comic-yellow);
-            border: 2px solid var(--ink);
-            padding: 0.4rem 0.7rem;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.68rem;
-            font-weight: 500;
-            color: var(--ink);
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 5;
-            line-height: 1.3;
-        }
-
-        /* SFX text */
-        .sfx {
-            font-family: 'Bangers', cursive;
-            color: var(--sunset-coral);
-            font-size: 1.8rem;
-            transform: rotate(-8deg);
-            text-shadow: 2px 2px 0 var(--ink);
-            -webkit-text-stroke: 1px var(--ink);
-            position: absolute;
-        }
-
-        /* Comic footer */
-        .comic-footer {
-            text-align: center;
-            padding: 1rem 2rem 1.5rem;
-            border-top: 1px solid var(--rule);
-        }
-        .comic-footer-text {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.75rem;
-            color: var(--sand-medium);
-        }
-        .comic-footer-cta {
-            display: inline-block;
-            margin-top: 0.6rem;
-            background: var(--sunset-gold);
-            color: var(--ocean-deep);
-            font-family: 'Outfit', sans-serif;
-            font-weight: 700;
-            font-size: 0.78rem;
-            padding: 0.5rem 1.5rem;
-            border-radius: 100px;
-            transition: all 0.2s;
-        }
-        .comic-footer-cta:hover {
-            background: var(--sunset-coral);
-            color: white;
-            transform: translateY(-1px);
-        }
-
-        /* ===== NEWSLETTER FULL-WIDTH CTA ===== */
-        .newsletter-cta-section {
-            background: var(--ocean-deep);
-            padding: 3rem 2rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .newsletter-cta-section::before {
-            content: '';
-            position: absolute;
-            top: -30%;
-            left: -10%;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(244,162,97,0.12) 0%, transparent 60%);
-            border-radius: 50%;
-        }
-        .newsletter-cta-section::after {
-            content: '';
-            position: absolute;
-            bottom: -40%;
-            right: -10%;
-            width: 350px;
-            height: 350px;
-            background: radial-gradient(circle, rgba(42,157,143,0.1) 0%, transparent 60%);
-            border-radius: 50%;
-        }
-        .newsletter-cta-inner {
-            max-width: 560px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-        .newsletter-cta-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--cream);
-            margin-bottom: 0.6rem;
-        }
-        .newsletter-cta-sub {
-            font-family: 'Source Serif 4', serif;
-            font-size: 0.95rem;
-            color: var(--ocean-foam);
-            opacity: 0.7;
-            margin-bottom: 1.5rem;
-            line-height: 1.55;
-        }
-        .newsletter-form {
-            display: flex;
-            gap: 0.6rem;
-            max-width: 440px;
-            margin: 0 auto;
-        }
-        .newsletter-input {
-            flex: 1;
-            padding: 0.8rem 1rem;
-            border: 1px solid rgba(168,218,220,0.3);
-            border-radius: 0.5rem;
-            background: rgba(255,255,255,0.08);
-            color: white;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.88rem;
-            outline: none;
-            transition: all 0.3s;
-        }
-        .newsletter-input::placeholder { color: rgba(168,218,220,0.4); }
-        .newsletter-input:focus { border-color: var(--sunset-gold); background: rgba(255,255,255,0.14); }
-        .newsletter-btn {
-            padding: 0.8rem 1.8rem;
-            background: var(--sunset-gold);
-            color: var(--ocean-deep);
-            border: none;
-            border-radius: 0.5rem;
-            font-family: 'Outfit', sans-serif;
-            font-weight: 700;
-            font-size: 0.88rem;
-            cursor: pointer;
-            transition: all 0.2s;
-            white-space: nowrap;
-        }
-        .newsletter-btn:hover { background: var(--sunset-coral); color: white; }
-        .newsletter-note {
-            font-size: 0.68rem;
-            color: rgba(168,218,220,0.3);
-            margin-top: 0.7rem;
-        }
-
-        /* ===== FOOTER ===== */
-        .editorial-footer {
-            background: var(--ink);
-            padding: 2.5rem 2rem;
-            color: rgba(255,255,255,0.5);
-        }
-        .footer-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 2rem;
-        }
-        .footer-col-title {
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.68rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--sunset-gold);
-            margin-bottom: 0.8rem;
-        }
-        .footer-col a {
-            display: block;
-            font-size: 0.82rem;
-            color: rgba(255,255,255,0.45);
-            padding: 0.2rem 0;
-            transition: color 0.2s;
-        }
-        .footer-col a:hover { color: var(--sunset-gold); }
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 1.5rem auto 0;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255,255,255,0.08);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.72rem;
-        }
-        .footer-logo {
-            font-family: 'Outfit', sans-serif;
-            font-weight: 800;
-            font-size: 1.1rem;
-            color: var(--sunset-gold);
-        }
-        .footer-logo span { color: rgba(255,255,255,0.3); }
-
-        /* ===== ARTICLE MINI LIST ===== */
-        .article-mini-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-        .article-mini {
-            display: flex;
-            gap: 1rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid var(--rule);
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .article-mini:last-child { border-bottom: none; padding-bottom: 0; }
-        .article-mini:hover .article-mini-title { color: var(--sunset-coral); }
-        .article-mini-thumb {
-            width: 90px;
-            height: 70px;
-            border-radius: 0.3rem;
-            overflow: hidden;
-            flex-shrink: 0;
-        }
-        .article-mini-thumb-inner {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
-            font-weight: 800;
-            font-style: italic;
-            color: rgba(255,255,255,0.85);
-        }
-        .article-mini-body { flex: 1; }
-        .article-mini-kicker {
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.58rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.14em;
-            color: var(--ocean-teal);
-            margin-bottom: 0.2rem;
-        }
-        .article-mini-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 0.92rem;
-            font-weight: 700;
-            color: var(--ink);
-            line-height: 1.25;
-            transition: color 0.2s;
-        }
-        .article-mini-meta {
-            font-size: 0.65rem;
-            color: var(--sand-medium);
-            margin-top: 0.2rem;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 900px) {
-            .lead-story { grid-template-columns: 1fr; }
-            .lead-image { min-height: 200px; }
-            .articles-grid { grid-template-columns: 1fr 1fr; }
-            .content-with-sidebar {
-                grid-template-columns: 1fr;
-            }
-            .sidebar-section { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-            .footer-inner { grid-template-columns: 1fr; gap: 1.5rem; }
-            .comic-strip-row.row-3 { grid-template-columns: 1fr; }
-            .comic-strip-row.row-2 { grid-template-columns: 1fr; }
-            .comic-strip-row.row-2-wide { grid-template-columns: 1fr; }
-        }
-        @media (max-width: 600px) {
-            .page-container { padding: 0 1rem; }
-            .articles-grid { grid-template-columns: 1fr; }
-            .sidebar-section { grid-template-columns: 1fr; }
-            .newsletter-form { flex-direction: column; }
-            .masthead-top { display: none; }
-            .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
-            .comic-panel { min-height: 160px; }
-        }
-
-        /* ===== ANIMATIONS ===== */
-        .reveal {
-            opacity: 0;
-            transform: translateY(16px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+/* Article body content hidden in card view */
+.article-body-hidden { display: none; }
+</style>
 </head>
 <body>
 
-    <!-- MASTHEAD -->
-    <header class="masthead">
-        <div class="masthead-top">
-            <span>Wednesday, March 12, 2026</span>
-            <span>Vol. 1 &middot; No. 6 &middot; <a href="https://dubltap.io">dubltap.io</a></span>
-            <span>Everett, WA</span>
-        </div>
-        <div class="masthead-title-wrap">
-            <div class="masthead-rule-top"></div>
-            <h1 class="masthead-title">The Convergence <span>Threshold</span></h1>
-            <p class="masthead-subtitle">Tech that matters. Humans that inspire. A rabbit in a racing suit.</p>
-            <div class="masthead-rule-bottom"></div>
-        </div>
-    </header>
+<!-- TOP BAR — always visible including mobile -->
+<div class="top-bar">
+    <div class="top-bar-left">
+        <a href="https://dubltap.io">&#x2190; dubltap.io</a>
+    </div>
+    <div class="top-bar-right">
+        <a href="#subscribe">Subscribe Free</a>
+        <a href="https://dubltap.io" class="top-bar-apps">Explore AI Apps</a>
+    </div>
+</div>
 
-    <!-- SECTION NAV -->
-    <nav class="section-nav">
-        <div class="section-nav-inner page-container">
-            <a href="#tech" class="active">Tech & AI</a>
-            <a href="#human">The Human Element</a>
-            <a href="#entrepreneur">Entrepreneur</a>
-            <a href="#entertainment">Entertainment</a>
-            <a href="#animals">The Animal Wire</a>
-            <a href="#fast-bunny" class="nav-bunny">The Fast Bunny</a>
-            <a href="#subscribe" class="nav-subscribe-btn">Subscribe Free</a>
-        </div>
-    </nav>
+<!-- MASTHEAD -->
+<header class="masthead">
+    <div class="masthead-top">
+        <span>Wednesday, March 12, 2026</span>
+        <span>Vol. 1 &middot; No. 6 &middot; <a href="https://dubltap.io">dubltap.io</a></span>
+        <span>Everett, WA</span>
+    </div>
+    <div class="masthead-title-wrap">
+        <div class="masthead-rule-top"></div>
+        <h1 class="masthead-title">The Convergence <span>Threshold</span></h1>
+        <p class="masthead-subtitle">Tech that matters. Humans that inspire. A rabbit in a racing suit.</p>
+        <div class="masthead-rule-bottom"></div>
+    </div>
+</header>
 
-    <!-- LEAD STORY -->
-    <section class="page-container">
-        <div class="lead-story reveal">
-            <div class="lead-main">
-                <div class="lead-kicker">Lead Story</div>
-                <h2 class="lead-headline">The Age of the AI Coworker Has Arrived. The Age of the Trustworthy One Hasn't.</h2>
-                <p class="lead-deck">Gumloop raised $50 million. Meta bought Moltbook. OpenAI shipped GPT-5.4 and a security agent. The message is the same: everyone has AI now. The edge is knowing where autonomy belongs and where a human still needs the final cut.</p>
-                <p class="lead-byline">By <strong>Christopher Grove</strong> &middot; March 12, 2026 &middot; 6 min read</p>
+<!-- SECTION NAV -->
+<nav class="section-nav">
+    <div class="section-nav-inner page-container">
+        <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <span class="section-nav-label">The Threshold</span>
+        <a href="#tech" class="active">Tech & AI</a>
+        <a href="#human">The Human Element</a>
+        <a href="#entrepreneur">Entrepreneur</a>
+        <a href="#entertainment">Entertainment</a>
+        <a href="#animals">The Animal Wire</a>
+        <a href="#fast-bunny" class="nav-bunny">The Fast Bunny</a>
+        <a href="#subscribe" class="nav-subscribe-btn">Subscribe Free</a>
+    </div>
+</nav>
+
+<!-- MOBILE NAV DRAWER -->
+<div class="mobile-nav-overlay" id="mobileOverlay" onclick="toggleMobileNav()"></div>
+<div class="mobile-nav-drawer" id="mobileDrawer">
+    <button class="mobile-nav-close" onclick="toggleMobileNav()">&times;</button>
+    <div style="padding-top:1.5rem;">
+        <a href="#tech" onclick="navTo('tech')">Tech & AI</a>
+        <a href="#human" onclick="navTo('human')">The Human Element</a>
+        <a href="#entrepreneur" onclick="navTo('entrepreneur')">Entrepreneur</a>
+        <a href="#entertainment" onclick="navTo('entertainment')">Entertainment</a>
+        <a href="#animals" onclick="navTo('animals')">The Animal Wire</a>
+        <a href="#fast-bunny" class="nav-bunny-mobile" onclick="navTo('fast-bunny')">&#x1F407; The Fast Bunny</a>
+        <a href="#subscribe" class="mobile-nav-subscribe" onclick="navTo('subscribe')">Subscribe Free</a>
+        <a href="https://dubltap.io" class="mobile-nav-home">&#x2190; Back to dubltap.io</a>
+    </div>
+</div>
+
+<!-- MAIN CONTENT (front page view) -->
+<div id="frontPage">
+
+<!-- LEAD STORY -->
+<section class="page-container">
+    <div class="lead-story reveal">
+        <div class="lead-main">
+            <div class="lead-kicker">Lead Story</div>
+            <h2 class="lead-headline" onclick="openArticle('lead')">The Age of the AI Coworker Has Arrived. The Age of the Trustworthy One Hasn’t.</h2>
+            <p class="lead-deck">Gumloop raised $50 million. Meta bought Moltbook. OpenAI shipped GPT-5.4 and a security agent. The message is the same: everyone has AI now. The edge is knowing where autonomy belongs and where a human still needs the final cut.</p>
+            <p class="lead-byline">By <strong>Christopher Grove</strong> &middot; March 12, 2026 &middot; 6 min read</p>
+            <span class="lead-read-more" onclick="openArticle('lead')">Read full article &#x2192;</span>
+        </div>
+        <div class="lead-image">
+            <div class="lead-image-placeholder" style="background: linear-gradient(135deg, #264653 0%, #2A9D8F 50%, #F4A261 100%);">
+                <span class="lead-img-text">TRUST</span>
+                <span class="photo-credit">Illustration / dubltap</span>
             </div>
-            <div class="lead-image">
-                <div class="lead-image-placeholder" style="background: linear-gradient(135deg, #264653 0%, #2A9D8F 50%, #F4A261 100%);">
-                    <span class="lead-img-text">TRUST</span>
-                    <span class="photo-credit">Illustration / dubltap</span>
-                </div>
-            </div>
         </div>
-    </section>
-
-    <!-- TECH & AI -->
-    <section id="tech" class="page-container">
-        <div class="section-header section-rule-accent reveal">
-            <span class="section-icon">&#x26A1;</span>
-            <span class="section-name">Tech & AI</span>
-            <span class="section-tagline">No jargon. No hype. Just what matters.</span>
-        </div>
-        <div class="articles-grid reveal">
-            <article class="article-card">
-                <div class="article-card-image">
-                    <div class="article-card-image-inner" style="background: linear-gradient(135deg, #2A9D8F, #264653);"><span class="card-img-word">Security</span></div>
-                </div>
-                <div class="article-card-kicker">AI INFRASTRUCTURE</div>
-                <h3 class="article-card-title">Security Has Become the Grown-Up Table in AI</h3>
-                <p class="article-card-excerpt">OpenAI launched Codex Security in research preview. Founders spent two years shipping at a speed that outran review, governance, and plain old code hygiene. The bill is coming due.</p>
-                <div class="article-card-meta">Mar 12 &middot; 4 min</div>
-            </article>
-            <article class="article-card">
-                <div class="article-card-image">
-                    <div class="article-card-image-inner" style="background: linear-gradient(135deg, #E76F51, #F4A261);"><span class="card-img-word">Agents</span></div>
-                </div>
-                <div class="article-card-kicker">AGENTIC AI</div>
-                <h3 class="article-card-title">AI Agents Are Leaving the Demo Stage and Entering Payroll Logic</h3>
-                <p class="article-card-excerpt">Gumloop's $50M round and Meta's Moltbook deal signal the same thing: companies are converting software from a menu into a workforce. That sounds efficient until you remember workers need management.</p>
-                <div class="article-card-meta">Mar 12 &middot; 5 min</div>
-            </article>
-            <article class="article-card">
-                <div class="article-card-image">
-                    <div class="article-card-image-inner" style="background: linear-gradient(135deg, #264653, #1a1a2e);"><span class="card-img-word">Partners</span></div>
-                </div>
-                <div class="article-card-kicker">INDUSTRY</div>
-                <h3 class="article-card-title">The AI Platform War Is Quietly Becoming a Partner War</h3>
-                <p class="article-card-excerpt">Anthropic launched the Anthropic Institute and a $100M Claude Partner Network. Frontier labs aren't selling models anymore. They're building policy cover and channel power.</p>
-                <div class="article-card-meta">Mar 12 &middot; 4 min</div>
-            </article>
-        </div>
-    </section>
-
-    <hr class="editorial-divider page-container">
-
-    <!-- CONTENT WITH SIDEBAR -->
-    <div class="page-container content-with-sidebar">
-        <div class="main-content-col">
-
-            <!-- HUMAN ELEMENT -->
-            <section id="human">
-                <div class="section-header section-rule-accent reveal">
-                    <span class="section-icon">&#x1F30D;</span>
-                    <span class="section-name">The Human Element</span>
-                    <span class="section-tagline">Because technology was never the main act.</span>
-                </div>
-                <div class="article-mini-list reveal">
-                    <article class="article-mini">
-                        <div class="article-mini-thumb">
-                            <div class="article-mini-thumb-inner" style="background: linear-gradient(135deg, #E76F51, #264653);"><span>&#x1F3DB;</span></div>
-                        </div>
-                        <div class="article-mini-body">
-                            <div class="article-mini-kicker">POLITICS & POWER</div>
-                            <h4 class="article-mini-title">The Politics of AI Just Stopped Being Theoretical</h4>
-                            <div class="article-mini-meta">Mar 12 &middot; 4 min read</div>
-                        </div>
-                    </article>
-                    <article class="article-mini">
-                        <div class="article-mini-thumb">
-                            <div class="article-mini-thumb-inner" style="background: linear-gradient(135deg, #FFBE98, #E76F51);"><span>&#x1F4BC;</span></div>
-                        </div>
-                        <div class="article-mini-body">
-                            <div class="article-mini-kicker">LABOR & AI</div>
-                            <h4 class="article-mini-title">Work Is Changing Faster Than the Labor Market Vocabulary</h4>
-                            <div class="article-mini-meta">Mar 12 &middot; 5 min read</div>
-                        </div>
-                    </article>
-                    <article class="article-mini">
-                        <div class="article-mini-thumb">
-                            <div class="article-mini-thumb-inner" style="background: linear-gradient(135deg, #2A9D8F, #264653);"><span>&#x1F512;</span></div>
-                        </div>
-                        <div class="article-mini-body">
-                            <div class="article-mini-kicker">DIGITAL RIGHTS</div>
-                            <h4 class="article-mini-title">The Internet's New Age Gates Are a Preview of a More Suspicious Web</h4>
-                            <div class="article-mini-meta">Mar 12 &middot; 4 min read</div>
-                        </div>
-                    </article>
-                </div>
+    </div>
             </section>
 
-            <!-- ENTREPRENEUR -->
-            <section id="entrepreneur">
-                <div class="section-header section-rule-accent reveal">
-                    <span class="section-icon">&#x1F680;</span>
-                    <span class="section-name">Entrepreneur</span>
-                    <span class="section-tagline">Builders. Makers. People who ship.</span>
-                </div>
-                <div class="articles-grid articles-grid-2 reveal">
-                    <article class="article-card">
-                        <div class="article-card-image">
-                            <div class="article-card-image-inner" style="background: linear-gradient(135deg, #F4A261, #E76F51, #264653);"><span class="card-img-word">Vertical</span></div>
-                        </div>
-                        <div class="article-card-kicker">STARTUP STRATEGY</div>
-                        <h3 class="article-card-title">Vertical AI Keeps Eating the Professional Middle</h3>
-                        <p class="article-card-excerpt">Seven thousand people showed up at LegalWeek in New York. The loudest question: is AI about to devalue lawyers' time? Legora's $550M raise lands right in that tension.</p>
-                        <div class="article-card-meta">Mar 12 &middot; 5 min</div>
-                    </article>
-                    <article class="article-card">
-                        <div class="article-card-image">
-                            <div class="article-card-image-inner" style="background: linear-gradient(135deg, #FFBE98, #F4A261);"><span class="card-img-word">Small</span></div>
-                        </div>
-                        <div class="article-card-kicker">BUILDER ECONOMICS</div>
-                        <h3 class="article-card-title">Small Teams Are Becoming Absurdly Productive. That Doesn't Mean They're Simple.</h3>
-                        <p class="article-card-excerpt">Lovable added $100M in revenue in a single month with 146 employees. Replit hit $9B valuation. The numbers are flashy. The trap is admiring tiny teams without understanding the judgment they require.</p>
-                        <div class="article-card-meta">Mar 12 &middot; 6 min</div>
-                    </article>
-                </div>
-            </section>
-
-            <!-- ENTERTAINMENT (Thursday preview) -->
-            <section id="entertainment">
-                <div class="section-header section-rule-accent reveal">
-                    <span class="section-icon">&#x1F3AC;</span>
-                    <span class="section-name">Entertainment</span>
-                    <span class="section-tagline">Culture worth your attention.</span>
-                </div>
-                <div class="reveal" style="padding:2rem 0; text-align:center; color:var(--sand-medium); font-family:'Source Serif 4',serif; font-style:italic;">
-                    Coming Thursday. Gaming, music, streaming, and culture worth your attention.
-                </div>
-            </section>
-
-            <!-- ANIMAL WIRE (Thursday preview) -->
-            <section id="animals">
-                <div class="section-header section-rule-accent reveal">
-                    <span class="section-icon">&#x1F43E;</span>
-                    <span class="section-name">The Animal Wire</span>
-                    <span class="section-tagline">Good news only. We don't make the rules.</span>
-                </div>
-                <div class="reveal" style="padding:2rem 0; text-align:center; color:var(--sand-medium); font-family:'Source Serif 4',serif; font-style:italic;">
-                    Coming Thursday. Rescue stories, animal science, and conservation wins.
-                </div>
-            </section>
-
-        </div>
-
-        <!-- SIDEBAR -->
-        <aside class="sidebar-section">
-            <div class="sidebar-card email-capture-card reveal">
-                <h3 class="sidebar-card-title">Get The Threshold</h3>
-                <p>The essential twice-weekly digest. Tech. Humans. Hustle. Animals. And every Sunday &mdash; The Fast Bunny. No spam. Ever.</p>
-                <form id="sidebar-email-form" onsubmit="handleEmailCapture(event, 'sidebar')">
-                    <input type="email" class="email-input-editorial" placeholder="your@email.com" required>
-                    <button type="submit" class="email-btn-editorial">Subscribe Free</button>
-                </form>
-                <p class="email-note-editorial">Join 500+ readers. Unsubscribe anytime.</p>
+<!-- TECH & AI -->
+<section id="tech" class="page-container">
+    <div class="section-header section-rule-accent reveal">
+        <span class="section-icon">&#x26A1;</span>
+        <span class="section-name">Tech & AI</span>
+        <span class="section-tagline">No jargon. No hype. Just what matters.</span>
+    </div>
+    <div class="articles-grid reveal">
+        <article class="article-card" onclick="openArticle('tech1')">
+            <div class="article-card-image">
+                <div class="article-card-image-inner" style="background: linear-gradient(135deg, #2A9D8F, #264653);"><span class="card-img-word">Security</span></div>
             </div>
-            <div class="sidebar-card reveal">
-                <h3 class="sidebar-card-title">Trending This Week</h3>
-                <div class="trending-item"><span class="trending-num">1</span><span class="trending-text">AI Coworkers Have Arrived. Trust Hasn't.</span></div>
-                <div class="trending-item"><span class="trending-num">2</span><span class="trending-text">$185M in AI Political Spending</span></div>
-                <div class="trending-item"><span class="trending-num">3</span><span class="trending-text">Lovable: $100M Revenue, 146 Employees</span></div>
-                <div class="trending-item"><span class="trending-num">4</span><span class="trending-text">Vertical AI Eats Legal</span></div>
-                <div class="trending-item"><span class="trending-num">5</span><span class="trending-text">The Fed Is Watching AI Jobs</span></div>
+            <div class="article-card-kicker">AI INFRASTRUCTURE</div>
+            <h3 class="article-card-title">Security Has Become the Grown-Up Table in AI</h3>
+            <p class="article-card-excerpt">OpenAI launched Codex Security in research preview. Founders spent two years shipping at a speed that outran review, governance, and plain old code hygiene. The bill is coming due.</p>
+            <div class="article-card-meta">Mar 12 &middot; 4 min</div>
+            <div class="article-card-read">Read article &#x2192;</div>
+        </article>
+        <article class="article-card" onclick="openArticle('tech2')">
+            <div class="article-card-image">
+                <div class="article-card-image-inner" style="background: linear-gradient(135deg, #E76F51, #F4A261);"><span class="card-img-word">Agents</span></div>
             </div>
-            <div class="sidebar-card app-promo-card reveal">
-                <h3 class="sidebar-card-title">AI That Actually Does Stuff</h3>
-                <p>8 specialized tools. Free to start. Built for the hungry.</p>
-                <a href="https://dubltap.io" class="app-promo-btn">Explore the Arsenal &#x2192;</a>
+            <div class="article-card-kicker">AGENTIC AI</div>
+            <h3 class="article-card-title">AI Agents Are Leaving the Demo Stage and Entering Payroll Logic</h3>
+            <p class="article-card-excerpt">Gumloop's $50M round and Meta's Moltbook deal signal the same thing: companies are converting software from a menu into a workforce.</p>
+            <div class="article-card-meta">Mar 12 &middot; 5 min</div>
+            <div class="article-card-read">Read article &#x2192;</div>
+        </article>
+        <article class="article-card" onclick="openArticle('tech3')">
+            <div class="article-card-image">
+                <div class="article-card-image-inner" style="background: linear-gradient(135deg, #264653, #1a1a2e);"><span class="card-img-word">Partners</span></div>
             </div>
-            <div class="sidebar-card reveal">
-                <h3 class="sidebar-card-title">The dubltap Toolkit</h3>
-                <div class="trending-item"><span class="trending-num" style="font-size:1rem;">&#x1F9E0;</span><a class="trending-text" href="https://mind.dubltap.io">Mind Expander &mdash; Free forever</a></div>
-                <div class="trending-item"><span class="trending-num" style="font-size:1rem;">&#x1F4B0;</span><a class="trending-text" href="https://hustle.dubltap.io">Side Hustle Copilot</a></div>
-                <div class="trending-item"><span class="trending-num" style="font-size:1rem;">&#x1F374;</span><a class="trending-text" href="https://fork.dubltap.io">Bad Mutha Forker</a></div>
-                <div class="trending-item"><span class="trending-num" style="font-size:1rem;">&#x1F4CA;</span><a class="trending-text" href="https://maven.dubltap.io">Market Maven</a></div>
-                <div class="trending-item"><span class="trending-num" style="font-size:1rem;">&#x1F3B5;</span><a class="trending-text" href="https://vibe.dubltap.io">VibeCurate</a></div>
+            <div class="article-card-kicker">INDUSTRY</div>
+            <h3 class="article-card-title">The AI Platform War Is Quietly Becoming a Partner War</h3>
+            <p class="article-card-excerpt">Anthropic launched the Anthropic Institute and a $100M Claude Partner Network. Frontier labs aren't selling models anymore. They're building policy cover and channel power.</p>
+            <div class="article-card-meta">Mar 12 &middot; 4 min</div>
+            <div class="article-card-read">Read article &#x2192;</div>
+        </article>
+    </div>
+</section>
+
+<hr class="editorial-divider page-container">
+
+<!-- CONTENT WITH SIDEBAR -->
+<div class="page-container content-with-sidebar">
+    <div class="main-content-col">
+
+        <!-- HUMAN ELEMENT -->
+        <section id="human">
+            <div class="section-header section-rule-accent reveal">
+                <span class="section-icon">&#x1F30D;</span>
+                <span class="section-name">The Human Element</span>
+                <span class="section-tagline">Because technology was never the main act.</span>
             </div>
-        </aside>
+            <div class="article-mini-list reveal">
+                <article class="article-mini" onclick="openArticle('human1')">
+                    <div class="article-mini-thumb">
+                        <div class="article-mini-thumb-inner" style="background: linear-gradient(135deg, #E76F51, #264653);"><span>&#x1F3DB;</span></div>
+                    </div>
+                    <div class="article-mini-body">
+                        <div class="article-mini-kicker">POLITICS & POWER</div>
+                        <h4 class="article-mini-title">The Politics of AI Just Stopped Being Theoretical</h4>
+                        <div class="article-mini-meta">Mar 12 &middot; 4 min read</div>
+                        <div class="article-mini-read">Read article &#x2192;</div>
+                    </div>
+                </article>
+                <article class="article-mini" onclick="openArticle('human2')">
+                    <div class="article-mini-thumb">
+                        <div class="article-mini-thumb-inner" style="background: linear-gradient(135deg, #FFBE98, #E76F51);"><span>&#x1F4BC;</span></div>
+                    </div>
+                    <div class="article-mini-body">
+                        <div class="article-mini-kicker">LABOR & AI</div>
+                        <h4 class="article-mini-title">Work Is Changing Faster Than the Labor Market Vocabulary</h4>
+                        <div class="article-mini-meta">Mar 12 &middot; 5 min read</div>
+                        <div class="article-mini-read">Read article &#x2192;</div>
+                    </div>
+                </article>
+                <article class="article-mini" onclick="openArticle('human3')">
+                    <div class="article-mini-thumb">
+                        <div class="article-mini-thumb-inner" style="background: linear-gradient(135deg, #2A9D8F, #264653);"><span>&#x1F512;</span></div>
+                    </div>
+                    <div class="article-mini-body">
+                        <div class="article-mini-kicker">DIGITAL RIGHTS</div>
+                        <h4 class="article-mini-title">The Internet’s New Age Gates Are a Preview of a More Suspicious Web</h4>
+                        <div class="article-mini-meta">Mar 12 &middot; 4 min read</div>
+                        <div class="article-mini-read">Read article &#x2192;</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ENTREPRENEUR -->
+        <section id="entrepreneur">
+            <div class="section-header section-rule-accent reveal">
+                <span class="section-icon">&#x1F680;</span>
+                <span class="section-name">Entrepreneur</span>
+                <span class="section-tagline">Builders. Makers. People who ship.</span>
+            </div>
+            <div class="articles-grid articles-grid-2 reveal">
+                <article class="article-card" onclick="openArticle('ent1')">
+                    <div class="article-card-image">
+                        <div class="article-card-image-inner" style="background: linear-gradient(135deg, #F4A261, #E76F51, #264653);"><span class="card-img-word">Vertical</span></div>
+                    </div>
+                    <div class="article-card-kicker">STARTUP STRATEGY</div>
+                    <h3 class="article-card-title">Vertical AI Keeps Eating the Professional Middle</h3>
+                    <p class="article-card-excerpt">Seven thousand people showed up at LegalWeek in New York. The loudest question: is AI about to devalue lawyers’ time?</p>
+                    <div class="article-card-meta">Mar 12 &middot; 5 min</div>
+                    <div class="article-card-read">Read article &#x2192;</div>
+                </article>
+                <article class="article-card" onclick="openArticle('ent2')">
+                    <div class="article-card-image">
+                        <div class="article-card-image-inner" style="background: linear-gradient(135deg, #FFBE98, #F4A261);"><span class="card-img-word">Small</span></div>
+                    </div>
+                    <div class="article-card-kicker">BUILDER ECONOMICS</div>
+                    <h3 class="article-card-title">Small Teams Are Becoming Absurdly Productive. That Doesn’t Mean They’re Simple.</h3>
+                    <p class="article-card-excerpt">Lovable added $100M in revenue in a single month with 146 employees. The numbers are flashy. The trap is admiring tiny teams without understanding the judgment they require.</p>
+                    <div class="article-card-meta">Mar 12 &middot; 6 min</div>
+                    <div class="article-card-read">Read article &#x2192;</div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ENTERTAINMENT (Thursday) -->
+        <section id="entertainment">
+            <div class="section-header section-rule-accent reveal">
+                <span class="section-icon">&#x1F3AC;</span>
+                <span class="section-name">Entertainment</span>
+                <span class="section-tagline">Culture worth your attention.</span>
+            </div>
+            <div class="coming-soon-section reveal">
+                <p class="coming-soon-text">Coming Thursday. Gaming, music, streaming, and culture worth your attention.</p>
+                <a href="#subscribe" class="coming-soon-subscribe">Subscribe to get notified &#x2192;</a>
+            </div>
+        </section>
+
+        <!-- ANIMAL WIRE (Thursday) -->
+        <section id="animals">
+            <div class="section-header section-rule-accent reveal">
+                <span class="section-icon">&#x1F43E;</span>
+                <span class="section-name">The Animal Wire</span>
+                <span class="section-tagline">Good news only. We don’t make the rules.</span>
+            </div>
+            <div class="coming-soon-section reveal">
+                <p class="coming-soon-text">Coming Thursday. Rescue stories, animal science, and conservation wins.</p>
+                <a href="#subscribe" class="coming-soon-subscribe">Subscribe to get notified &#x2192;</a>
+            </div>
+        </section>
+
     </div>
 
-    <!-- THE FAST BUNNY -->
-    <section id="fast-bunny" class="fast-bunny-section">
-        <div class="fast-bunny-header">
-            <div class="fb-sunday-badge">&#x2600;&#xFE0F; Sunday Edition</div>
-            <h2 class="fb-title">
-                <span class="the">The</span>
-                <span class="fast">Fast</span>
-                <span class="bunny">Bunny</span>
-            </h2>
-            <p class="fb-byline">Created by <strong>Christopher Grove</strong> &middot; A dubltap.io original</p>
-        </div>
-        <div class="comic-page" style="text-align:center;">
-            <div class="comic-episode-title">
-                <div class="comic-episode-num">Latest Episodes</div>
-            </div>
-            <div style="display:flex; flex-direction:column; gap:2rem; padding:1rem 0;">
-                <div>
-                    <div class="comic-episode-name" style="margin-bottom:0.8rem;">Episode 003: &ldquo;The Algorithm Doesn't Sleep&rdquo;</div>
-                    <img src="comics/ep003.jpg" alt="The Fast Bunny Episode 003 - The Algorithm Doesn't Sleep" style="width:100%; max-width:900px; border:3px solid #1C1917; border-radius:4px;">
-                </div>
-                <div>
-                    <div class="comic-episode-name" style="margin-bottom:0.8rem;">Episode 002: &ldquo;The Networking Event&rdquo;</div>
-                    <img src="comics/ep002.jpg" alt="The Fast Bunny Episode 002 - The Networking Event" style="width:100%; max-width:900px; border:3px solid #1C1917; border-radius:4px;">
-                </div>
-                <div>
-                    <div class="comic-episode-name" style="margin-bottom:0.8rem;">Episode 001: &ldquo;The Startup That Ran on Carrots&rdquo;</div>
-                    <img src="comics/ep001.jpg" alt="The Fast Bunny Episode 001 - The Startup That Ran on Carrots" style="width:100%; max-width:900px; border:3px solid #1C1917; border-radius:4px;">
-                </div>
-            </div>
-        </div>
-        <div class="comic-footer">
-            <p class="comic-footer-text">The Fast Bunny appears every Sunday in The Convergence Threshold. <a href="#subscribe" style="color:var(--sunset-gold);">Subscribe to get every episode &#x2192;</a></p>
-        </div>
-    </section>
-
-    <!-- NEWSLETTER CTA -->
-    <section id="subscribe" class="newsletter-cta-section">
-        <div class="newsletter-cta-inner">
-            <h2 class="newsletter-cta-title">Don't Miss the Next One.</h2>
-            <p class="newsletter-cta-sub">The Convergence Threshold lands in your inbox twice a week. Tech that matters. Humans that inspire. The Fast Bunny every Sunday. Zero spam. Real talk.</p>
-            <form class="newsletter-form" id="footer-email-form" onsubmit="handleEmailCapture(event, 'footer')">
-                <input type="email" class="newsletter-input" placeholder="your@email.com" required>
-                <button type="submit" class="newsletter-btn">Subscribe</button>
+    <!-- SIDEBAR -->
+    <aside class="sidebar-section">
+        <div class="sidebar-card email-capture-card reveal">
+            <h3 class="sidebar-card-title">Get The Threshold</h3>
+            <p>The essential twice-weekly digest. Tech. Humans. Hustle. Animals. And every Sunday &mdash; The Fast Bunny. No spam. Ever.</p>
+            <form id="sidebar-email-form" onsubmit="handleEmailCapture(event, 'sidebar')">
+                <input type="email" class="email-input-editorial" placeholder="your@email.com" required>
+                <button type="submit" class="email-btn-editorial">Subscribe Free</button>
             </form>
-            <p class="newsletter-note">Join The Threshold. Unsubscribe anytime. We're cool like that.</p>
+            <p class="email-note-editorial">Join 500+ readers. Unsubscribe anytime.</p>
         </div>
-    </section>
+        <div class="sidebar-card reveal">
+            <h3 class="sidebar-card-title">Trending This Week</h3>
+            <div class="trending-item"><span class="trending-num">1</span><span class="trending-text" onclick="openArticle('lead')">AI Coworkers Have Arrived. Trust Hasn’t.</span></div>
+            <div class="trending-item"><span class="trending-num">2</span><span class="trending-text" onclick="openArticle('human1')">$185M in AI Political Spending</span></div>
+            <div class="trending-item"><span class="trending-num">3</span><span class="trending-text" onclick="openArticle('ent2')">Lovable: $100M Revenue, 146 Employees</span></div>
+            <div class="trending-item"><span class="trending-num">4</span><span class="trending-text" onclick="openArticle('ent1')">Vertical AI Eats Legal</span></div>
+            <div class="trending-item"><span class="trending-num">5</span><span class="trending-text" onclick="openArticle('human2')">The Fed Is Watching AI Jobs</span></div>
+        </div>
+        <div class="sidebar-card app-promo-card reveal">
+            <h3 class="sidebar-card-title">AI That Actually Does Stuff</h3>
+            <p>8 specialized tools. Free to start. Built for the hungry.</p>
+            <a href="https://dubltap.io" class="app-promo-btn">Explore the Arsenal &#x2192;</a>
+        </div>
+        <div class="sidebar-card reveal">
+            <h3 class="sidebar-card-title">The dubltap Toolkit</h3>
+            <div class="trending-item"><span class="trending-num" style="font-size:1rem;">&#x1F9E0;</span><a class="trending-text" href="https://mind.dubltap.io">Mind Expander &mdash; Free forever</a></div>
+            <div class="trending-item"><span class="trending-num" style="font-size:1rem;">&#x1F4B0;</span><a class="trending-text" href="https://hustle.dubltap.io">Side Hustle Copilot</a></div>
+            <div class="trending-item"><span class="trending-num" style="font-size:1rem;">&#x1F374;</span><a class="trending-text" href="https://fork.dubltap.io">Bad Mutha Forker</a></div>
+            <div class="trending-item"><span class="trending-num" style="font-size:1rem;">&#x1F4CA;</span><a class="trending-text" href="https://maven.dubltap.io">Market Maven</a></div>
+            <div class="trending-item"><span class="trending-num" style="font-size:1rem;">&#x1F3B5;</span><a class="trending-text" href="https://vibe.dubltap.io">VibeCurate</a></div>
+        </div>
+    </aside>
+</div>
 
-    <!-- FOOTER -->
-    <footer class="editorial-footer">
-        <div class="footer-inner">
-            <div class="footer-col">
-                <div class="footer-col-title">The Arsenal</div>
-                <a href="https://mind.dubltap.io">Mind Expander (Free)</a>
-                <a href="https://hustle.dubltap.io">Side Hustle Copilot</a>
-                <a href="https://fork.dubltap.io">Bad Mutha Forker</a>
-                <a href="https://maven.dubltap.io">Market Maven</a>
-                <a href="https://cliff.dubltap.io">CLIFF NOTEZ</a>
-                <a href="https://bizdev.dubltap.io">Pro Business Dev</a>
-                <a href="https://aesthetic.dubltap.io">Aesthetic AI</a>
-                <a href="https://vibe.dubltap.io">VibeCurate</a>
+</div><!-- end #frontPage -->
+
+<!-- EXPANDED ARTICLE VIEW (hidden by default, shown when article clicked) -->
+<div id="articleView" class="page-container" style="display:none;">
+    <div class="article-expanded open">
+        <div class="article-expanded-back" onclick="closeArticle()">&#x2190; Back to front page</div>
+        <div class="article-expanded-kicker" id="articleKicker"></div>
+        <h2 id="articleTitle"></h2>
+        <div class="article-expanded-meta" id="articleMeta"></div>
+        <div class="article-expanded-body" id="articleBody"></div>
+        <div class="article-expanded-cta">
+            <p>The Convergence Threshold lands twice a week. Don’t miss the next one.</p>
+            <a href="#subscribe" onclick="closeArticle()">Subscribe Free &#x2192;</a>
+        </div>
+    </div>
+</div>
+
+<!-- THE FAST BUNNY -->
+<section id="fast-bunny" class="fast-bunny-section">
+    <div class="fast-bunny-header">
+        <div class="fb-sunday-badge">&#x2600;&#xFE0F; Sunday Edition</div>
+        <h2 class="fb-title">
+            <span class="the">The</span>
+            <span class="fast">Fast</span>
+            <span class="bunny">Bunny</span>
+        </h2>
+        <p class="fb-byline">Created by <strong>Christopher Grove</strong> &middot; A dubltap.io original</p>
+    </div>
+    <div class="comic-page" style="text-align:center;">
+        <div class="comic-episode-title">
+            <div class="comic-episode-num">Latest Episodes</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:2rem; padding:1rem 0;">
+            <div>
+                <div class="comic-episode-name" style="margin-bottom:0.8rem;">Episode 003: &ldquo;The Algorithm Doesn’t Sleep&rdquo;</div>
+                <img src="comics/ep003.png" alt="The Fast Bunny Episode 003 - The Algorithm Doesn't Sleep" style="width:100%; max-width:900px; border:3px solid #1C1917; border-radius:4px;" loading="lazy">
             </div>
-            <div class="footer-col">
-                <div class="footer-col-title">The Threshold</div>
-                <a href="#tech">Tech & AI</a>
-                <a href="#human">The Human Element</a>
-                <a href="#entrepreneur">Entrepreneur</a>
-                <a href="#entertainment">Entertainment</a>
-                <a href="#animals">The Animal Wire</a>
-                <a href="#fast-bunny">The Fast Bunny</a>
+            <div>
+                <div class="comic-episode-name" style="margin-bottom:0.8rem;">Episode 002: &ldquo;The Networking Event&rdquo;</div>
+                <img src="comics/ep002.png" alt="The Fast Bunny Episode 002 - The Networking Event" style="width:100%; max-width:900px; border:3px solid #1C1917; border-radius:4px;" loading="lazy">
             </div>
-            <div class="footer-col">
-                <div class="footer-col-title">Connect</div>
-                <a href="https://dubltap.io">dubltap.io</a>
-                <a href="https://mail.dubltap.io">Newsletter</a>
-                <a href="/cdn-cgi/l/email-protection#157d7079797a55716077796174653b7c7a"><span class="__cf_email__" data-cfemail="1f777a7373705f7b6a7d736b7e6f317670">[email&#160;protected]</span></a>
+            <div>
+                <div class="comic-episode-name" style="margin-bottom:0.8rem;">Episode 001: &ldquo;The Startup That Ran on Carrots&rdquo;</div>
+                <img src="comics/ep001.png" alt="The Fast Bunny Episode 001 - The Startup That Ran on Carrots" style="width:100%; max-width:900px; border:3px solid #1C1917; border-radius:4px;" loading="lazy">
             </div>
         </div>
-        <div class="footer-bottom">
-            <div class="footer-logo">dubl<span>tap</span>.io</div>
-            <span>&copy; 2026 dubltap.io &middot; AI that actually does stuff.</span>
-            <span>Riffs louder than hunger.</span>
+    </div>
+    <div class="comic-footer">
+        <p class="comic-footer-text">The Fast Bunny appears every Sunday in The Convergence Threshold. <a href="#subscribe" style="color:var(--sunset-gold);">Subscribe to get every episode &#x2192;</a></p>
+    </div>
+</section>
+
+<!-- NEWSLETTER CTA -->
+<section id="subscribe" class="newsletter-cta-section">
+    <div class="newsletter-cta-inner">
+        <h2 class="newsletter-cta-title">Don’t Miss the Next One.</h2>
+        <p class="newsletter-cta-sub">The Convergence Threshold lands in your inbox twice a week. Tech that matters. Humans that inspire. The Fast Bunny every Sunday. Zero spam. Real talk.</p>
+        <form class="newsletter-form" id="footer-email-form" onsubmit="handleEmailCapture(event, 'footer')">
+            <input type="email" class="newsletter-input" placeholder="your@email.com" required>
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+        </form>
+        <p class="newsletter-note">Join The Threshold. Unsubscribe anytime. We’re cool like that.</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="editorial-footer">
+    <div class="footer-inner">
+        <div class="footer-col">
+            <div class="footer-col-title">The Arsenal</div>
+            <a href="https://mind.dubltap.io">Mind Expander (Free)</a>
+            <a href="https://hustle.dubltap.io">Side Hustle Copilot</a>
+            <a href="https://fork.dubltap.io">Bad Mutha Forker</a>
+            <a href="https://maven.dubltap.io">Market Maven</a>
+            <a href="https://cliff.dubltap.io">CLIFF NOTEZ</a>
+            <a href="https://bizdev.dubltap.io">Pro Business Dev</a>
+            <a href="https://aesthetic.dubltap.io">Aesthetic AI</a>
+            <a href="https://vibe.dubltap.io">VibeCurate</a>
         </div>
-    </footer>
+        <div class="footer-col">
+            <div class="footer-col-title">The Threshold</div>
+            <a href="javascript:void(0)" onclick="closeArticle();scrollNav('tech')">Tech & AI</a>
+            <a href="javascript:void(0)" onclick="closeArticle();scrollNav('human')">The Human Element</a>
+            <a href="javascript:void(0)" onclick="closeArticle();scrollNav('entrepreneur')">Entrepreneur</a>
+            <a href="javascript:void(0)" onclick="closeArticle();scrollNav('entertainment')">Entertainment</a>
+            <a href="javascript:void(0)" onclick="closeArticle();scrollNav('animals')">The Animal Wire</a>
+            <a href="javascript:void(0)" onclick="closeArticle();scrollNav('fast-bunny')">The Fast Bunny</a>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-title">Connect</div>
+            <a href="https://dubltap.io">dubltap.io</a>
+            <a href="https://mail.dubltap.io">Newsletter Archive</a>
+            <a href="mailto:hello@dubltap.io">hello@dubltap.io</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-logo">dubl<span>tap</span>.io</div>
+        <span>&copy; 2026 dubltap.io &middot; AI that actually does stuff.</span>
+        <span>Riffs louder than hunger.</span>
+    </div>
+</footer>
 
-    <!-- SCRIPTS -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        var revealObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    revealObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(function(el) { revealObserver.observe(el); });
+<!-- SCRIPTS -->
+<script>
+// ===== ARTICLE DATA =====
+var articles = {
+    lead: {
+        kicker: 'LEAD STORY',
+        title: 'The Age of the AI Coworker Has Arrived. The Age of the Trustworthy One Hasn\u2019t.',
+        meta: 'By <strong>Christopher Grove</strong> &middot; March 12, 2026 &middot; 6 min read',
+        body: '<p>Gumloop raised $50 million. Meta bought Moltbook. OpenAI shipped GPT-5.4 and a security agent. The message from every boardroom in Silicon Valley is now unmistakable: the AI coworker is here. Not a chatbot. Not an assistant. A colleague with a login, a task queue, and access to your production systems.</p><p>But here is what most of the breathless coverage of this week\u2019s announcements leaves out: availability is not the same as trustworthiness. The fact that an AI agent can now write code, triage customer tickets, and draft sales proposals does not mean any of those outputs should be trusted without human review. The gap between capability and reliability is where every serious deployment story lives right now.</p><p>Gumloop\u2019s round is instructive. The company is building workflow automation with AI agents that operate across multiple business systems. The pitch is efficiency at scale. The reality is that every one of those agents is making decisions without the institutional memory, ethical judgment, or contextual sensitivity that a human employee builds over years. When the agent is right, it feels like magic. When it\u2019s wrong, it fails in ways that are often undetectable until the damage is done.</p><p>OpenAI\u2019s new security agent is an admission of the same problem from a different angle. If the code you\u2019re shipping was written or reviewed by an AI, the attack surface changes in fundamental ways. The models don\u2019t intentionally leave vulnerabilities \u2014 but they lack the adversarial imagination that experienced security engineers develop over decades. Codex Security is an attempt to patch that gap, but it\u2019s treating the symptom while the cause \u2014 unchecked speed \u2014 accelerates.</p><p>The organizations that will thrive in this transition are not the ones deploying the most agents the fastest. They are the ones building governance frameworks that treat AI outputs the way financial institutions treat trade confirmations \u2014 with structured review, clear accountability, and a human who signs off before anything touches production. The technology isn\u2019t the problem. Trust is. And trust, as always, is earned slowly.</p>'
+    },
+    tech1: {
+        kicker: 'AI INFRASTRUCTURE',
+        title: 'Security Has Become the Grown-Up Table in AI',
+        meta: 'By <strong>Christopher Grove</strong> &middot; March 12, 2026 &middot; 4 min read',
+        body: '<p>OpenAI launched Codex Security in research preview this week, and the timing says everything about where the industry actually stands. For two years, the dominant AI narrative has been about speed: ship fast, iterate faster, worry about guardrails later. Security was treated like compliance paperwork \u2014 something to handle after the product was already in the wild.</p><p>That era is ending. Not because the industry suddenly found its conscience, but because the attack vectors are multiplying faster than the models can patch them. AI-generated code has specific vulnerability patterns that traditional static analysis tools were never designed to catch. When an LLM writes a function, it optimizes for working code, not secure code. The difference is subtle until it isn\u2019t.</p><p>Codex Security represents a pivot from \u201Cmove fast and break things\u201D to \u201Cmake sure the things you\u2019ve already built aren\u2019t already broken.\u201D It scans codebases for the particular failure modes that AI-generated code produces \u2014 insecure defaults, missing input validation, and what security researchers call \u201Cplausible but dangerous\u201D implementations that look correct on the surface.</p><p>The real question is whether this will become a standard part of the AI development pipeline or an optional add-on that startups skip to save time. History suggests the latter, at least initially. Security always feels expensive until the breach happens. In AI, those breaches are going to arrive faster and hit harder than anything the software industry has seen before.</p>'
+    },
+    tech2: {
+        kicker: 'AGENTIC AI',
+        title: 'AI Agents Are Leaving the Demo Stage and Entering Payroll Logic',
+        meta: 'By <strong>Christopher Grove</strong> &middot; March 12, 2026 &middot; 5 min read',
+        body: '<p>Gumloop\u2019s $50 million round and Meta\u2019s acquisition of Moltbook landed within 48 hours of each other. That\u2019s not a coincidence. It\u2019s the market signaling that the agentic AI conversation has graduated from \u201Cwhat if\u201D to \u201Chow much.\u201D Companies are no longer asking whether AI agents can do useful work. They are building the infrastructure to deploy them at scale \u2014 with budgets, KPIs, and, inevitably, headcount trade-offs.</p><p>Gumloop\u2019s model is particularly revealing. The company builds agents that chain together actions across multiple SaaS tools \u2014 the kind of multi-step workflows that currently require a human to copy data from one system, transform it, paste it into another, and verify the result. The efficiency gains are real. The problem is what gets lost in the handoff.</p><p>Human workers build context over time. They know that the sales team inflates Q4 projections. They know that certain clients require a personal touch. They know when a process is technically correct but practically stupid. AI agents don\u2019t have any of that context, and the companies deploying them are going to learn that lesson the expensive way.</p><p>Meta\u2019s Moltbook acquisition is the enterprise version of the same bet. Moltbook was building agent frameworks for internal operations \u2014 the kind of back-office automation that sounds boring but represents billions in operational spend. Meta wants those agents running inside its own infrastructure, which tells you that even the companies building the models don\u2019t fully trust third-party agent platforms yet.</p><p>The next 18 months will sort the serious deployments from the expensive experiments. The differentiator won\u2019t be the quality of the underlying model. It will be the quality of the human judgment embedded in the governance layer on top of it.</p>'
+    },
+    tech3: {
+        kicker: 'INDUSTRY',
+        title: 'The AI Platform War Is Quietly Becoming a Partner War',
+        meta: 'By <strong>Christopher Grove</strong> &middot; March 12, 2026 &middot; 4 min read',
+        body: '<p>Anthropic launched the Anthropic Institute and a $100 million Claude Partner Network this week. If you read that as just another corporate partnership program, you\u2019re missing the strategic shift underneath it. The frontier AI labs have realized that winning the model benchmark race is necessary but insufficient. The real battle is for distribution, influence, and the institutional relationships that determine which AI platform gets embedded into enterprise workflows.</p><p>OpenAI learned this first with its Microsoft partnership. Google learned it second with its Workspace integration. Anthropic is learning it now with the Claude Partner Network \u2014 a structured program to build a channel of implementation partners, consultancies, and enterprise integrators who recommend Claude to their clients.</p><p>The Anthropic Institute is the policy cover. By investing in safety research and governance frameworks, Anthropic is building the credibility that regulated industries require before they\u2019ll adopt a new platform. Banks, hospitals, defense contractors \u2014 these organizations don\u2019t care about benchmark scores. They care about whether the vendor will still be around in five years and whether deploying their model will create regulatory risk.</p><p>This is the boring, lucrative part of the AI race. The companies that build the deepest partner ecosystems will control the enterprise market, regardless of which model is technically superior in any given quarter. It\u2019s a lesson from every previous platform war: distribution always beats raw capability.</p>'
+    },
+    human1: {
+        kicker: 'POLITICS & POWER',
+        title: 'The Politics of AI Just Stopped Being Theoretical',
+        meta: 'By <strong>Christopher Grove</strong> &middot; March 12, 2026 &middot; 4 min read',
+        body: '<p>The numbers are now impossible to ignore. AI-related political spending hit $185 million in the 2025-2026 cycle, distributed across lobbying, campaign contributions, and the quiet funding of think tanks that produce policy papers conveniently aligned with industry interests. This is not new behavior \u2014 every major industry does it. What\u2019s new is the speed. The AI lobby went from nonexistent to one of the top five corporate spending categories in under three years.</p><p>The implications cut both directions. On one side, the industry\u2019s political influence is accelerating the timeline for favorable regulation \u2014 or more precisely, the timeline for regulations written in language that the biggest players helped draft. On the other side, the scale of spending is generating its own backlash. Congressional staffers who once saw AI as a bipartisan opportunity are starting to see it as the next Big Tech consolidation story.</p><p>The real tension is between speed and governance. AI companies argue, correctly, that overly restrictive regulation could cede leadership to countries with fewer guardrails. Skeptics argue, also correctly, that self-regulation by companies with billion-dollar incentives is not regulation at all. The truth, as usual, is more complicated than either side\u2019s talking points.</p><p>What\u2019s clear is that the era of treating AI policy as a future problem is over. The decisions being made in Washington right now \u2014 about liability, data rights, algorithmic transparency, and the definition of \u201Cautonomous systems\u201D \u2014 will shape the industry for the next decade. Most of those decisions are being made by people who learned what a large language model was less than two years ago.</p>'
+    },
+    human2: {
+        kicker: 'LABOR & AI',
+        title: 'Work Is Changing Faster Than the Labor Market Vocabulary',
+        meta: 'By <strong>Christopher Grove</strong> &middot; March 12, 2026 &middot; 5 min read',
+        body: '<p>The Bureau of Labor Statistics released its quarterly employment report this week, and buried in the data was a number that should make every workforce planner uncomfortable: AI-related job postings increased 340% year over year, while the number of qualified candidates increased 12%. That\u2019s not a skills gap. That\u2019s a chasm.</p><p>The disconnect starts with language. Companies are hiring for roles that didn\u2019t exist 18 months ago \u2014 AI governance specialists, prompt engineers, human-in-the-loop designers, agent reliability engineers \u2014 using job descriptions written by people who are themselves still figuring out what those roles actually involve. The result is a labor market that\u2019s simultaneously desperate and confused.</p><p>The Federal Reserve flagged AI-driven labor displacement as a key risk factor in its most recent meeting minutes, but the real story isn\u2019t displacement. It\u2019s transformation. The jobs aren\u2019t disappearing; they\u2019re mutating into something the existing workforce isn\u2019t trained for. A paralegal who spent a decade mastering document review now needs to master document review with an AI copilot \u2014 which requires entirely different judgment, entirely different error-detection skills, and entirely different quality standards.</p><p>The organizations navigating this well share a common trait: they\u2019re investing in internal upskilling before they invest in AI tooling. Training your existing workforce to work alongside AI is slower and less glamorous than deploying a new agent platform, but it\u2019s the only approach that doesn\u2019t leave you with a powerful tool and nobody who knows how to use it responsibly.</p>'
+    },
+    human3: {
+        kicker: 'DIGITAL RIGHTS',
+        title: 'The Internet\u2019s New Age Gates Are a Preview of a More Suspicious Web',
+        meta: 'By <strong>Christopher Grove</strong> &middot; March 12, 2026 &middot; 4 min read',
+        body: '<p>Five states enacted AI-generated content disclosure laws in the first quarter of 2026. Three major social platforms introduced mandatory age verification using biometric data. And somewhere in the background, the open internet \u2014 the one where you could browse anonymously, speak freely, and exist without proving who you are \u2014 got a little smaller.</p><p>The stated rationale is child safety, and the concerns are legitimate. AI-generated deepfakes, synthetic media targeting minors, and algorithmically optimized manipulation are real problems that demand real solutions. But the solutions being implemented are building infrastructure that can easily be repurposed for broader surveillance, content control, and the kind of identity verification that turns every website into a checkpoint.</p><p>The pattern is familiar from every previous round of internet regulation: a genuine problem is used to justify an overbroad technical solution that creates new problems the original advocates never intended. Age verification databases become targets for identity theft. Biometric data collected by social platforms gets subpoenaed by law enforcement. Content disclosure requirements create chilling effects on political speech.</p><p>None of this means the status quo is acceptable. The question is whether we\u2019re building a safer internet or a more surveilled one, and whether the people making that decision understand the difference. Right now, the evidence suggests they don\u2019t.</p>'
+    },
+    ent1: {
+        kicker: 'STARTUP STRATEGY',
+        title: 'Vertical AI Keeps Eating the Professional Middle',
+        meta: 'By <strong>Christopher Grove</strong> &middot; March 12, 2026 &middot; 5 min read',
+        body: '<p>Seven thousand people showed up at LegalWeek in New York last week, and the loudest question echoing through the convention halls was one that used to be whispered: is AI about to devalue the hourly rate? Legora\u2019s $550 million raise landed right in that tension \u2014 a company building AI tools that can do in minutes what a team of junior associates does in weeks.</p><p>The pattern is the same one we saw in accounting, radiology, and financial analysis over the past two years. Vertical AI companies identify a profession where the mid-level work is structured, repetitive, and expensive, then build tools that compress the time and headcount required to deliver it. The senior partners keep their value \u2014 judgment, client relationships, courtroom presence. The junior and mid-level professionals who do the research, drafting, and review? Their market rate is collapsing.</p><p>Legora\u2019s pitch is specifically about legal research and contract analysis \u2014 work that law firms bill at $200\u2013$500 per hour and that AI can now perform with comparable accuracy at a fraction of the cost. The firms that adopt these tools first get a margin advantage. The firms that don\u2019t get undercut on price by competitors who did. It\u2019s not a choice; it\u2019s an inevitability.</p><p>The broader lesson for every professional services industry: if your value proposition is access to knowledge that AI can now access faster, your pricing model is about to get stress-tested. The professionals who survive are the ones whose value comes from judgment, relationship, and the ability to translate AI output into decisions that clients trust. Everything else is a commodity.</p>'
+    },
+    ent2: {
+        kicker: 'BUILDER ECONOMICS',
+        title: 'Small Teams Are Becoming Absurdly Productive. That Doesn\u2019t Mean They\u2019re Simple.',
+        meta: 'By <strong>Christopher Grove</strong> &middot; March 12, 2026 &middot; 6 min read',
+        body: '<p>Lovable added $100 million in revenue in a single month with 146 employees. Replit hit a $9 billion valuation with a team that most enterprise software companies would consider a rounding error. The numbers are flashy, and they\u2019re spawning a dangerous narrative: that small teams with AI can replace traditional organizations entirely.</p><p>They can\u2019t. What they can do is replace the commodity parts of traditional organizations \u2014 the layers of coordination, documentation, and approval that exist to manage complexity in large groups. When your team is 146 people and everyone has access to AI-powered development tools, you don\u2019t need a project management layer. You don\u2019t need a QA department. You don\u2019t need half the infrastructure that large companies built to manage the overhead of being large.</p><p>The trap is admiring the output without understanding the input. These tiny, hyper-productive teams work because they\u2019re staffed entirely with senior-level operators who can make judgment calls without supervision. They work because every person on the team understands the entire product. They work because the AI tools amplify existing expertise \u2014 they don\u2019t replace it.</p><p>For founders reading these stories and thinking \u201CI should keep my team small forever,\u201D the lesson is more nuanced than the headline suggests. Yes, AI lets a small team punch above its weight. But the judgment, taste, and domain expertise required to direct those AI tools doesn\u2019t come from the tools themselves. It comes from years of doing the hard work manually first. The teams that scale well with AI are the ones that could have scaled without it \u2014 they just do it faster now.</p>'
+    }
+};
 
-        var sections = document.querySelectorAll('section[id]');
-        var navLinks = document.querySelectorAll('.section-nav a:not(.nav-subscribe-btn)');
-        window.addEventListener('scroll', function() {
-            var current = '';
-            sections.forEach(function(section) {
-                if (scrollY >= section.offsetTop - 120) current = section.getAttribute('id');
-            });
-            navLinks.forEach(function(link) {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + current) link.classList.add('active');
-            });
-        });
+// ===== ARTICLE EXPAND/COLLAPSE =====
+function openArticle(id) {
+    var article = articles[id];
+    if (!article) return;
+    document.getElementById('articleKicker').innerHTML = article.kicker;
+    document.getElementById('articleTitle').innerHTML = article.title;
+    document.getElementById('articleMeta').innerHTML = article.meta;
+    document.getElementById('articleBody').innerHTML = article.body;
+    document.getElementById('frontPage').style.display = 'none';
+    document.getElementById('articleView').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
-        async function handleEmailCapture(e, source) {
-            e.preventDefault();
-            var form = e.target;
-            var emailInput = form.querySelector('input[type="email"]');
-            var btn = form.querySelector('button');
-            var email = emailInput.value;
-            if (!email) return;
-            btn.textContent = 'Joining...';
-            btn.disabled = true;
-            try {
-                var response = await fetch('https://api.dubltap.io/api/capture-email', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email: email, source: 'convergence-threshold-' + source, tags: ['newsletter', 'threshold', source] })
-                });
-                if (response.ok) {
-                    btn.textContent = 'You are In!';
-                    btn.style.background = '#2A9D8F';
-                    emailInput.value = '';
-                    if (typeof rdt === 'function') { rdt('track', 'Lead'); rdt('track', 'SignUp'); }
-                    setTimeout(function() { btn.textContent = source === 'sidebar' ? 'Subscribe Free' : 'Subscribe'; btn.style.background = ''; btn.disabled = false; }, 3000);
-                } else { throw new Error('fail'); }
-            } catch (err) {
-                window.open('https://mail.dubltap.io/subscribe', '_blank');
-                btn.textContent = source === 'sidebar' ? 'Subscribe Free' : 'Subscribe';
-                btn.disabled = false;
-            }
+function closeArticle() {
+    document.getElementById('frontPage').style.display = 'block';
+    document.getElementById('articleView').style.display = 'none';
+}
+
+// ===== MOBILE NAV =====
+function toggleMobileNav() {
+    var overlay = document.getElementById('mobileOverlay');
+    var drawer = document.getElementById('mobileDrawer');
+    overlay.classList.toggle('open');
+    drawer.classList.toggle('open');
+    document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : '';
+}
+
+function navTo(sectionId) {
+    toggleMobileNav();
+    closeArticle();
+    setTimeout(function() {
+        scrollNav(sectionId);
+    }, 100);
+}
+
+function scrollNav(sectionId) {
+    var target = document.getElementById(sectionId);
+    if (target) {
+        window.scrollTo({ top: target.offsetTop - 60, behavior: 'smooth' });
+    }
+}
+
+// ===== REVEAL ANIMATIONS =====
+var revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
         }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(function(el) { revealObserver.observe(el); });
 
-        document.querySelectorAll('.section-nav a[href^="#"]').forEach(function(link) {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                var target = document.querySelector(link.getAttribute('href'));
-                if (target) window.scrollTo({ top: target.offsetTop - 60, behavior: 'smooth' });
-            });
+// ===== SECTION NAV ACTIVE STATE =====
+var sections = document.querySelectorAll('section[id]');
+var navLinks = document.querySelectorAll('.section-nav a:not(.nav-subscribe-btn):not(.section-nav-label)');
+window.addEventListener('scroll', function() {
+    if (document.getElementById('frontPage').style.display === 'none') return;
+    var current = '';
+    sections.forEach(function(section) {
+        if (scrollY >= section.offsetTop - 120) current = section.getAttribute('id');
+    });
+    navLinks.forEach(function(link) {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+    });
+});
+
+// ===== DESKTOP SECTION NAV SMOOTH SCROLL =====
+document.querySelectorAll('.section-nav a[href^="#"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        closeArticle();
+        var target = document.querySelector(link.getAttribute('href'));
+        if (target) window.scrollTo({ top: target.offsetTop - 60, behavior: 'smooth' });
+    });
+});
+
+// ===== EMAIL CAPTURE =====
+async function handleEmailCapture(e, source) {
+    e.preventDefault();
+    var form = e.target;
+    var emailInput = form.querySelector('input[type="email"]');
+    var btn = form.querySelector('button');
+    var email = emailInput.value;
+    if (!email) return;
+    btn.textContent = 'Joining...';
+    btn.disabled = true;
+    try {
+        var response = await fetch('https://api.dubltap.io/api/capture-email', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: email, source: 'convergence-threshold-' + source, tags: ['newsletter', 'threshold', source] })
         });
-    </script>
+        if (response.ok) {
+            btn.textContent = '\u2713 You\u2019re In!';
+            btn.style.background = '#2A9D8F';
+            emailInput.value = '';
+            if (typeof rdt === 'function') { rdt('track', 'Lead'); rdt('track', 'SignUp'); }
+            setTimeout(function() { btn.textContent = source === 'sidebar' ? 'Subscribe Free' : 'Subscribe'; btn.style.background = ''; btn.disabled = false; }, 3000);
+        } else { throw new Error('fail'); }
+    } catch (err) {
+        window.open('https://mail.dubltap.io/subscribe', '_blank');
+        btn.textContent = source === 'sidebar' ? 'Subscribe Free' : 'Subscribe';
+        btn.disabled = false;
+    }
+}
+</script>
 
-    <!-- GA4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y3QEKJFSR0"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Y3QEKJFSR0');</script>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y3QEKJFSR0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Y3QEKJFSR0');</script>
 
-    <!-- Reddit Pixel -->
-    <script>!function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js";t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','a2_ika3zz1e2bhy');rdt('track','PageVisit');</script>
+<!-- Reddit Pixel -->
+<script>!function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js";t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','a2_ika3zz1e2bhy');rdt('track','PageVisit');</script>
 
 </body>
 </html>
