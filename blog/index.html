@@ -644,9 +644,9 @@ a:hover { color: var(--sunset-coral); }
 .email-input-editorial {
     width: 100%;
     padding: 0.7rem 0.9rem;
-    border: 1px solid rgba(168,218,220,0.25);
+    border: 1px solid rgba(168,218,220,0.5);
     border-radius: 0.4rem;
-    background: rgba(255,255,255,0.07);
+    background: rgba(255,255,255,0.15);
     color: white;
     font-family: 'DM Sans', sans-serif;
     font-size: 0.85rem;
@@ -656,6 +656,17 @@ a:hover { color: var(--sunset-coral); }
 }
 .email-input-editorial::placeholder { color: rgba(168,218,220,0.4); }
 .email-input-editorial:focus { border-color: var(--sunset-gold); background: rgba(255,255,255,0.12); }
+.email-input-editorial:-webkit-autofill,
+.email-input-editorial:-webkit-autofill:hover,
+.email-input-editorial:-webkit-autofill:focus,
+.newsletter-input:-webkit-autofill,
+.newsletter-input:-webkit-autofill:hover,
+.newsletter-input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px rgba(38,70,83,0.95) inset !important;
+    -webkit-text-fill-color: #FFFAF5 !important;
+    border-color: rgba(168,218,220,0.5) !important;
+    caret-color: #FFFAF5;
+}
 .email-btn-editorial {
     width: 100%;
     padding: 0.7rem;
@@ -916,16 +927,16 @@ a:hover { color: var(--sunset-coral); }
 .newsletter-input {
     flex: 1;
     padding: 0.8rem 1rem;
-    border: 1px solid rgba(168,218,220,0.3);
+    border: 1px solid rgba(168,218,220,0.5);
     border-radius: 0.5rem;
-    background: rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.15);
     color: white;
     font-family: 'DM Sans', sans-serif;
     font-size: 0.88rem;
     outline: none;
     transition: all 0.3s;
 }
-.newsletter-input::placeholder { color: rgba(168,218,220,0.4); }
+.newsletter-input::placeholder { color: #FFFAF5; opacity: 0.7; }
 .newsletter-input:focus { border-color: var(--sunset-gold); background: rgba(255,255,255,0.14); }
 .newsletter-btn {
     padding: 0.8rem 1.8rem;
