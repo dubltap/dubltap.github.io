@@ -4,9 +4,9 @@
     <loc>https://dubltap.io/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>h
+  </url>
   <url>
-    <loc>https://dubltap.io/blog</loc>
+    <loc>https://dubltap.io/blog/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
