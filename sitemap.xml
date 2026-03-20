@@ -219,4 +219,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+    <url>
+    <loc>https://dubltap.io/blog/fast-bunny-004.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dubltap.io/blog/ai-tools-for-freelancers-2026.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dubltap.io/blog/market-maven-vs-crayon-2026.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
