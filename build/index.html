@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Build With The Convergence Architect | dubltap.io</title>
-<meta name="description" content="Christopher Grove builds AI-powered apps from any idea, process, or workflow using the dubltap.io system. 8 live apps. Full stack, fully deployed. Let's build yours.">
+<meta name="description" content="Christopher Grove builds AI-powered apps from any idea, process, or workflow using the dubltap.io system. 8 live apps. Full stack, fully deployed. Let’s build yours.">
 <meta property="og:title" content="Build With The Convergence Architect">
-<meta property="og:description" content="You have an idea, a process, a workflow. I turn it into a production AI app. Let's talk.">
+<meta property="og:description" content="You have an idea, a process, a workflow. I turn it into a production AI app. Let’s talk.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dubltap.io/build">
 <meta property="og:image" content="https://dubltap.io/og-image.png">
@@ -17,25 +17,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600&family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
-    --gold: #F4A261;
-    --coral: #E76F51;
-    --peach: #FFBE98;
-    --deep: #264653;
-    --teal: #2A9D8F;
-    --foam: #A8DADC;
-    --ink: #1C1917;
-    --sand: #FDF8F3;
-    --warm: #F3EBE1;
-    --muted: #C4B7A6;
-    --dark: #4A4238;
+--gold: #F4A261;
+--coral: #E76F51;
+--peach: #FFBE98;
+--deep: #264653;
+--teal: #2A9D8F;
+--foam: #A8DADC;
+--ink: #1C1917;
+--sand: #FDF8F3;
+--warm: #F3EBE1;
+--muted: #C4B7A6;
+--dark: #4A4238;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--ink);
-    color: #fff;
-    overflow-x: hidden;
+font-family: 'DM Sans', sans-serif;
+background-color: var(--ink);
+background-image: url('fast-bunny-hero.jpg');
+background-size: 55%;
+background-position: right 2% top 80px;
+background-repeat: no-repeat;
+background-attachment: fixed;
+color: #fff;
+overflow-x: hidden;
 }
 
     /* ── NAV ── */
@@ -56,11 +61,6 @@ body {
         display: flex; align-items: center; justify-content: center;
         padding: 8rem 2rem 5rem;
         position: relative;
-        background-image: url('fast-bunny-hero.jpg');
-        background-size: 75%;
-        background-position: right 5% bottom -5%;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
     }
     .hero::before {
         content: '';
@@ -456,7 +456,10 @@ body {
 <script>
 var ro = new IntersectionObserver(function(entries){
 entries.forEach(function(e){
-if(e.isIntersecting){ e.target.classList.add('visible'); ro.unobserve(e.target); }});
+if(e.isIntersecting){
+e.target.classList.add('visible');
+ro.unobserve(e.target);
+}});
 },{threshold:0.12});
 document.querySelectorAll('.reveal').forEach(function(el){ ro.observe(el); });
 
