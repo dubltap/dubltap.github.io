@@ -3,1044 +3,1002 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Convergence Threshold | dubltap.io Blog — Come On In and Get Happy</title>
-<meta name="description" content="You're not broken. You're just not armed yet. Blog updates from The Convergence Architect — AI tools, cognitive enhancement, Hermetic wisdom, and the golden ratio. Home of Mind Beyond Mind: IAMAUM.">
-<meta name="keywords" content="convergence architect, AI tools, cognitive enhancement, Hermetic principles, golden ratio, side hustle AI, competitive intelligence, Mind Beyond Mind IAMAUM, dubltap.io, personal development AI">
-<meta property="og:title" content="The Convergence Threshold | dubltap.io">
-<meta property="og:description" content="You're not broken. You're just not armed yet. Nine AI tools. One frequency. Your frequency. Come on in and get happy.">
+<title>The Convergence Threshold — Tech, Life & The Fast Bunny | dubltap.io</title>
+<meta name="description" content="The Convergence Threshold — your favorite rag for tech that matters, humans that inspire, entrepreneurs who ship, animals that heal, and The Fast Bunny comic strip. Updated twice weekly. Sunday comics edition.">
+<meta name="keywords" content="tech news simplified, AI news, entrepreneur stories, The Fast Bunny comic, dubltap, convergence threshold, digital newspaper, tech entertainment">
+<meta property="og:title" content="The Convergence Threshold — Tech, Life & The Fast Bunny">
+<meta property="og:description" content="Not another tech blog. A real rag — with teeth, heart, humor, and a cartoon rabbit in a racing suit.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dubltap.io/blog">
+<meta property="og:image" content="https://dubltap.io/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Convergence Threshold | dubltap.io">
-<meta name="twitter:description" content="You're not broken. You're just not armed yet. Nine AI tools built for the hungry. The optimists. The futurists.">
 <link rel="canonical" href="https://dubltap.io/blog">
-
-<!-- Structured Data -->
 <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "The Convergence Threshold",
-    "description": "Blog updates from The Convergence Architect. AI tools, cognitive enhancement, Hermetic wisdom, and the golden ratio.",
-    "url": "https://dubltap.io/blog",
-    "author": {
-        "@type": "Person",
-        "name": "Christopher Grove",
-        "jobTitle": "The Convergence Architect",
-        "description": "40+ years building systems — from recording studios to factory floors to production AI. Author of Mind Beyond Mind: IAMAUM."
-    },
-    "publisher": {
-        "@type": "Organization",
-        "name": "dubltap.io",
-        "url": "https://dubltap.io",
-        "slogan": "Come on in and get happy."
-    }
-}
+{"@context":"https://schema.org","@type":"WebPage","name":"The Convergence Threshold","description":"Digital newspaper covering tech, humanity, entrepreneurship, entertainment, animals, and home of The Fast Bunny comic strip.","url":"https://dubltap.io/blog","author":{"@type":"Person","name":"Christopher Grove","jobTitle":"The Convergence Architect"},"publisher":{"@type":"Organization","name":"dubltap.io","url":"https://dubltap.io"}}
 </script>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Bangers&display=swap" rel="stylesheet">
 <style>
-    :root {
-        --sunset-gold: #F4A261;
-        --sunset-coral: #E76F51;
-        --sunset-peach: #FFBE98;
-        --ocean-deep: #264653;
-        --ocean-teal: #2A9D8F;
-        --ocean-foam: #A8DADC;
-        --sand-light: #FDF8F3;
-        --sand-warm: #E9E0D6;
-        --sand-medium: #C4B7A6;
-        --sand-dark: #4A4238;
-        --phi: 1.618;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-        font-family: 'DM Sans', system-ui, sans-serif;
-        background: var(--sand-light);
-        color: var(--sand-dark);
-        line-height: 1.618;
-        overflow-x: hidden;
-    }
-
-    /* ===== HEADER / NAV ===== */
-    .site-header {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background: rgba(253, 248, 243, 0.95);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border-bottom: 1px solid var(--ocean-foam);
-        z-index: 1000;
-        padding: 0.618rem 1.618rem;
-    }
-
-    .nav-inner {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo {
-        font-family: 'Outfit', sans-serif;
-        font-weight: 800;
-        font-size: 1.618rem;
-        color: var(--ocean-deep);
-        text-decoration: none;
-        letter-spacing: -0.02em;
-    }
-
-    .logo span { color: var(--sunset-gold); }
-
-    .nav-links { display: flex; gap: 1.618rem; align-items: center; }
-
-    .nav-links a {
-        font-family: 'DM Sans', sans-serif;
-        font-size: 0.875rem;
-        font-weight: 500;
-        color: var(--sand-dark);
-        text-decoration: none;
-        transition: color 0.2s;
-    }
-
-    .nav-links a:hover { color: var(--ocean-teal); }
-
-    .nav-cta {
-        background: var(--sunset-gold) !important;
-        color: var(--ocean-deep) !important;
-        padding: 0.382rem 1rem;
-        border-radius: 0.618rem;
-        font-weight: 600 !important;
-        transition: all 0.2s !important;
-    }
-
-    .nav-cta:hover {
-        background: var(--sunset-coral) !important;
-        transform: translateY(-1px);
-    }
-
-    /* ===== HERO ===== */
-    .blog-hero {
-        padding: 8rem 1.618rem 4.236rem;
-        text-align: center;
-        background: linear-gradient(180deg, var(--sand-light) 0%, var(--sand-warm) 100%);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .blog-hero::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        right: -20%;
-        width: 60%;
-        height: 200%;
-        background: radial-gradient(circle, rgba(244,162,97,0.08) 0%, transparent 60%);
-        pointer-events: none;
-    }
-
-    .hero-eyebrow {
-        font-family: 'Outfit', sans-serif;
-        font-size: 0.764rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.15em;
-        color: var(--ocean-teal);
-        margin-bottom: 1rem;
-    }
-
-    .hero-title {
-        font-family: 'Outfit', sans-serif;
-        font-size: clamp(2rem, 5vw, 3.5rem);
-        font-weight: 800;
-        color: var(--ocean-deep);
-        line-height: 1.15;
-        margin-bottom: 1rem;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .hero-title em {
-        font-style: normal;
-        background: linear-gradient(135deg, var(--sunset-gold), var(--sunset-coral));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    .hero-subtitle {
-        font-size: 1.15rem;
-        color: var(--sand-dark);
-        max-width: 600px;
-        margin: 0 auto 2rem;
-        opacity: 0.85;
-    }
-
-    .hero-author {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.618rem;
-        padding: 0.382rem 1rem 0.382rem 0.382rem;
-        background: rgba(255,255,255,0.7);
-        border-radius: 2rem;
-        border: 1px solid var(--ocean-foam);
-    }
-
-    .author-avatar {
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, var(--sunset-gold), var(--ocean-teal));
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: 'Outfit', sans-serif;
-        font-weight: 700;
-        color: white;
-        font-size: 0.875rem;
-    }
-
-    .author-info { text-align: left; }
-    .author-name { font-weight: 600; font-size: 0.875rem; color: var(--ocean-deep); }
-    .author-title { font-size: 0.764rem; color: var(--sand-medium); }
-
-    /* ===== MAIN CONTENT ===== */
-    .blog-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 2.618rem 1.618rem;
-        display: grid;
-        grid-template-columns: 1fr 340px;
-        gap: 2.618rem;
-    }
-
-    @media (max-width: 900px) {
-        .blog-content { grid-template-columns: 1fr; }
-    }
-
-    /* ===== BLOG POSTS ===== */
-    .posts-grid { display: flex; flex-direction: column; gap: 1.618rem; }
-
-    .post-card {
-        background: white;
-        border-radius: 1rem;
-        border: 1px solid var(--ocean-foam);
-        overflow: hidden;
-        transition: all 0.3s;
-        cursor: pointer;
-    }
-
-    .post-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 40px rgba(38, 70, 83, 0.1);
-    }
-
-    .post-card.featured {
-        border-color: var(--sunset-gold);
-        border-width: 2px;
-    }
-
-    .post-image {
-        height: 220px;
-        background: linear-gradient(135deg, var(--ocean-deep), var(--ocean-teal));
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-    }
-
-    .post-image::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(180deg, transparent 40%, rgba(38,70,83,0.4) 100%);
-    }
-
-    .post-image-text {
-        font-family: 'Outfit', sans-serif;
-        font-size: 3rem;
-        font-weight: 800;
-        color: rgba(255,255,255,0.15);
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        z-index: 1;
-    }
-
-    .featured-badge {
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-        background: var(--sunset-gold);
-        color: var(--ocean-deep);
-        font-family: 'Outfit', sans-serif;
-        font-size: 0.7rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        padding: 0.25rem 0.75rem;
-        border-radius: 2rem;
-        z-index: 2;
-    }
-
-    .post-body { padding: 1.618rem; }
-
-    .post-category {
-        font-family: 'Outfit', sans-serif;
-        font-size: 0.7rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: var(--ocean-teal);
-        margin-bottom: 0.5rem;
-    }
-
-    .post-title {
-        font-family: 'Outfit', sans-serif;
-        font-size: 1.382rem;
-        font-weight: 700;
-        color: var(--ocean-deep);
-        line-height: 1.3;
-        margin-bottom: 0.618rem;
-    }
-
-    .post-excerpt {
-        font-size: 0.938rem;
-        color: var(--sand-dark);
-        opacity: 0.8;
-        margin-bottom: 1rem;
-        line-height: 1.6;
-    }
-
-    .post-meta {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 0.8rem;
-        color: var(--sand-medium);
-    }
-
-    .read-time {
-        background: var(--sand-warm);
-        padding: 0.2rem 0.618rem;
-        border-radius: 1rem;
-        font-size: 0.75rem;
-    }
-
-    /* ===== SIDEBAR ===== */
-    .sidebar { display: flex; flex-direction: column; gap: 1.618rem; }
-
-    .sidebar-card {
-        background: white;
-        border-radius: 1rem;
-        border: 1px solid var(--ocean-foam);
-        padding: 1.618rem;
-    }
-
-    .sidebar-title {
-        font-family: 'Outfit', sans-serif;
-        font-size: 1rem;
-        font-weight: 700;
-        color: var(--ocean-deep);
-        margin-bottom: 1rem;
-        padding-bottom: 0.618rem;
-        border-bottom: 2px solid var(--sunset-gold);
-    }
-
-    /* Email Capture */
-    .email-card {
-        background: linear-gradient(135deg, var(--ocean-deep), #1a3a47);
-        border-color: var(--ocean-teal);
-    }
-
-    .email-card .sidebar-title {
-        color: white;
-        border-bottom-color: var(--sunset-gold);
-    }
-
-    .email-card p {
-        color: var(--ocean-foam);
-        font-size: 0.875rem;
-        margin-bottom: 1rem;
-    }
-
-    .email-input {
-        width: 100%;
-        padding: 0.618rem 1rem;
-        border: 1px solid var(--ocean-teal);
-        border-radius: 0.618rem;
-        background: rgba(255,255,255,0.1);
-        color: white;
-        font-family: 'DM Sans', sans-serif;
-        font-size: 0.875rem;
-        margin-bottom: 0.618rem;
-        outline: none;
-        transition: border-color 0.2s;
-    }
-
-    .email-input::placeholder { color: rgba(168, 218, 220, 0.6); }
-    .email-input:focus { border-color: var(--sunset-gold); }
-
-    .email-btn {
-        width: 100%;
-        padding: 0.618rem;
-        background: var(--sunset-gold);
-        color: var(--ocean-deep);
-        border: none;
-        border-radius: 0.618rem;
-        font-family: 'DM Sans', sans-serif;
-        font-weight: 700;
-        font-size: 0.875rem;
-        cursor: pointer;
-        transition: all 0.2s;
-    }
-
-    .email-btn:hover { background: var(--sunset-coral); transform: translateY(-1px); }
-
-    .email-note {
-        font-size: 0.7rem !important;
-        color: rgba(168, 218, 220, 0.5) !important;
-        text-align: center;
-        margin-top: 0.382rem;
-        margin-bottom: 0 !important;
-    }
-
-    /* Book Card */
-    .book-card {
-        background: linear-gradient(135deg, #2c1810 0%, #1a0f0a 100%);
-        border-color: var(--sunset-gold);
-        text-align: center;
-    }
-
-    .book-card .sidebar-title {
-        color: var(--sunset-peach);
-        border-bottom-color: var(--sunset-coral);
-    }
-
-    .book-icon {
-        font-size: 3rem;
-        margin-bottom: 0.618rem;
-        display: block;
-    }
-
-    .book-title-text {
-        font-family: 'Outfit', sans-serif;
-        font-size: 1.236rem;
-        font-weight: 700;
-        color: var(--sunset-gold);
-        margin-bottom: 0.382rem;
-    }
-
-    .book-author {
-        font-size: 0.8rem;
-        color: var(--sand-medium);
-        margin-bottom: 1rem;
-    }
-
-    .book-desc {
-        font-size: 0.85rem;
-        color: var(--sand-warm);
-        margin-bottom: 1rem;
-        line-height: 1.5;
-    }
-
-    .book-btn {
-        display: inline-block;
-        padding: 0.618rem 1.618rem;
-        background: var(--sunset-gold);
-        color: var(--ocean-deep);
-        text-decoration: none;
-        border-radius: 0.618rem;
-        font-weight: 700;
-        font-size: 0.875rem;
-        transition: all 0.2s;
-    }
-
-    .book-btn:hover { background: var(--sunset-coral); transform: translateY(-1px); }
-
-    /* Categories */
-    .category-list { display: flex; flex-direction: column; gap: 0.5rem; }
-
-    .category-link {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5rem 0;
-        text-decoration: none;
-        color: var(--sand-dark);
-        font-size: 0.875rem;
-        border-bottom: 1px solid var(--sand-warm);
-        transition: color 0.2s;
-    }
-
-    .category-link:hover { color: var(--ocean-teal); }
-
-    .category-count {
-        background: var(--sand-warm);
-        padding: 0.15rem 0.5rem;
-        border-radius: 1rem;
-        font-size: 0.7rem;
-        font-weight: 600;
-    }
-
-    /* ===== SCROLLING APP RIBBON ===== */
-    .app-ribbon {
-        background: var(--ocean-deep);
-        padding: 2rem 0;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .ribbon-title {
-        text-align: center;
-        font-family: 'Outfit', sans-serif;
-        font-size: 0.764rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.2em;
-        color: var(--ocean-foam);
-        margin-bottom: 1.2rem;
-        opacity: 0.7;
-    }
-
-    .ribbon-track {
-        display: flex;
-        gap: 1.2rem;
-        animation: scroll-ribbon 40s linear infinite;
-        width: max-content;
-    }
-
-    .ribbon-track:hover { animation-play-state: paused; }
-
-    @keyframes scroll-ribbon {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-    }
-
-    .app-chip {
-        display: flex;
-        align-items: center;
-        gap: 0.618rem;
-        padding: 0.618rem 1.236rem;
-        background: rgba(255,255,255,0.08);
-        border: 1px solid rgba(168, 218, 220, 0.2);
-        border-radius: 2rem;
-        text-decoration: none;
-        white-space: nowrap;
-        transition: all 0.3s;
-        flex-shrink: 0;
-    }
-
-    .app-chip:hover {
-        background: rgba(244, 162, 97, 0.15);
-        border-color: var(--sunset-gold);
-        transform: translateY(-2px);
-    }
-
-    .app-emoji { font-size: 1.2rem; }
-
-    .app-chip-name {
-        font-family: 'Outfit', sans-serif;
-        font-weight: 600;
-        font-size: 0.85rem;
-        color: white;
-    }
-
-    .app-chip-desc {
-        font-size: 0.72rem;
-        color: var(--ocean-foam);
-        opacity: 0.7;
-    }
-
-    .app-chip-price {
-        font-size: 0.7rem;
-        color: var(--sunset-gold);
-        font-weight: 600;
-    }
-
-    /* ===== FOOTER ===== */
-    .site-footer {
-        background: var(--ocean-deep);
-        color: var(--ocean-foam);
-        padding: 2.618rem 1.618rem 1.618rem;
-        text-align: center;
-    }
-
-    .footer-logo {
-        font-family: 'Outfit', sans-serif;
-        font-size: 1.618rem;
-        font-weight: 800;
-        color: white;
-        margin-bottom: 0.618rem;
-    }
-
-    .footer-logo span { color: var(--sunset-gold); }
-
-    .footer-tagline {
-        font-size: 0.875rem;
-        color: var(--ocean-foam);
-        opacity: 0.6;
-        margin-bottom: 1.618rem;
-    }
-
-    .footer-links {
-        display: flex;
-        justify-content: center;
-        gap: 1.618rem;
-        flex-wrap: wrap;
-        margin-bottom: 1.618rem;
-    }
-
-    .footer-links a {
-        color: var(--ocean-foam);
-        text-decoration: none;
-        font-size: 0.8rem;
-        opacity: 0.7;
-        transition: all 0.2s;
-    }
-
-    .footer-links a:hover { opacity: 1; color: var(--sunset-gold); }
-
-    .footer-copy {
-        font-size: 0.75rem;
-        opacity: 0.4;
-    }
-
-    /* ===== EMAIL CAPTURE MODAL ===== */
-    .modal-overlay {
-        display: none;
-        position: fixed;
-        inset: 0;
-        background: rgba(38, 70, 83, 0.6);
-        backdrop-filter: blur(8px);
-        z-index: 9999;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-    }
-
-    .modal-overlay.active { display: flex; }
-
-    .modal-box {
-        background: var(--sand-light);
-        border-radius: 1.618rem;
-        padding: 2.618rem;
-        max-width: 460px;
-        width: 100%;
-        text-align: center;
-        position: relative;
-        box-shadow: 0 20px 60px rgba(38, 70, 83, 0.3);
-    }
-
-    .modal-close {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        color: var(--sand-medium);
-        cursor: pointer;
-        transition: color 0.2s;
-    }
-
-    .modal-close:hover { color: var(--sand-dark); }
-
-    .modal-box h2 {
-        font-family: 'Outfit', sans-serif;
-        font-size: 1.618rem;
-        color: var(--ocean-deep);
-        margin-bottom: 0.618rem;
-    }
-
-    .modal-box p {
-        font-size: 0.938rem;
-        color: var(--sand-dark);
-        margin-bottom: 1.618rem;
-        opacity: 0.8;
-    }
-
-    .modal-input {
-        width: 100%;
-        padding: 0.764rem 1rem;
-        border: 2px solid var(--ocean-foam);
-        border-radius: 0.618rem;
-        font-family: 'DM Sans', sans-serif;
-        font-size: 1rem;
-        color: var(--sand-dark);
-        background: white;
-        outline: none;
-        margin-bottom: 0.618rem;
-        transition: border-color 0.2s;
-    }
-
-    .modal-input:focus { border-color: var(--ocean-teal); }
-
-    .modal-submit {
-        width: 100%;
-        padding: 0.764rem;
-        background: var(--sunset-gold);
-        color: var(--ocean-deep);
-        border: none;
-        border-radius: 0.618rem;
-        font-family: 'DM Sans', sans-serif;
-        font-weight: 700;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: all 0.2s;
-    }
-
-    .modal-submit:hover { background: var(--sunset-coral); }
-
-    .modal-fine-print {
-        font-size: 0.75rem;
-        color: var(--sand-medium);
-        margin-top: 0.618rem;
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 768px) {
-        .nav-links a:not(.nav-cta) { display: none; }
-        .blog-hero { padding: 6rem 1rem 3rem; }
-        .blog-content { padding: 1.618rem 1rem; }
-        .post-image { height: 160px; }
-    }
+/* ===== FOUNDATION ===== */
+:root {
+    --sunset-gold: #F4A261;
+    --sunset-coral: #E76F51;
+    --sunset-peach: #FFBE98;
+    --ocean-deep: #264653;
+    --ocean-teal: #2A9D8F;
+    --ocean-foam: #A8DADC;
+    --sand-light: #FDF8F3;
+    --sand-warm: #F3EBE1;
+    --sand-medium: #C4B7A6;
+    --sand-dark: #4A4238;
+    --cream: #FFFAF5;
+    --ink: #1C1917;
+    --rule: #D4C5B3;
+    --newsprint: #F9F4EE;
+    --comic-yellow: #FFF8DC;
+    --comic-blue: #E8F4FD;
+    --comic-pink: #FDE8E8;
+    --comic-green: #E8FDE8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'DM Sans', Georgia, serif;
+    background: var(--newsprint);
+    color: var(--ink);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* Grain overlay */
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+a { color: var(--ocean-teal); text-decoration: none; }
+a:hover { color: var(--sunset-coral); }
+
+/* ===== MASTHEAD ===== */
+.masthead {
+    background: var(--cream);
+    border-bottom: 4px double var(--ink);
+    padding: 0.6rem 0 0;
+    position: relative;
+}
+.masthead-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    font-size: 0.72rem;
+    color: var(--sand-medium);
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0.04em;
+}
+.masthead-top a { color: var(--sand-medium); }
+.masthead-top a:hover { color: var(--sunset-gold); }
+
+.masthead-title-wrap {
+    text-align: center;
+    padding: 1.2rem 2rem 0.8rem;
+    position: relative;
+}
+.masthead-rule-top {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 1px;
+    background: var(--ink);
+    margin-bottom: 1rem;
+}
+.masthead-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.3rem;
+}
+.masthead-title span { color: var(--sunset-gold); }
+.masthead-subtitle {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-style: italic;
+    font-size: 0.92rem;
+    color: var(--sand-dark);
+    opacity: 0.7;
+    margin-bottom: 0.6rem;
+}
+.masthead-rule-bottom {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 2px;
+    background: var(--ink);
+}
+
+/* Section Nav */
+.section-nav {
+    background: var(--cream);
+    border-bottom: 1px solid var(--rule);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.section-nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.section-nav-inner::-webkit-scrollbar { display: none; }
+.section-nav a {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    color: var(--sand-dark);
+    padding: 0.85rem 1.3rem;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+.section-nav a:hover,
+.section-nav a.active {
+    color: var(--sunset-coral);
+    border-bottom-color: var(--sunset-gold);
+}
+.section-nav .nav-bunny {
+    color: var(--sunset-gold);
+    font-family: 'Bangers', cursive;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: none;
+}
+.nav-subscribe-btn {
+    margin-left: auto;
+    background: var(--sunset-gold);
+    color: var(--ocean-deep) !important;
+    border-radius: 100px;
+    padding: 0.5rem 1.2rem !important;
+    font-weight: 700 !important;
+    border-bottom: none !important;
+    transition: all 0.2s;
+}
+.nav-subscribe-btn:hover {
+    background: var(--sunset-coral) !important;
+    color: white !important;
+    border-bottom-color: transparent !important;
+}
+
+/* ===== LAYOUT ===== */
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ===== SECTION HEADERS ===== */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0 1rem;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 1.5rem;
+}
+.section-icon { font-size: 1.4rem; line-height: 1; }
+.section-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+}
+.section-tagline {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 0.82rem;
+    color: var(--sand-medium);
+    margin-left: auto;
+}
+.section-rule-accent { position: relative; }
+.section-rule-accent::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--sunset-gold);
+}
+
+/* ===== LEAD STORY ===== */
+.lead-story {
+    display: grid;
+    grid-template-columns: 1.618fr 1fr;
+    gap: 2.5rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--rule);
+}
+.lead-kicker {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--sunset-coral);
+    margin-bottom: 0.5rem;
+}
+.lead-headline {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 800;
+    color: var(--ink);
+    line-height: 1.12;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.02em;
+}
+.lead-deck {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: var(--sand-dark);
+    margin-bottom: 1rem;
+}
+.lead-byline {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    color: var(--sand-medium);
+}
+.lead-byline strong { color: var(--ink); }
+
+.lead-image { border-radius: 0.5rem; overflow: hidden; position: relative; min-height: 280px; }
+.lead-image-placeholder {
+    width: 100%; height: 100%; min-height: 280px;
+    background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-teal) 60%, var(--sunset-gold) 100%);
+    display: flex; align-items: center; justify-content: center; position: relative;
+}
+.lead-image-placeholder .lead-img-text {
+    font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 800;
+    font-style: italic; color: rgba(255,255,255,0.12);
+}
+.lead-image-placeholder .photo-credit {
+    position: absolute; bottom: 0.6rem; right: 0.8rem;
+    font-size: 0.62rem; color: rgba(255,255,255,0.35); font-family: 'DM Sans', sans-serif;
+}
+
+/* ===== ARTICLE CARDS ===== */
+.articles-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+    padding-bottom: 2rem; border-bottom: 1px solid var(--rule); margin-bottom: 0;
+}
+.articles-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.article-card { cursor: pointer; transition: transform 0.2s; }
+.article-card:hover { transform: translateY(-2px); }
+.article-card-image {
+    width: 100%; height: 160px; border-radius: 0.4rem; overflow: hidden; margin-bottom: 0.8rem;
+}
+.article-card-image-inner {
+    width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+}
+.card-img-word {
+    font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 800;
+    font-style: italic; color: rgba(255,255,255,0.15);
+}
+.article-card-kicker {
+    font-family: 'Outfit', sans-serif; font-size: 0.62rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.14em; color: var(--ocean-teal); margin-bottom: 0.35rem;
+}
+.article-card-title {
+    font-family: 'Playfair Display', Georgia, serif; font-size: 1.15rem; font-weight: 700;
+    color: var(--ink); line-height: 1.25; margin-bottom: 0.5rem;
+}
+.article-card:hover .article-card-title { color: var(--sunset-coral); }
+.article-card-excerpt {
+    font-family: 'Source Serif 4', serif; font-size: 0.86rem; color: var(--sand-dark);
+    line-height: 1.6; opacity: 0.75; margin-bottom: 0.5rem;
+}
+.article-card-meta { font-size: 0.7rem; color: var(--sand-medium); }
+
+/* ===== SIDEBAR LAYOUT ===== */
+.content-with-sidebar {
+    display: grid; grid-template-columns: 1fr 320px; gap: 2.5rem; padding: 0 0 2rem;
+}
+.sidebar-section { padding-top: 2rem; }
+.sidebar-card {
+    background: var(--cream); border: 1px solid var(--rule); border-radius: 0.6rem;
+    padding: 1.5rem; margin-bottom: 1.5rem;
+}
+.sidebar-card-title {
+    font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700;
+    color: var(--ink); margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--rule);
+}
+
+/* Email capture sidebar */
+.email-capture-card {
+    background: var(--ocean-deep); border: none; color: white; position: relative; overflow: hidden;
+}
+.email-capture-card::before {
+    content: ''; position: absolute; top: -40%; right: -20%; width: 180px; height: 180px;
+    background: radial-gradient(circle, rgba(244,162,97,0.2) 0%, transparent 70%); border-radius: 50%;
+}
+.email-capture-card .sidebar-card-title { color: var(--sunset-peach); border-bottom-color: rgba(168,218,220,0.2); }
+.email-capture-card p { font-size: 0.84rem; color: var(--ocean-foam); opacity: 0.8; margin-bottom: 1rem; line-height: 1.6; }
+.email-input-editorial {
+    width: 100%; padding: 0.7rem 0.9rem; border: 1px solid rgba(168,218,220,0.25); border-radius: 0.4rem;
+    background: rgba(255,255,255,0.07); color: white; font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem; margin-bottom: 0.6rem; outline: none; transition: all 0.3s;
+}
+.email-input-editorial::placeholder { color: rgba(168,218,220,0.4); }
+.email-input-editorial:focus { border-color: var(--sunset-gold); background: rgba(255,255,255,0.12); }
+.email-btn-editorial {
+    width: 100%; padding: 0.7rem; background: var(--sunset-gold); color: var(--ocean-deep);
+    border: none; border-radius: 0.4rem; font-family: 'DM Sans', sans-serif;
+    font-weight: 700; font-size: 0.84rem; cursor: pointer; transition: all 0.2s;
+}
+.email-btn-editorial:hover { background: var(--sunset-coral); color: white; }
+.email-note-editorial { font-size: 0.65rem; color: rgba(168,218,220,0.35); text-align: center; margin-top: 0.5rem; }
+
+/* Trending sidebar */
+.trending-item { display: flex; gap: 0.8rem; align-items: flex-start; padding: 0.7rem 0; border-bottom: 1px solid var(--rule); }
+.trending-item:last-child { border-bottom: none; }
+.trending-num {
+    font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 800;
+    color: var(--sunset-gold); line-height: 1; min-width: 28px;
+}
+.trending-text { font-family: 'Source Serif 4', serif; font-size: 0.84rem; color: var(--ink); line-height: 1.35; }
+.trending-text:hover { color: var(--sunset-coral); cursor: pointer; }
+
+/* App promo sidebar */
+.app-promo-card { background: linear-gradient(135deg, var(--sunset-gold) 0%, var(--sunset-coral) 100%); border: none; text-align: center; }
+.app-promo-card .sidebar-card-title { color: var(--ocean-deep); border-bottom-color: rgba(38,70,83,0.2); }
+.app-promo-card p { font-size: 0.84rem; color: var(--ocean-deep); opacity: 0.85; margin-bottom: 1rem; line-height: 1.55; }
+.app-promo-btn {
+    display: inline-block; padding: 0.6rem 1.5rem; background: var(--ocean-deep); color: var(--sunset-gold);
+    border-radius: 100px; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.8rem;
+    letter-spacing: 0.03em; transition: all 0.2s;
+}
+.app-promo-btn:hover { background: var(--ink); color: var(--sunset-gold); transform: translateY(-1px); }
+
+/* ===== HORIZONTAL DIVIDERS ===== */
+.editorial-divider { border: none; border-top: 1px solid var(--rule); margin: 0; }
+.editorial-divider-thick { border-top: 2px solid var(--ink); }
+
+/* ===== THE FAST BUNNY COMIC SECTION ===== */
+.fast-bunny-section {
+    background: var(--cream); border-top: 4px solid var(--ink); border-bottom: 4px solid var(--ink);
+    margin: 2rem 0; padding: 0;
+}
+.fast-bunny-header { text-align: center; padding: 2rem 2rem 1rem; border-bottom: 2px solid var(--ink); position: relative; }
+.fb-sunday-badge {
+    display: inline-block; background: var(--sunset-coral); color: white; font-family: 'Outfit', sans-serif;
+    font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em;
+    padding: 0.3rem 1rem; border-radius: 100px; margin-bottom: 0.8rem;
+}
+.fb-title { font-family: 'Bangers', cursive; font-size: clamp(2.5rem, 6vw, 4.5rem); color: var(--ink); line-height: 1; margin-bottom: 0.3rem; letter-spacing: 0.03em; }
+.fb-title .the { font-size: 0.55em; color: var(--sand-medium); }
+.fb-title .fast { color: var(--sunset-gold); }
+.fb-title .bunny { color: var(--ocean-deep); }
+.fb-byline { font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: var(--sand-medium); }
+.fb-byline strong { color: var(--ink); }
+
+.comic-page { max-width: 960px; margin: 0 auto; padding: 1.5rem 2rem 2rem; }
+.comic-episode-title { text-align: center; margin-bottom: 1.5rem; }
+.comic-episode-num { font-family: 'Outfit', sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--sunset-coral); }
+.comic-episode-name { font-family: 'Bangers', cursive; font-size: 1.6rem; color: var(--ink); letter-spacing: 0.02em; }
+
+/* Comic panels grid */
+.comic-strip { display: grid; gap: 0.5rem; }
+.comic-strip-row { display: grid; gap: 0.5rem; }
+.comic-strip-row.row-3 { grid-template-columns: 1fr 1fr 1fr; }
+.comic-strip-row.row-2 { grid-template-columns: 1fr 1fr; }
+.comic-strip-row.row-2-wide { grid-template-columns: 1.5fr 1fr; }
+.comic-strip-row.row-1 { grid-template-columns: 1fr; }
+
+.comic-panel { background: white; border: 3px solid var(--ink); border-radius: 4px; position: relative; overflow: hidden; min-height: 200px; display: flex; flex-direction: column; }
+.comic-panel-art { flex: 1; display: flex; align-items: center; justify-content: center; position: relative; padding: 2.5rem 1rem 1rem; }
+
+.panel-sky { background: linear-gradient(180deg, #87CEEB 0%, #E0F4FF 100%); }
+.panel-office { background: linear-gradient(180deg, #F5F0EB 0%, #E8E0D5 100%); }
+.panel-night { background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); }
+.panel-sunset { background: linear-gradient(180deg, var(--sunset-peach) 0%, var(--sunset-gold) 100%); }
+.panel-garage { background: linear-gradient(180deg, #D4CBC0 0%, #B8AFA3 100%); }
+.panel-track { background: linear-gradient(180deg, #4a7c59 0%, #6b8f5e 60%, #C4B7A6 100%); }
+
+/* Speech bubbles */
+.speech-bubble {
+    position: absolute; background: white; border: 2.5px solid var(--ink); border-radius: 1.2rem;
+    padding: 0.55rem 0.85rem; font-family: 'DM Sans', sans-serif; font-size: 0.72rem;
+    font-weight: 600; color: var(--ink); line-height: 1.35; max-width: 65%; z-index: 5;
+}
+.speech-bubble::after {
+    content: ''; position: absolute; bottom: -12px; left: 25%; width: 0; height: 0;
+    border-left: 8px solid transparent; border-right: 8px solid transparent; border-top: 14px solid var(--ink);
+}
+.speech-bubble::before {
+    content: ''; position: absolute; bottom: -8px; left: 26%; width: 0; height: 0;
+    border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 11px solid white; z-index: 1;
+}
+.speech-bubble.right::after { left: auto; right: 25%; }
+.speech-bubble.right::before { left: auto; right: 26%; }
+.speech-bubble.thought { border-radius: 1.5rem; border-style: dashed; border-color: var(--sand-medium); font-style: italic; color: var(--sand-dark); }
+.speech-bubble.thought::after, .speech-bubble.thought::before { display: none; }
+.speech-bubble.yell { background: var(--comic-yellow); font-family: 'Bangers', cursive; font-size: 0.85rem; letter-spacing: 0.03em; font-weight: 400; }
+
+.bunny-character { width: 80px; height: 120px; position: relative; }
+.bunny-placeholder { text-align: center; font-size: 0.6rem; color: var(--sand-medium); font-style: italic; padding: 0.5rem; background: rgba(255,255,255,0.5); border-radius: 0.3rem; }
+
+.panel-caption {
+    background: var(--comic-yellow); border: 2px solid var(--ink); padding: 0.4rem 0.7rem;
+    font-family: 'DM Sans', sans-serif; font-size: 0.68rem; font-weight: 500; color: var(--ink);
+    position: absolute; top: 0; left: 0; z-index: 5; line-height: 1.3;
+}
+
+.sfx { font-family: 'Bangers', cursive; color: var(--sunset-coral); font-size: 1.8rem; transform: rotate(-8deg); text-shadow: 2px 2px 0 var(--ink); -webkit-text-stroke: 1px var(--ink); position: absolute; }
+
+.comic-footer { text-align: center; padding: 1rem 2rem 1.5rem; border-top: 1px solid var(--rule); }
+.comic-footer-text { font-family: 'DM Sans', sans-serif; font-size: 0.75rem; color: var(--sand-medium); }
+.comic-footer-cta {
+    display: inline-block; margin-top: 0.6rem; background: var(--sunset-gold); color: var(--ocean-deep);
+    font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.78rem; padding: 0.5rem 1.5rem;
+    border-radius: 100px; transition: all 0.2s;
+}
+.comic-footer-cta:hover { background: var(--sunset-coral); color: white; transform: translateY(-1px); }
+
+/* ===== NEWSLETTER FULL-WIDTH CTA ===== */
+.newsletter-cta-section {
+    background: var(--ocean-deep); padding: 3rem 2rem; text-align: center; position: relative; overflow: hidden;
+}
+.newsletter-cta-section::before {
+    content: ''; position: absolute; top: -30%; left: -10%; width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(244,162,97,0.12) 0%, transparent 60%); border-radius: 50%;
+}
+.newsletter-cta-section::after {
+    content: ''; position: absolute; bottom: -40%; right: -10%; width: 350px; height: 350px;
+    background: radial-gradient(circle, rgba(42,157,143,0.1) 0%, transparent 60%); border-radius: 50%;
+}
+.newsletter-cta-inner { max-width: 560px; margin: 0 auto; position: relative; z-index: 2; }
+.newsletter-cta-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 800; color: var(--cream); margin-bottom: 0.6rem; }
+.newsletter-cta-sub { font-family: 'Source Serif 4', serif; font-size: 0.95rem; color: var(--ocean-foam); opacity: 0.7; margin-bottom: 1.5rem; line-height: 1.55; }
+.newsletter-form { display: flex; gap: 0.6rem; max-width: 440px; margin: 0 auto; }
+.newsletter-input {
+    flex: 1; padding: 0.8rem 1rem; border: 1px solid rgba(168,218,220,0.3); border-radius: 0.5rem;
+    background: rgba(255,255,255,0.08); color: white; font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem; outline: none; transition: all 0.3s;
+}
+.newsletter-input::placeholder { color: rgba(168,218,220,0.4); }
+.newsletter-input:focus { border-color: var(--sunset-gold); background: rgba(255,255,255,0.14); }
+.newsletter-btn {
+    padding: 0.8rem 1.8rem; background: var(--sunset-gold); color: var(--ocean-deep); border: none;
+    border-radius: 0.5rem; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.88rem;
+    cursor: pointer; transition: all 0.2s; white-space: nowrap;
+}
+.newsletter-btn:hover { background: var(--sunset-coral); color: white; }
+.newsletter-note { font-size: 0.68rem; color: rgba(168,218,220,0.3); margin-top: 0.7rem; }
+
+/* ===== FOOTER ===== */
+.editorial-footer { background: var(--ink); padding: 2.5rem 2rem; color: rgba(255,255,255,0.5); }
+.footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; }
+.footer-col-title { font-family: 'Outfit', sans-serif; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--sunset-gold); margin-bottom: 0.8rem; }
+.footer-col a { display: block; font-size: 0.82rem; color: rgba(255,255,255,0.45); padding: 0.2rem 0; transition: color 0.2s; }
+.footer-col a:hover { color: var(--sunset-gold); }
+.footer-bottom { max-width: 1200px; margin: 1.5rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem; }
+.footer-logo { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--sunset-gold); }
+.footer-logo span { color: rgba(255,255,255,0.3); }
+
+/* ===== ARTICLE MINI LIST ===== */
+.article-mini-list { display: flex; flex-direction: column; gap: 1rem; }
+.article-mini { display: flex; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--rule); cursor: pointer; transition: all 0.2s; }
+.article-mini:last-child { border-bottom: none; padding-bottom: 0; }
+.article-mini:hover .article-mini-title { color: var(--sunset-coral); }
+.article-mini-thumb { width: 90px; height: 70px; border-radius: 0.3rem; overflow: hidden; flex-shrink: 0; }
+.article-mini-thumb-inner {
+    width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 800; font-style: italic; color: rgba(255,255,255,0.15);
+}
+.article-mini-body { flex: 1; }
+.article-mini-kicker { font-family: 'Outfit', sans-serif; font-size: 0.58rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--ocean-teal); margin-bottom: 0.2rem; }
+.article-mini-title { font-family: 'Playfair Display', serif; font-size: 0.92rem; font-weight: 700; color: var(--ink); line-height: 1.25; transition: color 0.2s; }
+.article-mini-meta { font-size: 0.65rem; color: var(--sand-medium); margin-top: 0.2rem; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .lead-story { grid-template-columns: 1fr; }
+    .lead-image { min-height: 200px; }
+    .articles-grid { grid-template-columns: 1fr 1fr; }
+    .content-with-sidebar { grid-template-columns: 1fr; }
+    .sidebar-section { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .footer-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+    .comic-strip-row.row-3 { grid-template-columns: 1fr; }
+    .comic-strip-row.row-2 { grid-template-columns: 1fr; }
+    .comic-strip-row.row-2-wide { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+    .page-container { padding: 0 1rem; }
+    .articles-grid { grid-template-columns: 1fr; }
+    .sidebar-section { grid-template-columns: 1fr; }
+    .newsletter-form { flex-direction: column; }
+    .masthead-top { display: none; }
+    .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+    .comic-panel { min-height: 160px; }
+}
+
+/* ===== ANIMATIONS ===== */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
 </style>
 
 </head>
 <body>
 
-<!-- HEADER -->
-<header class="site-header">
-    <nav class="nav-inner">
-        <a href="https://dubltap.io" class="logo">dubl<span>tap</span>.io</a>
-        <div class="nav-links">
-            <a href="https://dubltap.io">Home</a>
-            <a href="https://dubltap.io/blog">Blog</a>
-            <a href="https://dubltap.io/#tools">Tools</a>
-            <a href="https://dubltap.io/#tools" class="nav-cta">Try Free</a>
-        </div>
-    </nav>
+<!-- MASTHEAD -->
+<header class="masthead">
+    <div class="masthead-top">
+        <span>Thursday, March 26, 2026</span>
+        <span>Vol. 1 &middot; No. 8 &middot; <a href="https://dubltap.io">dubltap.io</a></span>
+        <span>Everett, WA</span>
+    </div>
+    <div class="masthead-title-wrap">
+        <div class="masthead-rule-top"></div>
+        <h1 class="masthead-title">The Convergence <span>Threshold</span></h1>
+        <p class="masthead-subtitle">Tech that matters. Humans that inspire. Food worth eating. A rabbit in a racing suit.</p>
+        <div class="masthead-rule-bottom"></div>
+    </div>
 </header>
 
-<!-- HERO -->
-<section class="blog-hero">
-    <div class="hero-eyebrow">The Convergence Threshold — Blog Updates</div>
-    <h1 class="hero-title">You're Not Broken. <em>You're Just Not Armed Yet.</em></h1>
-    <p class="hero-subtitle">Nine AI tools. One frequency. Your frequency. Built for the hungry, the optimists, the futurists. This is the arsenal.</p>
-    <div class="hero-author">
-        <div class="author-avatar">CG</div>
-        <div class="author-info">
-            <div class="author-name">Christopher Grove</div>
-            <div class="author-title">The Convergence Architect</div>
+<!-- SECTION NAV -->
+<nav class="section-nav">
+    <div class="section-nav-inner page-container">
+        <a href="#tech" class="active">Tech & AI</a>
+        <a href="#human">The Human Element</a>
+        <a href="#entrepreneur">Entrepreneur</a>
+        <a href="#entertainment">Entertainment</a>
+        <a href="#animals">The Animal Wire</a>
+        <a href="#culinary">Culinary</a>
+        <a href="#fast-bunny" class="nav-bunny">The Fast Bunny</a>
+        <a href="#subscribe" class="nav-subscribe-btn">Subscribe Free</a>
+    </div>
+</nav>
+
+<!-- LEAD STORY -->
+<section class="page-container">
+    <div class="lead-story reveal">
+        <div class="lead-main">
+            <div class="lead-kicker">Lead Story</div>
+            <h2 class="lead-headline">The Age of the AI Coworker Has Arrived. The Age of the Trustworthy One Hasn’t.</h2>
+            <p class="lead-deck">Gumloop raised $50 million. Meta bought Moltbook. OpenAI shipped GPT-5.4 and a security agent. The message is the same: everyone has AI now. The edge is knowing where autonomy belongs and where a human still needs the final cut.</p>
+            <p class="lead-byline">By <strong>Christopher Grove</strong> &middot; March 12, 2026 &middot; 6 min read</p>
+        </div>
+        <div class="lead-image">
+            <div class="lead-image-placeholder" style="background: linear-gradient(135deg, #264653 0%, #2A9D8F 50%, #F4A261 100%);">
+                <span class="lead-img-text">TRUST</span>
+                <span class="photo-credit">Illustration / dubltap</span>
+            </div>
         </div>
     </div>
 </section>
-<!-- MAIN CONTENT -->
-<main class="blog-content">
-    <div class="posts-grid">
 
-        <!-- NEW: Fast Bunny Episode 004 -->
-        <article class="post-card featured" onclick="window.location.href='https://dubltap.io/blog/fast-bunny-004.html'">
-            <div class="post-image" style="background: linear-gradient(135deg, #1C1917, #264653, #F4A261);">
-                <div class="featured-badge">The Fast Bunny · Ep. 004</div>
-                <div class="post-image-text">ENTERPRISE</div>
+<!-- TECH & AI -->
+<section id="tech" class="page-container">
+    <div class="section-header section-rule-accent reveal">
+        <span class="section-icon">&#x26A1;</span>
+        <span class="section-name">Tech & AI</span>
+        <span class="section-tagline">No jargon. No hype. Just what matters.</span>
+    </div>
+    <div class="articles-grid reveal">
+        <article class="article-card">
+            <div class="article-card-image">
+                <div class="article-card-image-inner" style="background: linear-gradient(135deg, #2A9D8F, #264653);"><span class="card-img-word">Security</span></div>
             </div>
-            <div class="post-body">
-                <div class="post-category">The Fast Bunny · Sunday Comics</div>
-                <h2 class="post-title">“Customer Number Four” — Fast Bunny Is Basically Enterprise Now</h2>
-                <p class="post-excerpt">Four paying customers. An investor update to “valued stakeholders (mom).” A dedicated desk upgrade in the works. Revenue up 33% QoQ (from $3 to $4). This week’s strip has everything.</p>
-                <div class="post-meta">
-                    <span>March 19, 2026</span>
-                    <span class="read-time">2 min read</span>
-                </div>
-            </div>
+            <div class="article-card-kicker">AI INFRASTRUCTURE</div>
+            <h3 class="article-card-title">Security Has Become the Grown-Up Table in AI</h3>
+            <p class="article-card-excerpt">OpenAI launched Codex Security in research preview. Founders spent two years shipping at a speed that outran review, governance, and plain old code hygiene. The bill is coming due.</p>
+            <div class="article-card-meta">Mar 12 &middot; 4 min</div>
         </article>
+        <article class="article-card">
+            <div class="article-card-image">
+                <div class="article-card-image-inner" style="background: linear-gradient(135deg, #E76F51, #F4A261);"><span class="card-img-word">Agents</span></div>
+            </div>
+            <div class="article-card-kicker">AGENTIC AI</div>
+            <h3 class="article-card-title">AI Agents Are Leaving the Demo Stage and Entering Payroll Logic</h3>
+            <p class="article-card-excerpt">Gumloop’s $50M round and Meta’s Moltbook deal signal the same thing: companies are converting software from a menu into a workforce. That sounds efficient until you remember workers need management.</p>
+            <div class="article-card-meta">Mar 12 &middot; 5 min</div>
+        </article>
+        <article class="article-card">
+            <div class="article-card-image">
+                <div class="article-card-image-inner" style="background: linear-gradient(135deg, #264653, #1a1a2e);"><span class="card-img-word">Partners</span></div>
+            </div>
+            <div class="article-card-kicker">INDUSTRY</div>
+            <h3 class="article-card-title">The AI Platform War Is Quietly Becoming a Partner War</h3>
+            <p class="article-card-excerpt">Anthropic launched the Anthropic Institute and a $100M Claude Partner Network. Frontier labs aren’t selling models anymore. They’re building policy cover and channel power.</p>
+            <div class="article-card-meta">Mar 12 &middot; 4 min</div>
+        </article>
+    </div>
+</section>
 
-        <!-- NEW: AI Tools for Freelancers -->
-        <article class="post-card" onclick="window.location.href='https://dubltap.io/blog/ai-tools-for-freelancers-2026.html'">
-            <div class="post-image" style="background: linear-gradient(135deg, #2A9D8F, #264653, #F4A261);">
-                <div class="post-image-text">EARN</div>
-            </div>
-            <div class="post-body">
-                <div class="post-category">Freelance Intelligence</div>
-                <h2 class="post-title">7 AI Tools That Actually Help Freelancers Make More Money in 2026</h2>
-                <p class="post-excerpt">Real tools freelancers keep using after the free trial ends. Not the ones getting hyped on Twitter — the ones showing up in invoices as the reason work got done faster.</p>
-                <div class="post-meta">
-                    <span>March 19, 2026</span>
-                    <span class="read-time">6 min read</span>
-                </div>
-            </div>
-        </article>
+<hr class="editorial-divider page-container">
 
-        <!-- NEW: Market Maven vs Crayon -->
-        <article class="post-card" onclick="window.location.href='https://dubltap.io/blog/market-maven-vs-crayon-2026.html'">
-            <div class="post-image" style="background: linear-gradient(135deg, #1a2f3a, #264653, #2A9D8F);">
-                <div class="post-image-text">INTEL</div>
-            </div>
-            <div class="post-body">
-                <div class="post-category">Competitive Intelligence</div>
-                <h2 class="post-title">Market Maven vs Crayon: AI Competitive Intelligence Compared (2026)</h2>
-                <p class="post-excerpt">Crayon starts at $25,000/year. Market Maven starts at $19/month. Honest breakdown of who each tool is actually built for — and which one most people actually need.</p>
-                <div class="post-meta">
-                    <span>March 19, 2026</span>
-                    <span class="read-time">5 min read</span>
-                </div>
-            </div>
-        </article>
+<!-- CONTENT WITH SIDEBAR -->
+<div class="page-container content-with-sidebar">
+    <div class="main-content-col">
 
-        <!-- FEATURED POST 1: Blog Post 001 -->
-        <article class="post-card" onclick="openPost('convergence-threshold')">
-            <div class="post-image" style="background: linear-gradient(135deg, #264653, #2A9D8F, #F4A261);">
-                <div class="post-image-text">ARMED</div>
+        <!-- HUMAN ELEMENT -->
+        <section id="human">
+            <div class="section-header section-rule-accent reveal">
+                <span class="section-icon">&#x1F30D;</span>
+                <span class="section-name">The Human Element</span>
+                <span class="section-tagline">Because technology was never the main act.</span>
             </div>
-            <div class="post-body">
-                <div class="post-category">The Convergence Threshold</div>
-                <h2 class="post-title">You’re Not Broken. You’re Just Not Armed Yet.</h2>
-                <p class="post-excerpt">You already know something’s off. That gap between where you are and where you know you should be. Not where someone told you to be. Where you know. In your gut. You’re hungry. Good. You’re restless. Better. That ends now.</p>
-                <div class="post-meta">
-                    <span>February 19, 2026</span>
-                    <span class="read-time">7 min read</span>
-                </div>
+            <div class="article-mini-list reveal">
+                <article class="article-mini">
+                    <div class="article-mini-thumb">
+                        <div class="article-mini-thumb-inner" style="background: linear-gradient(135deg, #E76F51, #264653);"><span>&#x1F3DB;</span></div>
+                    </div>
+                    <div class="article-mini-body">
+                        <div class="article-mini-kicker">POLITICS & POWER</div>
+                        <h4 class="article-mini-title">The Politics of AI Just Stopped Being Theoretical</h4>
+                        <div class="article-mini-meta">Mar 12 &middot; 4 min read</div>
+                    </div>
+                </article>
+                <article class="article-mini">
+                    <div class="article-mini-thumb">
+                        <div class="article-mini-thumb-inner" style="background: linear-gradient(135deg, #FFBE98, #E76F51);"><span>&#x1F4BC;</span></div>
+                    </div>
+                    <div class="article-mini-body">
+                        <div class="article-mini-kicker">LABOR & AI</div>
+                        <h4 class="article-mini-title">Work Is Changing Faster Than the Labor Market Vocabulary</h4>
+                        <div class="article-mini-meta">Mar 12 &middot; 5 min read</div>
+                    </div>
+                </article>
+                <article class="article-mini">
+                    <div class="article-mini-thumb">
+                        <div class="article-mini-thumb-inner" style="background: linear-gradient(135deg, #2A9D8F, #264653);"><span>&#x1F512;</span></div>
+                    </div>
+                    <div class="article-mini-body">
+                        <div class="article-mini-kicker">DIGITAL RIGHTS</div>
+                        <h4 class="article-mini-title">The Internet’s New Age Gates Are a Preview of a More Suspicious Web</h4>
+                        <div class="article-mini-meta">Mar 12 &middot; 4 min read</div>
+                    </div>
+                </article>
             </div>
-        </article>
+        </section>
 
-        <!-- POST 2: Interview Series -->
-        <article class="post-card" onclick="openPost('interview-001')">
-            <div class="post-image" style="background: linear-gradient(135deg, #1a0f0a, #2c1810, #F4A261);">
-                <div class="post-image-text">COUNCIL</div>
+        <!-- ENTREPRENEUR -->
+        <section id="entrepreneur">
+            <div class="section-header section-rule-accent reveal">
+                <span class="section-icon">&#x1F680;</span>
+                <span class="section-name">Entrepreneur</span>
+                <span class="section-tagline">Builders. Makers. People who ship.</span>
             </div>
-            <div class="post-body">
-                <div class="post-category">The Convergence Council Interview Series</div>
-                <h2 class="post-title">Interview One: The Convergence Threshold — Ten Minds, One Frequency</h2>
-                <p class="post-excerpt">What happens when Buckminster Fuller, Nikola Tesla, Carl Jung, and seven other luminaries sit you down and ask the questions nobody else will? The missing pillar. The shadow gold. The warrior who was hiding in plain sight.</p>
-                <div class="post-meta">
-                    <span>February 19, 2026</span>
-                    <span class="read-time">18 min read</span>
-                </div>
+            <div class="articles-grid articles-grid-2 reveal">
+                <article class="article-card">
+                    <div class="article-card-image">
+                        <div class="article-card-image-inner" style="background: linear-gradient(135deg, #F4A261, #E76F51, #264653);"><span class="card-img-word">Vertical</span></div>
+                    </div>
+                    <div class="article-card-kicker">STARTUP STRATEGY</div>
+                    <h3 class="article-card-title">Vertical AI Keeps Eating the Professional Middle</h3>
+                    <p class="article-card-excerpt">Seven thousand people showed up at LegalWeek in New York. The loudest question: is AI about to devalue lawyers’ time? Legora’s $550M raise lands right in that tension.</p>
+                    <div class="article-card-meta">Mar 12 &middot; 5 min</div>
+                </article>
+                <article class="article-card">
+                    <div class="article-card-image">
+                        <div class="article-card-image-inner" style="background: linear-gradient(135deg, #FFBE98, #F4A261);"><span class="card-img-word">Small</span></div>
+                    </div>
+                    <div class="article-card-kicker">BUILDER ECONOMICS</div>
+                    <h3 class="article-card-title">Small Teams Are Becoming Absurdly Productive. That Doesn’t Mean They’re Simple.</h3>
+                    <p class="article-card-excerpt">Lovable added $100M in revenue in a single month with 146 employees. Replit hit $9B valuation. The numbers are flashy. The trap is admiring tiny teams without understanding the judgment they require.</p>
+                    <div class="article-card-meta">Mar 12 &middot; 6 min</div>
+                </article>
             </div>
-        </article>
+        </section>
 
-        <!-- POST 3: The Builder Story -->
-        <article class="post-card" onclick="openPost('9-ai-apps')">
-            <div class="post-image" style="background: linear-gradient(135deg, #E76F51, #F4A261, #FFBE98);">
-                <div class="post-image-text">BUILD</div>
+        <!-- ENTERTAINMENT -->
+        <section id="entertainment">
+            <div class="section-header section-rule-accent reveal">
+                <span class="section-icon">&#x1F3AC;</span>
+                <span class="section-name">Entertainment</span>
+                <span class="section-tagline">Culture worth your attention.</span>
             </div>
-            <div class="post-body">
-                <div class="post-category">AI Tools That Work</div>
-                <h2 class="post-title">I Built 9 AI Apps That Actually Do Stuff — Here’s What I Learned</h2>
-                <p class="post-excerpt">17 custom GPTs. 9 production apps. One frequency. Every interface built on the golden ratio of 1:1.618. The same proportion governing galaxies, seashells, and the geometry of your own DNA. That’s not marketing. That’s mathematics.</p>
-                <div class="post-meta">
-                    <span>Coming Soon</span>
-                    <span class="read-time">12 min read</span>
-                </div>
+            <div class="article-mini-list reveal">
+                <article class="article-mini">
+                    <div class="article-mini-thumb">
+                        <div class="article-mini-thumb-inner" style="background: linear-gradient(135deg, #1C1917, #4A4238, #F4A261);">&#x1F4DD;</div>
+                    </div>
+                    <div class="article-mini-body">
+                        <div class="article-mini-kicker">WRITERS ROOM</div>
+                        <h4 class="article-mini-title">The Writers Are Back. The Studios Are Not Sure They Need Them.</h4>
+                        <div class="article-mini-meta">Mar 26 &middot; 4 min read</div>
+                    </div>
+                </article>
+                <article class="article-mini">
+                    <div class="article-mini-thumb">
+                        <div class="article-mini-thumb-inner" style="background: linear-gradient(135deg, #264653, #2A9D8F);">&#x1F3B5;</div>
+                    </div>
+                    <div class="article-mini-body">
+                        <div class="article-mini-kicker">AI &amp; MUSIC</div>
+                        <h4 class="article-mini-title">AI Music Is Everywhere. AI Music You Want to Listen to Is Not.</h4>
+                        <div class="article-mini-meta">Mar 26 &middot; 4 min read &middot; Skip rate: 73%</div>
+                    </div>
+                </article>
             </div>
-        </article>
+        </section>
+
+        <!-- ANIMAL WIRE -->
+        <section id="animals">
+            <div class="section-header section-rule-accent reveal">
+                <span class="section-icon">&#x1F43E;</span>
+                <span class="section-name">The Animal Wire</span>
+                <span class="section-tagline">Good news only. We don’t make the rules.</span>
+            </div>
+            <div class="article-mini-list reveal">
+                <article class="article-mini">
+                    <div class="article-mini-thumb">
+                        <div class="article-mini-thumb-inner" style="background: linear-gradient(135deg, #2A9D8F, #264653);">&#x1F418;</div>
+                    </div>
+                    <div class="article-mini-body">
+                        <div class="article-mini-kicker">WILDLIFE</div>
+                        <h4 class="article-mini-title">The Elephant That Learned to Ask for Help</h4>
+                        <div class="article-mini-meta">Mar 26 &middot; 4 min read &middot; Amboseli, Kenya</div>
+                    </div>
+                </article>
+                <article class="article-mini">
+                    <div class="article-mini-thumb">
+                        <div class="article-mini-thumb-inner" style="background: linear-gradient(135deg, #F4A261, #264653);">&#x1F436;</div>
+                    </div>
+                    <div class="article-mini-body">
+                        <div class="article-mini-kicker">ANIMAL COGNITION</div>
+                        <h4 class="article-mini-title">The Dog Studies Keep Saying the Same Thing. We Keep Being Surprised.</h4>
+                        <div class="article-mini-meta">Mar 26 &middot; 3 min read &middot; Budapest</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CULINARY -->
+        <section id="culinary">
+            <div class="section-header section-rule-accent reveal">
+                <span class="section-icon">&#x1F374;</span>
+                <span class="section-name">Culinary</span>
+                <span class="section-tagline">How we eat. What we eat. Why it matters.</span>
+            </div>
+            <div class="article-mini-list reveal">
+                <article class="article-mini">
+                    <div class="article-mini-thumb">
+                        <div class="article-mini-thumb-inner" style="background: linear-gradient(135deg, #E76F51, #FFBE98);">&#x1F373;</div>
+                    </div>
+                    <div class="article-mini-body">
+                        <div class="article-mini-kicker">FOOD CULTURE</div>
+                        <h4 class="article-mini-title">The Last Generation That Learned to Cook From Watching, Not Searching</h4>
+                        <div class="article-mini-meta">Mar 26 &middot; 4 min read</div>
+                    </div>
+                </article>
+                <article class="article-mini">
+                    <div class="article-mini-thumb">
+                        <div class="article-mini-thumb-inner" style="background: linear-gradient(135deg, #F4A261, #E76F51);">&#x1F52C;</div>
+                    </div>
+                    <div class="article-mini-body">
+                        <div class="article-mini-kicker">BAD MUTHA FORKER</div>
+                        <h4 class="article-mini-title">What Happens When You Let AI Rewrite Your Grandmother’s Recipes</h4>
+                        <div class="article-mini-meta">Mar 26 &middot; 5 min read &middot; <a href="https://fork.dubltap.io" style="color:var(--sunset-coral);">Try it free &rarr;</a></div>
+                    </div>
+                </article>
+            </div>
+        </section>
 
     </div>
 
     <!-- SIDEBAR -->
-    <aside class="sidebar">
-
-        <!-- Email Capture -->
-        <div class="sidebar-card email-card">
-            <h3 class="sidebar-title">The Dubltap Dispatch</h3>
-            <p>Weekly blog updates, tool spotlights, and one question designed to expose your blind spots. Direct. No fluff. Just signal.</p>
-            <input type="email" class="email-input" placeholder="your@email.com" id="sidebarEmail">
-            <button class="email-btn" onclick="captureEmail('sidebar')">Come On In</button>
-            <p class="email-note">No spam. Unsubscribe anytime. We're cool like that.</p>
+    <aside class="sidebar-section">
+        <div class="sidebar-card email-capture-card reveal">
+            <h3 class="sidebar-card-title">Get The Threshold</h3>
+            <p>The essential twice-weekly digest. Tech. Humans. Hustle. Animals. And every Sunday &mdash; The Fast Bunny. No spam. Ever.</p>
+            <form id="sidebar-email-form" onsubmit="handleEmailCapture(event, 'sidebar')">
+                <input type="email" class="email-input-editorial" placeholder="your@email.com" required>
+                <button type="submit" class="email-btn-editorial">Subscribe Free</button>
+            </form>
+            <p class="email-note-editorial">Join 500+ readers. Unsubscribe anytime.</p>
         </div>
-
-        <!-- Mind Beyond Mind Book -->
-        <div class="sidebar-card book-card">
-            <h3 class="sidebar-title">Go Deeper</h3>
-            <span class="book-icon">📖</span>
-            <div class="book-title-text">Mind Beyond Mind: IAMAUM</div>
-            <div class="book-author">by Christopher Grove</div>
-            <p class="book-desc">The Hermetic principles and metacognitive frameworks that became the philosophical foundation for dubltap.io. For those ready to go deeper.</p>
-            <a href="#" class="book-btn" id="bookLink">Explore the Book</a>
+        <div class="sidebar-card reveal">
+            <h3 class="sidebar-card-title">Trending This Week</h3>
+            <div class="trending-item"><span class="trending-num">1</span><span class="trending-text">AI Coworkers Have Arrived. Trust Hasn’t.</span></div>
+            <div class="trending-item"><span class="trending-num">2</span><span class="trending-text">$185M in AI Political Spending</span></div>
+            <div class="trending-item"><span class="trending-num">3</span><span class="trending-text">Lovable: $100M Revenue, 146 Employees</span></div>
+            <div class="trending-item"><span class="trending-num">4</span><span class="trending-text">Vertical AI Eats Legal</span></div>
+            <div class="trending-item"><span class="trending-num">5</span><span class="trending-text">The Fed Is Watching AI Jobs</span></div>
         </div>
+        <div class="sidebar-card app-promo-card reveal">
+            <h3 class="sidebar-card-title">AI That Actually Does Stuff</h3>
+            <p>8 specialized tools. Free to start. Built for the hungry.</p>
+            <a href="https://dubltap.io" class="app-promo-btn">Explore the Arsenal &#x2192;</a>
+        </div>
+        <div class="sidebar-card reveal">
+            <h3 class="sidebar-card-title">The dubltap Toolkit</h3>
+            <div class="trending-item"><span class="trending-num" style="font-size:1rem;">&#x1F9E0;</span><a class="trending-text" href="https://mind.dubltap.io">Mind Expander &mdash; Free forever</a></div>
+            <div class="trending-item"><span class="trending-num" style="font-size:1rem;">&#x1F4B0;</span><a class="trending-text" href="https://hustle.dubltap.io">Side Hustle Copilot</a></div>
+            <div class="trending-item"><span class="trending-num" style="font-size:1rem;">&#x1F374;</span><a class="trending-text" href="https://fork.dubltap.io">Bad Mutha Forker</a></div>
+            <div class="trending-item"><span class="trending-num" style="font-size:1rem;">&#x1F4CA;</span><a class="trending-text" href="https://maven.dubltap.io">Market Maven</a></div>
+            <div class="trending-item"><span class="trending-num" style="font-size:1rem;">&#x1F3B5;</span><a class="trending-text" href="https://vibe.dubltap.io">VibeCurate</a></div>
+        </div>
+    </aside>
+</div>
 
-        <!-- Categories -->
-        <div class="sidebar-card">
-            <h3 class="sidebar-title">Categories</h3>
-            <div class="category-list">
-                <a href="#" class="category-link">The Convergence Threshold <span class="category-count">2</span></a>
-                <a href="#" class="category-link">AI Tools That Work <span class="category-count">Coming</span></a>
-                <a href="#" class="category-link">Side Hustle Intel <span class="category-count">Coming</span></a>
-                <a href="#" class="category-link">Mind &amp; Method <span class="category-count">Coming</span></a>
-                <a href="#" class="category-link">The Convergence Council <span class="category-count">Series</span></a>
+<!-- THE FAST BUNNY -->
+<section id="fast-bunny" class="fast-bunny-section">
+    <div class="fast-bunny-header">
+        <div class="fb-sunday-badge">&#x2600;&#xFE0F; Sunday Edition</div>
+        <h2 class="fb-title">
+            <span class="the">The</span>
+            <span class="fast">Fast</span>
+            <span class="bunny">Bunny</span>
+        </h2>
+        <p class="fb-byline">Created by <strong>Christopher Grove</strong> &middot; A dubltap.io original</p>
+    </div>
+    <div class="comic-page" style="text-align:center;">
+        <div class="comic-episode-title">
+            <div class="comic-episode-num">Latest Episodes</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:2rem; padding:1rem 0;">
+            <div>
+                <div class="comic-episode-name" style="margin-bottom:0.8rem;">Episode 004: &ldquo;Customer Number Four&rdquo;</div>
+                <img src="images/fast-bunny-004.jpg" alt="The Fast Bunny Episode 004 - Customer Number Four" style="width:100%; max-width:900px; border:3px solid #1C1917; border-radius:4px;">
+            </div>
+            <div>
+                <div class="comic-episode-name" style="margin-bottom:0.8rem;">Episode 003: &ldquo;The Algorithm Doesn’t Sleep&rdquo;</div>
+                <img src="comics/ep003.png" alt="The Fast Bunny Episode 003 - The Algorithm Doesn't Sleep" style="width:100%; max-width:900px; border:3px solid #1C1917; border-radius:4px;">
+            </div>
+            <div>
+                <div class="comic-episode-name" style="margin-bottom:0.8rem;">Episode 002: &ldquo;The Networking Event&rdquo;</div>
+                <img src="comics/ep002.png" alt="The Fast Bunny Episode 002 - The Networking Event" style="width:100%; max-width:900px; border:3px solid #1C1917; border-radius:4px;">
+            </div>
+            <div>
+                <div class="comic-episode-name" style="margin-bottom:0.8rem;">Episode 001: &ldquo;The Startup That Ran on Carrots&rdquo;</div>
+                <img src="comics/ep001.png" alt="The Fast Bunny Episode 001 - The Startup That Ran on Carrots" style="width:100%; max-width:900px; border:3px solid #1C1917; border-radius:4px;">
             </div>
         </div>
+    </div>
+    <div class="comic-footer">
+        <p class="comic-footer-text">The Fast Bunny appears every Sunday in The Convergence Threshold. <a href="#subscribe" style="color:var(--sunset-gold);">Subscribe to get every episode &#x2192;</a></p>
+    </div>
+</section>
 
-        <!-- About -->
-        <div class="sidebar-card">
-            <h3 class="sidebar-title">The Convergence Architect</h3>
-            <p style="font-size: 0.875rem; margin-bottom: 0.618rem;">40 years building real systems — recording studios, factory floors, enterprise infrastructure. 12+ apps on Claude Opus 4.5. 17+ production GPT systems. Siemens/Rockwell/Azure AI certified. Theosophical Society. Published author.</p>
-            <p style="font-size: 0.85rem; color: var(--sand-dark); margin-bottom: 0.618rem;"><em>“Technology should make you more human, not less.”</em></p>
-            <p style="font-size: 0.8rem; color: var(--ocean-teal); font-weight: 600;">Not above you. Not ahead of you. Beside you.</p>
-        </div>
-
-    </aside>
-</main>
-<!-- SCROLLING APP RIBBON -->
-<section class="app-ribbon">
-    <div class="ribbon-title">The Arsenal — Nine AI Tools Built for the Hungry</div>
-    <div class="ribbon-track" id="ribbonTrack">
-        <!-- Apps will be duplicated by JS for seamless loop -->
+<!-- NEWSLETTER CTA -->
+<section id="subscribe" class="newsletter-cta-section">
+    <div class="newsletter-cta-inner">
+        <h2 class="newsletter-cta-title">Don’t Miss the Next One.</h2>
+        <p class="newsletter-cta-sub">The Convergence Threshold lands in your inbox twice a week. Tech that matters. Humans that inspire. The Fast Bunny every Sunday. Zero spam. Real talk.</p>
+        <form class="newsletter-form" id="footer-email-form" onsubmit="handleEmailCapture(event, 'footer')">
+            <input type="email" class="newsletter-input" placeholder="your@email.com" required>
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+        </form>
+        <p class="newsletter-note">Join The Threshold. Unsubscribe anytime. We’re cool like that.</p>
     </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="site-footer">
-    <div class="footer-logo">dubl<span>tap</span>.io</div>
-    <div class="footer-tagline">“Come On In and Get Happy.” — Nine Apps. One Frequency. Your Frequency.</div>
-    <div class="footer-links">
-        <a href="https://dubltap.io">Home</a>
-        <a href="https://dubltap.io/blog">Blog</a>
-        <a href="https://maven.dubltap.io">Market Maven</a>
-        <a href="https://bizdev.dubltap.io">Pro BizDev</a>
-        <a href="https://cliff.dubltap.io">CLIFF NOTEZ</a>
-        <a href="https://hustle.dubltap.io">Side Hustle Copilot</a>
-        <a href="https://fork.dubltap.io">Bad Mutha Forker</a>
-        <a href="https://mind.dubltap.io">Mind Expander</a>
-        <a href="https://aesthetic.dubltap.io">Aesthetic AI</a>
-        <a href="https://vibe.dubltap.io">VibeCurate</a>
+<footer class="editorial-footer">
+    <div class="footer-inner">
+        <div class="footer-col">
+            <div class="footer-col-title">The Arsenal</div>
+            <a href="https://mind.dubltap.io">Mind Expander (Free)</a>
+            <a href="https://hustle.dubltap.io">Side Hustle Copilot</a>
+            <a href="https://fork.dubltap.io">Bad Mutha Forker</a>
+            <a href="https://maven.dubltap.io">Market Maven</a>
+            <a href="https://cliff.dubltap.io">CLIFF NOTEZ</a>
+            <a href="https://bizdev.dubltap.io">Pro Business Dev</a>
+            <a href="https://aesthetic.dubltap.io">Aesthetic AI</a>
+            <a href="https://vibe.dubltap.io">VibeCurate</a>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-title">The Threshold</div>
+            <a href="#tech">Tech & AI</a>
+            <a href="#human">The Human Element</a>
+            <a href="#entrepreneur">Entrepreneur</a>
+            <a href="#entertainment">Entertainment</a>
+            <a href="#animals">The Animal Wire</a>
+            <a href="#culinary">Culinary</a>
+            <a href="#fast-bunny">The Fast Bunny</a>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-title">Connect</div>
+            <a href="https://dubltap.io">dubltap.io</a>
+            <a href="https://mail.dubltap.io">Newsletter</a>
+            <a href="/cdn-cgi/l/email-protection#a3cbc6cfcfcce3c7d6c1cfd7c2d38dcacc"><span class="__cf_email__" data-cfemail="2f474a4343406f4b5a4d435b4e5f014640">[email&#160;protected]</span></a>
+        </div>
     </div>
-    <div class="footer-copy">&copy; 2026 dubltap.io — The Convergence Architect — Christopher Grove — “The journey starts with a single note. Ours is G. Strike it.”</div>
+    <div class="footer-bottom">
+        <div class="footer-logo">dubl<span>tap</span>.io</div>
+        <span>&copy; 2026 dubltap.io &middot; AI that actually does stuff.</span>
+        <span>Riffs louder than hunger.</span>
+    </div>
 </footer>
 
-<!-- EMAIL CAPTURE MODAL -->
-<div class="modal-overlay" id="emailModal">
-    <div class="modal-box">
-        <button class="modal-close" onclick="closeModal()">&times;</button>
-        <h2>You’re Not Armed Yet.</h2>
-        <p>Get free access to all blog updates, the Convergence Council interview series, and weekly intel from The Convergence Architect. One frequency. Yours.</p>
-        <input type="email" class="modal-input" placeholder="your@email.com" id="modalEmail">
-        <button class="modal-submit" onclick="captureEmail('modal')">Come On In and Get Happy</button>
-        <div class="modal-fine-print">No spam. No noise. Just signal. Unsubscribe anytime.</div>
-    </div>
-</div>
+<!-- SCRIPTS -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    var revealObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(function(el) { revealObserver.observe(el); });
 
-<script>
-    // ===== APP RIBBON DATA =====
-    const apps = [
-        { name: 'VibeCurate', desc: 'Energy & Vibration', price: '$9/mo', emoji: '🎵', url: 'https://vibe.dubltap.io' },
-        { name: 'Bad Mutha Forker', desc: 'Recipe Transformation', price: '$9/mo', emoji: '🍴', url: 'https://fork.dubltap.io' },
-        { name: 'Mind Expander', desc: 'Cognitive Enhancement', price: 'FREE', emoji: '🧠', url: 'https://mind.dubltap.io' },
-        { name: 'CLIFF NOTEZ', desc: 'Document Analysis', price: '$19/mo', emoji: '📋', url: 'https://cliff.dubltap.io' },
-        { name: 'Market Maven', desc: 'Competitive Intelligence', price: '$19/mo', emoji: '📊', url: 'https://maven.dubltap.io' },
-        { name: 'Side Hustle Copilot', desc: 'Income Matching', price: '$12/mo', emoji: '💰', url: 'https://hustle.dubltap.io' },
-        { name: 'Pro BizDev', desc: 'Sales Strategy', price: '$24/mo', emoji: '🎯', url: 'https://bizdev.dubltap.io' },
-        { name: 'Aesthetic AI', desc: 'Golden Ratio Design', price: '$12/mo', emoji: '🎨', url: 'https://aesthetic.dubltap.io' },
-        { name: 'COMPLETE Bundle', desc: 'All 9 Tools', price: '$59/mo', emoji: '⚡', url: 'https://dubltap.io' },
-    ];
-
-    function buildRibbon() {
-        const track = document.getElementById('ribbonTrack');
-        // Duplicate for seamless scroll
-        const allApps = [...apps, ...apps, ...apps];
-        track.innerHTML = allApps.map(app => `
-            <a href="${app.url}" class="app-chip" target="_blank" rel="noopener">
-                <span class="app-emoji">${app.emoji}</span>
-                <div>
-                    <div class="app-chip-name">${app.name}</div>
-                    <div class="app-chip-desc">${app.desc}</div>
-                </div>
-                <span class="app-chip-price">${app.price}</span>
-            </a>
-        `).join('');
-    }
-    buildRibbon();
-
-    // ===== EMAIL CAPTURE =====
-    let emailCaptured = localStorage.getItem('dubltap_email_captured');
-
-    function captureEmail(source) {
-        const inputId = source === 'modal' ? 'modalEmail' : 'sidebarEmail';
-        const email = document.getElementById(inputId).value.trim();
-        if (!email || !email.includes('@')) {
-            alert('Please enter a valid email address.');
-            return;
-        }
-
-        // Track source with UTM
-        const data = { email, source: 'blog_' + source, timestamp: new Date().toISOString() };
-
-        // TODO: Replace with actual Beehiiv/ConvertKit API call
-        // fetch('https://api.beehiiv.com/...', { method: 'POST', body: JSON.stringify(data) });
-
-        console.log('Email captured:', data);
-        localStorage.setItem('dubltap_email_captured', 'true');
-        emailCaptured = true;
-
-        if (source === 'modal') {
-            closeModal();
-        }
-
-        // Show thank you
-        const btn = source === 'modal'
-            ? document.querySelector('.modal-submit')
-            : document.querySelector('.email-btn');
-        btn.textContent = '✓ Subscribed!';
-        btn.style.background = '#2A9D8F';
-
-        setTimeout(() => {
-            btn.textContent = source === 'modal' ? 'Get Free Access' : 'Subscribe Free';
-            btn.style.background = '';
-        }, 3000);
-    }
-
-    // ===== MODAL TRIGGERS =====
-    function openPost(slug) {
-        if (!emailCaptured) {
-            document.getElementById('emailModal').classList.add('active');
-            return;
-        }
-        // TODO: Navigate to full post
-        // window.location.href = '/blog/' + slug;
-        alert('Full blog posts coming soon! Email captured — you\'ll be first to read them.');
-    }
-
-    function closeModal() {
-        document.getElementById('emailModal').classList.remove('active');
-    }
-
-    // Close modal on overlay click
-    document.getElementById('emailModal').addEventListener('click', function(e) {
-        if (e.target === this) closeModal();
-    });
-
-    // Exit intent trigger
-    let exitShown = false;
-    document.addEventListener('mouseleave', function(e) {
-        if (e.clientY < 0 && !exitShown && !emailCaptured) {
-            exitShown = true;
-            setTimeout(() => {
-                document.getElementById('emailModal').classList.add('active');
-            }, 500);
-        }
-    });
-
-    // Scroll-based trigger (after 60% scroll)
-    let scrollShown = false;
+    var sections = document.querySelectorAll('section[id]');
+    var navLinks = document.querySelectorAll('.section-nav a:not(.nav-subscribe-btn)');
     window.addEventListener('scroll', function() {
-        if (scrollShown || emailCaptured) return;
-        const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-        if (scrollPercent > 60) {
-            scrollShown = true;
-            document.getElementById('emailModal').classList.add('active');
+        var current = '';
+        sections.forEach(function(section) {
+            if (scrollY >= section.offsetTop - 120) current = section.getAttribute('id');
+        });
+        navLinks.forEach(function(link) {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+        });
+    });
+
+    async function handleEmailCapture(e, source) {
+        e.preventDefault();
+        var form = e.target;
+        var emailInput = form.querySelector('input[type="email"]');
+        var btn = form.querySelector('button');
+        var email = emailInput.value;
+        if (!email) return;
+        btn.textContent = 'Joining...';
+        btn.disabled = true;
+        try {
+            var response = await fetch('https://api.dubltap.io/api/capture-email', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: email, source: 'convergence-threshold-' + source, tags: ['newsletter', 'threshold', source] })
+            });
+            if (response.ok) {
+                btn.textContent = 'You are In!';
+                btn.style.background = '#2A9D8F';
+                emailInput.value = '';
+                if (typeof rdt === 'function') { rdt('track', 'Lead'); rdt('track', 'SignUp'); }
+                setTimeout(function() { btn.textContent = source === 'sidebar' ? 'Subscribe Free' : 'Subscribe'; btn.style.background = ''; btn.disabled = false; }, 3000);
+            } else { throw new Error('fail'); }
+        } catch (err) {
+            window.open('https://mail.dubltap.io/subscribe', '_blank');
+            btn.textContent = source === 'sidebar' ? 'Subscribe Free' : 'Subscribe';
+            btn.disabled = false;
         }
+    }
+
+    document.querySelectorAll('.section-nav a[href^="#"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            var target = document.querySelector(link.getAttribute('href'));
+            if (target) window.scrollTo({ top: target.offsetTop - 60, behavior: 'smooth' });
+        });
     });
 </script>
 
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y3QEKJFSR0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Y3QEKJFSR0');</script>
+
+<!-- Reddit Pixel -->
+<script>!function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js";t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','a2_g6fh66r3ckgj');rdt('track','PageVisit');</script>
+
 </body>
-</html>
+    </html>
