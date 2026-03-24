@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Convergence Threshold | dubltap.io Blog — Come On In and Get Happy</title>
+<meta name="description" content="You’re not broken. You’re just not armed yet. Blog updates from The Convergence Architect — AI tools, cognitive enhancement, Hermetic wisdom, and the golden ratio. Home of Mind Beyond Mind: IAMAUM.">
+<meta name="keywords" content="convergence architect, AI tools, cognitive enhancement, Hermetic principles, golden ratio, side hustle AI, competitive intelligence, Mind Beyond Mind IAMAUM, dubltap.io, personal development AI">
+<meta property="og:title" content="The Convergence Threshold | dubltap.io">
+<meta property="og:description" content="You’re not broken. You’re just not armed yet. Nine AI tools. One frequency. Your frequency. Come on in and get happy.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dubltap.io/blog">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Convergence Threshold | dubltap.io">
+<meta name="twitter:description" content="You’re not broken. You’re just not armed yet. Nine AI tools built for the hungry. The optimists. The futurists.">
+<link rel="canonical" href="https://dubltap.io/blog">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "The Convergence Threshold",
+    "description": "Blog updates from The Convergence Architect. AI tools, cognitive enhancement, Hermetic wisdom, and the golden ratio.",
+    "url": "https://dubltap.io/blog",
+    "author": {
+        "@type": "Person",
+        "name": "Christopher Grove",
+        "jobTitle": "The Convergence Architect",
+        "description": "40+ years building systems — from recording studios to factory floors to production AI. Author of Mind Beyond Mind: IAMAUM."
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "dubltap.io",
+        "url": "https://dubltap.io",
+        "slogan": "Come on in and get happy."
+    }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+    :root {
+        --sunset-gold: #F4A261;
+        --sunset-coral: #E76F51;
+        --sunset-peach: #FFBE98;
+        --ocean-deep: #264653;
+        --ocean-teal: #2A9D8F;
+        --ocean-foam: #A8DADC;
+        --sand-light: #FDF8F3;
+        --sand-warm: #E9E0D6;
+        --sand-medium: #C4B7A6;
+        --sand-dark: #4A4238;
+        --phi: 1.618;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'DM Sans', system-ui, sans-serif;
+        background: var(--sand-light);
+        color: var(--sand-dark);
+        line-height: 1.618;
+        overflow-x: hidden;
+    }
+
+    .site-header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(253, 248, 243, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--ocean-foam);
+        z-index: 1000;
+        padding: 0.618rem 1.618rem;
+    }
+
+    .nav-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-family: 'Outfit', sans-serif;
+        font-weight: 800;
+        font-size: 1.618rem;
+        color: var(--ocean-deep);
+        text-decoration: none;
+        letter-spacing: -0.02em;
+    }
+
+    .logo span { color: var(--sunset-gold); }
+    .nav-links { display: flex; gap: 1.618rem; align-items: center; }
+
+    .nav-links a {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--sand-dark);
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--ocean-teal); }
+
+    .nav-cta {
+        background: var(--sunset-gold) !important;
+        color: var(--ocean-deep) !important;
+        padding: 0.382rem 1rem;
+        border-radius: 0.618rem;
+        font-weight: 600 !important;
+        transition: all 0.2s !important;
+    }
+
+    .nav-cta:hover {
+        background: var(--sunset-coral) !important;
+        transform: translateY(-1px);
+    }
+
+    .blog-hero {
+        padding: 8rem 1.618rem 4.236rem;
+        text-align: center;
+        background: linear-gradient(180deg, var(--sand-light) 0%, var(--sand-warm) 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .blog-hero::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 60%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(244,162,97,0.08) 0%, transparent 60%);
+        pointer-events: none;
+    }
+
+    .hero-eyebrow {
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.764rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: var(--ocean-teal);
+        margin-bottom: 1rem;
+    }
+
+    .hero-title {
+        font-family: 'Outfit', sans-serif;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 800;
+        color: var(--ocean-deep);
+        line-height: 1.15;
+        margin-bottom: 1rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-title em {
+        font-style: normal;
+        background: linear-gradient(135deg, var(--sunset-gold), var(--sunset-coral));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .hero-subtitle {
+        font-size: 1.15rem;
+        color: var(--sand-dark);
+        max-width: 600px;
+        margin: 0 auto 2rem;
+        opacity: 0.85;
+    }
+
+    .hero-author {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.618rem;
+        padding: 0.382rem 1rem 0.382rem 0.382rem;
+        background: rgba(255,255,255,0.7);
+        border-radius: 2rem;
+        border: 1px solid var(--ocean-foam);
+    }
+
+    .author-avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--sunset-gold), var(--ocean-teal));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Outfit', sans-serif;
+        font-weight: 700;
+        color: white;
+        font-size: 0.875rem;
+    }
+
+    .author-info { text-align: left; }
+    .author-name { font-weight: 600; font-size: 0.875rem; color: var(--ocean-deep); }
+    .author-title { font-size: 0.764rem; color: var(--sand-medium); }
+
+    .blog-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2.618rem 1.618rem;
+        display: grid;
+        grid-template-columns: 1fr 340px;
+        gap: 2.618rem;
+    }
+
+    @media (max-width: 900px) {
+        .blog-content { grid-template-columns: 1fr; }
+    }
+
+    .posts-grid { display: flex; flex-direction: column; gap: 1.618rem; }
+
+    .post-card {
+        background: white;
+        border-radius: 1rem;
+        border: 1px solid var(--ocean-foam);
+        overflow: hidden;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+
+    .post-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 40px rgba(38, 70, 83, 0.1);
+    }
+
+    .post-card.featured {
+        border-color: var(--sunset-gold);
+        border-width: 2px;
+    }
+
+    .post-image {
+        height: 220px;
+        background: linear-gradient(135deg, var(--ocean-deep), var(--ocean-teal));
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .post-image::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent 40%, rgba(38,70,83,0.4) 100%);
+    }
+
+    .post-image-text {
+        font-family: 'Outfit', sans-serif;
+        font-size: 3rem;
+        font-weight: 800;
+        color: rgba(255,255,255,0.15);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        z-index: 1;
+    }
+
+    .featured-badge {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        background: var(--sunset-gold);
+        color: var(--ocean-deep);
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        padding: 0.25rem 0.75rem;
+        border-radius: 2rem;
+        z-index: 2;
+    }
+
+    .post-body { padding: 1.618rem; }
+
+    .post-category {
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--ocean-teal);
+        margin-bottom: 0.5rem;
+    }
+
+    .post-title {
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.382rem;
+        font-weight: 700;
+        color: var(--ocean-deep);
+        line-height: 1.3;
+        margin-bottom: 0.618rem;
+    }
+
+    .post-excerpt {
+        font-size: 0.938rem;
+        color: var(--sand-dark);
+        opacity: 0.8;
+        margin-bottom: 1rem;
+        line-height: 1.6;
+    }
+
+    .post-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.8rem;
+        color: var(--sand-medium);
+    }
+
+    .read-time {
+        background: var(--sand-warm);
+        padding: 0.2rem 0.618rem;
+        border-radius: 1rem;
+        font-size: 0.75rem;
+    }
+
+    .sidebar { display: flex; flex-direction: column; gap: 1.618rem; }
+
+    .sidebar-card {
+        background: white;
+        border-radius: 1rem;
+        border: 1px solid var(--ocean-foam);
+        padding: 1.618rem;
+    }
+
+    .sidebar-title {
+        font-family: 'Outfit', sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--ocean-deep);
+        margin-bottom: 1rem;
+        padding-bottom: 0.618rem;
+        border-bottom: 2px solid var(--sunset-gold);
+    }
+
+    .email-card {
+        background: linear-gradient(135deg, var(--ocean-deep), #1a3a47);
+        border-color: var(--ocean-teal);
+    }
+
+    .email-card .sidebar-title {
+        color: white;
+        border-bottom-color: var(--sunset-gold);
+    }
+
+    .email-card p {
+        color: var(--ocean-foam);
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+    }
+
+    .email-input {
+        width: 100%;
+        padding: 0.618rem 1rem;
+        border: 1px solid var(--ocean-teal);
+        border-radius: 0.618rem;
+        background: rgba(255,255,255,0.1);
+        color: white;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.875rem;
+        margin-bottom: 0.618rem;
+        outline: none;
+        transition: border-color 0.2s;
+    }
+
+    .email-input::placeholder { color: rgba(168, 218, 220, 0.6); }
+    .email-input:focus { border-color: var(--sunset-gold); }
+
+    .email-btn {
+        width: 100%;
+        padding: 0.618rem;
+        background: var(--sunset-gold);
+        color: var(--ocean-deep);
+        border: none;
+        border-radius: 0.618rem;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 700;
+        font-size: 0.875rem;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    .email-btn:hover { background: var(--sunset-coral); transform: translateY(-1px); }
+
+    .email-note {
+        font-size: 0.7rem !important;
+        color: rgba(168, 218, 220, 0.5) !important;
+        text-align: center;
+        margin-top: 0.382rem;
+        margin-bottom: 0 !important;
+    }
+
+    .book-card {
+        background: linear-gradient(135deg, #2c1810 0%, #1a0f0a 100%);
+        border-color: var(--sunset-gold);
+        text-align: center;
+    }
+
+    .book-card .sidebar-title {
+        color: var(--sunset-peach);
+        border-bottom-color: var(--sunset-coral);
+    }
+
+    .book-icon { font-size: 3rem; margin-bottom: 0.618rem; display: block; }
+
+    .book-title-text {
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.236rem;
+        font-weight: 700;
+        color: var(--sunset-gold);
+        margin-bottom: 0.382rem;
+    }
+
+    .book-author { font-size: 0.8rem; color: var(--sand-medium); margin-bottom: 1rem; }
+
+    .book-desc {
+        font-size: 0.85rem;
+        color: var(--sand-warm);
+        margin-bottom: 1rem;
+        line-height: 1.5;
+    }
+
+    .book-btn {
+        display: inline-block;
+        padding: 0.618rem 1.618rem;
+        background: var(--sunset-gold);
+        color: var(--ocean-deep);
+        text-decoration: none;
+        border-radius: 0.618rem;
+        font-weight: 700;
+        font-size: 0.875rem;
+        transition: all 0.2s;
+    }
+
+    .book-btn:hover { background: var(--sunset-coral); transform: translateY(-1px); }
+
+    .category-list { display: flex; flex-direction: column; gap: 0.5rem; }
+
+    .category-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0;
+        text-decoration: none;
+        color: var(--sand-dark);
+        font-size: 0.875rem;
+        border-bottom: 1px solid var(--sand-warm);
+        transition: color 0.2s;
+    }
+
+    .category-link:hover { color: var(--ocean-teal); }
+
+    .category-count {
+        background: var(--sand-warm);
+        padding: 0.15rem 0.5rem;
+        border-radius: 1rem;
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+
+    .app-ribbon {
+        background: var(--ocean-deep);
+        padding: 2rem 0;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .ribbon-title {
+        text-align: center;
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.764rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: var(--ocean-foam);
+        margin-bottom: 1.2rem;
+        opacity: 0.7;
+    }
+
+    .ribbon-track {
+        display: flex;
+        gap: 1.2rem;
+        animation: scroll-ribbon 40s linear infinite;
+        width: max-content;
+    }
+
+    .ribbon-track:hover { animation-play-state: paused; }
+
+    @keyframes scroll-ribbon {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+
+    .app-chip {
+        display: flex;
+        align-items: center;
+        gap: 0.618rem;
+        padding: 0.618rem 1.236rem;
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(168, 218, 220, 0.2);
+        border-radius: 2rem;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: all 0.3s;
+        flex-shrink: 0;
+    }
+
+    .app-chip:hover {
+        background: rgba(244, 162, 97, 0.15);
+        border-color: var(--sunset-gold);
+        transform: translateY(-2px);
+    }
+
+    .app-emoji { font-size: 1.2rem; }
+
+    .app-chip-name {
+        font-family: 'Outfit', sans-serif;
+        font-weight: 600;
+        font-size: 0.85rem;
+        color: white;
+    }
+
+    .app-chip-desc { font-size: 0.72rem; color: var(--ocean-foam); opacity: 0.7; }
+    .app-chip-price { font-size: 0.7rem; color: var(--sunset-gold); font-weight: 600; }
+
+    .site-footer {
+        background: var(--ocean-deep);
+        color: var(--ocean-foam);
+        padding: 2.618rem 1.618rem 1.618rem;
+        text-align: center;
+    }
+
+    .footer-logo {
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.618rem;
+        font-weight: 800;
+        color: white;
+        margin-bottom: 0.618rem;
+    }
+
+    .footer-logo span { color: var(--sunset-gold); }
+
+    .footer-tagline {
+        font-size: 0.875rem;
+        color: var(--ocean-foam);
+        opacity: 0.6;
+        margin-bottom: 1.618rem;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 1.618rem;
+        flex-wrap: wrap;
+        margin-bottom: 1.618rem;
+    }
+
+    .footer-links a {
+        color: var(--ocean-foam);
+        text-decoration: none;
+        font-size: 0.8rem;
+        opacity: 0.7;
+        transition: all 0.2s;
+    }
+
+    .footer-links a:hover { opacity: 1; color: var(--sunset-gold); }
+    .footer-copy { font-size: 0.75rem; opacity: 0.4; }
+
+    .modal-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(38, 70, 83, 0.6);
+        backdrop-filter: blur(8px);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .modal-overlay.active { display: flex; }
+
+    .modal-box {
+        background: var(--sand-light);
+        border-radius: 1.618rem;
+        padding: 2.618rem;
+        max-width: 460px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        box-shadow: 0 20px 60px rgba(38, 70, 83, 0.3);
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--sand-medium);
+        cursor: pointer;
+        transition: color 0.2s;
+    }
+
+    .modal-close:hover { color: var(--sand-dark); }
+
+    .modal-box h2 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.618rem;
+        color: var(--ocean-deep);
+        margin-bottom: 0.618rem;
+    }
+
+    .modal-box p {
+        font-size: 0.938rem;
+        color: var(--sand-dark);
+        margin-bottom: 1.618rem;
+        opacity: 0.8;
+    }
+
+    .modal-input {
+        width: 100%;
+        padding: 0.764rem 1rem;
+        border: 2px solid var(--ocean-foam);
+        border-radius: 0.618rem;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 1rem;
+        color: var(--sand-dark);
+        background: white;
+        outline: none;
+        margin-bottom: 0.618rem;
+        transition: border-color 0.2s;
+    }
+
+    .modal-input:focus { border-color: var(--ocean-teal); }
+
+    .modal-submit {
+        width: 100%;
+        padding: 0.764rem;
+        background: var(--sunset-gold);
+        color: var(--ocean-deep);
+        border: none;
+        border-radius: 0.618rem;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    .modal-submit:hover { background: var(--sunset-coral); }
+    .modal-fine-print { font-size: 0.75rem; color: var(--sand-medium); margin-top: 0.618rem; }
+
+    @media (max-width: 768px) {
+        .nav-links a:not(.nav-cta) { display: none; }
+        .blog-hero { padding: 6rem 1rem 3rem; }
+        .blog-content { padding: 1.618rem 1rem; }
+        .post-image { height: 160px; }
+    }
+</style>
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+    <nav class="nav-inner">
+        <a href="https://dubltap.io" class="logo">dubl<span>tap</span>.io</a>
+        <div class="nav-links">
+            <a href="https://dubltap.io">Home</a>
+            <a href="https://dubltap.io/blog">Blog</a>
+            <a href="https://dubltap.io/#tools">Tools</a>
+            <a href="https://dubltap.io/#tools" class="nav-cta">Try Free</a>
+        </div>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="blog-hero">
+    <div class="hero-eyebrow">The Convergence Threshold &mdash; Blog Updates</div>
+    <h1 class="hero-title">You're Not Broken. <em>You're Just Not Armed Yet.</em></h1>
+    <p class="hero-subtitle">Nine AI tools. One frequency. Your frequency. Built for the hungry, the optimists, the futurists. This is the arsenal.</p>
+    <div class="hero-author">
+        <div class="author-avatar">CG</div>
+        <div class="author-info">
+            <div class="author-name">Christopher Grove</div>
+            <div class="author-title">The Convergence Architect</div>
+        </div>
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main class="blog-content">
+    <div class="posts-grid">
+
+        <!-- NEW: Fast Bunny Episode 004 -->
+        <article class="post-card featured" onclick="window.location.href='https://dubltap.io/blog/fast-bunny-004.html'">
+            <div class="post-image" style="background: linear-gradient(135deg, #1C1917, #264653, #F4A261);">
+                <div class="featured-badge">The Fast Bunny · Ep. 004</div>
+                <div class="post-image-text">ENTERPRISE</div>
+            </div>
+            <div class="post-body">
+                <div class="post-category">The Fast Bunny · Sunday Comics</div>
+                <h2 class="post-title">“Customer Number Four” — Fast Bunny Is Basically Enterprise Now</h2>
+                <p class="post-excerpt">Four paying customers. An investor update to “valued stakeholders (mom).” A dedicated desk upgrade in the works. Revenue up 33% QoQ (from $3 to $4). This week’s strip has everything.</p>
+                <div class="post-meta">
+                    <span>March 19, 2026</span>
+                    <span class="read-time">2 min read</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- NEW: AI Tools for Freelancers -->
+        <article class="post-card" onclick="window.location.href='https://dubltap.io/blog/ai-tools-for-freelancers-2026.html'">
+            <div class="post-image" style="background: linear-gradient(135deg, #2A9D8F, #264653, #F4A261);">
+                <div class="post-image-text">EARN</div>
+            </div>
+            <div class="post-body">
+                <div class="post-category">Freelance Intelligence</div>
+                <h2 class="post-title">7 AI Tools That Actually Help Freelancers Make More Money in 2026</h2>
+                <p class="post-excerpt">Real tools freelancers keep using after the free trial ends. Not the ones getting hyped on Twitter — the ones showing up in invoices as the reason work got done faster.</p>
+                <div class="post-meta">
+                    <span>March 19, 2026</span>
+                    <span class="read-time">6 min read</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- NEW: Market Maven vs Crayon -->
+        <article class="post-card" onclick="window.location.href='https://dubltap.io/blog/market-maven-vs-crayon-2026.html'">
+            <div class="post-image" style="background: linear-gradient(135deg, #1a2f3a, #264653, #2A9D8F);">
+                <div class="post-image-text">INTEL</div>
+            </div>
+            <div class="post-body">
+                <div class="post-category">Competitive Intelligence</div>
+                <h2 class="post-title">Market Maven vs Crayon: AI Competitive Intelligence Compared (2026)</h2>
+                <p class="post-excerpt">Crayon starts at $25,000/year. Market Maven starts at $19/month. Honest breakdown of who each tool is actually built for — and which one most people actually need.</p>
+                <div class="post-meta">
+                    <span>March 19, 2026</span>
+                    <span class="read-time">5 min read</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- FEATURED POST 1: Blog Post 001 -->
+        <article class="post-card" onclick="openPost('convergence-threshold')">
+            <div class="post-image" style="background: linear-gradient(135deg, #264653, #2A9D8F, #F4A261);">
+                <div class="post-image-text">ARMED</div>
+            </div>
+            <div class="post-body">
+                <div class="post-category">The Convergence Threshold</div>
+                <h2 class="post-title">You're Not Broken. You're Just Not Armed Yet.</h2>
+                <p class="post-excerpt">You already know something's off. That gap between where you are and where you know you should be. Not where someone told you to be. Where you know. In your gut. You're hungry. Good. You're restless. Better. That ends now.</p>
+                <div class="post-meta">
+                    <span>February 19, 2026</span>
+                    <span class="read-time">7 min read</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- POST 2: Interview Series -->
+        <article class="post-card" onclick="openPost('interview-001')">
+            <div class="post-image" style="background: linear-gradient(135deg, #1a0f0a, #2c1810, #F4A261);">
+                <div class="post-image-text">COUNCIL</div>
+            </div>
+            <div class="post-body">
+                <div class="post-category">The Convergence Council Interview Series</div>
+                <h2 class="post-title">Interview One: The Convergence Threshold &mdash; Ten Minds, One Frequency</h2>
+                <p class="post-excerpt">What happens when Buckminster Fuller, Nikola Tesla, Carl Jung, and seven other luminaries sit you down and ask the questions nobody else will? The missing pillar. The shadow gold. The warrior who was hiding in plain sight.</p>
+                <div class="post-meta">
+                    <span>February 19, 2026</span>
+                    <span class="read-time">18 min read</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- POST 3: The Builder Story -->
+        <article class="post-card" onclick="openPost('9-ai-apps')">
+            <div class="post-image" style="background: linear-gradient(135deg, #E76F51, #F4A261, #FFBE98);">
+                <div class="post-image-text">BUILD</div>
+            </div>
+            <div class="post-body">
+                <div class="post-category">AI Tools That Work</div>
+                <h2 class="post-title">I Built 9 AI Apps That Actually Do Stuff &mdash; Here's What I Learned</h2>
+                <p class="post-excerpt">17 custom GPTs. 9 production apps. One frequency. Every interface built on the golden ratio of 1:1.618. The same proportion governing galaxies, seashells, and the geometry of your own DNA. That's not marketing. That's mathematics.</p>
+                <div class="post-meta">
+                    <span>Coming Soon</span>
+                    <span class="read-time">12 min read</span>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <!-- Email Capture -->
+        <div class="sidebar-card email-card">
+            <h3 class="sidebar-title">The Dubltap Dispatch</h3>
+            <p>Weekly blog updates, tool spotlights, and one question designed to expose your blind spots. Direct. No fluff. Just signal.</p>
+            <input type="email" class="email-input" placeholder="your@email.com" id="sidebarEmail">
+            <button class="email-btn" onclick="captureEmail('sidebar')">Come On In</button>
+            <p class="email-note">No spam. Unsubscribe anytime. We're cool like that.</p>
+        </div>
+
+        <!-- Mind Beyond Mind Book -->
+        <div class="sidebar-card book-card">
+            <h3 class="sidebar-title">Go Deeper</h3>
+            <span class="book-icon">📖</span>
+            <div class="book-title-text">Mind Beyond Mind: IAMAUM</div>
+            <div class="book-author">by Christopher Grove</div>
+            <p class="book-desc">The Hermetic principles and metacognitive frameworks that became the philosophical foundation for dubltap.io. For those ready to go deeper.</p>
+            <a href="#" class="book-btn" id="bookLink">Explore the Book</a>
+        </div>
+
+        <!-- Categories -->
+        <div class="sidebar-card">
+            <h3 class="sidebar-title">Categories</h3>
+            <div class="category-list">
+                <a href="#" class="category-link">The Convergence Threshold <span class="category-count">2</span></a>
+                <a href="#" class="category-link">AI Tools That Work <span class="category-count">Coming</span></a>
+                <a href="#" class="category-link">Side Hustle Intel <span class="category-count">Coming</span></a>
+                <a href="#" class="category-link">Mind &amp; Method <span class="category-count">Coming</span></a>
+                <a href="#" class="category-link">The Convergence Council <span class="category-count">Series</span></a>
+            </div>
+        </div>
+
+        <!-- About -->
+        <div class="sidebar-card">
+            <h3 class="sidebar-title">The Convergence Architect</h3>
+            <p style="font-size: 0.875rem; margin-bottom: 0.618rem;">40 years building real systems — recording studios, factory floors, enterprise infrastructure. 12+ apps on Claude Opus 4.5. 17+ production GPT systems. Siemens/Rockwell/Azure AI certified. Theosophical Society. Published author.</p>
+            <p style="font-size: 0.85rem; color: var(--sand-dark); margin-bottom: 0.618rem;"><em>“Technology should make you more human, not less.”</em></p>
+            <p style="font-size: 0.8rem; color: var(--ocean-teal); font-weight: 600;">Not above you. Not ahead of you. Beside you.</p>
+        </div>
+
+    </aside>
+</main>
+
+<!-- SCROLLING APP RIBBON -->
+<section class="app-ribbon">
+    <div class="ribbon-title">The Arsenal — Nine AI Tools Built for the Hungry</div>
+    <div class="ribbon-track" id="ribbonTrack">
+        <!-- Apps will be duplicated by JS for seamless loop -->
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="footer-logo">dubl<span>tap</span>.io</div>
+    <div class="footer-tagline">“Come On In and Get Happy.” — Nine Apps. One Frequency. Your Frequency.</div>
+    <div class="footer-links">
+        <a href="https://dubltap.io">Home</a>
+        <a href="https://dubltap.io/blog">Blog</a>
+        <a href="https://maven.dubltap.io">Market Maven</a>
+        <a href="https://bizdev.dubltap.io">Pro BizDev</a>
+        <a href="https://cliff.dubltap.io">CLIFF NOTEZ</a>
+        <a href="https://hustle.dubltap.io">Side Hustle Copilot</a>
+        <a href="https://fork.dubltap.io">Bad Mutha Forker</a>
+        <a href="https://mind.dubltap.io">Mind Expander</a>
+        <a href="https://aesthetic.dubltap.io">Aesthetic AI</a>
+        <a href="https://vibe.dubltap.io">VibeCurate</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 dubltap.io — The Convergence Architect — Christopher Grove — “The journey starts with a single note. Ours is G. Strike it.”</div>
+</footer>
+
+<!-- EMAIL CAPTURE MODAL -->
+<div class="modal-overlay" id="emailModal">
+    <div class="modal-box">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <h2>You’re Not Armed Yet.</h2>
+        <p>Get free access to all blog updates, the Convergence Council interview series, and weekly intel from The Convergence Architect. One frequency. Yours.</p>
+        <input type="email" class="modal-input" placeholder="your@email.com" id="modalEmail">
+        <button class="modal-submit" onclick="captureEmail('modal')">Come On In and Get Happy</button>
+        <div class="modal-fine-print">No spam. No noise. Just signal. Unsubscribe anytime.</div>
+    </div>
+</div>
+
+<script>
+    // ===== APP RIBBON DATA =====
+    const apps = [
+        { name: 'VibeCurate', desc: 'Energy & Vibration', price: '$9/mo', emoji: '🎵', url: 'https://vibe.dubltap.io' },
+        { name: 'Bad Mutha Forker', desc: 'Recipe Transformation', price: '$9/mo', emoji: '🍴', url: 'https://fork.dubltap.io' },
+        { name: 'Mind Expander', desc: 'Cognitive Enhancement', price: 'FREE', emoji: '🧠', url: 'https://mind.dubltap.io' },
+        { name: 'CLIFF NOTEZ', desc: 'Document Analysis', price: '$19/mo', emoji: '📋', url: 'https://cliff.dubltap.io' },
+        { name: 'Market Maven', desc: 'Competitive Intelligence', price: '$19/mo', emoji: '📊', url: 'https://maven.dubltap.io' },
+        { name: 'Side Hustle Copilot', desc: 'Income Matching', price: '$12/mo', emoji: '💰', url: 'https://hustle.dubltap.io' },
+        { name: 'Pro BizDev', desc: 'Sales Strategy', price: '$24/mo', emoji: '🎯', url: 'https://bizdev.dubltap.io' },
+        { name: 'Aesthetic AI', desc: 'Golden Ratio Design', price: '$12/mo', emoji: '🎨', url: 'https://aesthetic.dubltap.io' },
+        { name: 'COMPLETE Bundle', desc: 'All 9 Tools', price: '$59/mo', emoji: '⚡', url: 'https://dubltap.io' },
+    ];
+
+    function buildRibbon() {
+        const track = document.getElementById('ribbonTrack');
+        // Duplicate for seamless scroll
+        const allApps = [...apps, ...apps, ...apps];
+        track.innerHTML = allApps.map(app =>
+            `<a href="${app.url}" class="app-chip" target="_blank" rel="noopener">
+                <span class="app-emoji">${app.emoji}</span>
+                <div>
+                    <div class="app-chip-name">${app.name}</div>
+                    <div class="app-chip-desc">${app.desc}</div>
+                </div>
+                <span class="app-chip-price">${app.price}</span>
+            </a>`
+        ).join('');
+    }
+    buildRibbon();
+
+    // ===== EMAIL CAPTURE =====
+    let emailCaptured = localStorage.getItem('dubltap_email_captured');
+
+    function captureEmail(source) {
+        const inputId = source === 'modal' ? 'modalEmail' : 'sidebarEmail';
+        const email = document.getElementById(inputId).value.trim();
+        if (!email || !email.includes('@')) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+
+        // Track source with UTM
+        const data = { email, source: 'blog_' + source, timestamp: new Date().toISOString() };
+
+        // TODO: Replace with actual Beehiiv/ConvertKit API call
+        // fetch('https://api.beehiiv.com/...', { method: 'POST', body: JSON.stringify(data) });
+
+        console.log('Email captured:', data);
+        localStorage.setItem('dubltap_email_captured', 'true');
+        emailCaptured = true;
+
+        if (source === 'modal') {
+            closeModal();
+        }
+
+        // Show thank you
+        const btn = source === 'modal'
+            ? document.querySelector('.modal-submit')
+            : document.querySelector('.email-btn');
+        btn.textContent = '✓ Subscribed!';
+        btn.style.background = '#2A9D8F';
+
+        setTimeout(() => {
+            btn.textContent = source === 'modal' ? 'Get Free Access' : 'Subscribe Free';
+            btn.style.background = '';
+        }, 3000);
+    }
+
+    // ===== MODAL TRIGGERS =====
+    function openPost(slug) {
+        if (!emailCaptured) {
+            document.getElementById('emailModal').classList.add('active');
+            return;
+        }
+        // TODO: Navigate to full post
+        // window.location.href = '/blog/' + slug;
+        alert('Full blog posts coming soon! Email captured \u2014 you\'ll be first to read them.');
+    }
+
+    function closeModal() {
+        document.getElementById('emailModal').classList.remove('active');
+    }
+
+    // Close modal on overlay click
+    document.getElementById('emailModal').addEventListener('click', function(e) {
+        if (e.target === this) closeModal();
+    });
+
+    // Exit intent trigger
+    let exitShown = false;
+    document.addEventListener('mouseleave', function(e) {
+        if (e.clientY < 0 && !exitShown && !emailCaptured) {
+            exitShown = true;
+            setTimeout(() => {
+                document.getElementById('emailModal').classList.add('active');
+            }, 500);
+        }
+    });
+
+    // Scroll-based trigger (after 60% scroll)
+    let scrollShown = false;
+    window.addEventListener('scroll', function() {
+        if (scrollShown || emailCaptured) return;
+        const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+        if (scrollPercent > 60) {
+            scrollShown = true;
+            document.getElementById('emailModal').classList.add('active');
+        }
+    });
+</script>
+
+</body>
+  </html>
