@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Convergence Threshold — Edition 8 · March 26, 2026 | dubltap.io</title>
+<meta name="description" content="The Convergence Threshold — your favorite rag for tech that matters, humans that inspire, entrepreneurs who ship, animals that heal, and The Fast Bunny comic strip. Updated twice weekly. Sunday comics edition.">
+<meta name="keywords" content="tech news simplified, AI news, entrepreneur stories, The Fast Bunny comic, dubltap, convergence threshold, digital newspaper, tech entertainment">
+<meta property="og:title" content="The Convergence Threshold — Tech, Life & The Fast Bunny">
+<meta property="og:description" content="Not another tech blog. A real rag — with teeth, heart, humor, and a cartoon rabbit in a racing suit.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dubltap.io/blog/editions/edition-8.html">
+<meta property="og:image" content="https://dubltap.io/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://dubltap.io/blog/editions/edition-8.html">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"The Convergence Threshold","description":"Digital newspaper covering tech, humanity, entrepreneurship, entertainment, animals, and home of The Fast Bunny comic strip.","url":"https://dubltap.io/blog","author":{"@type":"Person","name":"Christopher Grove","jobTitle":"The Convergence Architect"},"publisher":{"@type":"Organization","name":"dubltap.io","url":"https://dubltap.io"}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Bangers&display=swap" rel="stylesheet">
+<style>
+/* ===== FOUNDATION ===== */
+:root {
+    --sunset-gold: #F4A261;
+    --sunset-coral: #E76F51;
+    --sunset-peach: #FFBE98;
+    --ocean-deep: #264653;
+    --ocean-teal: #2A9D8F;
+    --ocean-foam: #A8DADC;
+    --sand-light: #FDF8F3;
+    --sand-warm: #F3EBE1;
+    --sand-medium: #C4B7A6;
+    --sand-dark: #4A4238;
+    --cream: #FFFAF5;
+    --ink: #1C1917;
+    --rule: #D4C5B3;
+    --newsprint: #F9F4EE;
+    --comic-yellow: #FFF8DC;
+    --comic-blue: #E8F4FD;
+    --comic-pink: #FDE8E8;
+    --comic-green: #E8FDE8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'DM Sans', Georgia, serif;
+    background: var(--newsprint);
+    color: var(--ink);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* Grain overlay */
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+a { color: var(--ocean-teal); text-decoration: none; }
+a:hover { color: var(--sunset-coral); }
+
+/* ===== MASTHEAD ===== */
+.masthead {
+    background: var(--cream);
+    border-bottom: 4px double var(--ink);
+    padding: 0.6rem 0 0;
+    position: relative;
+}
+.masthead-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    font-size: 0.72rem;
+    color: var(--sand-medium);
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0.04em;
+}
+.masthead-top a { color: var(--sand-medium); }
+.masthead-top a:hover { color: var(--sunset-gold); }
+
+.masthead-title-wrap {
+    text-align: center;
+    padding: 1.2rem 2rem 0.8rem;
+    position: relative;
+}
+.masthead-rule-top {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 1px;
+    background: var(--ink);
+    margin-bottom: 1rem;
+}
+.masthead-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.3rem;
+}
+.masthead-title span { color: var(--sunset-gold); }
+.masthead-subtitle {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-style: italic;
+    font-size: 0.92rem;
+    color: var(--sand-dark);
+    opacity: 0.7;
+    margin-bottom: 0.6rem;
+}
+.masthead-rule-bottom {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 2px;
+    background: var(--ink);
+}
+
+/* Section Nav */
+.section-nav {
+    background: var(--cream);
+    border-bottom: 1px solid var(--rule);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.section-nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.section-nav-inner::-webkit-scrollbar { display: none; }
+.section-nav a {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    color: var(--sand-dark);
+    padding: 0.85rem 1.3rem;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+.section-nav a:hover,
+.section-nav a.active {
+    color: var(--sunset-coral);
+    border-bottom-color: var(--sunset-gold);
+}
+.section-nav .nav-bunny {
+    color: var(--sunset-gold);
+    font-family: 'Bangers', cursive;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: none;
+}
+.nav-subscribe-btn {
+    margin-left: auto;
+    background: var(--sunset-gold);
+    color: var(--ocean-deep) !important;
+    border-radius: 100px;
+    padding: 0.5rem 1.2rem !important;
+    font-weight: 700 !important;
+    border-bottom: none !important;
+    transition: all 0.2s;
+}
+.nav-subscribe-btn:hover {
+    background: var(--sunset-coral) !important;
+    color: white !important;
+    border-bottom-color: transparent !important;
+}
+
+/* ===== LAYOUT ===== */
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ===== SECTION HEADERS ===== */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0 1rem;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 1.5rem;
+}
+.section-icon { font-size: 1.4rem; line-height: 1; }
+.section-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+}
+.section-tagline {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 0.82rem;
+    color: var(--sand-medium);
+    margin-left: auto;
+}
+.section-rule-accent { position: relative; }
+.section-rule-accent::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--sunset-gold);
+}
+
+/* ===== LEAD STORY ===== */
+.lead-story {
+    display: grid;
+    grid-template-columns: 1.618fr 1fr;
+    gap: 2.5rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--rule);
+}
+.lead-kicker {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--sunset-coral);
+    margin-bottom: 0.5rem;
+}
+.lead-headline {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 800;
+    color: var(--ink);
+    line-height: 1.12;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.02em;
+}
+.lead-deck {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: var(--sand-dark);
+    margin-bottom: 1rem;
+}
+.lead-byline {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    color: var(--sand-medium);
+}
+.lead-byline strong { color: var(--ink); }
+
+.lead-image { border-radius: 0.5rem; overflow: hidden; position: relative; min-height: 280px; }
+.lead-image-placeholder {
+    width: 100%; height: 100%; min-height: 280px;
+    background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-teal) 60%, var(--sunset-gold) 100%);
+    display: flex; align-items: center; justify-content: center; position: relative;
+}
+.lead-image-placeholder .lead-img-text {
+    font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 800;
+    font-style: italic; color: rgba(255,255,255,0.12);
+}
+.lead-image-placeholder .photo-credit {
+    position: absolute; bottom: 0.6rem; right: 0.8rem;
+    font-size: 0.62rem; color: rgba(255,255,255,0.35); font-family: 'DM Sans', sans-serif;
+}
+
+/* ===== ARTICLE CARDS ===== */
+.articles-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+    padding-bottom: 2rem; border-bottom: 1px solid var(--rule); margin-bottom: 0;
+}
+.articles-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.article-card { cursor: pointer; transition: transform 0.2s; }
+.article-card:hover { transform: translateY(-2px); }
+.article-card-image {
+    width: 100%; height: 160px; border-radius: 0.4rem; overflow: hidden; margin-bottom: 0.8rem;
+}
+.article-card-image-inner {
+    width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+}
+.card-img-word {
+    font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 800;
+    font-style: italic; color: rgba(255,255,255,0.15);
+}
+.article-card-kicker {
+    font-family: 'Outfit', sans-serif; font-size: 0.62rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.14em; color: var(--ocean-teal); margin-bottom: 0.35rem;
+}
+.article-card-title {
+    font-family: 'Playfair Display', Georgia, serif; font-size: 1.15rem; font-weight: 700;
+    color: var(--ink); line-height: 1.25; margin-bottom: 0.5rem;
+}
+.article-card:hover .article-card-title { color: var(--sunset-coral); }
+.article-card-excerpt {
+    font-family: 'Source Serif 4', serif; font-size: 0.86rem; color: var(--sand-dark);
+    line-height: 1.6; opacity: 0.75; margin-bottom: 0.5rem;
+}
+.article-card-meta { font-size: 0.7rem; color: var(--sand-medium); }
+
+/* ===== SIDEBAR LAYOUT ===== */
+.content-with-sidebar {
+    display: grid; grid-template-columns: 1fr 320px; gap: 2.5rem; padding: 0 0 2rem;
+}
+.sidebar-section { padding-top: 2rem; }
+.sidebar-card {
+    background: var(--cream); border: 1px solid var(--rule); border-radius: 0.6rem;
+    padding: 1.5rem; margin-bottom: 1.5rem;
+}
+.sidebar-card-title {
+    font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700;
+    color: var(--ink); margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--rule);
+}
+
+/* Email capture sidebar */
+.email-capture-card {
+    background: var(--ocean-deep); border: none; color: white; position: relative; overflow: hidden;
+}
+.email-capture-card::before {
+    content: ''; position: absolute; top: -40%; right: -20%; width: 180px; height: 180px;
+    background: radial-gradient(circle, rgba(244,162,97,0.2) 0%, transparent 70%); border-radius: 50%;
+}
+.email-capture-card .sidebar-card-title { color: var(--sunset-peach); border-bottom-color: rgba(168,218,220,0.2); }
+.email-capture-card p { font-size: 0.84rem; color: var(--ocean-foam); opacity: 0.8; margin-bottom: 1rem; line-height: 1.6; }
+.email-input-editorial {
+    width: 100%; padding: 0.7rem 0.9rem; border: 1px solid rgba(168,218,220,0.25); border-radius: 0.4rem;
+    background: rgba(255,255,255,0.07); color: white; font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem; margin-bottom: 0.6rem; outline: none; transition: all 0.3s;
+}
+.email-input-editorial::placeholder { color: rgba(168,218,220,0.4); }
+.email-input-editorial:focus { border-color: var(--sunset-gold); background: rgba(255,255,255,0.12); }
+.email-btn-editorial {
+    width: 100%; padding: 0.7rem; background: var(--sunset-gold); color: var(--ocean-deep);
+    border: none; border-radius: 0.4rem; font-family: 'DM Sans', sans-serif;
+    font-weight: 700; font-size: 0.84rem; cursor: pointer; transition: all 0.2s;
+}
+.email-btn-editorial:hover { background: var(--sunset-coral); color: white; }
+.email-note-editorial { font-size: 0.65rem; color: rgba(168,218,220,0.35); text-align: center; margin-top: 0.5rem; }
+
+/* Trending sidebar */
+.trending-item { display: flex; gap: 0.8rem; align-items: flex-start; padding: 0.7rem 0; border-bottom: 1px solid var(--rule); }
+.trending-item:last-child { border-bottom: none; }
+.trending-num {
+    font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 800;
+    color: var(--sunset-gold); line-height: 1; min-width: 28px;
+}
+.trending-text { font-family: 'Source Serif 4', serif; font-size: 0.84rem; color: var(--ink); line-height: 1.35; }
+.trending-text:hover { color: var(--sunset-coral); cursor: pointer; }
+
+/* App promo sidebar */
+.app-promo-card { background: linear-gradient(135deg, var(--sunset-gold) 0%, var(--sunset-coral) 100%); border: none; text-align: center; }
+.app-promo-card .sidebar-card-title { color: var(--ocean-deep); border-bottom-color: rgba(38,70,83,0.2); }
+.app-promo-card p { font-size: 0.84rem; color: var(--ocean-deep); opacity: 0.85; margin-bottom: 1rem; line-height: 1.55; }
+.app-promo-btn {
+    display: inline-block; padding: 0.6rem 1.5rem; background: var(--ocean-deep); color: var(--sunset-gold);
+    border-radius: 100px; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.8rem;
+    letter-spacing: 0.03em; transition: all 0.2s;
+}
+.app-promo-btn:hover { background: var(--ink); color: var(--sunset-gold); transform: translateY(-1px); }
+
+/* ===== HORIZONTAL DIVIDERS ===== */
+.editorial-divider { border: none; border-top: 1px solid var(--rule); margin: 0; }
+.editorial-divider-thick { border-top: 2px solid var(--ink); }
+
+/* ===== THE FAST BUNNY COMIC SECTION ===== */
+.fast-bunny-section {
+    background: var(--cream); border-top: 4px solid var(--ink); border-bottom: 4px solid var(--ink);
+    margin: 2rem 0; padding: 0;
+}
+.fast-bunny-header { text-align: center; padding: 2rem 2rem 1rem; border-bottom: 2px solid var(--ink); position: relative; }
+.fb-sunday-badge {
+    display: inline-block; background: var(--sunset-coral); color: white; font-family: 'Outfit', sans-serif;
+    font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em;
+    padding: 0.3rem 1rem; border-radius: 100px; margin-bottom: 0.8rem;
+}
+.fb-title { font-family: 'Bangers', cursive; font-size: clamp(2.5rem, 6vw, 4.5rem); color: var(--ink); line-height: 1; margin-bottom: 0.3rem; letter-spacing: 0.03em; }
+.fb-title .the { font-size: 0.55em; color: var(--sand-medium); }
+.fb-title .fast { color: var(--sunset-gold); }
+.fb-title .bunny { color: var(--ocean-deep); }
+.fb-byline { font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: var(--sand-medium); }
+.fb-byline strong { color: var(--ink); }
+
+.comic-page { max-width: 960px; margin: 0 auto; padding: 1.5rem 2rem 2rem; }
+.comic-episode-title { text-align: center; margin-bottom: 1.5rem; }
+.comic-episode-num { font-family: 'Outfit', sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--sunset-coral); }
+.comic-episode-name { font-family: 'Bangers', cursive; font-size: 1.6rem; color: var(--ink); letter-spacing: 0.02em; }
+
+/* Comic panels grid */
+.comic-strip { display: grid; gap: 0.5rem; }
+.comic-strip-row { display: grid; gap: 0.5rem; }
+.comic-strip-row.row-3 { grid-template-columns: 1fr 1fr 1fr; }
+.comic-strip-row.row-2 { grid-template-columns: 1fr 1fr; }
+.comic-strip-row.row-2-wide { grid-template-columns: 1.5fr 1fr; }
+.comic-strip-row.row-1 { grid-template-columns: 1fr; }
+
+.comic-panel { background: white; border: 3px solid var(--ink); border-radius: 4px; position: relative; overflow: hidden; min-height: 200px; display: flex; flex-direction: column; }
+.comic-panel-art { flex: 1; display: flex; align-items: center; justify-content: center; position: relative; padding: 2.5rem 1rem 1rem; }
+
+.panel-sky { background: linear-gradient(180deg, #87CEEB 0%, #E0F4FF 100%); }
+.panel-office { background: linear-gradient(180deg, #F5F0EB 0%, #E8E0D5 100%); }
+.panel-night { background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); }
+.panel-sunset { background: linear-gradient(180deg, var(--sunset-peach) 0%, var(--sunset-gold) 100%); }
+.panel-garage { background: linear-gradient(180deg, #D4CBC0 0%, #B8AFA3 100%); }
+.panel-track { background: linear-gradient(180deg, #4a7c59 0%, #6b8f5e 60%, #C4B7A6 100%); }
+
+/* Speech bubbles */
+.speech-bubble {
+    position: absolute; background: white; border: 2.5px solid var(--ink); border-radius: 1.2rem;
+    padding: 0.55rem 0.85rem; font-family: 'DM Sans', sans-serif; font-size: 0.72rem;
+    font-weight: 600; color: var(--ink); line-height: 1.35; max-width: 65%; z-index: 5;
+}
+.speech-bubble::after {
+    content: ''; position: absolute; bottom: -12px; left: 25%; width: 0; height: 0;
+    border-left: 8px solid transparent; border-right: 8px solid transparent; border-top: 14px solid var(--ink);
+}
+.speech-bubble::before {
+    content: ''; position: absolute; bottom: -8px; left: 26%; width: 0; height: 0;
+    border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 11px solid white; z-index: 1;
+}
+.speech-bubble.right::after { left: auto; right: 25%; }
+.speech-bubble.right::before { left: auto; right: 26%; }
+.speech-bubble.thought { border-radius: 1.5rem; border-style: dashed; border-color: var(--sand-medium); font-style: italic; color: var(--sand-dark); }
+.speech-bubble.thought::after, .speech-bubble.thought::before { display: none; }
+.speech-bubble.yell { background: var(--comic-yellow); font-family: 'Bangers', cursive; font-size: 0.85rem; letter-spacing: 0.03em; font-weight: 400; }
+
+.bunny-character { width: 80px; height: 120px; position: relative; }
+.bunny-placeholder { text-align: center; font-size: 0.6rem; color: var(--sand-medium); font-style: italic; padding: 0.5rem; background: rgba(255,255,255,0.5); border-radius: 0.3rem; }
+
+.panel-caption {
+    background: var(--comic-yellow); border: 2px solid var(--ink); padding: 0.4rem 0.7rem;
+    font-family: 'DM Sans', sans-serif; font-size: 0.68rem; font-weight: 500; color: var(--ink);
+    position: absolute; top: 0; left: 0; z-index: 5; line-height: 1.3;
+}
+
+.sfx { font-family: 'Bangers', cursive; color: var(--sunset-coral); font-size: 1.8rem; transform: rotate(-8deg); text-shadow: 2px 2px 0 var(--ink); -webkit-text-stroke: 1px var(--ink); position: absolute; }
+
+.comic-footer { text-align: center; padding: 1rem 2rem 1.5rem; border-top: 1px solid var(--rule); }
+.comic-footer-text { font-family: 'DM Sans', sans-serif; font-size: 0.75rem; color: var(--sand-medium); }
+.comic-footer-cta {
+    display: inline-block; margin-top: 0.6rem; background: var(--sunset-gold); color: var(--ocean-deep);
+    font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.78rem; padding: 0.5rem 1.5rem;
+    border-radius: 100px; transition: all 0.2s;
+}
+.comic-footer-cta:hover { background: var(--sunset-coral); color: white; transform: translateY(-1px); }
+
+/* ===== NEWSLETTER FULL-WIDTH CTA ===== */
+.newsletter-cta-section {
+    background: var(--ocean-deep); padding: 3rem 2rem; text-align: center; position: relative; overflow: hidden;
+}
+.newsletter-cta-section::before {
+    content: ''; position: absolute; top: -30%; left: -10%; width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(244,162,97,0.12) 0%, transparent 60%); border-radius: 50%;
+}
+.newsletter-cta-section::after {
+    content: ''; position: absolute; bottom: -40%; right: -10%; width: 350px; height: 350px;
+    background: radial-gradient(circle, rgba(42,157,143,0.1) 0%, transparent 60%); border-radius: 50%;
+}
+.newsletter-cta-inner { max-width: 560px; margin: 0 auto; position: relative; z-index: 2; }
+.newsletter-cta-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 800; color: var(--cream); margin-bottom: 0.6rem; }
+.newsletter-cta-sub { font-family: 'Source Serif 4', serif; font-size: 0.95rem; color: var(--ocean-foam); opacity: 0.7; margin-bottom: 1.5rem; line-height: 1.55; }
+.newsletter-form { display: flex; gap: 0.6rem; max-width: 440px; margin: 0 auto; }
+.newsletter-input {
+    flex: 1; padding: 0.8rem 1rem; border: 1px solid rgba(168,218,220,0.3); border-radius: 0.5rem;
+    background: rgba(255,255,255,0.08); color: white; font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem; outline: none; transition: all 0.3s;
+}
+.newsletter-input::placeholder { color: rgba(168,218,220,0.4); }
+.newsletter-input:focus { border-color: var(--sunset-gold); background: rgba(255,255,255,0.14); }
+.newsletter-btn {
+    padding: 0.8rem 1.8rem; background: var(--sunset-gold); color: var(--ocean-deep); border: none;
+    border-radius: 0.5rem; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.88rem;
+    cursor: pointer; transition: all 0.2s; white-space: nowrap;
+}
+.newsletter-btn:hover { background: var(--sunset-coral); color: white; }
+.newsletter-note { font-size: 0.68rem; color: rgba(168,218,220,0.3); margin-top: 0.7rem; }
+
+/* ===== FOOTER ===== */
+.editorial-footer { background: var(--ink); padding: 2.5rem 2rem; color: rgba(255,255,255,0.5); }
+.footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; }
+.footer-col-title { font-family: 'Outfit', sans-serif; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--sunset-gold); margin-bottom: 0.8rem; }
+.footer-col a { display: block; font-size: 0.82rem; color: rgba(255,255,255,0.45); padding: 0.2rem 0; transition: color 0.2s; }
+.footer-col a:hover { color: var(--sunset-gold); }
+.footer-bottom { max-width: 1200px; margin: 1.5rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem; }
+.footer-logo { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--sunset-gold); }
+.footer-logo span { color: rgba(255,255,255,0.3); }
+
+/* ===== ARTICLE MINI LIST ===== */
+.article-mini-list { display: flex; flex-direction: column; gap: 1rem; }
+.article-mini { display: flex; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--rule); cursor: pointer; transition: all 0.2s; }
+.article-mini:last-child { border-bottom: none; padding-bottom: 0; }
+.article-mini:hover .article-mini-title { color: var(--sunset-coral); }
+.article-mini-thumb { width: 90px; height: 70px; border-radius: 0.3rem; overflow: hidden; flex-shrink: 0; }
+.article-mini-thumb-inner {
+    width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 800; font-style: italic; color: rgba(255,255,255,0.15);
+}
+.article-mini-body { flex: 1; }
+.article-mini-kicker { font-family: 'Outfit', sans-serif; font-size: 0.58rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--ocean-teal); margin-bottom: 0.2rem; }
+.article-mini-title { font-family: 'Playfair Display', serif; font-size: 0.92rem; font-weight: 700; color: var(--ink); line-height: 1.25; transition: color 0.2s; }
+.article-mini-meta { font-size: 0.65rem; color: var(--sand-medium); margin-top: 0.2rem; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .lead-story { grid-template-columns: 1fr; }
+    .lead-image { min-height: 200px; }
+    .articles-grid { grid-template-columns: 1fr 1fr; }
+    .content-with-sidebar { grid-template-columns: 1fr; }
+    .sidebar-section { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .footer-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+    .comic-strip-row.row-3 { grid-template-columns: 1fr; }
+    .comic-strip-row.row-2 { grid-template-columns: 1fr; }
+    .comic-strip-row.row-2-wide { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+    .page-container { padding: 0 1rem; }
+    .articles-grid { grid-template-columns: 1fr; }
+    .sidebar-section { grid-template-columns: 1fr; }
+    .newsletter-form { flex-direction: column; }
+    .masthead-top { display: none; }
+    .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+    .comic-panel { min-height: 160px; }
+}
+
+/* ===== ANIMATIONS ===== */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+</style>Tech that matters. Humans that inspire. Food worth eating. A rabbit in a racing suit.</head>
+<body>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+    <div class="masthead-top">
+        <span>Tuesday, April 1, 2026</span> <span>Vol. 1 &middot; No. 9 &middot; <a href="https://dubltap.io">dubltap.io</a></span>
+        <span>Everett, WA</span>
+    </div>
+    <div class="masthead-title-wrap">
+        <div class="masthead-rule-top"></div>
+        <h1 class="masthead-title">The Convergence <span>Threshold</span></h1>
+        <p class="masthead-subtitle">Tech that matters. Humans that inspire. Food worth eating. A rabbit in a racing suit.</p>
+        <div class="masthead-rule-bottom"></div>
+    </div>
+</header>
+
+<!-- SECTION NAV -->
+<nav class="section-nav">
+    <div class="section-nav-inner page-container">
+        <a href="#tech" class="active">Tech & AI</a>
+        <a href="#human">The Human Element</a>
+        <a href="#entrepreneur">Entrepreneur</a>
+        <a href="#entertainment">Entertainment</a>
+        <a href="#animals">The Animal Wire</a>
+        <a href="#culinary">Culinary</a>
+        <a href="#subscribe" class="nav-subscribe-btn">Subscribe Free</a>
+    </div>
+</nav>
+
+    <div style="background:#F3EBE1;border-bottom:1px solid #D4C5B3;padding:0.75rem 2rem;text-align:center;font-family:'DM Sans',sans-serif;font-size:0.85rem;color:#4A4238;">&#x1F4F0; You are reading an archived edition. <a href="/blog" style="color:#2A9D8F;font-weight:600;">Read the latest edition &rarr;</a></div>
+
+    <!-- LEAD STORY -->
+<section class="page-container">
+    <div class="lead-story reveal">
+    <div class="lead-main">
+        <div class="lead-kicker">Lead Story</div>
+        <h2 class="lead-headline">They Called It an AI Pivot. 5,600 People Called It a Pink Slip.</h2>
+        <p class="lead-deck">Atlassian and Block laid off a combined 5,600 employees in three weeks, both citing AI as the reason. The pattern has a name now. It’s called AI washing. And it’s rewriting the rules of corporate accountability.</p>
+        <p class="lead-byline">By <strong>Christopher Grove</strong> · April 1, 2026 · 6 min read</p>
+    </div>
+    <div class="lead-image">
+        <div class="lead-image-placeholder" style="background: linear-gradient(135deg, #E76F51 0%, #264653 50%, #1a1a2e 100%);">
+            <span class="lead-img-text">LAYOFFS</span>
+            <span class="photo-credit">Illustration / dubltap</span>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- TECH & AI -->
+<section id="tech" class="page-container">
+    <div class="section-header section-rule-accent reveal">
+        <span class="section-icon">&#x26A1;</span>
+        <span class="section-name">Tech & AI</span>
+        <span class="section-tagline">No jargon. No hype. Just what matters.</span>
+    </div>
+    <div class="articles-grid reveal">
+    <article class="article-card">
+        <div class="article-card-image">
+            <div class="article-card-image-inner" style="background: linear-gradient(135deg, #F4A261, #E76F51);"><span class="card-img-word">Revenue</span></div>
+        </div>
+        <div class="article-card-kicker">THE COMPUTE RACE</div>
+        <h3 class="article-card-title">OpenAI Is Generating $2 Billion a Month. That Number Should Scare You.</h3>
+        <p class="article-card-excerpt">Annualized revenue crossed $25 billion. Anthropic is approaching $19 billion. An IPO looms. The moat around frontier AI is getting wider, not narrower. The application layer is still wide open.</p>
+        <div class="article-card-meta">Apr 1 · 4 min</div>
+    </article>
+    <article class="article-card">
+        <div class="article-card-image">
+            <div class="article-card-image-inner" style="background: linear-gradient(135deg, #264653, #2A9D8F);"><span class="card-img-word">Desktop</span></div>
+        </div>
+        <div class="article-card-kicker">FRONTIER MODELS</div>
+        <h3 class="article-card-title">GPT-5.4 Beat Humans at Their Own Desktop. Here’s What That Actually Means.</h3>
+        <p class="article-card-excerpt">Seventy-five percent on the OSWorld-V benchmark. The human baseline is 72.4 percent. The model didn’t beat humans at trivia. It outperformed them at using a computer the way humans use computers.</p>
+        <div class="article-card-meta">Apr 1 · 4 min</div>
+    </article>
+    <article class="article-card">
+        <div class="article-card-image">
+            <div class="article-card-image-inner" style="background: linear-gradient(135deg, #1a1a2e, #E76F51);"><span class="card-img-word">Washing</span></div>
+        </div>
+        <div class="article-card-kicker">AI WASHING</div>
+        <h3 class="article-card-title">The Layoff Playbook Has a New Chapter. It’s Called “Self-Funding AI.”</h3>
+        <p class="article-card-excerpt">Block cut 4,000. Atlassian cut 1,600. Amazon cut 14,000. The cumulative toll in 2026 exceeds 20,000 tech jobs explicitly attributed to AI. The corporate social license for AI layoffs is expanding.</p>
+        <div class="article-card-meta">Apr 1 · 3 min</div>
+    </article>
+</div>
+</section>
+
+<hr class="editorial-divider page-container">
+
+<!-- CONTENT WITH SIDEBAR -->
+<div class="page-container content-with-sidebar">
+    <div class="main-content-col">
+
+        <!-- HUMAN ELEMENT -->
+        <section id="human">
+            <div class="section-header section-rule-accent reveal">
+                <span class="section-icon">&#x1F30D;</span>
+                <span class="section-name">The Human Element</span>
+                <span class="section-tagline">Because technology was never the main act.</span>
+            </div>
+            <div class="article-mini-list reveal">
+    <article class="article-mini">
+        <div class="article-mini-thumb">
+            <div class="article-mini-thumb-inner" style="background: linear-gradient(135deg, #E76F51, #264653);"><span>💬</span></div>
+        </div>
+        <div class="article-mini-body">
+            <div class="article-mini-kicker">WORKFORCE</div>
+            <h4 class="article-mini-title">The Six-Hour Goodbye. What Atlassian’s Severance Timeline Says About Corporate Empathy.</h4>
+            <div class="article-mini-meta">Apr 1 · 4 min read</div>
+        </div>
+    </article>
+    <article class="article-mini">
+        <div class="article-mini-thumb">
+            <div class="article-mini-thumb-inner" style="background: linear-gradient(135deg, #2A9D8F, #264653);"><span>🧠</span></div>
+        </div>
+        <div class="article-mini-body">
+            <div class="article-mini-kicker">COGNITION</div>
+            <h4 class="article-mini-title">Raccoons Solve Puzzles for Fun. Not Food. Fun.</h4>
+            <div class="article-mini-meta">Apr 1 · 3 min read</div>
+        </div>
+    </article>
+    <article class="article-mini">
+        <div class="article-mini-thumb">
+            <div class="article-mini-thumb-inner" style="background: linear-gradient(135deg, #FFBE98, #E76F51);"><span>💼</span></div>
+        </div>
+        <div class="article-mini-body">
+            <div class="article-mini-kicker">LABOR</div>
+            <h4 class="article-mini-title">The Reskilling Timeline Doesn’t Match the Displacement Timeline. That’s the Whole Problem.</h4>
+            <div class="article-mini-meta">Apr 1 · 3 min read</div>
+        </div>
+    </article>
+</div>
+        </section>
+
+        <!-- ENTREPRENEUR -->
+        <section id="entrepreneur">
+            <div class="section-header section-rule-accent reveal">
+                <span class="section-icon">&#x1F680;</span>
+                <span class="section-name">Entrepreneur</span>
+                <span class="section-tagline">Builders. Makers. People who ship.</span>
+            </div>
+            <div class="articles-grid articles-grid-2 reveal">
+    <article class="article-card">
+        <div class="article-card-image">
+            <div class="article-card-image-inner" style="background: linear-gradient(135deg, #F4A261, #E76F51, #264653);"><span class="card-img-word">Seed</span></div>
+        </div>
+        <div class="article-card-kicker">SEED STAGE</div>
+        <h3 class="article-card-title">AI Startups Are Raising $10M Seeds at $45M Valuations. The Bar Just Moved Again.</h3>
+        <p class="article-card-excerpt">Y Combinator Demo Day made it clear: AI seed valuations have decoupled from traditional SaaS benchmarks. The tolerance for missteps has collapsed. Revenue is still revenue.</p>
+        <div class="article-card-meta">Apr 1 · 3 min</div>
+    </article>
+    <article class="article-card">
+        <div class="article-card-image">
+            <div class="article-card-image-inner" style="background: linear-gradient(135deg, #FFBE98, #F4A261);"><span class="card-img-word">Sora</span></div>
+        </div>
+        <div class="article-card-kicker">BUSINESS MODEL</div>
+        <h3 class="article-card-title">OpenAI Killed Sora Because It Cost $1 Million a Day. The Lesson Isn’t About Video.</h3>
+        <p class="article-card-excerpt">Impressive technology that costs $1 million per day to operate isn’t a product. It’s a research project with a marketing team. Sora was applause. Enterprise ChatGPT is revenue.</p>
+        <div class="article-card-meta">Apr 1 · 3 min</div>
+    </article>
+</div>
+        </section>
+
+        <!-- ENTERTAINMENT -->
+        <section id="entertainment">
+            <div class="section-header section-rule-accent reveal">
+                <span class="section-icon">&#x1F3AC;</span>
+                <span class="section-name">Entertainment</span>
+                <span class="section-tagline">Culture worth your attention.</span>
+            </div>
+            <div class="articles-grid articles-grid-2 reveal">
+    <article class="article-card">
+        <div class="article-card-image">
+            <div class="article-card-image-inner" style="background: linear-gradient(135deg, #2A9D8F, #264653);"><span class="card-img-word">Music</span></div>
+        </div>
+        <div class="article-card-kicker">STREAMING</div>
+        <h3 class="article-card-title">The AI DJ Experiment Isn’t Working. Spotify’s Data Proves It.</h3>
+        <p class="article-card-excerpt">Sessions average 14 minutes before users switch away. Daily active usage plateaued at 8 percent of premium subscribers. Listeners can tell. Their thumb knows the difference.</p>
+        <div class="article-card-meta">Apr 1 · 3 min</div>
+    </article>
+    <article class="article-card">
+        <div class="article-card-image">
+            <div class="article-card-image-inner" style="background: linear-gradient(135deg, #E76F51, #1a1a2e);"><span class="card-img-word">Gaming</span></div>
+        </div>
+        <div class="article-card-kicker">GAMING</div>
+        <h3 class="article-card-title">The First AI-Generated Video Game Got a 4.2 on Steam. Nobody’s Surprised.</h3>
+        <p class="article-card-excerpt">Every element passes a minimum quality bar. Nothing exceeds it. Comprehensively adequate and completely forgettable. The hybrid model wins. The fully-automated model produces a 4.2.</p>
+        <div class="article-card-meta">Apr 1 · 3 min</div>
+    </article>
+</div>
+        </section>
+
+        <!-- ANIMAL WIRE -->
+        <section id="animals">
+            <div class="section-header section-rule-accent reveal">
+                <span class="section-icon">&#x1F43E;</span>
+                <span class="section-name">The Animal Wire</span>
+                <span class="section-tagline">Good news only. We don’t make the rules.</span>
+            </div>
+            <div class="articles-grid articles-grid-2 reveal">
+    <article class="article-card">
+        <div class="article-card-image">
+            <div class="article-card-image-inner" style="background: linear-gradient(135deg, #FFBE98, #2A9D8F);"><span class="card-img-word">Tools</span></div>
+        </div>
+        <div class="article-card-kicker">COGNITION</div>
+        <h3 class="article-card-title">A Cow in the Czech Republic Is Using Tools. Scientists Are Rethinking Everything.</h3>
+        <p class="article-card-excerpt">Veronika chooses different ends of a grooming brush depending on which body part she’s reaching. Nobody expected bovine tool use. The ethics of industrial animal welfare just got harder to dismiss.</p>
+        <div class="article-card-meta">Apr 1 · 3 min</div>
+    </article>
+    <article class="article-card">
+        <div class="article-card-image">
+            <div class="article-card-image-inner" style="background: linear-gradient(135deg, #F4A261, #E76F51);"><span class="card-img-word">Nectar</span></div>
+        </div>
+        <div class="article-card-kicker">DISCOVERY</div>
+        <h3 class="article-card-title">Bees and Hummingbirds Are Drinking Alcohol All Day Long. They’re Fine.</h3>
+        <p class="article-card-excerpt">Pollinators consume human-equivalent amounts of ethanol from flower nectar every working day. Flight precision unchanged. Territorial aggression unaffected. They’ve been handling it for 100 million years.</p>
+        <div class="article-card-meta">Apr 1 · 3 min</div>
+    </article>
+</div>
+        </section>
+
+        <!-- CULINARY -->
+<section id="culinary">
+    <div class="section-header section-rule-accent reveal">
+        <span class="section-icon">&#x1F374;</span>
+        <span class="section-name">Culinary</span>
+        <span class="section-tagline">How we eat. What we eat. Why it matters.</span>
+    </div>
+    <div class="articles-grid articles-grid-2 reveal">
+        <article class="article-card">
+            <div class="article-card-image">
+                <div class="article-card-image-inner" style="background: linear-gradient(135deg, #F4A261, #FFBE98);"><span class="card-img-word">Forked</span></div>
+            </div>
+            <div class="article-card-kicker">AI IN THE KITCHEN</div>
+            <h3 class="article-card-title">I Let an AI Transform My Grandmother’s Banana Pudding. Here’s What It Got Right and What It Missed.</h3>
+            <p class="article-card-excerpt">The substitutions were technically correct. Coconut cream, cashew pudding, oat milk whipped topping. The result was 80 percent there. A half teaspoon of butter extract brought back the soul.</p>
+            <div class="article-card-meta">Apr 1 · 4 min</div>
+        </article>
+        <article class="article-card">
+            <div class="article-card-image">
+                <div class="article-card-image-inner" style="background: linear-gradient(135deg, #E76F51, #264653);"><span class="card-img-word">Starter</span></div>
+            </div>
+            <div class="article-card-kicker">FOOD SCIENCE</div>
+            <h3 class="article-card-title">The Sourdough Starter Your Great-Grandmother Kept Alive Is a 400-Species Ecosystem</h3>
+            <p class="article-card-excerpt">Genomic sequencing mapped microbial communities inside starters from 14 countries. Up to 400 distinct species. Starters over 50 years old have more complex and stable communities. Time itself is an ingredient.</p>
+            <div class="article-card-meta">Apr 1 · 3 min</div>
+        </article>
+    </div>
+</section>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar-section">
+        <div class="sidebar-card email-capture-card reveal">
+            <h3 class="sidebar-card-title">Get The Threshold</h3>
+            <p>The essential twice-weekly digest. Tech. Humans. Hustle. Animals. And every Sunday &mdash; The Fast Bunny. No spam. Ever.</p>
+            <form id="sidebar-email-form" onsubmit="handleEmailCapture(event, 'sidebar')">
+                <input type="email" class="email-input-editorial" placeholder="your@email.com" required>
+                <button type="submit" class="email-btn-editorial">Subscribe Free</button>
+            </form>
+            <p class="email-note-editorial">Join 500+ readers. Unsubscribe anytime.</p>
+        </div>
+        <div class="sidebar-card reveal">
+            <h3 class="sidebar-card-title">Trending This Week</h3>
+            <div class="trending-item"><span class="trending-num">1</span><span class="trending-text">AI Coworkers Have Arrived. Trust Hasn’t.</span></div>
+            <div class="trending-item"><span class="trending-num">2</span><span class="trending-text">$185M in AI Political Spending</span></div>
+            <div class="trending-item"><span class="trending-num">3</span><span class="trending-text">Lovable: $100M Revenue, 146 Employees</span></div>
+            <div class="trending-item"><span class="trending-num">4</span><span class="trending-text">Vertical AI Eats Legal</span></div>
+            <div class="trending-item"><span class="trending-num">5</span><span class="trending-text">The Fed Is Watching AI Jobs</span></div>
+        </div>
+        <div class="sidebar-card app-promo-card reveal">
+            <h3 class="sidebar-card-title">AI That Actually Does Stuff</h3>
+            <p>8 specialized tools. Free to start. Built for the hungry.</p>
+            <a href="https://dubltap.io" class="app-promo-btn">Explore the Arsenal &#x2192;</a>
+        </div>
+        <div class="sidebar-card reveal">
+            <h3 class="sidebar-card-title">The dubltap Toolkit</h3>
+            <div class="trending-item"><span class="trending-num" style="font-size:1rem;">&#x1F9E0;</span><a class="trending-text" href="https://mind.dubltap.io">Mind Expander &mdash; Free forever</a></div>
+            <div class="trending-item"><span class="trending-num" style="font-size:1rem;">&#x1F4B0;</span><a class="trending-text" href="https://hustle.dubltap.io">Side Hustle Copilot</a></div>
+            <div class="trending-item"><span class="trending-num" style="font-size:1rem;">&#x1F374;</span><a class="trending-text" href="https://fork.dubltap.io">Bad Mutha Forker</a></div>
+            <div class="trending-item"><span class="trending-num" style="font-size:1rem;">&#x1F4CA;</span><a class="trending-text" href="https://maven.dubltap.io">Market Maven</a></div>
+            <div class="trending-item"><span class="trending-num" style="font-size:1rem;">&#x1F3B5;</span><a class="trending-text" href="https://vibe.dubltap.io">VibeCurate</a></div>
+        </div>
+    </aside>
+</div>
+<!-- NEWSLETTER CTA -->
+<section id="subscribe" class="newsletter-cta-section">
+    <div class="newsletter-cta-inner">
+        <h2 class="newsletter-cta-title">Don’t Miss the Next One.</h2>
+        <p class="newsletter-cta-sub">The Convergence Threshold lands in your inbox twice a week. Tech that matters. Humans that inspire. The Fast Bunny every Sunday. Zero spam. Real talk.</p>
+        <form class="newsletter-form" id="footer-email-form" onsubmit="handleEmailCapture(event, 'footer')">
+            <input type="email" class="newsletter-input" placeholder="your@email.com" required>
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+        </form>
+        <p class="newsletter-note">Join The Threshold. Unsubscribe anytime. We’re cool like that.</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="editorial-footer">
+    <div class="footer-inner">
+        <div class="footer-col">
+            <div class="footer-col-title">The Arsenal</div>
+            <a href="https://mind.dubltap.io">Mind Expander (Free)</a>
+            <a href="https://hustle.dubltap.io">Side Hustle Copilot</a>
+            <a href="https://fork.dubltap.io">Bad Mutha Forker</a>
+            <a href="https://maven.dubltap.io">Market Maven</a>
+            <a href="https://cliff.dubltap.io">CLIFF NOTEZ</a>
+            <a href="https://bizdev.dubltap.io">Pro Business Dev</a>
+            <a href="https://aesthetic.dubltap.io">Aesthetic AI</a>
+            <a href="https://vibe.dubltap.io">VibeCurate</a>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-title">The Threshold</div>
+            <a href="#tech">Tech & AI</a>
+            <a href="#human">The Human Element</a>
+            <a href="#entrepreneur">Entrepreneur</a>
+            <a href="#entertainment">Entertainment</a>
+            <a href="#animals">The Animal Wire</a>
+            <a href="#culinary">Culinary</a>
+        </div>
+        <div class="footer-col">
+            <div class="footer-col-title">Connect</div>
+            <a href="https://dubltap.io">dubltap.io</a>
+            <a href="https://mail.dubltap.io">Newsletter</a>
+            <a href="/cdn-cgi/l/email-protection#442c2128282b04203126283025346a2d2b"><span class="__cf_email__" data-cfemail="533b363f3f3c133726313f2732237d3a3c">[email&#160;protected]</span></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-logo">dubl<span>tap</span>.io</div>
+        <span>&copy; 2026 dubltap.io &middot; AI that actually does stuff.</span>
+        <span>Riffs louder than hunger.</span>
+    
+        <div style="margin-top:12px;font-size:0.8rem;opacity:0.7;text-align:center;">Creator: <a href="https://christopher-grove.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Christopher Grove</a> | <a href="https://christopher-grove.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">christopher-grove.com</a></div>
+        <div style="margin-top:6px;font-size:0.8rem;text-align:center;"><a href="https://christopher-grove.com/blog/the-adoption-gap" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Read: The Adoption Gap</a></div></div>
+</footer>
+
+<!-- SCRIPTS -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    var revealObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(function(el) { revealObserver.observe(el); });
+
+    var sections = document.querySelectorAll('section[id]');
+    var navLinks = document.querySelectorAll('.section-nav a:not(.nav-subscribe-btn)');
+    window.addEventListener('scroll', function() {
+        var current = '';
+        sections.forEach(function(section) {
+            if (scrollY >= section.offsetTop - 120) current = section.getAttribute('id');
+        });
+        navLinks.forEach(function(link) {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+        });
+    });
+
+    async function handleEmailCapture(e, source) {
+        e.preventDefault();
+        var form = e.target;
+        var emailInput = form.querySelector('input[type="email"]');
+        var btn = form.querySelector('button');
+        var email = emailInput.value;
+        if (!email) return;
+        btn.textContent = 'Joining...';
+        btn.disabled = true;
+        try {
+            var response = await fetch('https://api.dubltap.io/api/capture-email', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: email, source: 'convergence-threshold-' + source, tags: ['newsletter', 'threshold', source] })
+            });
+            if (response.ok) {
+                btn.textContent = 'You are In!';
+                btn.style.background = '#2A9D8F';
+                emailInput.value = '';
+                if (typeof rdt === 'function') { rdt('track', 'Lead'); rdt('track', 'SignUp'); }
+                setTimeout(function() { btn.textContent = source === 'sidebar' ? 'Subscribe Free' : 'Subscribe'; btn.style.background = ''; btn.disabled = false; }, 3000);
+            } else { throw new Error('fail'); }
+        } catch (err) {
+            window.open('https://mail.dubltap.io/subscribe', '_blank');
+            btn.textContent = source === 'sidebar' ? 'Subscribe Free' : 'Subscribe';
+            btn.disabled = false;
+        }
+    }
+
+    document.querySelectorAll('.section-nav a[href^="#"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            var target = document.querySelector(link.getAttribute('href'));
+            if (target) window.scrollTo({ top: target.offsetTop - 60, behavior: 'smooth' });
+        });
+    });
+</script>
+
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y3QEKJFSR0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Y3QEKJFSR0');</script>
+
+<!-- Reddit Pixel -->
+<script>!function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js";t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','a2_g6fh66r3ckgj');rdt('track','PageVisit');</script>
+
+</body>
+    </html>
+
