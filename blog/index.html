@@ -544,6 +544,27 @@ a:hover { color: var(--sunset-coral); }
 /* ===== ANIMATIONS ===== */
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ===== EXPANDED ARTICLE READER ===== */
+.article-expanded { display: none; max-width: 760px; margin: 0 auto; padding: 2rem 0 3rem; }
+.article-expanded.open { display: block; }
+.article-expanded-back { display: inline-flex; align-items: center; gap: 0.4rem; font-family: 'Outfit', sans-serif; font-size: 0.75rem; font-weight: 700; color: var(--ocean-teal); margin-bottom: 1.5rem; cursor: pointer; transition: color 0.2s; }
+.article-expanded-back:hover { color: var(--sunset-coral); }
+.article-expanded-kicker { font-family: 'Outfit', sans-serif; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--sunset-coral); margin-bottom: 0.6rem; }
+.article-expanded h2 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; color: var(--ink); line-height: 1.15; margin-bottom: 0.8rem; }
+.article-expanded-meta { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; color: var(--sand-medium); margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule); }
+.article-expanded-meta strong { color: var(--ink); }
+.article-expanded-body { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.05rem; line-height: 1.8; color: var(--sand-dark); }
+.article-expanded-body p { margin-bottom: 1.2rem; }
+.article-expanded-body p:last-child { margin-bottom: 0; }
+.article-expanded-cta { margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, var(--sunset-gold), var(--sunset-coral)); border-radius: 0.6rem; text-align: center; }
+.article-expanded-cta p { font-family: 'DM Sans', sans-serif !important; font-size: 0.88rem !important; color: var(--ocean-deep) !important; font-weight: 600; margin-bottom: 0.6rem !important; }
+.article-expanded-cta a { display: inline-block; padding: 0.5rem 1.5rem; background: var(--ocean-deep); color: var(--sunset-gold); border-radius: 100px; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.8rem; }
+.article-expanded-cta a:hover { background: var(--ink); }
+.article-card-read { font-family: 'Outfit', sans-serif; font-size: 0.72rem; font-weight: 700; color: var(--sunset-coral); margin-top: 0.3rem; }
+.article-mini-read { font-family: 'Outfit', sans-serif; font-size: 0.65rem; font-weight: 700; color: var(--sunset-coral); margin-top: 0.15rem; }
+.lead-read-more { display: inline-block; margin-top: 0.8rem; font-family: 'Outfit', sans-serif; font-size: 0.78rem; font-weight: 700; color: var(--sunset-coral); cursor: pointer; transition: all 0.2s; }
+.lead-read-more:hover { color: var(--ocean-teal); }
 </style>Tech that matters. Humans that inspire. Food worth eating. A rabbit in a racing suit.</head>
 <body>
 
@@ -576,14 +597,16 @@ a:hover { color: var(--sunset-coral); }
     </div>
 </nav>
 
-<!-- LEAD STORY -->
+<div id="frontPage">
+  <!-- LEAD STORY -->
 <section class="page-container">
     <div class="lead-story reveal">
     <div class="lead-main">
         <div class="lead-kicker">Lead Story</div>
-        <h2 class="lead-headline">They Called It an AI Pivot. 5,600 People Called It a Pink Slip.</h2>
+        <h2 class="lead-headline" style="cursor:pointer;" onclick="openArticle('lead')">They Called It an AI Pivot. 5,600 People Called It a Pink Slip.</h2>
         <p class="lead-deck">Atlassian and Block laid off a combined 5,600 employees in three weeks, both citing AI as the reason. The pattern has a name now. It’s called AI washing. And it’s rewriting the rules of corporate accountability.</p>
         <p class="lead-byline">By <strong>Christopher Grove</strong> · April 1, 2026 · 6 min read</p>
+            <span class="lead-read-more" onclick="openArticle('lead')">Read full article &#x2192;</span>
     </div>
     <div class="lead-image">
         <div class="lead-image-placeholder" style="background: linear-gradient(135deg, #E76F51 0%, #264653 50%, #1a1a2e 100%);">
@@ -602,7 +625,7 @@ a:hover { color: var(--sunset-coral); }
         <span class="section-tagline">No jargon. No hype. Just what matters.</span>
     </div>
     <div class="articles-grid reveal">
-    <article class="article-card">
+    <article class="article-card" onclick="openArticle('tech1')">
         <div class="article-card-image">
             <div class="article-card-image-inner" style="background: linear-gradient(135deg, #F4A261, #E76F51);"><span class="card-img-word">Revenue</span></div>
         </div>
@@ -610,8 +633,9 @@ a:hover { color: var(--sunset-coral); }
         <h3 class="article-card-title">OpenAI Is Generating $2 Billion a Month. That Number Should Scare You.</h3>
         <p class="article-card-excerpt">Annualized revenue crossed $25 billion. Anthropic is approaching $19 billion. An IPO looms. The moat around frontier AI is getting wider, not narrower. The application layer is still wide open.</p>
         <div class="article-card-meta">Apr 1 · 4 min</div>
+            <div class="article-card-read">Read article &#x2192;</div>
     </article>
-    <article class="article-card">
+    <article class="article-card" onclick="openArticle('tech2')">
         <div class="article-card-image">
             <div class="article-card-image-inner" style="background: linear-gradient(135deg, #264653, #2A9D8F);"><span class="card-img-word">Desktop</span></div>
         </div>
@@ -619,8 +643,9 @@ a:hover { color: var(--sunset-coral); }
         <h3 class="article-card-title">GPT-5.4 Beat Humans at Their Own Desktop. Here’s What That Actually Means.</h3>
         <p class="article-card-excerpt">Seventy-five percent on the OSWorld-V benchmark. The human baseline is 72.4 percent. The model didn’t beat humans at trivia. It outperformed them at using a computer the way humans use computers.</p>
         <div class="article-card-meta">Apr 1 · 4 min</div>
+            <div class="article-card-read">Read article &#x2192;</div>
     </article>
-    <article class="article-card">
+    <article class="article-card" onclick="openArticle('tech3')">
         <div class="article-card-image">
             <div class="article-card-image-inner" style="background: linear-gradient(135deg, #1a1a2e, #E76F51);"><span class="card-img-word">Washing</span></div>
         </div>
@@ -628,6 +653,7 @@ a:hover { color: var(--sunset-coral); }
         <h3 class="article-card-title">The Layoff Playbook Has a New Chapter. It’s Called “Self-Funding AI.”</h3>
         <p class="article-card-excerpt">Block cut 4,000. Atlassian cut 1,600. Amazon cut 14,000. The cumulative toll in 2026 exceeds 20,000 tech jobs explicitly attributed to AI. The corporate social license for AI layoffs is expanding.</p>
         <div class="article-card-meta">Apr 1 · 3 min</div>
+            <div class="article-card-read">Read article &#x2192;</div>
     </article>
 </div>
 </section>
@@ -646,7 +672,7 @@ a:hover { color: var(--sunset-coral); }
                 <span class="section-tagline">Because technology was never the main act.</span>
             </div>
             <div class="article-mini-list reveal">
-    <article class="article-mini">
+    <article class="article-mini" onclick="openArticle('human1')">
         <div class="article-mini-thumb">
             <div class="article-mini-thumb-inner" style="background: linear-gradient(135deg, #E76F51, #264653);"><span>💬</span></div>
         </div>
@@ -654,9 +680,10 @@ a:hover { color: var(--sunset-coral); }
             <div class="article-mini-kicker">WORKFORCE</div>
             <h4 class="article-mini-title">The Six-Hour Goodbye. What Atlassian’s Severance Timeline Says About Corporate Empathy.</h4>
             <div class="article-mini-meta">Apr 1 · 4 min read</div>
+                <div class="article-mini-read">Read article &#x2192;</div>
         </div>
     </article>
-    <article class="article-mini">
+    <article class="article-mini" onclick="openArticle('human2')">
         <div class="article-mini-thumb">
             <div class="article-mini-thumb-inner" style="background: linear-gradient(135deg, #2A9D8F, #264653);"><span>🧠</span></div>
         </div>
@@ -664,9 +691,10 @@ a:hover { color: var(--sunset-coral); }
             <div class="article-mini-kicker">COGNITION</div>
             <h4 class="article-mini-title">Raccoons Solve Puzzles for Fun. Not Food. Fun.</h4>
             <div class="article-mini-meta">Apr 1 · 3 min read</div>
+                <div class="article-mini-read">Read article &#x2192;</div>
         </div>
     </article>
-    <article class="article-mini">
+    <article class="article-mini" onclick="openArticle('human3')">
         <div class="article-mini-thumb">
             <div class="article-mini-thumb-inner" style="background: linear-gradient(135deg, #FFBE98, #E76F51);"><span>💼</span></div>
         </div>
@@ -674,6 +702,7 @@ a:hover { color: var(--sunset-coral); }
             <div class="article-mini-kicker">LABOR</div>
             <h4 class="article-mini-title">The Reskilling Timeline Doesn’t Match the Displacement Timeline. That’s the Whole Problem.</h4>
             <div class="article-mini-meta">Apr 1 · 3 min read</div>
+                <div class="article-mini-read">Read article &#x2192;</div>
         </div>
     </article>
 </div>
@@ -687,7 +716,7 @@ a:hover { color: var(--sunset-coral); }
                 <span class="section-tagline">Builders. Makers. People who ship.</span>
             </div>
             <div class="articles-grid articles-grid-2 reveal">
-    <article class="article-card">
+    <article class="article-card" onclick="openArticle('ent1')">
         <div class="article-card-image">
             <div class="article-card-image-inner" style="background: linear-gradient(135deg, #F4A261, #E76F51, #264653);"><span class="card-img-word">Seed</span></div>
         </div>
@@ -695,8 +724,9 @@ a:hover { color: var(--sunset-coral); }
         <h3 class="article-card-title">AI Startups Are Raising $10M Seeds at $45M Valuations. The Bar Just Moved Again.</h3>
         <p class="article-card-excerpt">Y Combinator Demo Day made it clear: AI seed valuations have decoupled from traditional SaaS benchmarks. The tolerance for missteps has collapsed. Revenue is still revenue.</p>
         <div class="article-card-meta">Apr 1 · 3 min</div>
+            <div class="article-card-read">Read article &#x2192;</div>
     </article>
-    <article class="article-card">
+    <article class="article-card" onclick="openArticle('ent2')">
         <div class="article-card-image">
             <div class="article-card-image-inner" style="background: linear-gradient(135deg, #FFBE98, #F4A261);"><span class="card-img-word">Sora</span></div>
         </div>
@@ -704,6 +734,7 @@ a:hover { color: var(--sunset-coral); }
         <h3 class="article-card-title">OpenAI Killed Sora Because It Cost $1 Million a Day. The Lesson Isn’t About Video.</h3>
         <p class="article-card-excerpt">Impressive technology that costs $1 million per day to operate isn’t a product. It’s a research project with a marketing team. Sora was applause. Enterprise ChatGPT is revenue.</p>
         <div class="article-card-meta">Apr 1 · 3 min</div>
+            <div class="article-card-read">Read article &#x2192;</div>
     </article>
 </div>
         </section>
@@ -716,7 +747,7 @@ a:hover { color: var(--sunset-coral); }
                 <span class="section-tagline">Culture worth your attention.</span>
             </div>
             <div class="articles-grid articles-grid-2 reveal">
-    <article class="article-card">
+    <article class="article-card" onclick="openArticle('enter1')">
         <div class="article-card-image">
             <div class="article-card-image-inner" style="background: linear-gradient(135deg, #2A9D8F, #264653);"><span class="card-img-word">Music</span></div>
         </div>
@@ -724,8 +755,9 @@ a:hover { color: var(--sunset-coral); }
         <h3 class="article-card-title">The AI DJ Experiment Isn’t Working. Spotify’s Data Proves It.</h3>
         <p class="article-card-excerpt">Sessions average 14 minutes before users switch away. Daily active usage plateaued at 8 percent of premium subscribers. Listeners can tell. Their thumb knows the difference.</p>
         <div class="article-card-meta">Apr 1 · 3 min</div>
+            <div class="article-card-read">Read article &#x2192;</div>
     </article>
-    <article class="article-card">
+    <article class="article-card" onclick="openArticle('enter2')">
         <div class="article-card-image">
             <div class="article-card-image-inner" style="background: linear-gradient(135deg, #E76F51, #1a1a2e);"><span class="card-img-word">Gaming</span></div>
         </div>
@@ -733,6 +765,7 @@ a:hover { color: var(--sunset-coral); }
         <h3 class="article-card-title">The First AI-Generated Video Game Got a 4.2 on Steam. Nobody’s Surprised.</h3>
         <p class="article-card-excerpt">Every element passes a minimum quality bar. Nothing exceeds it. Comprehensively adequate and completely forgettable. The hybrid model wins. The fully-automated model produces a 4.2.</p>
         <div class="article-card-meta">Apr 1 · 3 min</div>
+            <div class="article-card-read">Read article &#x2192;</div>
     </article>
 </div>
         </section>
@@ -745,7 +778,7 @@ a:hover { color: var(--sunset-coral); }
                 <span class="section-tagline">Good news only. We don’t make the rules.</span>
             </div>
             <div class="articles-grid articles-grid-2 reveal">
-    <article class="article-card">
+    <article class="article-card" onclick="openArticle('animal1')">
         <div class="article-card-image">
             <div class="article-card-image-inner" style="background: linear-gradient(135deg, #FFBE98, #2A9D8F);"><span class="card-img-word">Tools</span></div>
         </div>
@@ -753,8 +786,9 @@ a:hover { color: var(--sunset-coral); }
         <h3 class="article-card-title">A Cow in the Czech Republic Is Using Tools. Scientists Are Rethinking Everything.</h3>
         <p class="article-card-excerpt">Veronika chooses different ends of a grooming brush depending on which body part she’s reaching. Nobody expected bovine tool use. The ethics of industrial animal welfare just got harder to dismiss.</p>
         <div class="article-card-meta">Apr 1 · 3 min</div>
+            <div class="article-card-read">Read article &#x2192;</div>
     </article>
-    <article class="article-card">
+    <article class="article-card" onclick="openArticle('animal2')">
         <div class="article-card-image">
             <div class="article-card-image-inner" style="background: linear-gradient(135deg, #F4A261, #E76F51);"><span class="card-img-word">Nectar</span></div>
         </div>
@@ -762,6 +796,7 @@ a:hover { color: var(--sunset-coral); }
         <h3 class="article-card-title">Bees and Hummingbirds Are Drinking Alcohol All Day Long. They’re Fine.</h3>
         <p class="article-card-excerpt">Pollinators consume human-equivalent amounts of ethanol from flower nectar every working day. Flight precision unchanged. Territorial aggression unaffected. They’ve been handling it for 100 million years.</p>
         <div class="article-card-meta">Apr 1 · 3 min</div>
+            <div class="article-card-read">Read article &#x2192;</div>
     </article>
 </div>
         </section>
@@ -774,7 +809,7 @@ a:hover { color: var(--sunset-coral); }
         <span class="section-tagline">How we eat. What we eat. Why it matters.</span>
     </div>
     <div class="articles-grid articles-grid-2 reveal">
-        <article class="article-card">
+        <article class="article-card" onclick="openArticle('cul1')">
             <div class="article-card-image">
                 <div class="article-card-image-inner" style="background: linear-gradient(135deg, #F4A261, #FFBE98);"><span class="card-img-word">Forked</span></div>
             </div>
@@ -782,8 +817,9 @@ a:hover { color: var(--sunset-coral); }
             <h3 class="article-card-title">I Let an AI Transform My Grandmother’s Banana Pudding. Here’s What It Got Right and What It Missed.</h3>
             <p class="article-card-excerpt">The substitutions were technically correct. Coconut cream, cashew pudding, oat milk whipped topping. The result was 80 percent there. A half teaspoon of butter extract brought back the soul.</p>
             <div class="article-card-meta">Apr 1 · 4 min</div>
+            <div class="article-card-read">Read article &#x2192;</div>
         </article>
-        <article class="article-card">
+        <article class="article-card" onclick="openArticle('cul2')">
             <div class="article-card-image">
                 <div class="article-card-image-inner" style="background: linear-gradient(135deg, #E76F51, #264653);"><span class="card-img-word">Starter</span></div>
             </div>
@@ -791,6 +827,7 @@ a:hover { color: var(--sunset-coral); }
             <h3 class="article-card-title">The Sourdough Starter Your Great-Grandmother Kept Alive Is a 400-Species Ecosystem</h3>
             <p class="article-card-excerpt">Genomic sequencing mapped microbial communities inside starters from 14 countries. Up to 400 distinct species. Starters over 50 years old have more complex and stable communities. Time itself is an ingredient.</p>
             <div class="article-card-meta">Apr 1 · 3 min</div>
+            <div class="article-card-read">Read article &#x2192;</div>
         </article>
     </div>
 </section>
@@ -832,7 +869,24 @@ a:hover { color: var(--sunset-coral); }
     </aside>
 </div>
 
-<!-- THE FAST BUNNY -->
+</div><!-- end #frontPage -->
+
+  <!-- EXPANDED ARTICLE VIEW -->
+  <div id="articleView" class="page-container" style="display:none;">
+    <div class="article-expanded open">
+      <div class="article-expanded-back" onclick="closeArticle()">&#x2190; Back to front page</div>
+      <div class="article-expanded-kicker" id="articleKicker"></div>
+      <h2 id="articleTitle"></h2>
+      <div class="article-expanded-meta" id="articleMeta"></div>
+      <div class="article-expanded-body" id="articleBody"></div>
+      <div class="article-expanded-cta">
+        <p>The Convergence Threshold lands twice a week. Don't miss the next one.</p>
+        <a href="#subscribe" onclick="closeArticle()">Subscribe Free &#x2192;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE FAST BUNNY -->
 <section id="fast-bunny" class="fast-bunny-section">
     <div class="fast-bunny-header">
         <div class="fb-sunday-badge">&#x2600;&#xFE0F; Sunday Edition</div>
@@ -929,7 +983,29 @@ a:hover { color: var(--sunset-coral); }
         <div style="margin-top:6px;font-size:0.8rem;text-align:center;"><a href="https://christopher-grove.com/blog/the-adoption-gap" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Read: The Adoption Gap</a></div></div>
 </footer>
 
-<!-- SCRIPTS -->
+<script>
+var articles={
+lead:{kicker:'LEAD STORY',title:'They Called It an AI Pivot. 5,600 People Called It a Pink Slip.',meta:'By <strong>Christopher Grove</strong> · April 1, 2026 · 6 min read',body:'<p>Atlassian cut 1,600 employees on a Wednesday morning. Block followed two weeks later with 4,000. Both companies used identical framing: this is an AI pivot, a strategic realignment, a necessary investment in the future. The employees who received calendar invites titled “Your Role” at 7 a.m. had a different word for it.</p><p>The pattern has a name now. Researchers at Stanford and MIT are calling it AI washing — the practice of attributing layoffs to artificial intelligence adoption regardless of whether AI actually replaces the eliminated roles. The term borrows from greenwashing, and the analogy is precise.</p><p>Atlassian’s case is instructive. The company announced that it would replace the eliminated positions with AI-powered workflows. When pressed during the earnings call, executives could not name a single AI system currently deployed in production that performs the work previously done by the laid-off employees. The AI tools they referenced are in development. The layoffs already happened.</p><p>Block’s situation follows the same script with a financial twist. The company told investors that AI-driven automation would allow it to operate with a leaner workforce. But Block’s own engineering blog, published three days before the layoffs, described their AI initiatives as “early-stage experiments” focused on fraud detection and customer service routing — neither of which accounts for the 4,000 eliminated positions in operations, marketing, and middle management.</p><p>The cumulative toll in 2026 now exceeds 20,000 tech jobs explicitly attributed to AI. The actual number of jobs eliminated for AI-related reasons is almost certainly a fraction of that figure. The gap between the claimed reason and the real reason is where the accountability problem lives.</p><p>None of this means AI isn’t changing work. It is. But the current wave of layoffs is being driven primarily by margin pressure, investor expectations, and the convenient narrative that AI makes headcount reduction sound like innovation rather than cost-cutting.</p>'},
+tech1:{kicker:'THE COMPUTE RACE',title:'OpenAI Is Generating $2 Billion a Month. That Number Should Scare You.',meta:'By <strong>Christopher Grove</strong> · April 1, 2026 · 4 min read',body:'<p>OpenAI’s annualized revenue crossed $25 billion in March 2026. That figure represents a growth rate that has no precedent in the software industry. For context, Salesforce took 20 years to reach the same milestone. OpenAI did it in three.</p><p>The number should impress you. It should also concern you. Revenue of this magnitude, concentrated in a single company building a technology that every industry depends on, creates the kind of structural power that regulators typically spend decades trying to prevent.</p><p>Anthropic is approaching $19 billion in annualized revenue, growing at roughly 60 percent quarter over quarter. Google’s AI division generated an estimated $12 billion in direct AI product revenue last quarter. The frontier model market is consolidating around three players, and the barriers to entry are climbing with every training run.</p><p>The moat isn’t the model. The moat is compute. OpenAI’s partnership with Microsoft gives it access to Azure infrastructure that no startup can replicate. A new entrant would need to spend $5–10 billion on compute alone before writing a single line of training code.</p><p>An IPO is reportedly planned for late 2026, with a target valuation exceeding $300 billion. If that happens, OpenAI becomes one of the most valuable companies in the world, and the application layer built on top of its models becomes dependent on a publicly traded company with fiduciary obligations to maximize shareholder returns. Every developer building on GPT should be thinking about what that means for their margins.</p>'},
+tech2:{kicker:'FRONTIER MODELS',title:'GPT-5.4 Beat Humans at Their Own Desktop. Here’s What That Actually Means.',meta:'By <strong>Christopher Grove</strong> · April 1, 2026 · 4 min read',body:'<p>Seventy-five percent on the OSWorld-V benchmark. The human baseline is 72.4 percent. For the first time, a large language model outperformed average humans at using a computer the way humans use computers — navigating applications, filling out forms, managing files, operating software through graphical interfaces.</p><p>This is not another benchmark story about trivia or math. OSWorld-V tests the ability to accomplish real desktop tasks: open a spreadsheet, find a specific value, copy it to another application, format it correctly, and save the result.</p><p>GPT-5.4 didn’t beat humans at thinking. It beat them at clicking. That distinction matters enormously, because clicking is what most knowledge work actually consists of. The intellectual component of most office jobs is a small fraction of the total time spent. The rest is navigation, data entry, and procedural task completion that AI can now do faster.</p><p>Any role where more than 50 percent of the time is spent on interface manipulation is now within the capability envelope of a model that costs cents per task. The roles that remain valuable are the ones where the human provides judgment, creativity, or contextual understanding.</p><p>The 75 percent score also reveals the ceiling. The best humans score above 90 percent. GPT-5.4’s errors cluster around ambiguous instructions and multi-step tasks with branching logic — precisely the scenarios where human judgment matters most.</p>'},
+tech3:{kicker:'AI WASHING',title:'The Layoff Playbook Has a New Chapter. It’s Called “Self-Funding AI.”',meta:'By <strong>Christopher Grove</strong> · April 1, 2026 · 3 min read',body:'<p>Block cut 4,000. Atlassian cut 1,600. Amazon cut 14,000 across two rounds. The cumulative toll in 2026 exceeds 20,000 tech jobs explicitly attributed to AI transformation. The phrase showing up in every earnings call is “self-funding AI” — the idea that savings from layoffs will pay for the AI tools that supposedly replace the workers.</p><p>The arithmetic is seductive. Cut $200 million in annual salary expense, redirect $50 million to AI infrastructure, and report the remaining $150 million as margin improvement. Wall Street rewards the narrative. The stock goes up.</p><p>But the premise has a flaw: what happens when the AI tools don’t actually perform the work that was eliminated? In at least three major layoff announcements this year, the AI systems referenced were either in pilot, in development, or simply planned. The gap between “we’re investing in AI” and “AI is doing the work” is being papered over with investor relations language.</p><p>The corporate social license for AI layoffs is expanding. Two years ago, laying off thousands while citing AI would have generated sustained backlash. Today it generates a stock bump. The normalization is the story.</p>'},
+human1:{kicker:'WORKFORCE',title:'The Six-Hour Goodbye. What Atlassian’s Severance Timeline Says About Corporate Empathy.',meta:'By <strong>Christopher Grove</strong> · April 1, 2026 · 4 min read',body:'<p>The calendar invites arrived at 7 a.m. Pacific. By 1 p.m., the affected employees had been removed from Slack, their email accounts deactivated, and their access to internal systems revoked. Six hours from notification to digital erasure.</p><p>The speed was deliberate. Corporate security protocols require immediate access revocation. The logic is sound from a risk management perspective. But the human cost — learning you’ve lost your job and simultaneously losing the ability to say goodbye to colleagues or download personal files — is something no security protocol accounts for.</p><p>Former employees described the experience in identical terms: shock, then confusion, then the specific humiliation of discovering that your laptop is bricked before you’ve finished reading the severance package. Several reported that their access was cut while they were still on the notification call.</p><p>The severance terms were reasonable — 12 weeks of pay, extended health coverage, outplacement services. But the delivery mechanism undermined whatever goodwill those terms were intended to create. You cannot tell someone they are valued in the same sentence you tell them they have six hours to disappear.</p><p>The same organizations that spend millions on employer branding and “people-first” messaging execute workforce reductions with the emotional sensitivity of a database migration.</p>'},
+human2:{kicker:'COGNITION',title:'Raccoons Solve Puzzles for Fun. Not Food. Fun.',meta:'By <strong>Christopher Grove</strong> · April 1, 2026 · 3 min read',body:'<p>A research team at the University of Wyoming published results from a two-year study of urban raccoon cognition. The study presented raccoons with mechanical puzzles that offered no food reward — just the satisfaction of opening a box to find another, smaller box inside. The raccoons solved them anyway. Repeatedly. Voluntarily. For fun.</p><p>The finding is significant because nearly all previous studies of animal problem-solving used food as the motivating reward. The Wyoming study removed the reward entirely and found that raccoons still engaged with the puzzles, often spending 20 to 30 minutes on a single mechanism.</p><p>The researchers used multi-step lock mechanisms of increasing complexity. The raccoons not only solved them but showed measurable improvement over time, suggesting they were learning the underlying logic rather than just memorizing physical sequences.</p><p>What makes raccoons particularly interesting is their hands. Raccoon forepaws have five digits with extraordinary dexterity. Combined with their problem-solving drive, this manual dexterity creates a cognitive feedback loop that accelerates learning.</p><p>The broader implication is that intrinsic motivation — the drive to solve problems for the satisfaction of solving them — may be far more common in the animal kingdom than previously assumed.</p>'},
+human3:{kicker:'LABOR',title:'The Reskilling Timeline Doesn’t Match the Displacement Timeline. That’s the Whole Problem.',meta:'By <strong>Christopher Grove</strong> · April 1, 2026 · 3 min read',body:'<p>Every major layoff announcement in 2026 has included a variation of the same promise: we will invest in reskilling our workforce for the AI economy. The promise sounds responsible. The math doesn’t work.</p><p>The average enterprise AI deployment replaces a job function in 3 to 6 months. The average reskilling program takes 12 to 18 months. The gap between those two timelines is where careers go to stall.</p><p>Corporate reskilling programs assume workers can learn new skills while performing their current roles. But when the current role is being automated, there is no stable platform to learn from. The worker is simultaneously trying to master a new skill set and watching their existing expertise become less valuable by the week.</p><p>Data from the World Economic Forum’s 2026 workforce report confirms the mismatch. Of workers displaced by AI automation in 2025, only 23 percent transitioned to new roles within their original company one year later. Forty-one percent found new employment in a different field. Thirty-six percent remained unemployed or underemployed.</p><p>The problem isn’t willingness. Workers want to learn. The problem is time, access, and the stubborn reality that meaningful skill transitions require months of practice, not a four-week online certificate.</p>'},
+ent1:{kicker:'SEED STAGE',title:'AI Startups Are Raising $10M Seeds at $45M Valuations. The Bar Just Moved Again.',meta:'By <strong>Christopher Grove</strong> · April 1, 2026 · 3 min read',body:'<p>Y Combinator’s Spring 2026 Demo Day made one thing clear: AI seed valuations have decoupled from traditional SaaS benchmarks entirely. The median AI startup raised $10 million at a $45 million valuation with less than $500,000 in annual revenue.</p><p>The tolerance for early-stage risk in AI has never been higher. Frontier AI companies are growing at rates that make SaaS growth curves look like straight lines. Investors who missed the OpenAI and Anthropic rounds are desperate for exposure to the next platform shift.</p><p>But revenue is still revenue. The companies that raised at the highest valuations still need to build products that customers pay for. The gap between demo-worthy AI capabilities and production-ready AI products is where most startups die.</p><p>The founders who succeed share a common trait: they treat the AI component as infrastructure rather than product. The product is the workflow it enables, the time it saves, or the decision it improves. The AI is the engine, not the car. Investors are starting to learn the difference, but the correction hasn’t hit valuations yet.</p>'},
+ent2:{kicker:'BUSINESS MODEL',title:'OpenAI Killed Sora Because It Cost $1 Million a Day. The Lesson Isn’t About Video.',meta:'By <strong>Christopher Grove</strong> · April 1, 2026 · 3 min read',body:'<p>Impressive technology that costs $1 million per day to operate isn’t a product. It’s a research project with a marketing team.</p><p>OpenAI launched Sora to enormous fanfare. The demos were stunning — photorealistic video generation from text prompts. The problem was economics. Each minute of generated video cost $8 to $15 in compute, and users wanted hours of content. At peak usage, Sora was burning through more than $1 million per day.</p><p>The shutdown was handled with corporate delicacy: no public announcement, just a gradual reduction in access followed by a blog post about “refocusing on core capabilities.” Users discovered the change when their API calls started returning errors.</p><p>The lesson extends beyond video. Every frontier AI capability faces the same economic test: can the compute cost be reduced fast enough to reach a viable price point? For text generation, the answer was yes. For video, the costs remain prohibitive.</p><p>Sora was applause. Enterprise ChatGPT is revenue. Every founder building AI products should tattoo that distinction on their forearm.</p>'},
+enter1:{kicker:'STREAMING',title:'The AI DJ Experiment Isn’t Working. Spotify’s Data Proves It.',meta:'By <strong>Christopher Grove</strong> · April 1, 2026 · 3 min read',body:'<p>Sessions average 14 minutes before users switch away. Daily active usage plateaued at 8 percent of premium subscribers. The AI DJ feature is not failing because the technology is bad. It’s failing because listeners can tell the difference between a recommendation engine with a voice and an actual human who understands the emotional arc of a listening session.</p><p>Users engage with AI DJ out of curiosity, stay for one or two transitions, and leave when they realize the selections are competent but not inspired. The algorithm optimizes for songs you’ll probably like. A great human DJ plays songs you didn’t know you needed to hear right now.</p><p>Spotify’s internal metrics show that AI DJ users don’t listen to more music overall. They just redirect existing listening time into a different interface. The feature isn’t growing the pie — it’s slicing it differently.</p><p>Music is emotional, and emotions are contextual in ways that listening history cannot capture. What you need on a Tuesday afternoon after a difficult meeting is different from Saturday morning while making breakfast. AI DJ treats every session the same. Human DJs read the room. Until AI can read the room, the DJ metaphor is marketing, not product.</p>'},
+enter2:{kicker:'GAMING',title:'The First AI-Generated Video Game Got a 4.2 on Steam. Nobody’s Surprised.',meta:'By <strong>Christopher Grove</strong> · April 1, 2026 · 3 min read',body:'<p>Every element passes a minimum quality bar. Nothing exceeds it. That’s the verdict for the first fully AI-generated video game on Steam: comprehensively adequate and completely forgettable.</p><p>The game demonstrates that AI can produce all the components of a functional game. The environments are detailed. The character models are consistent. The dialogue is grammatically correct. The music shifts with gameplay mood. Everything works. Nothing surprises.</p><p>The 4.2 rating reflects a gaming audience with an extremely refined sense for the difference between crafted and generated content. Gamers spend thousands of hours developing intuitions about design intent — they can feel when a level was placed deliberately versus interpolated from patterns.</p><p>The hybrid model is where the industry is heading. Studios use AI for the 80 percent of content that is structural — terrain, background assets, NPC dialogue, ambient music — while human designers focus on the 20 percent that creates emotional resonance. The fully automated model produces a 4.2. The hybrid model produces something worth playing.</p>'},
+animal1:{kicker:'COGNITION',title:'A Cow in the Czech Republic Is Using Tools. Scientists Are Rethinking Everything.',meta:'By <strong>Christopher Grove</strong> · April 1, 2026 · 3 min read',body:'<p>Her name is Veronika, she lives on a research farm outside Brno, and she has been documented using a grooming brush in a way that meets the scientific definition of tool use. She chooses different ends of the brush depending on which body part she’s reaching. Nobody taught her.</p><p>Tool use was once considered uniquely human. Then we found it in chimpanzees. Then crows. Then octopuses. A cow using tools forces a revision not about intelligence, but about the assumptions we make about animals we’ve categorized as livestock.</p><p>The research team at Mendel University documented Veronika’s behavior over 14 months. She discovered the brush’s dual functionality independently. Other cows have since been observed attempting similar behaviors, suggesting social learning.</p><p>The implications extend into ethics. The industrial farming system is built on implicit assumptions about cognitive limitations. When those assumptions are contradicted by evidence, the ethical framework that permits current practices becomes harder to defend on scientific grounds.</p><p>The evidence is accumulating, and each new discovery makes the “they don’t really understand” argument a little harder to make with a straight face.</p>'},
+animal2:{kicker:'DISCOVERY',title:'Bees and Hummingbirds Are Drinking Alcohol All Day Long. They’re Fine.',meta:'By <strong>Christopher Grove</strong> · April 1, 2026 · 3 min read',body:'<p>Flower nectar ferments. It has always fermented. And the pollinators that drink it have been consuming ethanol as a routine part of their diet for roughly 100 million years. A new study quantified just how much: the human-equivalent of several glasses of wine per working day.</p><p>The research team measured ethanol concentrations in nectar from 250 flowering species across six continents. The average concentration was 1 to 3 percent — comparable to a light beer. Some tropical species reached 8 percent.</p><p>The remarkable finding is that it doesn’t impair them. Honeybees showed no measurable decrease in flight precision or navigation accuracy. Hummingbirds maintained their hovering stability. Over evolutionary time, pollinators developed metabolic pathways that process ethanol so efficiently that intoxication simply doesn’t occur.</p><p>The evolutionary explanation is straightforward: pollinators that avoided fermented flowers would miss a significant portion of available food. Natural selection favored efficient alcohol metabolism.</p><p>Some plants appear to have evolved higher-ethanol nectar deliberately, as fermented nectar produces stronger scent signals that attract pollinators from greater distances. Nature has been running the world’s longest-standing open bar.</p>'},
+cul1:{kicker:'AI IN THE KITCHEN',title:'I Let an AI Transform My Grandmother’s Banana Pudding. Here’s What It Got Right and What It Missed.',meta:'By <strong>Christopher Grove</strong> · April 1, 2026 · 4 min read',body:'<p>The assignment was simple: take my grandmother’s banana pudding recipe — the one handwritten on an index card with measurements like “a good handful” — and let an AI modernize it for dietary restrictions. No dairy. No refined sugar. Keep the soul.</p><p>The AI’s substitutions were technically correct. Coconut cream for whole milk. Cashew-based pudding for instant vanilla. Oat milk whipped topping for Cool Whip. Every substitution had supporting data from food science literature.</p><p>The result was 80 percent there. The texture was right. The layers held. The banana flavor came through. But something was missing — a warmth, a richness that the original had and the reformulated version lacked.</p><p>The fix came from a half teaspoon of butter extract — a zero-dairy flavoring that the AI never suggested because it doesn’t appear in plant-based recipe databases. It’s a Southern pantry staple that exists in a generation of home cooks’ memories but barely registers in formal food writing.</p><p>This is the gap AI cooking tools haven’t closed: the difference between a recipe that works and a dish that feels like home. The AI can optimize for nutrition, texture, and chemistry. It cannot optimize for the emotional resonance of a flavor that reminds you of your grandmother’s kitchen on a Sunday afternoon.</p>'},
+cul2:{kicker:'FOOD SCIENCE',title:'The Sourdough Starter Your Great-Grandmother Kept Alive Is a 400-Species Ecosystem',meta:'By <strong>Christopher Grove</strong> · April 1, 2026 · 3 min read',body:'<p>Genomic sequencing has mapped what bakers have known intuitively for centuries: a sourdough starter is not a simple culture. It is a complex ecosystem containing up to 400 distinct microbial species that interact, compete, and cooperate.</p><p>The study, conducted across 14 countries using metagenomic sequencing on 500 starters ranging from two weeks to over 120 years old, challenges the assumption that sourdough cultures are dominated by a few key species.</p><p>The microbial communities vary dramatically by geography, flour type, hydration level, and age. A starter maintained in San Francisco contains a fundamentally different community than one in Paris, even when both are fed identical flour.</p><p>The most striking finding was the relationship between age and stability. Starters over 50 years old had more complex microbial communities but were paradoxically more stable — more resistant to contamination and more consistent in fermentation. Time itself is an ingredient.</p><p>For home bakers, the practical takeaway is that patience and consistency matter more than technique. Your great-grandmother didn’t have genomic sequencing. She had discipline. The result was the same: a living ecosystem that turned flour and water into something no factory can replicate.</p>'}
+};
+function openArticle(id){var a=articles[id];if(!a)return;document.getElementById('articleKicker').innerHTML=a.kicker;document.getElementById('articleTitle').innerHTML=a.title;document.getElementById('articleMeta').innerHTML=a.meta;document.getElementById('articleBody').innerHTML=a.body;document.getElementById('frontPage').style.display='none';document.getElementById('articleView').style.display='block';window.scrollTo({top:0,behavior:'smooth'});}
+function closeArticle(){document.getElementById('frontPage').style.display='block';document.getElementById('articleView').style.display='none';}
+</script>
+
+  <!-- SCRIPTS -->
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     var revealObserver = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
@@ -986,6 +1062,7 @@ a:hover { color: var(--sunset-coral); }
     document.querySelectorAll('.section-nav a[href^="#"]').forEach(function(link) {
         link.addEventListener('click', function(e) {
             e.preventDefault();
+            closeArticle();
             var target = document.querySelector(link.getAttribute('href'));
             if (target) window.scrollTo({ top: target.offsetTop - 60, behavior: 'smooth' });
         });
