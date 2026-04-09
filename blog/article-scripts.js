@@ -45,7 +45,7 @@ async function captureEmail() {
     const email = document.getElementById('ctaEmail').value.trim();
     if (!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
     try {
-        await fetch('https://api.dubltap.io/api/capture-email', {
+        await fetch('https://api.dubltap.io/api/email-capture', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, source_app: 'blog_article', tags: ['blog','dispatch','article'] })
