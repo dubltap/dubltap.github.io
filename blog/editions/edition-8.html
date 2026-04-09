@@ -918,7 +918,7 @@ a:hover { color: var(--sunset-coral); }
         btn.textContent = 'Joining...';
         btn.disabled = true;
         try {
-            var response = await fetch('https://api.dubltap.io/api/capture-email', {
+            var response = await fetch('https://api.dubltap.io/api/email-capture', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email: email, source: 'convergence-threshold-' + source, tags: ['newsletter', 'threshold', source] })
